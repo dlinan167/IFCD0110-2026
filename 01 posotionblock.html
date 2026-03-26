@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>positionblock</title>
+    <meta charset="UTF-8">
+
+    <!--El style per a tota la pàgina-->
+    <style>
+        .caixa{
+            height: 300px;
+            width: 300px;
+            display: inline-block;
+            border-radius: 3%;
+        }
+        .caixa1{
+            background-color: red;
+        }
+        .caixa2{
+            background-color: cyan;
+        }
+        .caixa3{
+            background-color: purple;
+        }
+        .caixa4{
+            background-color: chartreuse;
+        }
+        .minicaixa1{
+            height: 25%;
+            width: 25%;
+            background-color: darkgreen;
+            display: inline-block;
+        }
+        
+    </style> 
+    <!-- ".caixa1" es una clase que hem definit--> <!--la classe "caixa" engloba les medides de totes las caixes ("inline-block" es caixes en línea)-->
+</head>
+
+<body>
+    <header style="background-color: burlywood; text-align: center;"> <!--style solament per la caixa header-->
+        <h1>Posicionament caixes: positionblock</h1>
+    </header>
+    <main>
+        <div class="caixa caixa1">Caixa 1</div>
+        <div class="caixa caixa2">Caixa 2</div>
+        <div class="caixa caixa3">Caixa 3</div>
+        <div class="caixa caixa4">
+            Caixa 4
+        <div class="minicaixa1">Mini caixa</div>
+        </div>
+
+    </main>
+
+    <footer style="background-color: aquamarine; text-align: center;">Desenvolupat per David</footer>
+</body>
+</html>
