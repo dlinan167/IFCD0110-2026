@@ -1,3 +1,4 @@
 Primera línea de document nou
 Nova segona línea modificada
 Tercera línea nova
+Cuarta línea (commit en VisualStudio)
