@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Example d'ús del Grid (Taula)</title>
+
+    <style>
+        /* "Header" i "Footer" amb mateix format (sense repetir codi) */
+        header, footer{
+            text-align: center;
+            background-color: black;
+            color: wheat;
+        }
+        /*Declarar etiquetes (Exp: "headerG")*/
+        header{
+            grid-area: headerG;
+        }
+        main{
+            grid-area: mainG; 
+            background-color: green;
+            color: wheat;
+            text-align: center;
+        }
+        aside{
+            grid-area: asideG; 
+            background-color: darkslateblue;
+            color: wheat;
+            text-align: center;
+        }
+        footer{grid-area: footerG;
+        }
+        /*Declarar etiquetes */
+
+        .gridContenidor{
+            display: grid;
+            /*Medida de columnes (4 cel·les / divisions en vertical)*/
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /*Medida de files*/
+            grid-template-rows: 1fr 4fr 3fr 1fr 1fr 1fr;
+            
+            /*grid en areas*/
+            grid-template-areas: 
+            "headerG headerG headerG headerG" /*Primera fila*/
+            "asideG   mainG    mainG   mainG"
+            "asideG   mainG    mainG   mainG"
+            "asideG   mainG    mainG   mainG"
+            "asideG   mainG    mainG   mainG"
+            "footerG footerG footerG footerG";
+
+        }
+
+    </style>
+
+
+</head>
+<body class="gridContenidor"> <!--display grid en contenidor (body)-->
+
+    <header>
+        <h1>Example d'ús de display grid (Taula de pagina)</h1>
+    </header>
+    <main>
+        <h1>MAIN</h1>
+
+    </main>
+    <aside> <h2>ASIDE (OPCIONS DE MENU)</h2> </aside>
+    <footer><h2>Footer</h2></footer>
+
+</body> <!--display grid en contenidor (body)-->
+</html>
