@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>06 DisplayFlex Exemples</title>
+
+    <style>
+        header, footer{
+            text-align: center;
+            background-color: black;
+            color: wheat;
+        }
+        main{
+            height: 1000px;
+            background-color: wheat;
+
+            /* display: flex; "display: flex;" acomoda automàticament els continguts de la etiqueta
+
+            flex-direction: row-reverse;  'row reverse' invirteix la direcció de la fila
+        
+            flex-wrap: wrap; /*Acomoda fent salt de linea cuan els continguts no caben en la mateixa linea
+        
+            justify-content:space-evenly; Fa espai entre els continguts
+
+            align-items: center; centre els elements (altura)*/
+        
+        }
+        .caixa{
+            height: 12%;
+            width: 12%;
+            background-color: black;
+            color: wheat;
+            text-align: center;
+            border: 4px solid purple;
+            margin: 1px;
+            text-shadow: 1px black;
+            font-size: 75%;
+
+            align-content: center; /*Alinea el text al centre (altura)*/
+
+        }
+        .exemple{
+            height: 100px;
+            width: 200px;
+            display: flex;
+            border: solid;
+            background-color: white;
+        }
+        .exampleGroup{
+
+            display: flex;
+            flex-direction: row;
+        }
+        .titolExemple{text-align: center; border: 1px solid black;}
+
+        .vermell{
+            background-color: red
+        }
+        .verd{
+            background-color: green;
+        }
+        .blau{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+    <h1>Example de display Flex (Flexbox)</h1>
+    </header>
+
+    <main>
+        <h2>Example de visualització: display flex</h2>
+        <hr>
+
+        <ul>
+            <li><h2>flex-direction</h2></li>
+
+            <div class="exampleGroup">
+                <div class="titolExemple"> 
+                <h3> row</h3>
+                    <div class="exemple" style="flex-direction: row;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+                
+                <div class="titolExemple"> 
+                    <h3> row reverse</h3>
+                    <div class="exemple" style="flex-direction: row-reverse;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                <h3> row </h3>
+                
+                    <div class="exemple" style="">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                    <h3> row </h3>
+                    <div class="exemple" style="">
+                    
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <li><h2>lallalal</h2></li> <!--Grup d'Exemples Flex-->
+
+                        <div class="exampleGroup">
+                <div class="titolExemple"> 
+                <h3> row</h3>
+                    <div class="exemple" style="flex-direction: row;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+                
+                <div class="titolExemple"> 
+                    <h3> row reverse</h3>
+                    <div class="exemple" style="flex-direction: row-reverse;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                <h3> row </h3>
+                
+                    <div class="exemple" style="">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                    <h3> row </h3>
+                    <div class="exemple" style="">
+                    
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <li><h2>lallalal</h2></li> <!--Grup d'Exemples Flex-->
+
+                        <div class="exampleGroup">
+                <div class="titolExemple"> 
+                <h3> row</h3>
+                    <div class="exemple" style="flex-direction: row;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+                
+                <div class="titolExemple"> 
+                    <h3> row reverse</h3>
+                    <div class="exemple" style="flex-direction: row-reverse;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                <h3> row </h3>
+                
+                    <div class="exemple" style="">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                    <h3> row </h3>
+                    <div class="exemple" style="">
+                    
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <li><h2>lallalal</h2></li> <!--Grup d'Exemples Flex-->
+
+                        <div class="exampleGroup">
+                <div class="titolExemple"> 
+                <h3> row</h3>
+                    <div class="exemple" style="flex-direction: row;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+                
+                <div class="titolExemple"> 
+                    <h3> row reverse</h3>
+                    <div class="exemple" style="flex-direction: row-reverse;">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                <h3> row </h3>
+                
+                    <div class="exemple" style="">
+                        
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+
+                <div class="titolExemple"> 
+                    <h3> row </h3>
+                    <div class="exemple" style="">
+                    
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </ul>
+        
+        
+        <div class="caixa vermell">1</div>
+        <div class="caixa verd">2</div>
+        <div class="caixa blau">3</div>
+        <div class="caixa">4</div>
+
+    </main>
+    
+    
+    <footer><h2>Footer</h2></footer>
+</body>
+</html>

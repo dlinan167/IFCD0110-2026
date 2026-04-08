@@ -15,12 +15,14 @@
         /*Declarar etiquetes (Exp: "headerG")*/
         header{
             grid-area: headerG;
+            border: 3px solid brown;
         }
         main{
             grid-area: mainG; 
             background-color: green;
             color: wheat;
             text-align: center;
+            border: 3px solid brown;
         }
     nav{
             grid-area:navG; 
@@ -28,7 +30,7 @@
             color: wheat;
             text-align: center;
         }
-        footer{grid-area: footerG;}
+        footer{grid-area: footerG; border: 3px solid brown;}
 
         article{
             grid-area: articleG;
@@ -36,6 +38,8 @@
             color: wheat;
             border: 3px solid black;
             margin: 2%;
+            padding: 1%;
+            text-align: left;
         }
 
         section{
@@ -44,7 +48,8 @@
             color: wheat;
             text-align: center;
             border: 3px solid black;
-            margin: 2%;
+            margin: 1%;
+            padding: 1%;
         }
         /*Declarar etiquetes */
 
@@ -66,6 +71,12 @@
 
         }
 
+        .imatgeArticle{
+            height: 25%; width: 25%; padding: 1%;
+            float: left;
+            position:relative;
+
+        }
     </style>
 
 
@@ -79,19 +90,22 @@
         <h1>MAIN</h1>
         
         <article> <!--Article 1-->
-            <h2>Article 1</h2>
-            <section><h3>Section 1</h3>
-                E indústria dels batallants <hr> diverses vegades los. Tracta de certs virtuosos actes que. Fama del qual en lo món molt triümfava. E li plau que los set. Per divinal inspiració propasà de retraure's. Joventut sua havia fetes seguint les. Marc Antoni e de molts. Cavaller; la sisena és dels actes e costumes que. Gran saviesa e alt enginy havia servit per llong temps. Santa Magdalena e de Sant. Debilitat de la nostra memòria sotsmetent fàcilment a oblivió no. Lo comte Guillem de Varoic Aquest era un cavaller. Comte en edat avançada de. Segons reciten les següents històries Comença la primera part del. Fet ab tal artifici que es departia pel. En l'exercici militar perquè en les. Semblants paraules: Mos fills e fidelíssims servidors. De passar a la casa santa de Jerusalem com tot. Observaven aquelll segons la fi per què.</section>
+            <h2>Article 1 (Títol)</h2>
+            <section><h3>Section 1</h3> <hr>
+                <img src="https://www.investopedia.com/thmb/_deXeEfrR5-J08LJV_Koif06X1M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-2152528658-14ea765b763d42d185c639b7a9d637c2.jpg" alt="" class="imatgeArticle">
+
+                E indústria dels batallants diverses vegades los. Tracta de certs virtuosos actes que. Fama del qual en lo món molt triümfava. E li plau que los set. Per divinal inspiració propasà de retraure's. Joventut sua havia fetes seguint les. Marc Antoni e de molts. Cavaller; la sisena és dels actes e costumes que. Gran saviesa e alt enginy havia servit per llong temps. Santa Magdalena e de Sant. Debilitat de la nostra memòria sotsmetent fàcilment a oblivió no. Lo comte Guillem de Varoic Aquest era un cavaller. Comte en edat avançada de. Segons reciten les següents històries Comença la primera part del. Fet ab tal artifici que es departia pel. En l'exercici militar perquè en les. Semblants paraules: Mos fills e fidelíssims servidors. De passar a la casa santa de Jerusalem com tot. Observaven aquelll segons la fi per què.</section>
             <h4>
-                Article footer
-            </h4>
+                Article footer: Aquest era un cavaller. Comte en edat avançada de. Segons reciten les següents històries Comença la primera part del. Fet ab tal artifici que es departia pel. En l'exercici militar perquè en les.
+            </h4><hr>
             </article>
    
 
         <article> <!--Article 2-->
-            <h2>Article 2</h2>
-            <section><h3>Section 2</h3></section>
-            
+            <h2>Article 2 (Títol)</h2>
+            <section><h3>Section 2</h3><hr></section>
+            <section><h3>Section 3</h3></section>
+
             <h4>
                 Article footer
             </h4>
