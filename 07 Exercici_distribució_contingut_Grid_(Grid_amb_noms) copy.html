@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Example d'ús del Grid (Taula)</title>
+
+    <style>
+        /* "Header" i "Footer" amb mateix format (sense repetir codi) */
+        
+        header, footer{
+            text-align: center;
+        }
+        /*Declarar etiquetes (Exp: "headerG")*/
+        header{
+            grid-area: headerG;
+            background-color: gray;
+            border: 8px solid;
+        }
+        main{
+            height: 650px;
+            grid-area: mainG; 
+            background-color: maroon;
+            text-align: center;
+            border: 8px solid;
+        }
+
+         aside{
+            grid-area:asideG; 
+            background-color: green;
+            text-align: center;
+            border: 8px solid;
+        }
+        footer{grid-area: footerG;
+            background-color: blue;
+            border: 8px solid;
+        }
+
+        section{
+            grid-area: sectionG;
+            background-color: blue;
+            color: wheat;
+            text-align: center;
+            border: 3px solid black;
+            margin: 2%;
+        }
+        .menu{
+            grid-area: menuG;
+            background-color: goldenrod;
+            border: 5px solid;
+            text-align: center;
+
+        }
+
+        /*Declarar etiquetes */
+
+        .gridContenidor{
+            display: grid;
+
+            /*Medida de columnes (4 cel·les / divisions en vertical)*/
+            grid-template-columns: repeat(4, 1fr);
+            /*Medida de files*/
+            grid-template-rows: repeat(6, 1fr);
+            
+            /*grid en areas*/
+            grid-template-areas: 
+            "headerG headerG headerG headerG" /*Primera fila*/
+            "menuG   mainG    mainG  asideG"
+            "menuG   mainG    mainG  asideG"
+            "menuG   mainG    mainG  asideG"
+            "menuG   mainG    mainG  asideG"
+            "footerG footerG footerG footerG";
+
+        }
+
+        /*grid Alternatiu*/
+        .gridArticle{
+            display: grid;
+            /*Medida de columnes*/
+
+        }
+
+
+        
+    </style>
+</head>
+
+
+<body class="gridContenidor"> <!--display grid en contenidor (body)-->
+
+    <header>
+        <h1>Capçalera</h1>
+    </header>
+
+    <div class="menu">
+        <h2>MENÚ</h2>
+    </div>
+
+    <main class="gridArticle">
+        <h1>Principal</h1>
+        <!--Article amb grid-->
+        
+        
+            
+           
+    </main>
+    
+    <aside> <h2>ASIDE</h2></aside>
+    <footer><h2>Peu</h2></footer>
+
+</body> <!--display grid en contenidor (body)-->
+</html>

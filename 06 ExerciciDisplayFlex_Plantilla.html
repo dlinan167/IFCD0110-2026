@@ -11,8 +11,9 @@
             color: wheat;
         }
         main{
-            height: 1000px;
+
             background-color: wheat;
+            border: 2px solid;
 
             /* display: flex; "display: flex;" acomoda automàticament els continguts de la etiqueta
 
@@ -26,32 +27,38 @@
         
         }
         .caixa{
-            height: 12%;
-            width: 12%;
+            height: 15%;
+            width: 16%;
             background-color: black;
             color: wheat;
             text-align: center;
             border: 4px solid purple;
             margin: 1px;
             text-shadow: 1px black;
-            font-size: 75%;
+
 
             align-content: center; /*Alinea el text al centre (altura)*/
-
+        }
+        
+        .caixaStretch{
+            height: auto;
         }
         .exemple{
-            height: 100px;
+            height: 120px;
             width: 200px;
             display: flex;
             border: solid;
             background-color: white;
+            flex-wrap: wrap;
         }
         .exampleGroup{
 
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
+            
         }
-        .titolExemple{text-align: center; border: 1px solid black;}
+        .titolExemple{text-align: center; border: 1px solid black; margin-right: 0.5%;}
 
         .vermell{
             background-color: red
@@ -76,7 +83,7 @@
         <hr>
 
         <ul>
-            <li><h2>flex-direction</h2></li>
+            <li><h2>flex-direction</h2></li>  <!--Grup d'Exemples Flex 1-->
 
             <div class="exampleGroup">
                 <div class="titolExemple"> 
@@ -104,9 +111,9 @@
                 </div>
 
                 <div class="titolExemple"> 
-                <h3> row </h3>
+                <h3> column </h3>
                 
-                    <div class="exemple" style="">
+                    <div class="exemple" style="flex-direction: column;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -117,8 +124,8 @@
                 </div>
 
                 <div class="titolExemple"> 
-                    <h3> row </h3>
-                    <div class="exemple" style="">
+                    <h3> column-reverse </h3>
+                    <div class="exemple" style="flex-direction: column-reverse;">
                     
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -130,12 +137,12 @@
             </div>
 
 
-            <li><h2>lallalal</h2></li> <!--Grup d'Exemples Flex-->
+            <li><h2>justify-content</h2></li> <!--Grup d'Exemples Flex 2-->
 
                         <div class="exampleGroup">
                 <div class="titolExemple"> 
-                <h3> row</h3>
-                    <div class="exemple" style="flex-direction: row;">
+                <h3> flex-start</h3>
+                    <div class="exemple" style="justify-content: flex-start;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -146,8 +153,8 @@
                 </div>
                 
                 <div class="titolExemple"> 
-                    <h3> row reverse</h3>
-                    <div class="exemple" style="flex-direction: row-reverse;">
+                    <h3> flex-end</h3>
+                    <div class="exemple" style="justify-content: flex-end;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -158,9 +165,9 @@
                 </div>
 
                 <div class="titolExemple"> 
-                <h3> row </h3>
+                <h3> center </h3>
                 
-                    <div class="exemple" style="">
+                    <div class="exemple" style="justify-content: center;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -171,8 +178,19 @@
                 </div>
 
                 <div class="titolExemple"> 
-                    <h3> row </h3>
-                    <div class="exemple" style="">
+                    <h3> space-between </h3>
+                    <div class="exemple" style="justify-content: space-between;">
+                    
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+                <div class="titolExemple"> 
+                    <h3> space-around </h3>
+                    <div class="exemple" style="justify-content: space-around;">
                     
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -183,12 +201,12 @@
                 </div>
             </div>
             
-            <li><h2>lallalal</h2></li> <!--Grup d'Exemples Flex-->
+            <li><h2>align-items</h2></li> <!--Grup d'Exemples Flex 3-->
 
                         <div class="exampleGroup">
                 <div class="titolExemple"> 
-                <h3> row</h3>
-                    <div class="exemple" style="flex-direction: row;">
+                <h3> flex-start </h3>
+                    <div class="exemple" style="align-items: flex-start;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -199,8 +217,8 @@
                 </div>
                 
                 <div class="titolExemple"> 
-                    <h3> row reverse</h3>
-                    <div class="exemple" style="flex-direction: row-reverse;">
+                    <h3> flex-end</h3>
+                    <div class="exemple" style="align-items: flex-end;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
@@ -211,10 +229,15 @@
                 </div>
 
                 <div class="titolExemple"> 
-                <h3> row </h3>
+                <h3> center </h3>
                 
-                    <div class="exemple" style="">
+                    <div class="exemple" style="align-items: center;">
                         
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                                            
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
                         <div class="caixa blau">3</div>
@@ -224,39 +247,62 @@
                 </div>
 
                 <div class="titolExemple"> 
-                    <h3> row </h3>
-                    <div class="exemple" style="">
+                    <h3> baseline </h3>
+                    <div class="exemple" style="align-items: baseline;">
                     
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
-                        <div class="caixa blau">3</div>
+                        <div class="caixa blau" style="height: 50px;">3</div>
                         <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+                <div class="titolExemple"> 
+                    <h3> stretch </h3>
+                    <div class="exemple" style="align-items: stretch;">
+                    
+                        <div class="caixa caixaStretch vermell">1</div>
+                        <div class="caixa caixaStretch verd">2</div>
+                        <div class="caixa caixaStretch blau">3</div>
+                        <div class="caixa caixaStretch">4</div>
                         
                     </div>
                 </div>
             </div>
 
-            <li><h2>lallalal</h2></li> <!--Grup d'Exemples Flex-->
+            <li><h2>align-content</h2></li> <!--Grup d'Exemples Flex 4-->
 
                         <div class="exampleGroup">
                 <div class="titolExemple"> 
-                <h3> row</h3>
-                    <div class="exemple" style="flex-direction: row;">
+                <h3> flex-start</h3>
+                    <div class="exemple" style="align-content: flex-start;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
                         <div class="caixa blau">3</div>
                         <div class="caixa">4</div>
                         
+
+                        <div class="caixa verd">2</div>
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+
                     </div>
                 </div>
                 
                 <div class="titolExemple"> 
-                    <h3> row reverse</h3>
-                    <div class="exemple" style="flex-direction: row-reverse;">
+                    <h3> flex-end</h3>
+                    <div class="exemple" style="align-content: flex-end;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+
+                        
+                        <div class="caixa verd">2</div>
+                        <div class="caixa vermell">1</div>
                         <div class="caixa blau">3</div>
                         <div class="caixa">4</div>
                         
@@ -264,12 +310,18 @@
                 </div>
 
                 <div class="titolExemple"> 
-                <h3> row </h3>
+                <h3> center </h3>
                 
-                    <div class="exemple" style="">
+                    <div class="exemple" style="align-content: center;">
                         
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+
+                        
+                        <div class="caixa verd">2</div>
+                        <div class="caixa vermell">1</div>
                         <div class="caixa blau">3</div>
                         <div class="caixa">4</div>
                         
@@ -277,11 +329,33 @@
                 </div>
 
                 <div class="titolExemple"> 
-                    <h3> row </h3>
-                    <div class="exemple" style="">
+                    <h3> space-between </h3>
+                    <div class="exemple" style="align-content: space-between;">
                     
                         <div class="caixa vermell">1</div>
                         <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                        <div class="caixa verd">2</div>
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+                        
+                    </div>
+                </div>
+                <div class="titolExemple"> 
+                    <h3> space-around </h3>
+                    <div class="exemple" style="align-content: space-around;">
+                    
+                        <div class="caixa vermell">1</div>
+                        <div class="caixa verd">2</div>
+                        <div class="caixa blau">3</div>
+                        <div class="caixa">4</div>
+
+
+                        <div class="caixa verd">2</div>
+                        <div class="caixa vermell">1</div>
                         <div class="caixa blau">3</div>
                         <div class="caixa">4</div>
                         
@@ -292,10 +366,10 @@
         </ul>
         
         
-        <div class="caixa vermell">1</div>
+        <!-- <div class="caixa vermell">1</div>
         <div class="caixa verd">2</div>
         <div class="caixa blau">3</div>
-        <div class="caixa">4</div>
+        <div class="caixa">4</div> -->
 
     </main>
     
