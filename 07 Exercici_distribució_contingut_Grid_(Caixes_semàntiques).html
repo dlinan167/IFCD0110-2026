@@ -24,20 +24,21 @@
             background-color: maroon;
             text-align: center;
             border: 8px solid;
+            
+            width: 50%;
 
         }
 
-         aside{
+        aside{
             grid-area:asideG; 
             background-color: green;
             text-align: center;
             border: 8px solid;
-            
-            /*style concret (sense CSS)*/
 
-            float: right;
-            width: 23%;
+            width: 25%;
         }
+
+        
         footer{grid-area: footerG;
             background-color: blue;
             border: 8px solid;
@@ -57,13 +58,11 @@
             background-color: goldenrod;
             border: 5px solid;
             text-align: center;
-
-            /*style concret (sense CSS)*/
-
-            float: left;
-            width: 23%;
+            
+            width: 25%;
 
         }
+
 
         /*Declarar etiquetes */
 
@@ -89,7 +88,11 @@
         }
 
 
-
+        .div-CenterFlex{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
         
     </style>
 </head>
@@ -100,39 +103,42 @@
     <header>
         <h1>Capçalera</h1>
     </header>
-
-    <div class="menu">
-        <h2>MENÚ</h2>
-    </div>
-
-    <aside> <h2>ASIDE</h2></aside>
-
-    <main>
-        <h1>Principal</h1>
-        <!--Article amb grid-->
-
-        <div class="gridArticle">
-            <section> <!--Section 1-->
-                <h2>Secció 1</h2>
-                <article><h3>Article 1</h3></article>
-                <article><h3>Article 2</h3></article>
-                <h4>
-                    
-                </h4>
-            </section>
-            
-            <section> <!--Section 2-->
-                <h2>Secció 2</h2>
-                <article><h3>Article 1</h3></article>
-                <article><h3>Article 2</h3></article>
-                <h4>
-                    
-                </h4>
-            </section>
+    
+    <div class="div-CenterFlex">
+    
+        
+        <div class="menu">
+            <h2>MENÚ</h2>
         </div>
+        
+
+        
+        <main>
+            <h1>Principal</h1>
+            <!--Article amb grid-->
             
-           
-    </main>
+            <div class="gridArticle">
+                <section> <!--Section 1-->
+                    <h2>Secció 1</h2>
+                    <article><h3>Article 1</h3></article>
+                    <article><h3>Article 2</h3></article>
+                    <h4>
+                        
+                    </h4>
+                </section>
+                
+                <section> <!--Section 2-->
+                    <h2>Secció 2</h2>
+                    <article><h3>Article 1</h3></article>
+                <article><h3>Article 2</h3></article>
+                <h4>
+                    
+                </h4>
+            </section>
+         </div>
+        </main>
+        <aside> <h2>ASIDE</h2></aside>     
+    </div>
     
 
     <footer><h2>Peu</h2></footer>

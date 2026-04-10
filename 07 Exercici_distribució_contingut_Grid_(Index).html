@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Example d'ús del Grid (Taula)</title>
+    <link rel="stylesheet" href="./07 CSS_Exercici_distribució_contingut_Grid.css"/>
+
+    <style>
+
+
+        /*sense CSS (Espefific de Index)*/
+        h1, h2, h3{
+
+            font-size: smaller;
+        }
+        b, h4{
+            font-size: larger;
+        }
+        a{color: inherit;} /* <-- Evita que el color de les lletres/mini-pagina es canvi amb l'enllaç*/
+        
+    </style>
+    
+</head>
+
+
+<body> <!--                -->
+
+    <div class="div-Grey"></div>
+    <div class="div-Grey" style="float: left; width: 2%;"></div>
+    <div class="div-Grey" style="float: right; width: 2%;"></div>
+
+
+
+    <header class="div-IndexPageHeader">
+        <h4><b>07 Exercici distribució contingut Grid (Index)</b></h>
+    </header>
+
+
+    <div style="display: flex; justify-content: space-around; flex-direction: row;">
+
+        <div class="div-Index"> <b>Utilitzant caixes semàntiques</b> <hr> <!--Distribució 1-->
+            <a href="./07 Exercici_distribució_contingut_Grid_(Caixes_semàntiques).html"> <!--Enllaç a la pagina-->
+                <!-- -div amb mini pagina START- -->
+            <div>
+
+    <header>
+        <h1>Capçalera</h1>
+    </header>
+    
+    <div class="div-CenterFlex">
+    
+        
+        <div class="menu">
+            <h2>MENÚ</h2>
+        </div>
+        
+
+        
+        <main>
+            <h1>Principal</h1>
+            <!--Article amb grid-->
+            
+            <div class="gridArticle">
+                <section> <!--Section 1-->
+                    <h2>Secció 1</h2>
+                    <article><h3>Article 1</h3></article>
+                    <article><h3>Article 2</h3></article>
+                    <h4>
+                        
+                    </h4>
+                </section>
+                
+                <section> <!--Section 2-->
+                    <h2>Secció 2</h2>
+                    <article><h3>Article 1</h3></article>
+                <article><h3>Article 2</h3></article>
+                <h4>
+                    
+                </h4>
+            </section>
+         </div>
+        </main>
+        <aside> <h2>ASIDE</h2></aside>     
+    </div>
+    
+
+    <footer><h2>Peu</h2></footer>
+            </div>
+                <!-- -div amb mini pagina END- -->
+        </a>
+
+        </div>
+        <div class="div-Index"><b> Utilitzant caixes divs </b><hr> <!--Distribució 2-->
+            <a href="./07 Exercici_distribució_contingut_Grid_(Caixes_div).html"> <!--Enllaç a la pagina-->
+                
+                <!-- -div amb mini pagina START- -->
+            <div>
+                <div class="div-header">
+                    <h1>Capçalera</h1>
+                </div>
+
+
+    <div class="div-CenterFlex">
+
+        <div class="menu">
+            <h2>MENÚ</h2>
+        </div>
+        
+        <div class="div-main">
+            <h1>Principal</h1>
+            <!--Article amb grid-->
+            
+            <div class="gridArticle">
+                <div class="div-section"> <!--Section 1-->
+                    <h2>Secció 1</h2>
+                    <div class="div-article"><h3>Article 1</h3></div>
+                    <div class="div-article"><h3>Article 2</h3></div>
+                    <h4>
+                        
+                    </h4>
+                </div>
+                
+                <div class="div-section"> <!--Section 2-->
+                    <h2>Secció 2</h2>
+                    <div class="div-article"><h3>Article 1</h3></div>
+                    <div class="div-article"><h3>Article 2</h3></div>
+                    <h4>
+                        
+                    </h4>
+                </div>
+            </div>       
+        </div>
+        <div class="div-aside"> <h2>ASIDE</h2></div>
+    </div>
+    <div class="div-footer"><h2>Peu</h2></div>
+            </div>
+                <!-- -div amb mini pagina END- -->
+            </a>
+
+        </div>
+        <div class="div-Index"><b> Distribució de grid amb atributs resumits </b><hr> <!--Distribució 3-->
+            <a href="./07 Exercici_distribució_contingut_Grid_(Grid_atributs_resumits).html"> <!--Enllaç a la pagina-->
+
+                <!-- -div amb mini pagina START- -->
+              <div class="gridContenidor"> 
+
+                <header>
+                    <h1>Capçalera</h1>
+                </header>
+            
+    <div class="menu">
+        <h2>MENÚ</h2>
+    </div>
+
+    <main class="gridArticle">
+        <h1>Principal</h1>
+        <!--Article amb grid-->
+        
+        
+           
+    </main>
+    
+    <aside> <h2>ASIDE</h2></aside>
+    <footer><h2>Peu</h2></footer>
+                </div>
+                <!-- -div amb mini pagina END- -->
+            </a>
+        </div>
+
+        <div class="div-Index"><b> Distribució de grid assignant noms de àrees </b><hr> <!--Distribució 4-->
+            <a href="./07 Exercici_distribució_contingut_Grid_(Grid_amb_noms).html"> <!--Enllaç a la pagina-->
+
+                <!-- -div amb mini pagina START- -->
+        <div class="gridContenidorNOMS">
+                <header>
+        <h1>Capçalera</h1>
+    </header>
+
+    <div class="menu">
+        <h2>MENÚ</h2>
+    </div>
+
+    <main class="gridArticle">
+        <h1>Principal</h1>
+        <!--Article amb grid-->
+        
+        
+            
+           
+    </main>
+    
+    <aside> <h2>ASIDE</h2></aside>
+    <footer><h2>Peu</h2></footer>
+
+        </div>
+                 <!-- -div amb mini pagina END- -->
+        </a>
+        </div>
+
+    </div>
+
+
+    <div class="div-Grey"></div>
+
+
+</body> <!--display grid en contenidor (body)-->
+</html>
