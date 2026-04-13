@@ -1,0 +1,43 @@
+.capçalera{
+    background-color: black;
+    color: wheat;
+    font-size: xx-large;
+    text-align: center;
+
+}
+.peu{
+    background-color: black;
+    color: wheat;
+    font-size: x-large;
+    text-align: center;
+
+}
+
+/* Colors dels enllaços */
+/* >>> estil dels links y dels seus estats START >>> (Pseudo classes) */
+a:link{
+    color: red;
+    text-decoration: none;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    background-color: yellowgreen;
+    text-decoration: underline;
+}
+a:active{
+    background-color: orange;
+}
+/* <<< estil dels links y dels seus estats END <<< */
+
+
+/* >>> Treure els punts de la llista >>> */
+ul{
+    list-style-type: none;
+    padding: 0%;
+    justify-content: space-around;
+    display: flex;
+    background-color: wheat;
+
+}
