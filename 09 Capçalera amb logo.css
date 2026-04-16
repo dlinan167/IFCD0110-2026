@@ -55,3 +55,20 @@ ul{
     }
 
 }
+
+/* >>> Borders i format de taula >>> */
+
+
+table, tr, td{
+border: 5px solid;
+font-size: x-large;
+padding: 0.5%;
+/* text-align: center; */
+border-collapse: collapse;
+
+
+th{
+    background-color: wheat;
+}
+}
+/**/
