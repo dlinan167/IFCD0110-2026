@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="./09 Capçalera amb logo.css"/> <!-- Enllaç a arxiu d'estils-->
+
+    <title>Capçalera amb logo i menú</title>
+    <link rel="icon" type="image/x-icon" href="./img/imatge_pera.png"> <!-- <<< Icono per la pestanya <<<-->
+    <style>
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1%;
+        }
+
+        table, tr, td{
+            border: 0px solid;
+            font-size: x-large;
+            padding: 0.5%;
+            text-align: center;
+        }
+        table{
+            border: 1px solid;
+        }
+        /* table, tr, td{
+            border: 5px solid;
+            font-size: x-large;
+            padding: 0.5%;
+            text-align: center;
+        } */
+
+        /* Cambia el color por hijo(child) de tr de las filas pares(even)/ effecto rayas de zebra */
+        td{
+            height: 50px;
+            width: 50px;
+        }
+  
+        tr:nth-child(odd), td:nth-child(odd){
+            background-color: black;
+            color: white;
+        }
+            tr:nth-child(2), td:nth-child(2){
+            background-color: white;
+            color: black;
+        }
+
+
+
+        /* tr:nth-child(2){
+            background-color: white;
+            color: black;
+        } */
+
+        /* .table > tbody > tr:nth-child(2n) > td:nth-child(2n),
+.table > tbody > tr:nth-child(2n + 1) > td:nth-child(2n + 1){
+background:#000;
+color: #FFFFFF;
+font-weight: bold;
+}
+  */
+
+        /* Lo mismo pero para las columnas pares*/
+        /* td:nth-child(even){
+            background-color: #D6EEEE;
+        } */
+
+        /* Al pasar el rató per sobre la fila cambia de color */
+        td:hover{
+            background-color: #96D4D4;
+        }
+        /* AJEDREZ */
+        .PEDRO{
+            background-color: white;
+            color: black;
+        }
+        .PACO{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <img src="https://stickerize.in/wp-content/uploads/2025/04/linuxpenguin.png" width="10%"/>
+
+        <div> <h2> PRÀCTICA TABLE</h2> </div>
+
+        <nav>
+
+        </nav>
+    </header>
+    
+   
+    
+    <main>
+
+
+
+         <!-- Taula START >>> -->
+         <table style="width: 30%;">
+
+            <th colspan="8"> <h2 class="PEDRO"> PEDRO </h2> </th>
+
+            <tr>
+                <td>Torre</td>
+                <td>Caballo</td>
+                <td>Alfil</td>
+                <td>Rey</td>
+                <td>Reina</td>
+                <td>Alfil</td>
+                <td>Caballo</td>
+                <td>Torre</td>
+            </tr>
+            <tr>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+                <td>Peón</td>
+
+            </tr>
+            <tr>
+                <td>Torre</td>
+                <td>Caballo</td>
+                <td>Alfil</td>
+                <td>Rey</td>
+                <td>Reina</td>
+                <td>Alfil</td>
+                <td>Caballo</td>
+                <td>Torre</td>
+            </tr>
+               <th colspan="8"> <h1 class="PACO"> PACO </h1></th>
+         </table>
+       
+          <!-- Taula END <<< -->
+
+
+<footer>Footer David</footer>
+</body>
+</html>
