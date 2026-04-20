@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="./09 Capçalera amb logo.css"/> <!-- Enllaç a arxiu d'estils-->
+
+    <title>16 Multimedia</title>
+    <link rel="icon" type="image/x-icon" href="./img/imatge_pera.png"> <!-- <<< Icono per la pestanya <<<-->
+    <style>
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <img src="https://stickerize.in/wp-content/uploads/2025/04/linuxpenguin.png" width="10%"/>
+
+        <div> <h2> PRÀCTICA INCORPORACIÓ MULTIMEDIA</h2> </div>
+
+        <nav>
+            <ul>
+                <li> <a href="./09 home.html"> Home </a></li>
+                <li> <a href="./09 quiSom.html"> Qui som? </a> </li>
+                <li> <a href="./09 intranet.html"> Intranet </a> </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <main>
+
+        <h1> vídeo multimedia local:</h1>
+        <h2>(Sense "controls", amb 'autoplay' i 'loop')</h2>
+        <video src="./video/video_playa.mp4" type="video/mp4" autoplay loop width="55%"> El teu navegador no soporta aquest format </video>
+
+        <!-- <<< L'interior de la etiqueta multimedia 'video' s'utilitza com a missatge cuan no es pot carregar -->
+
+        <h1> vídeo multimedia local:</h1>
+        <h2>(Amb "controls")</h2>
+        <video src="./video/video_playa.mp4" type="video/mp4" controls width="55%" preload="auto"> El teu navegador no soporta aquest format </video>
+
+        <!-- <<< 'controls' es dona las opcions de reproucció del vídeo-->
+
+
+        
+        <h1> Audio multimedia local:</h1>
+        <h2>(Amb "controls")</h2>
+        <audio src="./audio/u_360ksmwme0-pajaros-mananeros-223790.mp3" controls style="margin: 1%;"></audio>
+
+    </main>
+    
+
+
+    <footer>
+        Desenvolupat per David
+    </footer>
+    
+</body>
+
+</html>

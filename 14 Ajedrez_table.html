@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8"/>
 
-    <link rel="stylesheet" href="./09 Capçalera amb logo.css"/> <!-- Enllaç a arxiu d'estils-->
+    <link rel="stylesheet" href="./09 Capçalera amb logo.css"/> <!--Enllaç a arxiu d'estils-->
 
-    <title>Capçalera amb logo i menú</title>
+    <title>14 AJEDREZ_table</title>
     <link rel="icon" type="image/x-icon" href="./img/imatge_pera.png"> <!-- <<< Icono per la pestanya <<<-->
     <style>
         main{
@@ -31,35 +31,39 @@
             text-align: center;
         } */
 
-        /* Cambia el color por hijo(child) de tr de las filas pares(even)/ effecto rayas de zebra */
+        /* Cambia el color por hijo(child) de tr de las filas pares(even) / effecto rayas de zebra */
         td{
             height: 50px;
             width: 50px;
         }
   
-        tr:nth-child(odd), td:nth-child(odd){
+
+        /* Files negres(pars) amb celes negres en (Impars) */
+        tr:nth-child(odd), td:nth-child(even){
             background-color: black;
             color: white;
+
+            /* Celes pars blanques */
+            td:nth-child(even){
+                background-color: white;
+                color: black;
+            } 
         }
-            tr:nth-child(2), td:nth-child(2){
+        /*  */
+        
+
+        /* Otro metodo */
+        /* tr:nth-child(odd), td:nth-child(even){
+            background-color: black;
+            color: white;   
+        }
+        
+        tr:nth-child(odd) td:nth-child(even){
             background-color: white;
             color: black;
-        }
+        }  */
 
 
-
-        /* tr:nth-child(2){
-            background-color: white;
-            color: black;
-        } */
-
-        /* .table > tbody > tr:nth-child(2n) > td:nth-child(2n),
-.table > tbody > tr:nth-child(2n + 1) > td:nth-child(2n + 1){
-background:#000;
-color: #FFFFFF;
-font-weight: bold;
-}
-  */
 
         /* Lo mismo pero para las columnas pares*/
         /* td:nth-child(even){
@@ -88,7 +92,7 @@ font-weight: bold;
 
         <img src="https://stickerize.in/wp-content/uploads/2025/04/linuxpenguin.png" width="10%"/>
 
-        <div> <h2> PRÀCTICA TABLE</h2> </div>
+        <div> <h2> PRÀCTICA CHESS TABLE</h2> </div>
 
         <nav>
 
@@ -102,7 +106,7 @@ font-weight: bold;
 
 
          <!-- Taula START >>> -->
-         <table style="width: 30%;">
+         <table style="width: 32%;">
 
             <th colspan="8"> <h2 class="PEDRO"> PEDRO </h2> </th>
 
