@@ -19,6 +19,30 @@ nav{
     width: 15%;
 }
 
+/* IMPORTANT */
+      body {
+        margin: 0; /* <-- Sense el borde blanc per defecte en la pagina */
+      }
+      li:hover{
+        background-color: aqua;
+        color: blue;
+    }
+
+    ul{
+
+        list-style-type: none;
+        padding: 0%;
+        text-align: center;
+
+            li{
+                background-color: brown;
+                border-radius: 5%;
+                margin: 1%;
+                color: wheat;
+            }
+        
+    }
+
 /* Colors dels enllaços */
 /* >>> estil dels links y dels seus estats START >>> (Pseudo classes) */
 a:link{
@@ -40,7 +64,7 @@ a:active{
 
 /* >>> Treure els punts de la llista >>> */
 /* LLista en columna */
-ul{
+/* ul{
     list-style-type: none;
     padding: 0%;
 
@@ -54,10 +78,12 @@ ul{
         margin-right: 20%;
     }
 
-}
+} */
+    
+
+
 
 /* >>> Borders i format de taula >>> */
-
 
 table, tr, td{
 border: 5px solid;

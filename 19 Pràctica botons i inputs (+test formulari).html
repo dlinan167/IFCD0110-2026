@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="./09 Capçalera amb logo.css"/> <!-- Enllaç a arxiu d'estils-->
+
+    <title>18 canvas</title>
+    <link rel="icon" type="image/x-icon" href="./img/imatge_pera.png"> <!-- <<< Icono per la pestanya <<<-->
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid;
+
+        
+        width: 100%;
+        font-size: large;
+        /* text-align: center; */
+        padding: 0.5%;
+      }
+
+      aside {
+        
+        background-color: burlywood;
+        width: 15%;
+      }
+      .div-Contenidor {
+        display: flex;
+      }
+      body {
+        margin: 0; /* <-- Sense el borde blanc per defecte en la pagina */
+      }
+      li:hover{
+        background-color: aqua;
+        color: blue;
+    }
+    li{
+        background-color: brown;
+        border-radius: 5%;
+         margin: 1%;
+        color: wheat;
+        
+    }
+    ul{
+
+        list-style-type: none;
+        padding: 0%;
+        text-align: center;
+        
+    }
+    button{
+        
+        background-color: darkcyan;
+        border-radius: 5px;
+        padding: 2%;
+    }
+    form{
+        border: 5px solid darkolivegreen;
+        padding: 1%;
+        background-color: antiquewhite;
+    }
+
+    a{text-decoration: none;}
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <img src="https://stickerize.in/wp-content/uploads/2025/04/linuxpenguin.png" width="10%"/>
+
+        <h1> Pràctica botons i inputs </h1>
+
+        <div> </div>
+
+    </header>
+    
+    
+    <div class="div-Contenidor"> 
+
+        <aside>
+            <nav>
+                Menú
+                <ul>
+                    <a href="#" target="_blank"><li>Outlook </li></a>
+                    <a href="#" target="_blank"><li>Google</li></a>
+                    <a href="#" target="_blank"><li>Yahoo</li></a>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main>
+            <button onclick="alert('Bon dia amic meu')"> <!-- <<< Ens obre una finestra d'alerta(missatge) al fer click //-->
+                Fes click!
+            </button>
+
+            <button disabled> boton deshabilitat en un primer moment</button>
+
+
+            <h2>Més button types:</h2>
+            <!-- <<< Formulari START <<< -->
+            <form action="./prova.html">  <!-- <<< Formulari que al enviar(submit) ens portara a la pagina './prova.html', enviant les dades dels inputs -->
+
+                <button type="button"> Botó normal (button)</button>
+                <button type="submit"> Envia formulari (submit)</button>
+                <button type="reset"> Nateja formulari (reset)</button>
+
+                <br><br>
+                <!-- INPUTS FORMULARI >>> -->
+                <!-- Nom: -->
+                <label for="nom">Nom:</label>
+                
+                <input type="text" name="nom" />
+                
+                <!-- Cognom: -->
+                <label for="cognom">Cognom:</label>
+                
+                <input type="text" name="cognom" />
+                <!-- <<< -->
+
+                <!--tipus test (radio)(explusiu) START >>> -->
+                <h2>Radio button</h2>
+                <h3> (Per tipo test): </h3>
+                <hr>
+                <!--Pregunta 1-->
+                <h3>Quina es la teva fruita preferida?</h3>
+
+                <label for="rPomes">Opció 1, Pomes: </label>
+                <input type="radio" id="rPomes" name="fruita"/>
+                <br><br>
+
+                <label for="rPeres">Opció 2, Peres: </label>
+                <input type="radio" id="rPeres" name="fruita"/>
+                <br><br>
+                
+                <label for="rTaronges">Opció 3, Taronges: </label>
+                <input type="radio" id="rTaronges" name="fruita"/>
+                <br><br>
+
+                
+                <!--Pregunta 2--> 
+                <h3>Quin es el teu sexe?</h3>
+                <label for="rMascle">Mascle </label>
+                <input type="radio" id="rMacle" name="sexe" value="Mascle"/>
+
+                <label for="rFemella">Femella </label>
+                <input type="radio" id="rFemella" name="sexe" value="Femella"/>
+
+                <!-- tipus test (radio) END <<< -->
+                
+                <!-- Checkbox (complementari) START >>> -->
+                <h2>Checkbox</h2>
+                <h3>Estils musicals que m'agrades</h3>
+
+                <label for="cReggaeton">Reggaeton</label>
+                <input type="checkbox" id="cReggaeton" name="musica" value="Reggaeton"/>
+                
+                <label for="cRock">Rock</label>
+                <input type="checkbox" id="cRock" name="musica" value="Rock"/>
+                
+                <label for="cSimfònic">Simfònic</label>
+                <input type="checkbox" id="cSimfònic" name="musica" value="Simfònic"/>
+                
+                <!-- Checkbox (complementari) END >>> -->
+                 
+
+
+            </form>
+            <!-- Formulari END <<< -->
+                
+        </main>
+    </div>
+        
+    
+    
+    
+
+
+    <footer>
+        Desenvolupat per David
+    </footer>
+    
+</body>
+
+</html>
