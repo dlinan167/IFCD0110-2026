@@ -5,12 +5,32 @@
     <title>21 primerExempleCSS</title>
     <link rel="shortcut icon" href="./img/imatge_pera.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./21 primerExempleCSS.css"/> <!-- < < < Primer CSS -->
-    <link rel="stylesheet" href="./21 primerExempleCSS 2.css"/> <!-- < < < CSS 2 -->
+    <link rel="stylesheet" href="./21 primerExempleCSS 2on.css"/> <!-- < < < CSS 2 -->
 
     <style>
         header{
-            background-color: aliceblue;
-            color: rgb(0, 112, 0);
+            background-color: red;
+            position: fixed;
+            z-index: 1; /*< < < Per donar posició a un element fixe i que es pugui veure per sobre de altres elements que el trepitgen*/
+        }
+        /* Alternativa */
+        /* header{
+            background-color: red;
+            position: fixed;
+            top: 0;
+                        i el header al final
+            } */
+        main{
+            top: 44px;
+        }
+        ul{
+            list-style-type: square;
+        }
+        .llista-fruites{
+            list-style-type: circle;
+        }
+        #cotxes{   /*< < < style amb id, NO ES RECOMENABLE per que utilitza id, solament per coses molt específiques*/
+            list-style-type: disc;
         }
     </style>
 
@@ -24,22 +44,40 @@
     <header style="background-color: rgb(252, 229, 194);"> <!-- < < < Toma prioritat el style inline (en la etiqueta)-->
         <h1>(Pàgina d'exemple del primer arxiu utilitzant CSS)</h1>
     </header>
-    <nav>
-        Menú.
-        <ul>
-            <li>Opció1</li>
-            <li>Opció2</li>
-            <li>Opció3</li>
-            <li>Opció4</li>
+
+    <nav class="menu-cotxes">
+        Cotxes:
+        <ul id="cotxes">
+            <li>Toyota</li>
+            <li>Renault</li>
+            <li>Ford</li>
+            <li>Porche</li>
             
         </ul>
     </nav>
 
-    <main>
+    <main class="principal-Main">
         Contingut principal de la pàgina
+        <br>
+        <br>
+        <br>
+        <div class="bolita">
+
+        </div>
 
     </main>
 
+        <nav class="menu-fruites">
+            Fruites:
+            <ul style="list-style-type: square;" class="llista-fruites">
+                <li>Pomes</li>
+                <li>Peres</li>
+                <li>Plàtans</li>
+                <li>Meduixes</li>
+            </ul>
+        </nav>
+            
+  
 
     <footer>Desenvolupat per David</footer>
   </body>
