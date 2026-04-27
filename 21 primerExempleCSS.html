@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>21 primerExempleCSS</title>
+    <link rel="shortcut icon" href="./img/imatge_pera.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="./21 primerExempleCSS.css"/> <!-- < < < Primer CSS -->
+    <link rel="stylesheet" href="./21 primerExempleCSS 2.css"/> <!-- < < < CSS 2 -->
+
+    <style>
+        header{
+            background-color: aliceblue;
+            color: rgb(0, 112, 0);
+        }
+    </style>
+
+    <!-- <<< ORDRE DE PRIORITAT DELS ESTILS: >>>
+          1er: style Inline
+          2on: Etiqueta style
+          3er: Arxiu enllçat CSS        -->
+  </head>
+
+  <body>
+    <header style="background-color: rgb(252, 229, 194);"> <!-- < < < Toma prioritat el style inline (en la etiqueta)-->
+        <h1>(Pàgina d'exemple del primer arxiu utilitzant CSS)</h1>
+    </header>
+    <nav>
+        Menú.
+        <ul>
+            <li>Opció1</li>
+            <li>Opció2</li>
+            <li>Opció3</li>
+            <li>Opció4</li>
+            
+        </ul>
+    </nav>
+
+    <main>
+        Contingut principal de la pàgina
+
+    </main>
+
+
+    <footer>Desenvolupat per David</footer>
+  </body>
+</html>
