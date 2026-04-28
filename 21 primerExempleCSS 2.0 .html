@@ -11,7 +11,7 @@
         header{
             background-color: red;
             position: fixed;
-           /*z-index: 1;*/ /*< < < Per donar posició a un element fixe i que es pugui veure per sobre de altres elements que el trepitgen*/
+            z-index: 1; /*< < < Per donar posició a un element fixe i que es pugui veure per sobre de altres elements que el trepitgen*/
         }
         /* Alternativa */
         /* header{
@@ -30,6 +30,12 @@
         }
         .llista-fruites{
             list-style-type: circle;
+        }
+        section {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        scroll-margin-top: 90px; /* per evitar solapament */
         }
         /* #cotxes{   < < < style amb id, NO ES RECOMENABLE per que utilitza id, solament per coses molt específiques
             list-style-type: disc;
