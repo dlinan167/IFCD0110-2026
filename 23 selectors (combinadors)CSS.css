@@ -1,0 +1,205 @@
+/* *{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+* {
+  margin: 0%;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: rgb(238, 234, 172);
+  /* text-align: center; */
+  width: 100%;
+}
+header {
+  /* Borders redondegats */
+  border-bottom: 5px solid rgb(128, 0, 128);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  position: fixed;
+  z-index: 10;
+  top: 0%;
+}
+
+footer {
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: fixed;
+
+  bottom: 0%;
+}
+
+.menu-nav {
+  background-color: rgb(172, 255, 47);
+  border: 2px solid;
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.principal-Main {
+  background-color: rgb(100, 149, 237);
+  left: 15.5%;
+  position: relative;
+  padding: 1%;
+}
+
+.seccio {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 1%;
+  margin-top: 1%;
+  background-color: rgb(255, 188, 106);
+
+  padding: 0.5rem;
+}
+section{
+  display: flex;
+  width: 99%;
+  height: 99%;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid;
+  align-items: center;
+}
+
+
+span {
+  /* color: red; */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/*  */
+/* li:hover {
+  background-color: rgb(0, 255, 255);
+  color: rgb(0, 0, 255);
+  border-radius: 1rem;
+} */
+a:link {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+li:active {
+  background-color: rgb(255, 166, 0);
+}
+/*  */
+
+main {
+  width: 82%;
+  top: 3.5rem; /*< < < Podem utilitzar "rem" com a mida relativa*/
+  border-radius: 2%;
+}
+section {
+  scroll-margin-top: 2.7rem; /* < < <  "scroll-margin-top" ens serveix per posar distancia entre la capçalera fixa a l'hora de clickar la secció al menu*/
+}
+nav {
+  top: 3.7rem;
+}
+hr{
+   margin: 3%;
+}
+span {
+  /* < < < "span" per destacar un troç del text*/
+  /* color: red; */
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.div-Contenedor{
+    border: 1rem solid;
+    display: flex;
+}
+
+/* < < < Selectors (COMBINAT) START > > >*/
+/* .menu {    *DEPRECATED*
+  list-style-type: none;
+  padding-left: 0%;
+} */
+
+ul, ol{
+  
+  padding: 0%;
+
+  border: 2px solid;
+  border-radius: 1rem;
+  margin: 1%;
+
+}
+ul li{ /* < < < Tots els decendents del ul que son li tenen aquest css (ul [space] li)  */
+  list-style-type: none;
+  padding: 0%;
+}
+ul > li > ul> li:hover{ /* <<< Para fer hover diferent en sub-opció dintre d'una llista superior. Ex:
+  (   <ul>
+     <li>Opció 1.</li>
+        <li> Opció 2.
+          <ul>
+            <li> sub-opció 1 </li>
+          </ul>
+        </li> 
+      </ul>         ) */
+    background-color: rgb(255, 0, 76);
+    border-radius: 1rem;
+}
+ul > li:nth-child(even) > ul> li:hover{ /* <<< Para fer hover diferent en sub-opció dintre d'una llista superior (en un elemnt PARELL). Ex: (MATEIX QUE ADALT)
+  (   <ul>
+     <li>Opció 1.</li> 
+        <li> Opció 2. (Opció PARELL)
+          <ul>
+            <li> sub-opció 1 </li>
+          </ul>
+        </li> 
+      </ul>         ) */
+    background-color: rgb(164, 86, 253);
+    border-radius: 1rem;
+}
+
+nav > ul > li:hover{ /* < < < Solament el fills ul directes d'un "nav" (nav > ul), i a la vegada, els fills "li" del "ul" fan el efecte del hover (ul > li:hover)*/
+  background-color: rgb(0, 255, 255);
+  color: rgb(0, 0, 255);
+  border-radius: 1rem;
+}
+nav > ul > li:nth-child(odd):hover{ /* < < < El mateix pero amb hover imparell*/
+  background-color: rgb(255, 166, 0);
+  border-radius: 1rem;
+}
+/* < < < Selectors (COMBINAT) END > > >*/
+
+
+.contenidoCaja { 
+  
+}
+
+.cajaPadre{
+  margin: 1%;
+  height: 18rem;
+  width: 18rem;
+  background-color: rgb(0, 0, 0);
+  border: 0.4rem solid rgb(128, 0, 128);
+  color: wheat;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tituloCaja{
+  background-color: rgb(80, 110, 28);
+  height: 20%;
+  border-bottom: 1px solid;
+}
+.contenidoCaja{
+  font-size: 2rem;
+}
