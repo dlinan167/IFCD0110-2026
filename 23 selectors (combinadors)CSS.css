@@ -153,6 +153,10 @@ ul > li > ul> li:hover{ /* <<< Para fer hover diferent en sub-opció dintre d'un
     background-color: rgb(255, 0, 76);
     border-radius: 1rem;
 }
+article:nth-child(odd) > .tituloCaja{
+  background-color: rgb(255, 123, 0);
+}
+
 ul > li:nth-child(even) > ul> li:hover{ /* <<< Para fer hover diferent en sub-opció dintre d'una llista superior (en un elemnt PARELL). Ex: (MATEIX QUE ADALT)
   (   <ul>
      <li>Opció 1.</li> 
