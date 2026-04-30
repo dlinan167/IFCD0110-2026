@@ -153,8 +153,11 @@ ul > li > ul> li:hover{ /* <<< Para fer hover diferent en sub-opció dintre d'un
     background-color: rgb(255, 0, 76);
     border-radius: 1rem;
 }
-article:nth-child(odd) > .tituloCaja{
+article:nth-child(even) > .tituloCaja{ /* <Coloreja els titols dels articles pars (files)*/
   background-color: rgb(255, 123, 0);
+}
+section:nth-child(even) > article:nth-child(odd) > .tituloCaja{ /* < Coloreja els (articles impars) a les (columnes pars)*/
+  background-color: rgb(38, 0, 255);
 }
 
 ul > li:nth-child(even) > ul> li:hover{ /* <<< Para fer hover diferent en sub-opció dintre d'una llista superior (en un elemnt PARELL). Ex: (MATEIX QUE ADALT)
@@ -182,9 +185,9 @@ nav > ul > li:nth-child(odd):hover{ /* < < < El mateix pero amb hover imparell*/
 /* < < < Selectors (COMBINAT) END > > >*/
 
 
-.contenidoCaja { 
+/* .contenidoCaja { 
   
-}
+} */
 
 .cajaPadre{
   margin: 1%;
