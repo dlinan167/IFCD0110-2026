@@ -191,7 +191,7 @@ li:hover{
   cursor: pointer;
 }
 
-/* Ocultar submenu de submenu(2ón) per defecte */
+/* Ocultar submenu de submenu(2ón) per defecte (CODI BRUT)*/
 nav > ul > li > ul ul{
 
   display: none;
@@ -227,8 +227,7 @@ nav > ul > li > ul > li > ul> li:hover > ul{
   border-radius: 1rem;
 }
 
-
-/* < < < MENÚ I SUBMENUS: (TABULAT) (MILLLOR METODE) > > > */
+/* < < < MENÚ I SUBMENUS: (TABULAT) (MILLOR METODE) > > > */
 .menu-prova{
   display: flex;
 }
@@ -241,11 +240,16 @@ nav > ul > li > ul > li > ul> li:hover > ul{
 .submenu-tabulat:hover{
   background-color: rgb(8, 124, 201);
 }
-.submenu-tabulat > ul{
-  left: -5rem;
-}
-.submenu-tabulat li > ul{
+.submenu-tabulat li:hover > ul{ /*posició de submenu al fer hover*/
   position: relative;
   left: 11rem;
   top: -1rem;
 }
+
+/* AMB CLASSES TAMBÉ (ul li etc... , [classes]) */
+/* .submenu-tabulat ul li, .submenu-tabulat .llista .item{
+  display: none;
+}
+.submenu-tabulat li:hover > ul > li, .submenu-tabulat > .llista > .item{
+  display: block;
+} */
