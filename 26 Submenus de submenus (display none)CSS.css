@@ -130,7 +130,7 @@ span {
     text-align: center;
 }
 
-ul, ol{
+ul, ol, .llista{
   
   padding: 0%;
 
@@ -139,7 +139,7 @@ ul, ol{
   margin: 1%;
 
 }
-ul li{ /* < < < Tots els decendents del ul que son li tenen aquest css (ul [space] li)  */
+ul li, .llista .item{ /* < < < Tots els decendents del ul que son li tenen aquest css (ul [space] li)  */
   list-style-type: none;
   padding: 0%;
 }
@@ -231,25 +231,18 @@ nav > ul > li > ul > li > ul> li:hover > ul{
 .menu-prova{
   display: flex;
 }
-.submenu-tabulat ul li{
+/* AMB CLASSES TAMBÉ (ul li etc... , [classes]) */
+.submenu-tabulat ul li, /*AMB CLASSES > > >*/ .submenu-tabulat .llista .item{
   display: none;
 }
-.submenu-tabulat li:hover > ul > li{
+.submenu-tabulat li:hover > ul > li,/*AMB CLASSES > > >*/ .submenu-tabulat .item:hover > .llista > .item{
   display: block;
 }
 .submenu-tabulat:hover{
   background-color: rgb(8, 124, 201);
 }
-.submenu-tabulat li:hover > ul{ /*posició de submenu al fer hover*/
+.submenu-tabulat li:hover > ul, /*AMB CLASSES > > >*/ .submenu-tabulat .item:hover > .llista{ /*posició de submenu al fer hover*/
   position: relative;
   left: 11rem;
   top: -1rem;
 }
-
-/* AMB CLASSES TAMBÉ (ul li etc... , [classes]) */
-/* .submenu-tabulat ul li, .submenu-tabulat .llista .item{
-  display: none;
-}
-.submenu-tabulat li:hover > ul > li, .submenu-tabulat > .llista > .item{
-  display: block;
-} */
