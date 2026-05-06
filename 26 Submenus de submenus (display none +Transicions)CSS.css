@@ -231,18 +231,60 @@ nav > ul > li > ul > li > ul> li:hover > ul{
 .menu-prova{
   display: flex;
 }
-/* AMB CLASSES TAMBÉ (ul li etc... , [classes]) */
-.submenu-tabulat ul li, /*AMB CLASSES > > >*/ .submenu-tabulat .llista .item{
+.submenu-tabulat ul li{
   display: none;
 }
-.submenu-tabulat li:hover > ul > li,/*AMB CLASSES > > >*/ .submenu-tabulat .item:hover > .llista > .item{
+.submenu-tabulat li:hover > ul > li{
   display: block;
 }
 .submenu-tabulat:hover{
   background-color: rgb(8, 124, 201);
 }
-.submenu-tabulat li:hover > ul, /*AMB CLASSES > > >*/ .submenu-tabulat .item:hover > .llista{ /*posició de submenu al fer hover*/
+.submenu-tabulat li:hover > ul{ /*posició de submenu al fer hover*/
   position: relative;
   left: 11rem;
   top: -1rem;
+}
+
+/* --------------------- Trancicions del menu principal: > > > ----------------- */
+
+.submenu-tabulat-transicio:hover{
+  background-color: rgb(130, 8, 201);
+  border: 0.2rem solid;
+}
+.submenu-tabulat-transicio .llista .item{
+  display: none;
+}
+.submenu-tabulat-transicio .item:hover > .llista > .item{
+  display: block;
+}
+  /* --- Codi opacity dels submenus --- > */
+ /* Codi de format just abans de la trancisció*/
+.submenu-tabulat-transicio .item> .llista{
+   
+  opacity: 0%;
+  width: 0%;
+}
+.submenu-tabulat-transicio .item:hover > .llista{
+  position: relative;
+  left: 11rem;
+  top: -1rem;
+
+  /* Codi de la trancisció i el seu format*/
+  transition: width 1s, opacity 1s, background-color 1s, color 1s;
+  width: 100%;
+  opacity: 100%;
+  color: white;
+  background-color: black;
+}
+
+.submenu-tabulat-transicio{width: 20%;}
+/* ----- Codigo flecha ----- > */
+.titol-transicio{display: flex;}
+.titol-transicio > div{ border: 0.1rem dashed; width: 50%;} /* div amb bordes dins del titol trancicio */
+/* ---Mou el angle de la flecheta al fer hover--- */
+.submenu-tabulat-transicio:hover .titol-transicio > div > img{
+
+  transform: rotate(120deg);
+  transition: transform 0.9s;
 }

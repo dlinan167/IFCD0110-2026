@@ -167,25 +167,28 @@ img{
   height: 100%;
 }
 /* TRANSFORMS: > > > */
-.translate {
+.translate:hover {
   transform: translate(100px, 30px); /* moves the element 50px along the x-axis, and 20px along the y-axis */
 }
-.rotate {
+.rotate:hover {
   transform: rotate(45deg);
 }
-.skew{
+.scaleX:hover {
+  transform: scaleX(1.5);
+}
+.skew:hover{
   transform: skew(15deg, 15deg);
 }
-.matrix {
+.matrix:hover {
   transform: matrix(1, 0, 0.5, 1, 50, 50);
 }
 
-.rotateX {
-  transform: rotateX(150deg);
+.rotateX:hover {
+  transform: rotateX(55deg);
 }
-.rotateY {
-  transform: rotateY(150deg);
+.rotateY:hover {
+  transform: rotateY(55deg);
 }
-.rotateZ {
-  transform: rotateZ(90deg);
+.rotateZ:hover {
+  transform: rotateZ(55deg); 
 }
