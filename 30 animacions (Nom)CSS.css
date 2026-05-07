@@ -190,29 +190,29 @@ li:hover{
   height: 100%;
 } */
 
-.anim-1{
-  animation-name: anim-1;
+.anim-D{
+  animation-name: anim-D;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }
-.anim-2{
-  animation-name: anim-2;
+.anim-A{
+  animation-name: anim-A;
   animation-duration: 5s;
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
-.anim-3{
-  animation-name: anim-3;
+.anim-V{
+  animation-name: anim-V;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }
-.anim-4{
-  animation-name: anim-4;
+.anim-I{
+  animation-name: anim-I;
   animation-duration: 8s;
   animation-fill-mode: forwards;
 }
-.anim-5{
-  animation-name: anim-5;
+.anim-D2{
+  animation-name: anim-D2;
   animation-duration: 8s;
   animation-fill-mode: forwards;
   animation-delay: 2.5s;
@@ -221,7 +221,7 @@ li:hover{
 /* --------------------- Definició d'Animacions: > > > ----------------- */
 
 /* --------------------------------- */
-@keyframes anim-1{
+@keyframes anim-D{
 
   0%{
     left: 0; 
@@ -252,7 +252,7 @@ li:hover{
 }
 /* --------------------------------- */
 
-@keyframes anim-2{
+@keyframes anim-A{
 
   0%{
     left: 0; 
@@ -285,7 +285,7 @@ li:hover{
 }
 /* --------------------------------- */
 
-@keyframes anim-3{
+@keyframes anim-V{
 
   0%{
     right: 0;
@@ -315,7 +315,7 @@ li:hover{
     background-color: blueviolet;}
 }
 /* --------------------------------- */
-@keyframes anim-4{
+@keyframes anim-I{
   0%{
     right: 0;
     top: 0;
@@ -349,18 +349,18 @@ li:hover{
     top: 8rem; 
   }
   90%{
-    right: 42.5rem; 
+    right: 43rem; 
     top: 8rem; 
     transform: rotate(90deg);
   }
   100%{
-    right: 42.5rem;
+    right: 43rem;
     top: 8rem; 
     
     background-color: blueviolet;}
 }
 /* --------------------------------- */
-@keyframes anim-5{
+@keyframes anim-D2{
 
   0%{
     left: 0;
