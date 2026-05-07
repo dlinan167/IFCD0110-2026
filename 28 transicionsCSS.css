@@ -221,6 +221,7 @@ img{
 .caixa-color-blue:hover{
   color: wheat;
   width: 100%;
+  background-color: green;
   transition: width 2s, background-color 3s, color 3s;
 
 }
