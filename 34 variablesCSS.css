@@ -1,0 +1,83 @@
+/* --------------- VARIABLES ------------------ */
+:root{
+  --color-principal-icones: brown;
+  --color-ombres-icones: black;
+  --color-titols: rgb(238, 234, 172);
+}
+/* ---------------- !!!!!! ---------------------- */
+
+html{
+  font-size: 62.5%; /*equival a 10 px*/
+}
+* {
+  margin: 0%;
+  font-size: 2rem; /*Multipliquem per 2 (20px)*/
+}
+
+/* --------Propietats comuns de header i footer-------- */
+/* ----- Format compartit ----- */
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: var(--color-titols);
+  width: 100%;
+  position: fixed;
+}
+
+header {
+  border-bottom: 5px solid rgb(128, 0, 128);
+  z-index: 10; /*Es mostra per sobre d'altres elements*/
+  top: 0%; /*Fent scroll es manté a la part superior*/
+}
+
+footer {
+  /* menys opacitat */
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  bottom: 0%; /*Fent scroll es manté en la part inferior*/
+}
+nav{
+  background-color: blanchedalmond;
+  width: 15%;
+  height: calc(100vh - 3rem);
+}
+main{
+  width: 70%;
+  background-color: aquamarine;
+}
+aside{
+  background-color: cadetblue;
+  width: 15%;
+}
+
+
+ul{
+  list-style-type: none;
+  padding: 0.5rem;
+}
+nav li:hover{
+  background-color: burlywood;
+  cursor: pointer;
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease; /*Fa transició*/
+}
+
+li:hover > i{
+  transform: rotateY(-360deg); /*Rota la icona*/
+  transition: all 0.3s ease;
+}
+
+i{
+  padding: 1rem;
+  color: var(--color-principal-icones); /*Apliquem el color amb la variable*/
+  text-shadow: 1.5px 2px var(--color-ombres-icones);
+}
+.div-Contenidor{
+  display: flex;
+    margin-top: 2.75rem;
+
+}
