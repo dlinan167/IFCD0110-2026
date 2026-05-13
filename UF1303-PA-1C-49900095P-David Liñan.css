@@ -1,3 +1,65 @@
+
+/* 1.1  */
+/* CSS incrustada () ? */
+/* CSS enlazada () ? */
+/* CSS importada (?) ? */
+/* CSS en línea (class=bla style="display flex etc...") ? */
+
+/* 2.1 */
+/* 2.1.1 Universal (esterisco) OK? */
+/* 2.1.2 Elemento (<etiqueta>) --OK-- */
+/* 2.1.3 De clase (.clase) --OK-- */
+/* 2.1.4 por atributo (?) ? */
+/* 2.1.5 Por ID (#claseID) ? */
+
+/* 2.2 */
+/* 2.2.1 pseudoclase dinámica (Ex--> :hover) ? */
+/* 2.2.2 pseudoelemento (?) ? */
+/* 2.2.3 pseudoclase estrucutales (?) ? */
+
+/* 3.1 */
+/* 3.1.1 posició (position: static; etc...) x3  ?  */
+/* 3.1.2 Profundidad (z-index ?) x3  ?  */
+/* 3.1.3 Tamaño (width height etc...) x3  ?  */
+/* 3.1.4 Márgenes (margin % etc...) x3  ?  */
+/* 3.1.5 Fondo (Background-color etc...) x3  ?  */
+
+
+/* 3.2  (Propiedades espeficicas CSS de:)*/ 
+
+/* 3.2.1 Párrafos (<p> ?) ? */
+/* 3.2.2 Imagenes (figure img etc...) ? */
+/* 3.2.3 Vídeos ( loop autoplay etc...) ? */
+/* 3.2.4 Enlaces ( ... :active etc...) ? */
+/* 3.2.5 Listas ( list-style none etc...) ? */
+/* 3.2.6 Tablas ( gap etc...) ? */
+
+/* 3.3 Font de lletra ( ) x3 ?  */
+
+/* 3.4 */
+/* 3.4.1 Acolchado (padding) ? */
+/* 3.4.2 Desbordamiento (overflow: hidden ) ? */
+/* 3.4.3 Alineacion (text-align ? ) ? */
+/* 3.4.4 Sangría ( ? ) ? */
+/* 3.4.5 Flexbox ( display:flex; ) ? */
+
+/* 3.5 */
+/* 3.5.1 En bloque (display:block;) ?*/
+/* 3.5.2 En columna () ? */
+
+
+
+/* 4 (Efectos, (transform???) ) */
+/* 4.1 Visivilidad (visibility:none; etc...) ? */
+/* 4.2 Cambio de tamaño () ? */
+/* 4.3 Cambio de Cursor (cursor:pointer; etc...) ? */
+/* 4.4 Transformaciones 2D (Transform: rotateX ; etc...) ? */
+/* 4.5 Transformaciones 3D (Transform: rotateX3d ; etc...) ? */
+/* 4.6 Combinaciones (?) ? */
+/* 4.7 Animaciones (@Keyframe etc...) ? */
+
+
+
 /* Aplica un style de lletra global */
 /* Aplica 0 marge al <body>, evita els bordes blancs */
 * {

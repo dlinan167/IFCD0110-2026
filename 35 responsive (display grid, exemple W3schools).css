@@ -1,0 +1,96 @@
+/* --------------- VARIABLES ------------------ */
+:root{
+  --color-principal-icones: brown;
+  --color-ombres-icones: black;
+  --color-titols: rgb(238, 234, 172);
+}
+/* ---------------- !!!!!! ---------------------- */
+
+html{
+  font-size: 62.5%; /*equival a 10 px*/
+}
+* {
+  margin: 0%;
+  font-size: 2rem; /*Multipliquem per 2 (20px)*/
+}
+
+/* --------Propietats comuns de header i footer-------- */
+/* ----- Format compartit ----- */
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: var(--color-titols);
+}
+
+header {
+  border-bottom: 5px solid rgb(128, 0, 128);
+  z-index: 10; /*Es mostra per sobre d'altres elements*/
+}
+
+footer {
+  /* menys opacitat */
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+nav{
+  background-color: blanchedalmond;
+  
+}
+main{
+  background-color: aquamarine;
+  padding: 1%;
+  
+}
+aside{
+  background-color: cadetblue;
+  
+}
+
+
+ul{
+  list-style-type: none;
+  padding: 0.5rem;
+}
+nav li:hover{
+  background-color: burlywood;
+  cursor: pointer;
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease; /*Fa transició*/
+}
+
+li:hover > i{
+  transform: rotateY(-360deg); /*Rota la icona*/
+  transition: all 0.3s ease;
+}
+
+i{
+  padding: 1rem;
+  color: var(--color-principal-icones); /*Apliquem el color amb la variable*/
+  text-shadow: 1.5px 2px var(--color-ombres-icones);
+}
+/* -- Display: grid -- */
+.div-Contenidor-grid{
+  display: grid;
+}
+/* ---------------- RESPONSIVE ------------------- */
+/* mida reduida minima per a que canvi la pagina */
+@media(min-width: 555px) {
+  /* posem la distribució de la mida normal del grid de la pagina (div-contenidor-grid)*/
+  header{grid-area: 1/span 6;}
+  nav{grid-area: 2/span 3; ul {display: flex; flex-direction: row; justify-content: space-around;}}
+  main{grid-area: 3/span 2;}
+  aside{grid-area: 3/span 1;}
+  footer{grid-area: 4/span 6;}
+}
+  @media(min-width: 768px) {
+    /* posem la distribució de la mida normal del grid de la pagina (div-contenidor-grid)*/
+    header{grid-area: 1/span 6;}
+    nav{grid-area: 2/span 1; ul {display: block;}}
+    main{grid-area: 2/span 4;}
+    aside{grid-area: 2/span 1;}
+    footer{grid-area: 3/span 6;}
+  }
