@@ -46,8 +46,11 @@ main{
   
 }
 aside{
+  padding: 0.2%;
   background-color: cadetblue;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
@@ -62,7 +65,7 @@ nav li:hover{
   transition: all 0.3s ease; /*Fa transició*/
 }
 
-li:hover > i{
+nav li:hover > i{
   transform: rotateY(-360deg); /*Rota la icona*/
   transition: all 0.3s ease;
 }
@@ -76,21 +79,93 @@ i{
 .div-Contenidor-grid{
   display: grid;
 }
+img{
+  max-width: 100%;
+  height: 100%;
+}
+figure{
+  padding: 0.2%;
+  margin: 0.5%;
+  width: 17rem;
+  height: 18rem;
+  border: 0.225rem solid rgb(0, 0, 0);
+}
+.fila{
+  display: flex;
+}
+p::first-letter{
+  font-size: 3rem;
+  
+}
+p::before{
+  content: "Legeix això: ";
+  color: red;
+  font-weight: bold;
+}
+/* Sangria */
+p {text-indent:5rem;
+} 
 /* ---------------- RESPONSIVE ------------------- */
 /* mida reduida minima per a que canvi la pagina */
-@media(min-width: 555px) {
-  /* posem la distribució de la mida normal del grid de la pagina (div-contenidor-grid)*/
+/* ------------------------ */
+@media(max-width: 406px) {
   header{grid-area: 1/span 6;}
-  nav{grid-area: 2/span 3; ul {display: flex; flex-direction: row; justify-content: space-around;}}
-  main{grid-area: 3/span 2;}
+  nav{grid-area: 2/span 6; 
+    ul{display: none;} 
+    span{display: none;}
+  }
+  
+  main  {grid-area: 4/span 6;}
+  aside {grid-area: 3/span 6; flex-direction: row;
+    p{display: none;} 
+    .fila{display: none;}
+  }
+  footer{grid-area: 5/span 6;}
+
+  /* Mostrar menu amburgesa i ocultar menu normal */
+  ul > i{visibility: visible;}
+  ul > li{visibility: hidden;}
+}
+/* ------------------------ */
+@media(max-width: 572px) { /*Max-with !!! */
+  header{grid-area: 1/span 6;}
+  nav{grid-area: 2/span 6; 
+    ul{display: flex; flex-direction: row; justify-content: space-around;} 
+    span{display: none;}
+  }
+  main  {grid-area: 4/span 6;}
+  aside {grid-area: 3/span 6; flex-direction: row;
+    p{display: none;} 
+    .fila{display: none;}
+  }
+  footer{grid-area: 5/span 6;}
+
+  ul > i {visibility: hidden;}
+}
+/* ------------------------ */
+@media(min-width: 573px) {
+  header{grid-area: 1/span 6;}
+  nav{grid-area: 2/span 6; 
+    ul {display: flex; flex-direction: row; justify-content: space-around;} 
+    span{display: inline;}
+  }
+  main{grid-area: 3/span 4;}
   aside{grid-area: 3/span 1;}
   footer{grid-area: 4/span 6;}
+
+    ul > i {visibility: hidden;}
 }
+/* ------------------------ */
   @media(min-width: 768px) {
     /* posem la distribució de la mida normal del grid de la pagina (div-contenidor-grid)*/
     header{grid-area: 1/span 6;}
-    nav{grid-area: 2/span 1; ul {display: block;}}
+    nav{grid-area: 2/span 1; 
+      ul{display: block;} 
+      li{display: flex;}
+        display: flex;
+        }
     main{grid-area: 2/span 4;}
     aside{grid-area: 2/span 1;}
     footer{grid-area: 3/span 6;}
+   
   }
