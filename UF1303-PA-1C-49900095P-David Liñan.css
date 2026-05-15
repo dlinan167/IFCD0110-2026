@@ -55,7 +55,11 @@
 /* 4.3 Cambio de Cursor (cursor:pointer; etc...) ? */
 /* 4.4 Transformaciones 2D (Transform: rotateX ; etc...) ? */
 /* 4.5 Transformaciones 3D (Transform: rotateY3d(180deg) ; etc...) ? */
-/* 4.6 Combinaciones (?) ? */
+/* 4.6 Combinaciones (}
+ul li{  < < < Tots els decendents del ul que son li tenen aquest css (ul [space] li) 
+  list-style-type: none;
+  padding: 0%;
+}) ? */
 /* 4.7 Animaciones (@Keyframe etc...) ? */
 
 

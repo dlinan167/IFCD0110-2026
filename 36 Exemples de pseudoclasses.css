@@ -1,0 +1,150 @@
+html{
+  font-size: 62.5%; /*equival a 10 px*/
+}
+* {
+  margin: 0%;
+  font-size: 2rem; /*Multipliquem per 2 (20px)*/
+}
+
+/* --------Propietats comuns de header i footer-------- */
+/* ----- Format compartit ----- */
+/* --------Propietats comuns de header i footer-------- */
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: rgb(238, 234, 172);
+  width: 100%;
+}
+
+header {
+  border-bottom: 5px solid rgb(128, 0, 128);
+
+  z-index: 10;
+  top: 0%; /*Fent scroll es manté*/
+}
+
+footer {
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: fixed;
+
+  bottom: 0%; /*Fent scroll es manté*/
+}
+main{
+    padding: 0.25%;
+    width: 98%;
+    
+    border: 0.225rem solid rgb(0, 0, 0);
+    background-color: burlywood;
+
+}
+/* Estructura Contenidor(en columna) i fila */
+.div-Contenidor{
+  display: flex;
+  justify-content: center;
+}
+.fila{
+  display: flex;
+  border-bottom: 0.225rem solid rgb(0, 0, 0);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.targeta{
+    border: 0.125rem solid rgb(0, 0, 0);
+    width: 35rem;
+    height: 30rem;
+    border-radius: 3.5rem;
+    margin: 1.25%;
+    background-color: aliceblue;
+    text-align: center;
+}
+.titol-targeta{
+    border-bottom: 0.150rem solid rgb(0, 0, 0);
+    height: 5rem;
+    padding: 2%;
+
+    /* Centrem el text (Horizontal i verticalment) */
+    text-align: center;
+    align-content: center;
+}
+.contingut-exemple p{
+    padding: 2.0%;
+    text-align: center;
+    align-content: center;
+}
+/* Exemple 1 ----- */
+.contingut-exemple  a:link{background-color: orange;}   /*links en ordre: L,V,H,A */
+.contingut-exemple  a:visited{background-color: green;}
+.contingut-exemple  a:hover{background-color: yellow;}
+.contingut-exemple  a:active{background-color: blue;}
+/* Exemple 2 ----- */
+.first-Last-child > p:first-child{
+    background-color: rgba(172, 32, 32, 0.87);
+}
+.first-Last-child > p:last-child{
+    background-color: rgba(11, 11, 248, 0.87);
+}
+/* Exemple 3 ----- */
+.nth-child-exemple > :nth-child(odd){
+    background-color: rgba(172, 32, 32, 0.87);
+}
+.nth-child-exemple > :nth-child(even){
+    background-color: rgba(11, 11, 248, 0.87);
+}
+/* Exemple 4 ----- */
+.nth-LastChild-exemple > :nth-child(2){
+    background-color: green;
+}
+.nth-LastChild-exemple > :nth-last-child(2){ /* <<<--- Comença a contar desde abaix */
+    background-color: chocolate;
+}
+/* Exemple 5 ----- */ /*Primer i darrer fill d'un tipus*/
+
+.of-type-example > div:last-of-type{
+    background-color: chartreuse;
+}
+.of-type-example > p:first-of-type{
+    background-color: crimson;
+}
+
+/* Exemple 6 ----- */
+
+.only-child-exemple :only-child{ /* <<-- Hijos unicos*/
+    background-color: rgb(250, 79, 241);
+}
+/* Example 7 */
+.only-of-type-exemple > :only-of-type{ /* <<-- Nómes l'unic d'un tipus */
+    background-color: darkslateblue;
+}
+/* Example 8 */
+.empty-exemple :empty{
+    background-color: forestgreen;
+}
+.empty-caixa{
+    width: 5rem;
+    height: 5rem;
+    border: 0.225rem solid rgb(0, 0, 0);
+}
+/* Example 9 */
+.language-example :lang(CA){ /*Per lenguatge*/
+    background-color: yellowgreen;
+}
+.language-example :lang(IT){ /*Per lenguatge*/
+    background-color: red;
+}
+
+img{
+  max-width: 100%;
+  height: 100%;
+}
+figure{
+  padding: 0.2%;
+  margin: 0.5%;
+  width: 17rem;
+  height: 18rem;
+  border: 0.225rem solid rgb(0, 0, 0);
+}
