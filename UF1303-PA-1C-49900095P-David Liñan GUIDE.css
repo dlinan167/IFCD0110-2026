@@ -1,0 +1,409 @@
+
+/* 1.1  */
+/* CSS incrustada (<styles>) ? */
+/* CSS enlazada (<link>) OK */
+/* CSS importada (@import url('style.css') ) ? */
+/* CSS en línea (class=bla style="display flex etc...") ? */
+
+
+/* 2.1 */
+/* Sol per pantalla */
+@media screen {
+  .classe-empty{
+
+  }
+  /* ====================== REGLA VACIA */
+  /* 2.1.1 SELECTOR Universal (esterisco *{ }) OK */
+*{
+
+}
+/* 2.1.2 SELECTOR Elemento (<etiqueta>) --OK-- */
+main{
+
+}
+/* 2.1.3 SELECTOR De clase (.clase) --OK-- */
+.classe{
+
+}
+/* 2.1.4 SELECTOR por atributo (CSS: a[target]{... } ) OK */
+
+a[target]{ /* <=== Solament agafa els enllaços amb atribut "target" per aplicar l'estil d'aquest seletor*/
+  
+}
+/* 2.1.5 SELECTOR Por ID (#claseID) OK */
+#classe-ID{
+
+}
+/* 2.2 */
+/* 2.2.1 pseudoclase dinámica (Ex--> :hover) OK */
+.classe-empty :hover{
+  background-color: brown;
+}
+/* 2.2.2 pseudoelemento (p::first-letter {font-size: ... } (sobre textos no caixes)) OK */
+.classe-empty p::first-letter{
+
+}
+/* 2.2.3 pseudoclase estructurales (li:first-child {color:blue; } ) OK */
+.classe-empty li:first-child{
+
+}
+/* REGLA VACIA ======================== */
+}
+
+@media print{
+  .classe-empty{
+    display: none;
+  }
+}
+
+
+/* 3.1 */
+/* 3.1.1 posició (position: static; etc...) x3  ?  */
+.classe-empty{
+  position: static;
+  position: fixed;
+  position: absolute;
+
+/* 3.1.2 Profundidad (z-index: 50 etc...) x3  ?  */
+  z-index: 50;
+  /* 3.1.3 Tamaño (width, height, etc...) x3  ?  */
+  width: 20;
+  height: 20;
+  /* 3.1.4 Márgenes (margin % etc...) x3  ?  */
+  margin: 1%;
+  /* 3.1.5 Fondo (Background-color etc...) x3  ?  */
+  background-color: aqua;
+}
+
+
+/* 3.2  (Propiedades espeficicas CSS de:)*/ 
+
+/* 3.2.1 Párrafos (<p> ?) ? */
+p{
+  text-align: justify;
+  font-size: 1rem;
+}
+/* 3.2.2 Imagenes (<figure> <img> etc...) ? */
+figure{
+  padding: 1%;
+}
+/* 3.2.3 Vídeos ( loop autoplay etc...) ? */
+/* ===== <video src="./video/video_playa.mp4" type="video/mp4" autoplay loop controls width="55%"> */
+
+/* 3.2.4 Enlaces ( ... :active etc...) ? */
+/* ==== href="https://www.w3schools.com/html/coffee.htm" target="_blank" */
+
+/* 3.2.5 Listas ( list-style none etc...) ? */
+nav li{
+list-style-type: none;
+}
+/* 3.2.6 Tablas ( gap etc...) ? */
+
+/* 3.3 Font de lletra (font-family: ) x3 ?  */
+.classe-empty{
+  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+}
+/* 3.4 */
+/* 3.4.1 Acolchado (padding) ? */
+.classe-empty{
+  padding: 0.5%;
+}
+/* 3.4.2 Desbordamiento (overflow: hidden ) ? */
+.classe-empty{
+  overflow: hidden;
+  overflow: auto;
+}
+/* 3.4.3 Alineacion (text-align ? ) ? */
+.classe-empty{
+  text-align: center;
+}
+/* 3.4.4 Sangría ( p {text-indent:5px;} ) ? */
+p{text-indent: 1rem;}
+/* 3.4.5 Flexbox ( display:flex; ) ? */
+.classe-empty{
+  display: flex;
+}
+
+/* 3.5 */
+/* 3.5.1 En bloque (display:block;) ?*/
+.classe-empty{
+  display: block;
+}
+/* 3.5.2 En columna (Flex-direction: column;) ? */
+.classe-empty{
+  display: block;
+  
+}
+
+
+
+/* 4 (Efectos, (+transform) ) */
+/* 4.1 Visibilidad (visibility:none; etc...) ? */
+.classe-empty {
+  visibility: hidden;
+  visibility: visible;
+}
+/* 4.2 Cambio de tamaño (width:0 ->>> width 10rem etc...) ? */
+nav li:hover{
+  width: 125%;
+  transition: width 2s;
+}
+/* 4.3 Cambio de Cursor (cursor:pointer; etc...) ? */
+nav li:hover{
+  cursor: pointer;
+}
+
+/* 4.4 Transformaciones 2D (Transform: rotateX ; etc...) ? */
+.rotateY:hover {
+  transform: rotateX(55deg);
+}
+/* 4.5 Transformaciones 3D (Transform: rotate3d(180deg) ; etc...) ? */
+.rotate3D:hover {
+  transform: rotate3d(0, 1, 0, 160deg);
+}
+/* 4.6 Combinaciones (}
+ul li{  < < < Tots els decendents del ul que son li tenen aquest css (ul [space] li) 
+  list-style-type: none;
+  padding: 0%;
+}) ? */
+/* 4.7 Animaciones (@Keyframe etc...) ? */
+@keyframes canviColor{
+  from{background-color: blueviolet;}
+  to{background-color: red;}
+}
+
+
+
+/* Aplica un style de lletra global */
+/* Aplica 0 marge al <body>, evita els bordes blancs */
+* {
+  margin: 0%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* --------Propietats comuns de header i footer-------- */
+/* ----- Format compartit ----- */
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: rgb(238, 234, 172);
+  width: 100%;
+  position: fixed;
+}
+
+header {
+  border-bottom: 5px solid rgb(128, 0, 128);
+
+  z-index: 10; /*Es mostra per sobre d'altres elements*/
+  top: 0%; /*Fent scroll es manté a la part superior*/
+}
+
+footer {
+  /* menys opacitat */
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  bottom: 0%; /*Fent scroll es manté en la part inferior*/
+}
+
+/* Format predeterminat de section */
+section{
+  width: 7.5rem;
+  height: 7.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Etiqueta amb format per paraules destacades */
+span {
+  color: red;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+/* Canvia el format per defect dels links */
+a:link {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+/* Al clickar element de llista canvia el color */
+li:active {
+  background-color: rgb(255, 166, 0);
+}
+
+/*----- Format del apartat MAIN -------*/
+main {
+  height: calc(100vh - 3rem); /*Calculem l'alçada */
+  position: relative;
+  background-color: rgba(175, 175, 175, 0.623);
+  display: flex;
+  flex-direction: column;
+  padding: 0.3%;
+}
+/* Format dels <hr> de separació*/
+hr{
+  margin: 3%;
+  color: rgb(0, 0, 0);
+  border: 0.15rem dashed;
+}
+
+/* Div contenidor que ordena amb display flex la col·locació dels apartats principals*/
+.div-Contenedor{
+  margin-top: 3rem;
+  border: 0.4rem solid;
+  width: 99%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 1.500rem;
+}
+/* Format de les llistes */
+ul, ol, .llista{
+  text-align: left;
+  padding: 1%;
+  border: 0.0625rem solid;
+  border-radius: 1rem;
+  margin: 1%;
+}
+ul li, .llista .item{ /* < < < Tots els decendents del ul que son li tenen aquest format css (ul [space] li)  */
+  /* Eliminem el punt per defecte de les llistes >-*/
+  list-style-type: none;
+  padding: 0%;
+}
+
+/* El cursor cambia cuan es fa hover sobre un element d'una llista */
+li:hover{
+  cursor: pointer;
+}
+
+/* -------Format del contingut principal(main)------- */
+/* Caixa que ordena altres caixes en fila */
+.fila{
+  margin-top: 3.5%;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-around;
+  border: 0.225rem solid;
+  position: relative;
+  border-radius: 0rem 0rem 1rem 1rem; 
+}
+main input[type="text"]{}
+/* Caixa de contingut de text */
+.content{
+  font-size: 1.5rem;
+  background-color: rgba(43, 116, 226, 0.575);
+  padding: 1%;
+  flex-direction: column;
+  font-weight: bold;
+  border-radius: 0rem 0rem 1rem 1rem; 
+}
+/* Format de la caixa d'imatge */
+figure{
+  border: 0.225rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* --------- nav / Menu --------*/
+
+.dades-contacte{
+  position: relative;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(0, 85, 124);
+  border: 3px solid rgb(128, 0, 128);
+  font-size: 1.1rem;
+  color: wheat;
+  /* border-radius: 1rem; */
+  border-radius: 0rem 0rem 1rem 1rem; /*Bordes dabaix redondegats*/
+
+}
+.nav-opcio{
+  border-right: 2px solid wheat;
+  border-left: 2px solid wheat;
+  width: 99%;
+  color: wheat;
+}
+/* ---------Format de caixa desplegable de les transicions */
+/* Caixa plegada */
+.caixa-targeta{
+  border: 0.225rem solid;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(137, 43, 226, 0.575);
+
+  position: relative;
+  padding: 1%;
+  overflow: hidden;
+
+}
+.titol-targeta{
+  border: 0.225rem solid;
+  background-color: rgba(255, 255, 1, 0.418);
+  font-size: large;
+}
+.contingut-targeta{
+  font-size: 1.5rem;
+}
+/* Trancició de les targetes deplegables al fer hover */
+.caixa-targeta:hover{
+  height: +30rem;
+  transform: translate(0, -9rem);
+  background-color: rgba(27, 163, 39, 0.932);
+  transition: height 1s, background-color 1s, transform 1s;
+  overflow: auto;
+}
+
+/* ------------------- FORMAT D'ESTRUCTURA-------------------- */
+
+aside{
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3%;
+  background-color: rgba(127, 172, 255, 0.719);
+  border-radius:  1.225rem;
+  border:  solid;
+}
+
+
+
+.imatgeRodona img{
+  border-radius: 50%;
+}
+.imatgeRodona{
+  width: 70%;
+  height: 20%;
+  border-radius: 50%;
+}
+.targeta-horitzontal{
+  display: flex;
+  flex-direction: row;
+}
+.targeta-horitzontal > .contingut-targeta{
+  width: 75%;
+}
+
+/* Les imatges s'adecuen a la caixa pare */
+img{ 
+  /* width: 100%;
+  height: 100%; */
+  width: 95%;
+  height: 95%;
+}
+
