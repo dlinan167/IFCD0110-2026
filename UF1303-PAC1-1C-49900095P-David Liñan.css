@@ -8,47 +8,47 @@
 
 /* 2.1 */
 /* Sol per pantalla */
-@media screen {
+/* @media screen {
   .classe-empty{
 
   }
   /* ====================== REGLA VACIA */
-  /* 2.1.1 SELECTOR Universal (esterisco *{ }) OK */
+  /* 2.1.1 SELECTOR Universal (esterisco *{ }) OK
 *{
 
 }
-/* 2.1.2 SELECTOR Elemento (<etiqueta>) --OK-- */
+/* 2.1.2 SELECTOR Elemento (<etiqueta>) --OK-- 
 main{
 
 }
-/* 2.1.3 SELECTOR De clase (.clase) --OK-- */
+/* 2.1.3 SELECTOR De clase (.clase) --OK-- 
 .classe{
 
 }
-/* 2.1.4 SELECTOR por atributo (CSS: a[target]{... } ) OK */
+/* 2.1.4 SELECTOR por atributo (CSS: a[target]{... } ) OK
 
-a[target]{ /* <=== Solament agafa els enllaços amb atribut "target" per aplicar l'estil d'aquest seletor*/
+a[target]{ /* <=== Solament agafa els enllaços amb atribut "target" per aplicar l'estil d'aquest seletor
   
 }
-/* 2.1.5 SELECTOR Por ID (#claseID) OK */
+/* 2.1.5 SELECTOR Por ID (#claseID) OK 
 #classe-ID{
 
 }
 /* 2.2 */
-/* 2.2.1 pseudoclase dinámica (Ex--> :hover) OK */
+/* 2.2.1 pseudoclase dinámica (Ex--> :hover) OK 
 .classe-empty :hover{
   background-color: brown;
 }
-/* 2.2.2 pseudoelemento (p::first-letter {font-size: ... } (sobre textos no caixes)) OK */
+/* 2.2.2 pseudoelemento (p::first-letter {font-size: ... } (sobre textos no caixes)) OK 
 .classe-empty p::first-letter{
 
 }
-/* 2.2.3 pseudoclase estructurales (li:first-child {color:blue; } ) OK */
+/* 2.2.3 pseudoclase estructurales (li:first-child {color:blue; } ) OK 
 .classe-empty li:first-child{
 
 }
-/* REGLA VACIA ======================== */
-}
+/* REGLA VACIA ======================== 
+} */
 
 @media print{
   .classe-empty{
