@@ -25,7 +25,7 @@ main{
 .classe{
 
 }
-/* 2.1.4 SELECTOR por atributo (CSS: a[target]{... } ) OK
+/* 2.1.4 SELECTOR por atributo (CSS: a[target]{... } ) OK 
 
 a[target]{ /* <=== Solament agafa els enllaços amb atribut "target" per aplicar l'estil d'aquest seletor
   
@@ -118,6 +118,7 @@ list-style-type: none;
 }
 /* 3.2.6 Tablas ( etc...) OK */
 table {
+  display: grid;
   position: relative;
   left: 35%;
   width: 25%;
