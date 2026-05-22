@@ -42,15 +42,15 @@
                     <div class="fila">     
                         <div class="fila">
                             <label for="NOM"><b>Nom</b></label>
-                            <input type="text" placeholder="Entra el teu nom" name="NOM" required7>
+                            <input type="text" placeholder="Entra el teu nom" name="NOM" required/>
                         </div>
                         <div class="fila">
                             <label for="USUARI"><b>Usuari</b></label>
-                            <input type="text" placeholder="Entra el teu cognom" name="USUARI" required7>
+                            <input type="text" placeholder="Entra el teu cognom" name="USUARI" required/>
                         </div>
                         <div class="fila"> 
                             <label for="CONTRASENYA"><b>Contrasenya</b></label>
-                            <input type="password" placeholder="Entra la teva contrasenya" name="CONTRASENYA" required7>
+                            <input type="password" placeholder="Entra la teva contrasenya" name="CONTRASENYA" required/>
                         </div>
                         <button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
                         
@@ -66,31 +66,35 @@
                 </form> 
             </div>
         </div>
-
+                <!-- =============== FORMULARI DE EDITAR PERFIL ================= -->
         <div class="div-registre" id="editar_perfil">
             <figure>
-                <img src="https://cdn.pixabay.com/photo/2014/02/04/13/17/register-257986_1280.jpg" alt="tecla de Registre">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/editing-user-action/edit-user-icon.png" alt="tecla de Registre">
             </figure>
             <form action="https://www.google.com" method="post" target="_blank">
                 
                 <div class="fila">     
                     <div class="fila">
                         <label for="NOM"><b>Nom</b></label>
-                        <input type="text" placeholder="Entra el teu nom" name="NOM" required7>
+                        <input type="text" placeholder="Entra el teu nom" name="NOM" required/>
                     </div>
                     <div class="fila">
                         <label for="USUARI"><b>Usuari</b></label>
-                        <input type="text" placeholder="Entra el teu cognom" name="USUARI" required7>
+                        <input type="text" placeholder="Entra el teu cognom" name="USUARI" required/>
                     </div>
                     <div class="fila"> 
                         <label for="CONTRASENYA"><b>Contrasenya</b></label>
-                        <input type="password" placeholder="Entra la teva contrasenya" name="CONTRASENYA" required7>
+                        <input type="password" placeholder="Entra la teva contrasenya" name="CONTRASENYA" required/>
+                    </div>
+                    <div class="fila">
+                        <h3>Quin es el teu sexe?</h3>
+                        <label for="rMascle">Mascle </label>
+                        <input type="radio" id="rMacle" name="sexe" value="Mascle"/>
+                        
+                        <label for="rFemella">Femella </label>
+                        <input type="radio" id="rFemella" name="sexe" value="Femella"/>
                     </div>
                     <button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
-                    
-                    <label>
-                        <input type="checkbox" checked="checked" name="RECORDAR-ME"/> Recordar-me
-                    </label>
                 </div>
                 
                 <div class="fila" style="background-color:#f1f1f1">
@@ -99,6 +103,41 @@
                 </div>
             </form> 
         </div>
+                      <!-- ============================= FORMULARI ETIQUETA '<select>' I OPCIÓ MULTIPLE DE COTXES ============================== -->
+        <div class="fila">
+            <div class="div-registre">
+            <h2>EL element '>select'</h2>
+            <p>L'element select s'utilitza per crear una llista desplegable.</p>
+            
+            <form action="" method="get" target="_blank">
+                <figure>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3097/3097144.png" alt="Icona de cotxe">
+                </figure>
+                <div class="fila">    
+                    <label for="COTXE">Elegir cotxe:</label>
+                    <select name="COTXE" id="COTXE">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+
+                <div class="fila">
+                    <label for="COTXE_multiple">Elegir cotxe (multiple):</label>
+                    <select name="COTXE_multiple" id="COTXE_multiple" multiple>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <button type="submit" value="Submit">Enviar COTXE</button>
+            </form>
+            <!-- MISSATGE D'ALERTA -->
+            <button onclick="javascript:alert ('ALERTA: Avui es divendres')">MISSATGE DE ALERTA, onclick</button>
+        </div>
+    </div>
         
             <!-- ========================= (LEGACY, DEPRECATED) FORMULARI ========================= -->
             <h2>Més button types:</h2>

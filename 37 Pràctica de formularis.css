@@ -56,6 +56,7 @@ main{
 aside{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   background-color: cadetblue;
   width: 15%;
   position: relative;
@@ -160,6 +161,35 @@ form label{
   font-size: 1.3em;
 }
 .div-registre{
-  width: 35%;
+  min-width: 30%;
   border: 0.4rem brown solid;
+  width: min-content;
+}
+button{
+  cursor: pointer;
+  margin: 0.3rem;
+  background-color: rgb(39, 167, 14);
+  border-radius: 1rem;
+  border: 0.250rem solid;
+}
+button:hover{
+  background-color: rgb(172, 202, 0);
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease;
+}
+/* ============================= RESPONSIVE !====================================== */
+@media(max-width: 700px) {
+  aside{
+    display: none;
+  }
+  main{
+    width: 100%;
+  }
+}
+
+
+@media(max-width: 1875px){
+  nav li{
+    width: 86%;
+  }
 }
