@@ -1,0 +1,152 @@
+:root{
+    --fons-principal:#bd6717;
+    --fons-titol: #000000f5;
+    --color-titol-lletra: #f5deb3;
+    --fons-titol-border: #ac0095;
+    --fons-anuncis: #5f3300;
+    --fons-navegacio:#5f5e00;
+
+}
+/* ================== ESTRUCTURA GENERAL ======================= */
+
+header,footer{
+    color: var(--color-titol-lletra);
+    background-color: var(--fons-titol);
+    border-color: var(--fons-titol-border);
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+body{
+    background: var(--fons-principal);
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 6.5% auto 6.5%;
+}
+
+ul{
+    list-style-type: none;
+}
+main{
+    text-align: center;
+    border: 0.150rem solid;
+}
+aside{
+    border: 0.150rem solid;
+    background-color: var(--fons-anuncis);
+    align-content: center;
+}
+.fila{
+  display: flex;
+  padding: 1%;
+  border-bottom: 0.225rem solid rgb(0, 0, 0);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* ==================== MENU de NAV ======================= */
+nav{
+    align-content: center;
+    border: 0.150rem solid;
+    background: var(--fons-navegacio);
+}
+body > nav{
+    position: fixed;
+    top: 20%;
+    
+}
+body > nav li:hover{
+  width: 110%;
+  border: 0.250rem solid;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  padding: 1.5%;
+  transition: all 0.3s;
+}
+.nav-item{
+    border: 0.2rem solid;
+    background-color: rgb(235, 177, 177);
+    margin-left: 0.4rem;
+}
+
+nav li{width: 10.5em; text-align: center; transition: all 0.3s ease;}
+nav li:hover{
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    background-color: burlywood;
+    cursor: pointer;
+    transform: scale(1.25); /*Aumenta el tamany al fer hover*/
+    transition: all 0.3s ease; /*Fa transició*/
+}
+nav figure:hover{
+    transform: scale(1.8);
+    transition: all 0.3s ease;
+}
+nav li:hover a{
+  font-size: 1.1rem;
+}
+a{font-weight: bold;}
+/* ==================== LINKS OPCIÓ  NAV ======================= */
+nav li:active {
+  background-color: rgb(255, 166, 0);
+}
+/* =========== IMATGES I BANNERS ============= */
+figure{
+  object-fit: contain;
+  width: 90%;
+  height: fit-content;
+  padding: 0.2%;
+  border: 0.150rem solid black;
+}
+nav figure{
+  margin: 0%;
+  border: none;
+}
+img{
+    width: 100%;
+    max-height: auto;
+}
+.div-registre figure{
+  width: 100%;
+  border: 0;
+  padding: 0%;
+}
+
+/* =============== Modificació sobre classes BOOTSTRAP ================ */
+.alert-warning{
+    color: #947201;
+    font-weight: bold;
+}
+.form-signin{
+    padding: 25%;
+}
+/* =============== Modificació sobre classes BOOTSTRAP ================ */
+.tarjeta-login{
+    width: 20rem;
+    align-content: center;
+    margin: 10%;
+    border: 0.2rem solid;
+}
+
+/* =========== FORMULARI ============= */
+form label{
+  margin-right: 1%;
+  margin-left: 1%;
+}
+#log-in input, label, b{
+  font-size: 1.3em;
+}
+button{
+  cursor: pointer;
+  margin: 0.3rem;
+  background-color: rgb(39, 167, 14);
+  border-radius: 1rem;
+  border: 0.250rem solid;
+}
+button:hover{
+  background-color: rgb(172, 202, 0);
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease;
+}
+
+/* ============================= RESPONSIVE !====================================== */

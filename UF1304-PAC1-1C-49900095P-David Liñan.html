@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>37 Pràctica de formularis</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="./img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <!-- =========  ENLLAÇ DE LLIBRERIA BOOTSTRAP =========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./UF1304-Plantilla_1.css" /> <!-- < < < Primer CSS (en local) PLANTILLA -->
+    <link rel="stylesheet" href="./UF1304-Plantilla_2.css" /> <!-- < < < CSS 2-->
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+    <header>
+    <h1>CET Penedes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Opció 1</li>
+            <li>Opció 2</li>
+            <li>Opció 3</li>
+            <li>Opció 4</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="tarjeta-login">
+            <div class="div-registre" id="log-in">
+                <figure>
+                    <img src="https://cdn.pixabay.com/photo/2014/02/04/13/17/register-257986_1280.jpg" alt="tecla de Registre">
+                </figure>
+                <form action="https://www.google.com" method="get" target="_blank">
+                    
+                    <div class="fila">     
+                        <div class="fila">
+                            <label for="USUARI"><b>Usuari</b></label>
+                            <input type="text" placeholder="Entra el teu cognom" name="USUARI" required/>
+                        </div>
+                        <div class="fila"> 
+                            <label for="CONTRASENYA"><b>Contrasenya</b></label>
+                            <input type="password" placeholder="Entra la teva contrasenya" name="CONTRASENYA" required/>
+                        </div>
+                        <button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="RECORDAR-ME"/> Recordar-me
+                        </label>
+                    </div>
+                    
+                    <div class="fila" style="background-color:#f1f1f1">
+                        <button type="reset" class="btnCancelar">Natejar camps!</button>
+                        <span class="CONTRASENYA">Has perdut la teva <a href="#">contrasenya?</a></span>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </main>
+    <aside>BANNERS</aside>
+
+    <footer>Fet per David</footer>
+
+</body>
+    <!-- ========= CARGAR BOOTSTRAP =========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
