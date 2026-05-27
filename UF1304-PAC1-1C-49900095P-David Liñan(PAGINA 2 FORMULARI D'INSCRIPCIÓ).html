@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>37 Pràctica de formularis</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="./img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./UF1304-Plantilla_1.css" /> <!-- < < < Primer CSS (en local) PLANTILLA -->
+    <link rel="stylesheet" href="./UF1304-Plantilla_2.css" /> <!-- < < < CSS 2-->
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="https://borsa.cetpenedes.cat/wp-content/uploads/2022/06/logo-alta-calidad_Mesa-de-trabajo-1.png" alt="logo CET Penedes">
+        </figure>
+    <h1>C.E.T Penedes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Opció 1</li>
+            <li>Opció 2</li>
+            <li>Opció 3</li>
+            <li>Opció 4</li>
+        </ul>
+    </nav>
+    <main>
+        <!-- =========== ----- GRUP DE DADES DE L'INSCRIT ----- =========== -->
+
+        <form action="./UF1304-PAC1-1C-49900095P-David Liñan(Confirmacio).html" method="get" target="_blank">
+            <div class="fila">
+                
+                <div class="tarjeta-formulari">
+                <div class="tarjeta-titol">
+                    <h2>- - - - - DADES DE L'INSCRIT - - - - -</h2>
+                </div>
+                <!-- NOM I COGNOM -->
+                <div class="fila">
+                    <label for="rNOM-COGNOM">- Nom i cognoms:</label>
+                    <input type="text" name="nom-cognom" id="rNOM-COGNOM" placeholder="NOM i COGNOMs" minlength="10" maxlength="80" required/>
+                </div>
+                <!-- EDAT -->
+                <div class="fila">
+                    <label for="rEDAT">- Edat:</label>
+                    <input type="number" name="edat" id="rEDAT" min="16" max="30" placeholder="16-30" style="width: 3.5rem;"/>
+                </div>
+                    
+                    <!-- TELÈFON -->
+                    <div class="fila">   
+                    <label for="rTELEFON">- Telèfon mòbil:</label>
+                    <br>
+                    <input type="tel" name="telefon" id="rTELEFON" placeholder="123456789" pattern="[0-9]{9}"/> <!-- "pattern" obliga en aquest cas un rang del 0 al 9 "[0-9]" en 3 dígits "{3}"-->
+                </div>
+                <!-- PROPÒSITS -->
+                <div class="fila">
+                    <label for="rPROPOSITS">- Propòsits a aconseguir al curs:</label>
+                    <textarea id="rPROPOSITS" name="proposits" rows="6" cols="33"></textarea>
+                </div>
+            </div>
+
+
+        <!-- =========== ----- GRUP DE PREFERÈNCIES DEL TALLER ----- =========== -->
+        <div class="tarjeta-formulari">
+            <div class="tarjeta-titol">
+                <h2>- - - - PREFERÈNCIES DEL TALLER - - - -</h2>
+            </div>
+            <!-- DISPOSITIU -->
+            <div class="fila">
+            <h2>- Dispositiu que utilitzaràs:</h2>
+                <ul>
+                    <li>
+                        <input type="radio" id="rORDINADOR" name="Dispositiu" value="Ordinador"/> 
+                        <label for="rORDINADOR">Ordinador</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="rTAULETA" name="Dispositiu" value="Tauleta"/>
+                        <label for="rTAULETA">Tauleta </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="rSMARTPHONE" name="Dispositiu" value="Smartphone"/>
+                        <label for="rSMARTPHONE">Smartphone </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="rALTRE" name="Dispositiu" value="Altre"/>
+                        <label for="rALTRE">Altre </label>
+                    </li>
+                </ul>  
+            </div>
+            <!-- PROGRAMA -->
+            <div class="fila">    
+                <label for="rPROGRAMA">- Quin programa t’interessa més?:</label>
+                <select name="rPROGRAMA" id="rPROGRAMA">
+                    <option value="Photoshop">Photoshop</option>
+                    <option value="Krita">Krita</option>
+                    <option value="LigthRoom">LigthRoom</option>
+                    <option value="GIMP">GIMP</option>
+                    <option value="Blender">Blender</option>
+                </select>
+            </div>
+
+            <!-- HABILITATS -->
+            <div class="fila">
+                <h2>- Habilitats previes:</h2>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="rMODELATGE-3D" name="Habilitats" value="Modelatge-3D"/>
+                        <label for="rMODELATGE-3D">Modelatge 3D</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="rEDICIÓ-IMATGE" name="Habilitats" value="Edició-imatge"/>
+                        <label for="rEDICIÓ-IMATGE">Edició d’imatge</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="rANIMACIO" name="Habilitats" value="Animacio"/>
+                        <label for="rANIMACIO">Animació</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" id="rDIBUIX-VECTORIAL" name="Habilitats" value="Dibuix-Vectorial"/>
+                        <label for="rDIBUIX-VECTORIAL">Dibuix Vectorial</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="rFOTO-MUNTATGE" name="Habilitats" value="FotoMuntatge"/>
+                        <label for="rFOTO-MUNTATGE">FotoMuntatge</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- BUTTONS DEL FORM -->
+        <button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
+        <button type="reset" class="btnCancelar">Natejar camps!</button>
+    </form>
+        
+    </main>
+    <aside>BANNERS</aside>
+
+    <footer>Fet per David</footer>
+
+</body>
+</html>
