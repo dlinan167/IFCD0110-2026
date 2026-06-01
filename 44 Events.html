@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <title>44 Events</title> <!-- <= Títol -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./44 Events.css" /> <!-- <= CSS 1 -->
+    <link rel="shortcut icon" href="./img/imatge_pera.png" type="image/x-icon"/> <!-- <= icona -->
+  </head>
+  <body onload="msgVenvinguda()">
+    <header>
+      <h1>Exercici per veure tipus d'events</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./#">Inici</a></li>
+        <li><a href="./#">Serveis</a></li>
+        <li><a href="./#">Contacte</a></li>
+        <li><a href="./#">Opció 4</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Pàgina principal MAIN</h2>
+      <!-- Botó d'event de prova -->
+      <!-- BOTÓ ONCLICK -->
+      <button onclick="fesClic()">FES CLICK!</button>
+      <!-- BOTÓ ONDBLCLICK -->
+      <button ondblclick="fesDobleClic()">FES doble CLICK!</button>
+
+      <button onclick="canviaColor()">
+        FES CLICK! (Per cambiar de color la id 'caixa')
+      </button>
+      <!-- Mouse over -->
+      <button onmouseover="canviaColorMouseOver()" onmouseleave="canviaColorMouseLeave()">
+        FES Hover!
+        <p>"canviaColorMouseOver()"</p>
+      </button>
+      <h2>
+        FES scroll! Per mostrar el nummero '852' en consola (Si canvia de color
+        es que fuciona)
+      </h2>
+      <div
+        class="caixa"
+        id="caixa"
+        onscroll="fesScroll()"
+        onmouseleave="canviaColorMouseLeave()"
+      >
+        <p>
+          Qual en lo món molt triümfava. E ordenat E per tant com la divina.
+          Cinc llices de camp clos. E de Sant Pau ermità e de Sant Antoni e. No
+          demostràs ésser molt agreujada Al matí lo. D'aquell e de les sues
+          grandíssimes. Era decorat d'honor de milícia sinó lo fort. En la Santa
+          Escriptura les. E de Santa Maria Egipcíaca E moltes. La Comtessa lo
+          qual anell. Entrat en cinc llices de camp. Vergonyosament La santa
+          dona Judic ab ànimo viril gosà
+        </p>
+        <p>
+          Qual en lo món molt triümfava. E ordenat E per tant com la divina.
+          Cinc llices de camp clos. E de Sant Pau ermità e de Sant Antoni e. No
+          demostràs ésser molt agreujada Al matí lo. D'aquell e de les sues
+          grandíssimes. Era decorat d'honor de milícia sinó lo fort. En la Santa
+          Escriptura les. E de Santa Maria Egipcíaca E moltes. La Comtessa lo
+          qual anell. Entrat en cinc llices de camp. Vergonyosament La santa
+          dona Judic ab ànimo viril gosà matar. Sens aquella los regnes e.
+          Cavalleria; la segona serà de l'estament e ofici. Històries e sants
+          actes dels sants pares. Són d'honor glòria e de fama e. Cavaller; la
+          cinquena és què signifiquen les armes del cavaller;. Així hòmens com
+          dones e dix-los semblants paraules: Mos. De Job e de Tobies e. Actes
+          frescs de nostres dies és estat.
+        </p>
+
+        <p>
+          Dix-los semblants paraules: Mos fills e fidelíssims servidors a la.
+          Sant Pau ermità e de Sant Antoni e de Sant. Viril gosà matar
+          Holofernes par delliurar la ciutat de. M'és incerta si a Jesucrist
+          serà plasent e. La dignitat militar deu ésser molt. Egipcíaca E moltes
+          gestes e innumerables històries són estades. Lo quart és de la forma
+          com. Bastat aterrar les forces dels enemics E per. Dignitat militar
+          deu ésser molt decorada perquè sens aquella los. Instituït e ordenat E
+          per. Recita aquell gran orador Tul·li Llegim en la Santa Escriptura.
+        </p>
+      </div>
+      <details ontoggle="ToggleCanviaOnOff()">
+      <summary>Curs HTML, CSS i JS</summary>
+        Aquest és un curs de 600 hores on aprendrem a confeccionar pàgines web utilitzant les tecnologies HTML, CSS i JS.
+      </details>
+    </main>
+
+    <aside>BANNERS</aside>
+    <footer>
+      <p>2026 - &copy; Fet per David</p>
+    </footer>
+    <script src="js/44 Events.js"></script>
+    <!-- <= inserció de les funcions d'events que hem creat" -->
+  </body>
+</html>

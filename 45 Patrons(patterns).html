@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <title>45 Patrons(patterns)</title> <!-- <= Títol -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./45 Patrons(patterns).css" /> <!-- <= CSS 1 -->
+    <link rel="shortcut icon" href="./img/imatge_pera.png" type="image/x-icon"/> <!-- <= icona -->
+  </head>
+  <body>
+    <header>
+      <h1>Exercici per veure tipus de patrons</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./#">Opció 1</a></li>
+        <li><a href="./#">Opció 2</a></li>
+        <li><a href="./#">Opció 3</a></li>
+        <li><a href="./#">Opció 4</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Pàgina principal MAIN</h2>
+      <form action="./45 Patrons(patterns).html" method="get" target="_blank">
+
+        <!-- INPUT TEL AMB LLISTA D'OPCIONS (enllçat amb l'id) -->
+        <label for="telefon">Telèfon: INPUT TEL AMB LLISTA D'OPCIONS (sugerencies tel:555-0100)</label>
+        <br>
+      <input type="tel" list="tel-list" name="TELEFON" placeholder="tel: 123-123456" pattern="[0-9]{3}-[0-9]{6}" minlength="9" maxlength="15"/>
+      <datalist id="tel-list">
+        <option value="555-0100"></option>
+        <option value="555-0101"></option>
+      </datalist>
+        <!-- BUTTONS DEL FORM -->
+       <button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
+    </form>
+    </main>
+
+    <aside>BANNERS</aside>
+    <footer>
+      <p>2026 - &copy; Fet per David</p>
+    </footer>
+    <script src="js/45 Patrons(patterns).js"></script>
+    <!-- <= inserció de les funcions d'events que hem creat" -->
+  </body>
+</html>
