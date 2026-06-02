@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>UF1303-PA-1C-49900095P-David Liñan</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/751/751683.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./UF1304-Plantilla_1.css" /> <!-- < < < Primer CSS (en local) PLANTILLA -->
+    <link rel="stylesheet" href="./UF1304-Plantilla_2.css" /> <!-- < < < CSS 2-->
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="https://cdn-icons-png.flaticon.com/512/751/751683.png" alt="logo de CET Penedes">
+        </figure>
+    <h1>Hotels Maria del Mar</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Opció 1</li>
+            <li>Opció 2</li>
+            <li>Opció 3</li>
+            <li>Opció 4</li>
+        </ul>
+    </nav>
+    <main>
+    <!-- =========== 2. Llistat d’hotels.  =========== -->
+    <div class="fila">
+        
+        <div class="tarjeta-formulari-ample">
+            <div class="tarjeta-titol">
+                <h2>- - - - - LLISTAT D'HOTELS - - - - -</h2>
+            </div>
+            <div class="fila">
+                <!-- 9. Model d'habitació -->
+                <table cellspacing="0" cellpadding="0" tabindex="6" id="model-habitacio">
+                    <tr>
+                        <th><h2>nº</h2></th>
+                        <th colspan="3"><h2>Models d'habitació disponibles</h2></th>
+                    </tr>
+                    <!-- FILA de taula-->
+                    <tr>
+                        <td>
+                            <!-- 7. ID d'hotel-->
+                            <b>5</b>
+                        </td>
+                        <td> 
+                            <p>Económica</p> 
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.altaveu.com%2Fuploads%2Fs1%2F20%2F21%2F14%2F9%2Fhabitacio.jpeg&f=1&nofb=1&ipt=26307a7f4756b6af5de0b7979d891d59450164bb626789e5ac99c2c7ed7da238" alt="Foto del hotel llistat">
+                            </figure>
+                        </td>
+                    </tr>
+                    <!-- FILA de taula-->
+                    <!-- FILA de taula-->
+                    <tr>
+                        <td>
+                            <b>3</b>
+                        </td>
+                        <td>
+                            <p>Turista Deluxe</p> 
+                        </td>
+                        <td> 
+                            <figure>
+                                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcasalouran.com%2Fwp-content%2Fuploads%2F2024%2F05%2Fdetalle2-2-habitacion_doble-casa_rural-galicia-fragas_do_eume.jpg&f=1&nofb=1&ipt=a9863a8566141b179e0ade4d1f6c2643dea91ade9a706f5f65e1143930051b02" alt="Foto del hotel llistat">
+                            </figure>
+                        </td>
+                    </tr>
+                    <!-- FILA de taula-->
+                    <!-- FILA de taula-->
+                    <tr>
+                        <td>
+                            <b>2</b>
+                        </td>
+                        <td>
+                            <p>VIP</p> 
+                        </td>
+                        <td> 
+                            <figure>
+                                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.3dmodels.org%2Fuploads%2Farbin4444%2F014_Bedroom_Victorian_Style_Hotel%2FBedroom_Victorian_Style_Hotel_1000_0001.jpg&f=1&nofb=1&ipt=4c5ad046fb50b17f92fcc6269f12f66c3b2e46137883718a9fe7b2706a9d0963" alt="Foto del hotel llistat">
+                            </figure>
+                        </td>
+                    </tr>
+                    <!-- FILA de taula-->
+                </table>
+                
+                <a href="./contacte_gestor.html" target="_blank">
+                    <button name="CONTGestor" id="CONTGestor">Contactar gestor</button>
+                </a>
+            </div>
+                
+                <form action="./UF1304-PAC1-1C-49900095P-David Liñan(1 CERCA).html" method="get" target="_blank">
+                    <div class="fila">
+
+                        <!-- 11. Opció estança amb esmorzar -->
+                        <div class="tarjeta-titol tarjeta-caixa">
+                            <h2>Incloure esmorzar amb estança?</h2>
+                            <label for="rSI">Si</label>
+                            <input type="radio" id="rSI" name="ESMORZAR" value="Si" required/>
+                            
+                            <label for="rNO">No</label>
+                            <input type="radio" id="rNO" name="ESMORZAR" value="No" required checked="checked"/>
+                        </div>
+                    </div>
+                    <div class="fila">
+                        <!-- 12. Opció per a fer les peticions especials -->
+                            <div class="tarjeta-titol tarjeta-caixa">
+                            <h2>Fer les peticions especials?</h2>
+                            <label for="rSI">Si</label>
+                            <input type="radio" id="rSI" name="PETICIONSesp" value="Si" required/>
+                            
+                            <label for="rNO">No</label>
+                            <input type="radio" id="rNO" name="PETICIONSesp" value="No" required checked="checked"/>
+
+                       
+                           <div class="fila">
+                               <label for="IDtime"><h2>Hora d'entrada</h2></label>
+                               <br>
+                               <input type="time" name="hora" id="IDtime"/>
+                            </div>
+                            <div class="fila">
+                                <label for="IDtime"><h2>Hora de sortida</h2></label>
+                                <br>
+                                <input type="time" name="hora" id="IDtime"/>
+                            </div>
+
+                            <h2>Incloure un llit supletori?</h2>
+                            <label for="rSI">Si</label>
+                            <input type="radio" id="rSI" name="PETICIONSesp" value="Si" />
+                            
+                            <label for="rNO">No</label>
+                            <input type="radio" id="rNO" name="PETICIONSesp" value="No"/>
+                            <div class="linea" style="margin: 5%;">
+                                <h2>Personalitzar la sol·licitud.</h2>
+                                <textarea id="rPERSONALITZAR" name="PERSONALITZAR" rows="6" cols="33" placeholder="Personalitzar petició"></textarea>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- 13. Botó de reserva. -->
+                    <button type="submit" id="btnSubmit">RESERVAR HABITACIÓ</button>
+                    <button type="reset" class="btnCancelar">Natejar camps!</button>
+                    </form> 
+                </div>
+            </div>
+        </main>
+            
+            <aside>BANNERS</aside>
+            <footer>
+                <ul>
+                    <li>Direcció: Carrer de Ponent, 11, 17310 Lloret de Mar, Girona  </li>
+                    <li>tel: 123 36 42 21</li>
+                </ul>
+                
+            </footer>
+</body>
+</html>

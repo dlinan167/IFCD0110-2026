@@ -72,7 +72,6 @@ nav{
 body > nav{
     position: fixed;
     top: 20%;
-    
 }
 body > nav li:hover{
   width: 110%;
@@ -112,7 +111,7 @@ nav li:active {
 /* =========== IMATGES I BANNERS ============= */
 figure{
   object-fit: contain;
-  width: 90%;
+  width: auto;
   height: fit-content;
   padding: 0.2%;
   border: 0.150rem solid black;
@@ -137,7 +136,7 @@ img{
     background-color: rgba(230, 229, 229, 0.527);
 }
 .tarjeta-formulari-ample{
-    width: 45rem;
+    width: 55rem;
     align-content: center;
     margin: 2%;
     border: 0.2rem solid;
@@ -146,6 +145,10 @@ img{
 }
 .tarjeta-titol{
   background-color: rgb(189, 252, 252);
+}
+.tarjeta-caixa{
+  border: 0.2rem solid;
+  width: 40%;
 }
 .tarjeta-formulari ul{
   width: 80%;
@@ -174,7 +177,7 @@ form label{
   font-size: 1rem;
 }
 
-form button{
+button{
   width: 8rem;
   cursor: pointer;
   margin: 0.3rem;
@@ -187,11 +190,54 @@ button:hover{
   transform: scale(1.1); /*Aumenta el tamany al fer hover*/
   transition: all 0.3s ease;
 }
+/* =========== TAULA LLISTAT =========== */
+table {
+  display: grid;
+  position: relative;
+  width: 100%;
+  border: 0.2rem solid;
+  gap: inherit;
+  border-collapse: collapse;
+}
+tr:nth-child(even){
+background-color: #D6EEEE;
+}
+tr:nth-child(odd){
+background-color: #90d9d9;
+}
+td:first-child{
+  width: 3rem;
+}
+td:nth-child(2){
+  width: 15rem;
+}
+td{
+  width: 12rem;
+  height: 5rem;
+  border: 0.1rem solid;
+  padding: 1%;
+  font-size: 1.2rem;
+}
+th:first-child{
+  width: 5rem;
+}
+th{
+  width: 12rem;
+  border: 0.1rem solid;
+  padding: 1%;
+  background-color: blanchedalmond;
+}
+#model-habitacio{
+  width: 40%;
+}
 
-/* ============================= RESPONSIVE !====================================== */
+/* ============================= RESPONSIVE! ====================================== */
 
 @media (max-width:650px) {
     body > nav{
         position: static;
+    }
+    body{
+      display: block;
     }
 }
