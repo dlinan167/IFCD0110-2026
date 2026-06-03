@@ -160,15 +160,28 @@ img{
   margin-left: 12.5%;
 }
 .missatge-confirmacio{
+  display: flex;
+  align-content: center;
   position: absolute;
-  top: 26.5%;
-  left: 22.5%;
+  top: 10%;
   background-color: rgba(0, 255, 255, 0.541);
   color: #000000f5;
   border-radius: 4rem;
-  font-size: 1.8rem;
   align-content: center;
   padding: 3rem;
+}
+.missatge-confirmacio p{
+    font-size: 1.8rem;
+}
+.missatge-confirmacio figure{
+  width: 50%;
+  border: 0;
+  position: relative;
+  right: -2.5rem;
+}
+.missatge-confirmacio img{
+  position: relative;
+  float: right;
 }
 
 /* =========== FORMULARI ============= */
@@ -189,6 +202,11 @@ button:hover{
   background-color: rgb(172, 202, 0);
   transform: scale(1.1); /*Aumenta el tamany al fer hover*/
   transition: all 0.3s ease;
+}
+input:invalid{
+    color: red;
+    border: 0.2rem solid red;
+    opacity: 0.9;
 }
 /* =========== TAULA LLISTAT =========== */
 table {
@@ -229,6 +247,11 @@ th{
 }
 #model-habitacio{
   width: 40%;
+}
+
+.table-rating td{
+  width: 4rem;
+  height: 3rem;
 }
 
 /* ============================= RESPONSIVE! ====================================== */

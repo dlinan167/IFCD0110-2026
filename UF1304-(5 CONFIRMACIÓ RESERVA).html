@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>UF1303-PA-1C-49900095P-David Liñan</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/751/751683.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./UF1304-Plantilla_1.css" /> <!-- < < < Primer CSS (en local) PLANTILLA -->
+    <link rel="stylesheet" href="./UF1304-Plantilla_2.css" /> <!-- < < < CSS 2-->
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="https://cdn-icons-png.flaticon.com/512/751/751683.png" alt="logo de CET Penedes">
+        </figure>
+        <h1>Hotels Maries dels Mars</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Opció 1</li>
+            <li>Opció 2</li>
+            <li>Opció 3</li>
+            <li>Opció 4</li>
+        </ul>
+    </nav>
+    <main>
+
+
+        <div class="tarjeta-formulari-ample">
+            <form action="./UF1304-(6 OPINIÓ).html" method="get" target="_blank">
+            <div class="tarjeta-titol">
+                <h2>- - - - - Confirmació de la reserva - - - - -</h2>
+            </div>
+            
+                <!-- =========== 5. Confirmació de la reserva. =========== -->
+            <div class="fila">
+                <div class="tarjeta-formulari">
+                    <!-- 31. Codi de descompte. -->
+                        <label for="CODI-DESCOMPTE"><b>Codi de descompte:</b></label>
+                        <input type="text" placeholder="1234-5678" name="CODI-DESCOMPTE" pattern="[0-9]{4}-[0-9]{4}" minlength="9" maxlength="9"/>
+                </div>
+            </div>
+            <br>
+                    <!-- 32. Dades de la targeta de crèdit. -->
+                    <div class="tarjeta-titol">
+                        - - - - - DADES DE LA TARJETA DE CRÈDIT - - - - -
+                    </div>
+                    <div class="tarjeta-formulari-ample">
+
+                        <!-- Titular -->
+                         
+                        <label for="TITULAR"><b>Titular de la targeta:</b></label>
+                        <input type="text" placeholder="Entra el titular" name="TITULAR" pattern="[A-Za-z]{2,}" size="50" minlength="2" required/>
+                        <br>
+                        <!-- Tipus de tarjeta -->
+                    <label for="TIPUS-TARJETA">Tipus de tarjeta:</label>
+                    <select name="TIPUS-TARJETA" id="TIPUS-TARJETA">
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="american-express">American-Express</option>
+                        <option value="diners-club-international">Diners-Club-International</option>
+                    </select>
+                   
+                    <div class="fila"> 
+                        <!-- Número de tarjeta -->
+                        <label for="NUM-TARJETA"><b>Número de tarjeta:</b></label>
+                        <input type="text" placeholder="123456789876543" name="NUM-TARJETA"  minlength="13" maxlength="19" required/>
+                        
+                        <!-- Data de caducitat -->
+                        <label for="DATA-CADUCITAT"><b>Data de caducitat:</b></label>
+                        <input type="date" name="DATA-CADUCITAT" id="DATA-CADUCITAT" required/>   
+                        <!-- Codi CVC -->
+
+                        <label for="CODI-CVC"><b>Codi CVC:</b></label>
+                        <input type="text" placeholder="123" name="CODI-CVC" size="4" minlength="3" maxlength="4" required/>
+                    </div>
+                </div>
+                <div class="tarjeta-formulari-ample">
+                        
+                        <!-- 33. Acceptar les condicions legals. -->
+                        <input type="checkbox" id="COND-LEGALS" name="COND-LEGALS" value="ACCEPTED" required/>
+                        <label for="COND-LEGALS">Accepto les condicions legals</label>
+                          
+                        <!-- 34. Oferir la possibilitat de subscriure's a un newsletter. -->
+                         <div class="fila">
+                             <input type="checkbox" id="SUBS-NEWLETTER" name="SUBS-NEWLETTER" value="ACCEPTED"/>
+                             <label for="SUBS-NEWLETTER">Subscribir-se al nostre newsletter?</label>
+                            </div>
+                        </div>
+
+                            <!-- 35. Botó de confirmació de la reserva. -->
+                        <div class="fila">
+                            <button type="submit" id="btnSubmit">CONFIRMAR RESERVA</button>
+                             <br>
+                             <button type="reset" class="btnCancelar">Natejar camps!</button>
+                            </div>
+                        </form> 
+                    </div>
+                </main>
+                    
+    <aside>BANNERS</aside>
+    <footer>
+        <ul>
+            <li>Direcció: Carrer de Ponent, 11, 17310 Lloret de Mar, Girona  </li>
+            <li>tel: 123 36 42 21</li>
+        </ul>
+        
+    </footer>
+</body>
+</html>
