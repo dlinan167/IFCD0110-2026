@@ -135,6 +135,7 @@ img{
     border: 0.2rem solid;
     border-color: rgb(167, 252, 141);
     background-color: rgba(230, 229, 229, 0.527);
+    box-shadow: 0.25rem 0.25rem rgba(8, 8, 8, 0.555); 
 }
 .tarjeta-formulari-ample{
     width: 95%;
@@ -143,6 +144,7 @@ img{
     border: 0.2rem solid;
     border-color: rgb(167, 252, 141);
     background-color: rgba(230, 229, 229, 0.527);
+    box-shadow: 0.25rem 0.25rem rgba(8, 8, 8, 0.555); 
 }
 .tarjeta-titol{
   background-color: rgb(189, 252, 252);
@@ -171,6 +173,7 @@ img{
   border-radius: 4rem;
   align-content: center;
   padding: 3rem;
+  box-shadow: 0.35rem 0.35rem rgba(8, 8, 8, 0.575); 
 }
 .missatge-confirmacio p{
     font-size: 1.8rem;
