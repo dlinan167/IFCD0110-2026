@@ -30,7 +30,7 @@
 
 
         <div class="tarjeta-formulari-ample">
-            <form action="./UF1304-(6 OPINIÓ).html" method="get" target="_blank">
+            <form action="./UF1304-(6 OPINIÓ).html" method="get">
             <div class="tarjeta-titol">
                 <h2>- - - - - Confirmació de la reserva - - - - -</h2>
             </div>
@@ -67,7 +67,7 @@
                     <div class="fila"> 
                         <!-- Número de tarjeta -->
                         <label for="NUM-TARJETA"><b>Número de tarjeta:</b></label>
-                        <input type="text" placeholder="123456789876543" name="NUM-TARJETA"  minlength="13" maxlength="19" required/>
+                        <input type="text" placeholder="123456789876543" pattern="[0-9]{13,}" name="NUM-TARJETA"  minlength="13" maxlength="19" required/>
                         
                         <!-- Data de caducitat -->
                         <label for="DATA-CADUCITAT"><b>Data de caducitat:</b></label>
@@ -75,7 +75,7 @@
                         <!-- Codi CVC -->
 
                         <label for="CODI-CVC"><b>Codi CVC:</b></label>
-                        <input type="text" placeholder="123" name="CODI-CVC" size="4" minlength="3" maxlength="4" required/>
+                        <input type="text" placeholder="123" pattern="[0-9]{3,}" name="CODI-CVC" size="4" minlength="3" maxlength="4" required/>
                     </div>
                 </div>
                 <div class="tarjeta-formulari-ample">
