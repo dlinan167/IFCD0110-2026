@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
-    <title>UF1303-PA-1C-49900095P-David Liñan</title> <!-- < Titol de la pestanya -->
+    <title>UF1304-PA-1C-49900095P-David Liñan</title> <!-- < Titol de la pestanya -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/751/751683.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
     <link rel="stylesheet" href="./UF1304-Plantilla_1.css" /> <!-- < < < Primer CSS (en local) PLANTILLA -->
     <link rel="stylesheet" href="./UF1304-Plantilla_2.css" /> <!-- < < < CSS 2-->
@@ -73,7 +73,7 @@
             </div>
             
                 <!-- =========== 4. b)  Formulari per a donar-se d’alta =========== -->
-            <div class="fila">
+                <div class="fila">
                 <div class="tarjeta-formulari">
                     <!-- 17. Tractament -->
                     <h2>Estimat Sr./Sra</h2>
@@ -91,76 +91,75 @@
                         <!-- 19. Cognoms. -->
                         <label for="COGNOMS"><b>Cognoms:</b></label>
                         <input type="text" placeholder="Entra els teus cognoms" name="COGNOMS" minlength="2" required/>
-                   
+                        
                         <!-- 20. Clau d’accés. -->
                         <div class="fila"> 
-                        <label for="CLAU-ACCES"><b>Clau d’accés:</b></label>
-                        <input type="password" placeholder="Entra la teva Clau d’accés" name="CLAU-ACCES"  minlength="8" maxlength="12" required/>
-                    </div>
-                    <div class="fila">
-                        <!-- 21. Repetició de la clau d’accés. -->
-                        <label for="CLAU-ACCES"><b>Repeteix la Clau d’accés:</b></label>
-                        <input type="password" placeholder="Entra la teva Clau d’accés" name="CLAU-ACCES"  minlength="8" maxlength="12" required/>
-                    </div>
-                </div>
-                <!-- 22. NIF. -->
-                    <div class="tarjeta-formulari-ample">
-                        <label for="NIF"><b>NIF:</b></label>
-                        <input type="text" placeholder="NIF" name="CLAU-ACCES" size="10" minlength="10" maxlength="10" required/>
-                        
-                        <!-- 23. Adreça de correu electrònic. -->
-                        <label for="EMAIL">Email:</label>
-                        <input type="email" name="EMAIL" id="EMAIL" size="35" pattern="[0-9A-za-z]+(\.[0-9A-za-z]+)*@[0-9A-za-z]+\.[A-za-z]{2,3}" placeholder="example@gmail.com" minlength="2" maxlength="99" required>
-                          
-                        <!-- 24. Teléfon. -->
-                         <div class="fila">
-                             <label for="TELEFON">Telèfon:</label>
-                             <input type="tel" name="TELEFON" placeholder="tel: 123-123456" pattern="[0-9]{3}-[0-9]{6}" minlength="9" maxlength="15" title="123-123456" required/>
-                            </div>
+                            <label for="CLAU-ACCES"><b>Clau d’accés:</b></label>
+                            <input type="password" placeholder="Entra la teva Clau d’accés" name="CLAU-ACCES"  minlength="8" maxlength="12" required/>
                         </div>
-
-                            <div class="fila">   
-                            <!-- 25. Adreça de l’immoble. -->
-                            <div class="tarjeta-formulari-ample">
-                            <div class="fila">
-                             <label for="ADRECA"><b>Adreça:</b></label>
-                             <input type="text" name="ADRECA" placeholder="Carrer Exemple, nº 11" size="60"/>
-                             
-                             <!-- 26. Codi Postal -->
-                             <label for="CODI-POSTAL"><b>Codi Postal:</b></label>
-                             <input type="text" name="CODI-POSTAL" placeholder="12345" size="6"/>
-
-                                 <!-- 27. Població. -->
-                                 <label for="POBLACIO"><b>Població:</b></label>
-                                 <input type="text" name="POBLACIO" placeholder="Lloret de Mar" size="25"/>
-                                 <!-- 28. Província. -->
-                                 <label for="PROVINCIA"><b>Provincia:</b></label>
-                                 <input type="text" name="PROVINCIA" placeholder="Girona" size="20"/>
-                            </div>
-                        </div>
-
-                            <!-- 29. Data de naixement. -->
-                            <label for="DATA-NAIXEMENT"><b>Ingressa la data de naixement:</b></label>
-                            <input type="date" name="DATA-NAIXEMENT" id="DATA-NAIXEMENT" required/>     
-                        
-                            <!-- 30. Botó de registre. -->
                         <div class="fila">
-                            <button type="submit" id="btnSubmit">REGISTRAR-SE</button>
-                             <br>
-                             <button type="reset" class="btnCancelar">Natejar camps!</button>
-                            </div>
-                    </form> 
+                            <!-- 21. Repetició de la clau d’accés. -->
+                            <label for="CLAU-ACCES"><b>Repeteix la Clau d’accés:</b></label>
+                            <input type="password" placeholder="Entra la teva Clau d’accés" name="CLAU-ACCES"  minlength="8" maxlength="12" required/>
+                        </div>
+                    </div>
+                    <!-- 22. NIF. -->
+                <div class="tarjeta-formulari-ample">
+                    <label for="NIF"><b>NIF:</b></label>
+                    <input type="text" placeholder="NIF" name="CLAU-ACCES" size="10" minlength="10" maxlength="10" required/>
+                    
+                    <!-- 23. Adreça de correu electrònic. -->
+                    <label for="EMAIL">Email:</label>
+                    <input type="email" name="EMAIL" id="EMAIL" size="35" pattern="[0-9A-za-z]+(\.[0-9A-za-z]+)*@[0-9A-za-z]+\.[A-za-z]{2,3}" placeholder="example@gmail.com" minlength="2" maxlength="99" required>
+                    
+                    <!-- 24. Teléfon. -->
+                    <div class="fila">
+                        <label for="TELEFON">Telèfon:</label>
+                        <input type="tel" name="TELEFON" placeholder="tel: 123-123456" pattern="[0-9]{3}-[0-9]{6}" minlength="9" maxlength="15" title="123-123456" required/>
+                    </div>
                 </div>
-            </div>
-        </main>
-            
-    <aside>BANNERS</aside>
-    <footer>
-        <ul>
-            <li>Direcció: Carrer de Ponent, 11, 17310 Lloret de Mar, Girona  </li>
-            <li>tel: 123 36 42 21</li>
-        </ul>
-        
-    </footer>
+                
+                <!-- 25. Adreça de l’immoble. -->
+                <div class="tarjeta-formulari-ample">
+                    <div class="fila">
+                        <label for="ADRECA"><b>Adreça:</b></label>
+                        <input type="text" name="ADRECA" placeholder="Carrer Exemple, nº 11" size="60"/>
+                        
+                        <!-- 26. Codi Postal -->
+                        <label for="CODI-POSTAL"><b>Codi Postal:</b></label>
+                        <input type="text" name="CODI-POSTAL" placeholder="12345" size="6"/>
+                        
+                        <!-- 27. Població. -->
+                        <label for="POBLACIO"><b>Població:</b></label>
+                        <input type="text" name="POBLACIO" placeholder="Lloret de Mar" size="25"/>
+                        <!-- 28. Província. -->
+                        <label for="PROVINCIA"><b>Provincia:</b></label>
+                        <input type="text" name="PROVINCIA" placeholder="Girona" size="20"/>
+                    </div>
+                </div>
+                
+                <!-- 29. Data de naixement. -->
+                <label for="DATA-NAIXEMENT"><b>Ingressa la data de naixement:</b></label>
+                <input type="date" name="DATA-NAIXEMENT" id="DATA-NAIXEMENT" required/>     
+                
+                <!-- 30. Botó de registre. -->
+                <div class="fila">
+                    <button type="submit" id="btnSubmit">REGISTRAR-SE</button>
+                    <br>
+                    <button type="reset" class="btnCancelar">Natejar camps!</button>
+                </div>
+            </form> 
+        </div>
+    </div>
+</main>
+
+<aside>BANNERS</aside>
+<footer>
+    <ul>
+        <li>Direcció: Carrer de Ponent, 11, 17310 Lloret de Mar, Girona  </li>
+        <li>tel: 123 36 42 21</li>
+    </ul>
+    
+</footer>
 </body>
 </html>

@@ -74,7 +74,7 @@ li:hover > i{
 
 i{
   padding: 1rem;
-  color: var(--color-principal-icones); /*Apliquem el color amb la variable*/
+  color: var(--color-principal-icones);
   text-shadow: 1.5px 2px var(--color-ombres-icones);
 }
 .div-Contenidor{
