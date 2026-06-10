@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>Recicla-T</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./CSS/style.css" /> <!-- < < < CSS 1 -->
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- FONT ENLLAÇADA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <figure>
+            <img src="img/logo.png" alt="Icona de Pera">
+        </figure>
+        <h1>Recicla-T</h1>
+    </header>
+    <!-- MENU nav -->
+    <nav>
+        <ul>
+            <li><a href="./index.html" target="_blank"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="./productes.html" target="_blank"><i class="fa-solid fa-power-off"></i> Productes</a></li>
+            <li><a href="./contacte.html" target="_blank"><i class="fa-solid fa-power-off"></i> Contacte</a></li>
+        </ul>
+    </nav>
+    <!-- MAIN -->
+    <main>
+        <!-- FORMULARI -->
+        <div class="missatge-formulari">    
+                <div>
+                    <h2 class="missatge-titol"><i class="fa-solid fa-house"></i>Inicia un Pressupost</h2>
+                    <form action="confirmacio.html" method="get" target="_blank">
+                        <!-- NOM i Cognoms -->
+                        <div class="fila">
+                            <label for="NOM-COGNOM"><b>Nom i Cognoms:</b></label>
+                            <input type="text" placeholder="Entra el teu nom i cognoms" name="NOM-COGNOM" id="NOM-COGNOM" pattern="[A-Za-z]{2,}" minlength="2" size="50" required/>
+                        </div>
+                        
+                        <!-- EMAIL -->
+                        <div class="fila">
+                            <label for="EMAIL">Email:</label>
+                            <input type="email" name="EMAIL" id="EMAIL" size="35" pattern="[0-9A-za-z]+(\.[0-9A-za-z]+)*@[0-9A-za-z]+\.[A-za-z]{2,3}" placeholder="example@gmail.com" minlength="2" maxlength="99" required>
+                        </div>
+                        
+                        <!-- TELEFON -->
+                        <div class="fila">
+                            <label for="TELEFON">Telèfon:</label>
+                            <input type="tel" name="TELEFON" placeholder="tel: 123-123456" pattern="[0-9]{3}-[0-9]{6}" minlength="9" maxlength="15" title="123-123456"/>
+                        </div>
+                            
+                        <!-- OPCIONS A ESCOLLIR -->
+                        <div class="fila">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="OPCIO-INSTAL·LACIÓ" name="OPCIO-INSTAL·LACIÓ" value="Ràpida"/>
+                                    <label for="OPCIO-INSTAL·LACIÓ">Instal·lació ràpida (més car)</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="OPCIO-INSTAL·LACIÓ" name="OPCIO-INSTAL·LACIÓ" value="Un-mes"/>
+                                    <label for="OPCIO-INSTAL·LACIÓ">En un mes</label>
+
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="OPCIO-INSTAL·LACIÓ" name="OPCIO-INSTAL·LACIÓ" value="6-mesos"/>
+                                    <label for="OPCIO-INSTAL·LACIÓ">D'aquí a 6 mesos (més barat)</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- DESPLEGABLE PROVINCIA -->
+                         <div class="fila">
+                             <label for="PROVINCIA">Província d'instal·lació:</label>
+                             <select name="PROVINCIA" id="PROVINCIA">
+                                 <option value="Barcelona">Barcelona</option>
+                                 <option value="Tarragona">Tarragona</option>
+                                 <option value="Lleida">Lleida</option>
+                                 <option value="Girona">Girona</option>
+                                </select>
+                            </div>
+                        <!-- METODE -->
+                          <div class="fila">
+
+                            <ul>
+                                <li>
+                                    <input type="radio" id="EFECTIU" name="MÈTODE" value="Efectiu"/>
+                                    <label for="rEFECTIU">Efectiu</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="rCRÈDIT" name="MÈTODE" value="Crèdit"/>
+                                    <label for="rCRÈDIT">Crèdit</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="BIZUM" name="MÈTODE" value="Bizum"/>
+                                    <label for="rBIZUM">Bizum</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <!-- COMENTARI AMB MAXIM:200 -->
+                        <h2>Comentari</h2>
+                        <textarea id="rCOMENTARI" name="COMENTARI" rows="6" cols="35" maxlength="200" placeholder="El teu comentari: max. de 200 caràcteres"></textarea>
+
+                        <!-- BOTO ENVIAR -->
+                    <button tabindex="3" type="submit" id="btnSubmit">ENVIAR</button>
+                </div>
+            </form>
+                <figure>
+                    <img src="img/Imatge-presentació.png" alt="Imatge Presentació d'empresa Recicla-T">
+                </figure>
+            </div>
+    </main>
+                    
+    <aside></aside>
+    <!-- FOOTER -->
+    <footer>
+        <ul>
+            <li>Direcció: Carrer de Recicla-T, 11, 17310 Aminet, Motoro  </li>
+            <li>tel: 123 36 42 21</li>
+        </ul>
+    </footer>
+</body>
+</html>

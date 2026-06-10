@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>CarSmart</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="img/1 Foto de coche en oferta blanco.webp" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+     <link rel="stylesheet" href="./index.css"/> <!-- < < < CSS 1 -->
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>CarSmart</h1>
+    </header>
+    <!-- MANU NAV -->
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Quienes somos</li>
+            <li>Donde encontrarnos</li>
+            <li>Preguntas frequentes</li>
+        </ul>
+    </nav>
+    <!--  -->
+    <main>
+        <!-- Seccion de introducción -->
+        <div class="tarjeta-presentacion">    
+            <div>
+                <section tabindex="1">
+                    <article>
+                        <h2>Venta de coches electricos de vanguardia</h2>
+                        <p>Compra un coche nuevo ecologico y familiar</p>
+                        <p>Tecnologia de alta gama a precio accesible</p>
+                    </article>
+                </section>
+                <br>
+                <section tabindex="2">
+                    <article>
+                        <h3>No te lo pierdas! Echa un vistazo a nuestras ofertas flash!</h3>
+                        <p>La ofertas flash son ofertas de tiempo limitado de temporada, dando un breve vistazo a nuestros vehiculos mas exclusivos.</p>
+                    </article>
+                </section>
+                <br>
+                <!-- VIDEO -->
+                <video tabindex="3" src="./video/interiorCotxe.mp4" type="video/mp4" controls width="100%" height="15%" preload="auto" autoplay loop> El teu navegador no soporta aquest format </video>
+                <!-- AUDIO DE COCHE ELETRICO -->
+                <h2>Pausa un momento... E imagina conduciendo tu nuevo coche electrico de última gama</h2>
+                <audio src="./audio/Audio_ambiental_coche_electrico.mp3" controls style="margin: 1%;"></audio>
+                <br>
+                <div class="tarjeta-titol" style="border: 0.2rem solid;">
+                OFERTES FLASH!
+            </div>
+            <!-- Tabla de coches en oferta -->
+            <table class="tabla-ofertas">
+                <!-- Table fila header -->
+                <tr>
+                    <th>Foto</th>
+                    <th>Precio</th>
+                    <th>Caballos de potencia</th>
+                </tr>
+                <!-- Oferta Coche 1 -->
+                <tr tabindex="4">
+                    <td>
+                        <figure>
+                            <img src="img/1 Foto de coche en oferta blanco.webp" alt="Foto de coche en oferta blanco">
+                        </figure>
+                    </td>
+                    <td>29.999€</td>
+                    <td>350/C</td>
+                </tr>
+                <!-- Oferta Coche 2 -->
+                <tr tabindex="5">
+                    <td>
+                        <figure>
+                            <img src="img/2 Foto de coche en oferta negro.webp" alt="Foto de coche en oferta negro">
+                        </figure>
+                    </td>
+                    <td>23.999€</td>
+                    <td>300/C</td>
+                </tr>
+                <!-- Oferta Coche 3 -->
+                <tr tabindex="6">
+                    <td>
+                        <figure>
+                            <img src="img/3 Foto de coche en oferta azul oscuro.webp" alt="Foto de coche en oferta azul oscuro">
+                        </figure>
+                    </td>
+                    <td>21.999€</td>
+                    <td>220/C</td>
+                    
+                </tr>
+                <!-- Oferta Coche 4 -->
+                <tr tabindex="7">
+                    <td>
+                        <figure>
+                            <img src="img/4 Foto de coche en oferta gris plateado.webp" alt="Foto de coche en oferta gris plateado">
+                        </figure>
+                    </td>
+                    <td>34.999€</td>
+                    <td>380/C</td>
+                    
+                </tr>
+                <!-- Oferta Coche 5 -->
+                <tr tabindex="8">
+                    <td>
+                        <figure>
+                            <img src="img/5 Foto de coche en oferta amarillo.webp" alt="Foto de coche en oferta amarillo">
+                        </figure>
+                    </td>
+                    <td>19.999€</td>
+                    <td>160/C</td>
+                    
+                </tr>
+                <!-- Oferta Coche 6 -->
+                <tr tabindex="9">
+                    <td>
+                        <figure>
+                            <img src="img/6 Foto de coche en oferta rojo.webp" alt="Foto de coche en oferta rojo">
+                        </figure>
+                    </td>
+                    <td>38.999€</td>
+                    <td>320/C</td>
+                    
+                </tr>
+                <!-- Oferta Coche 7 -->
+                <tr tabindex="10">
+                    <td>
+                        <figure>
+                            <img src="img/7 Foto de coche en oferta claro.webp" alt="Foto de coche en oferta claro">
+                        </figure>
+                    </td>
+                    <td>11.999€</td>
+                    <td>110/C</td>
+                    
+                </tr>
+                <!-- Oferta Coche 8 -->
+                <tr tabindex="11">
+                    <td>
+                        <figure>
+                            <img src="img/8 Foto de coche en oferta oscuro.webp" alt="Foto de coche en oferta oscuro">
+                        </figure>
+                    </td>
+                    <td>17.999€</td>
+                    <td>210/C</td>
+                    
+                </tr>
+            </table>
+            <br>
+            <!-- FORMULARIO -->
+            <h2>Deja una valoración sobre nuestras ofertas!</h2>
+            <br>
+            <form action="./index.html" method="get" target="_blank">
+                <!-- Input EMAIL. -->
+                <label for="EMAIL"><b>Email:</b></label>
+                <input tabindex="12" type="email" name="EMAIL" id="EMAIL" size="35" pattern="[0-9A-za-z]+(\.[0-9A-za-z]+)*@[0-9A-za-z]+\.[A-za-z]{2,3}" placeholder="example@gmail.com" minlength="2" maxlength="50" required>
+                <!-- Input NOMBRE -->
+                <label for="NOM"><b>Nombre:</b></label>
+                <input tabindex="13" type="text" placeholder="Entra el teu nom" name="NOM" pattern="[A-Za-z]{2,20}" minlength="2" required/>
+                <!-- Taula de valoració -->
+                <input tabindex="14" type="range" id="VALORACIO" name="VALORACIO" min="1" max="5" value="5" style="width: 80%; z-index: 5;"/>
+                <table style="border: 0.1rem solid;">
+                    <tr>
+                        <td  style="border: 0.1rem solid;">1</td>
+                        <td  style="border: 0.1rem solid;">2</td>
+                        <td  style="border: 0.1rem solid;">3</td>
+                        <td  style="border: 0.1rem solid;">4</td>
+                        <td  style="border: 0.1rem solid;">5</td>
+                    </tr>
+                </table>
+                <button tabindex="15" type="submit" id="btnSubmit">ENVIAR TU VALORACION</button>
+            </form>
+        </div>
+    </div>
+</main>
+<!-- Aside Per BANNERS-->
+<aside></aside>
+<!-- FOOTER -->
+<footer>
+    <ul>
+        <li>Direcció: Carrer de Perito, 11, 17220 Lloreta de Petit, Matoro</li>
+        <li>tel: 123 36 42 21</li>
+    </ul>  
+</footer>
+</body>
+</html>

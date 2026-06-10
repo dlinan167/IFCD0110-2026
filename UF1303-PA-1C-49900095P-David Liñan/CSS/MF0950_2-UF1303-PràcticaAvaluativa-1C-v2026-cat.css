@@ -1,0 +1,222 @@
+/*
+	25/FOAP/781/0195135/046	
+	IFCD0110/MF0950_2/UF1303	
+	PA-1C-V2026
+	Pràctica avaluativa
+	Primera convocatòria
+	
+	Defineix aquí les propietats CSS i enllaça'l amb el document index.html tenint en compte les condicions posades.
+	Define aquí las propiedades CSS y enlázalos con el documento index.html teniendo en cuenta las condiciones puestas.
+*/
+
+*{
+	margin: 0.04%;
+}
+
+/* ======= Mostrar en pantalles de menys de 1080px ====== */
+@media (max-width:1080px) {	
+/* ======= ESTRUCTURA HEADER I FOOTER ======= */
+body{
+	border-top: 1.5rem solid rgb(12, 12, 12);
+	border-bottom: 1.4rem solid rgb(29, 29, 29);
+	height: 100vh;
+}
+.div-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+	visibility: visible;
+}
+
+.div-footer{
+	background: rgba(112, 112, 95, 0.089);
+	z-index: 10;
+	visibility: visible;
+}
+.div-footer > ul{
+	display: flex;
+	justify-content: space-between;
+	padding-left: 0%;
+	text-align: center;
+	list-style-type: none;
+	align-items: center;
+	font-size: 0.85rem;
+}
+.div-header-SOC{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgb(1, 158, 248);
+}
+.div-header-SOC img{
+	width: 25%;
+}
+/* ======= ESTRUCTURA PRINCIPAL ======= */
+.contenidor-principal{
+	display: flex;
+}
+p{	
+	font-family: 'Courier New', Courier, monospace;
+}
+.contenidor-opcions{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1%;
+	justify-content: center;
+}
+.contenidor-opcions img{
+	margin: 4%;
+}
+.contenidor-opcions a:hover img{
+	transform: scale(1.15) rotate(30deg);
+	translate: 100px, 50px;
+	transition: all 4s;
+	transition-delay: 2s;
+}
+
+.contenedorCercadors{
+	width: 70%;
+	position: relative;
+	top: -0.35rem;
+	margin-right: 1%;
+	margin-bottom: 2%;
+}
+.capCercadors img{
+	width: 100%;
+}
+/* ======= CAIXA CERCADORS ======= */
+
+.contenedorCercadors img{
+	width: 100%;
+}
+.caixa-cercadors{
+	border-right: 0.6rem solid rgb(1, 149, 235);
+	border-left: 0.6rem solid rgb(1, 149, 235);
+	padding: 1.25%;
+	position: relative;
+}
+/* ======= Enllaços ====== */
+.caixa-cercadors a{
+	display: flex;
+	justify-content: end;
+}
+a{
+	color: rgb(108, 180, 0);
+	font-weight: bold;
+}
+a:visited{
+	color: brown;
+}
+#idioma-pagina{
+	color: inherit;
+	text-decoration: none;
+}
+/*  */
+
+}
+
+/* ======= Mostrar en totes altres pantalles ====== */
+
+/* ======= ESTRUCTURA HEADER I FOOTER ======= */
+body{
+	border-top: 1.5rem solid rgb(12, 12, 12);
+	border-bottom: 1.4rem solid rgb(29, 29, 29);
+	height: 100vh;
+}
+.div-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+	visibility: visible;
+}
+
+.div-footer{
+	background: rgba(112, 112, 95, 0.089);
+	z-index: 10;
+	visibility: visible;
+}
+.div-footer > ul{
+	display: flex;
+	justify-content: space-between;
+	padding-left: 0%;
+	text-align: center;
+	list-style-type: none;
+	align-items: center;
+	font-size: 0.85rem;
+}
+.div-header-SOC{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgb(1, 158, 248);
+}
+.div-header-SOC img{
+	width: 25%;
+}
+/* ======= ESTRUCTURA PRINCIPAL ======= */
+.contenidor-principal{
+	display: flex;
+}
+p{	
+	font-family: 'Courier New', Courier, monospace;
+}
+.contenidor-opcions{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1%;
+	justify-content: center;
+}
+.contenidor-opcions img{
+	margin: 4%;
+}
+.contenidor-opcions a:hover img{
+	transform: scale(1.15) rotate(30deg);
+	translate: 100px, 50px;
+	transition: all 4s;
+	transition-delay: 2s;
+}
+
+.contenedorCercadors{
+	width: 70%;
+	position: relative;
+	top: -0.35rem;
+	margin-right: 1%;
+	margin-bottom: 2%;
+}
+.capCercadors img{
+	width: 100%;
+}
+/* ======= CAIXA CERCADORS ======= */
+
+.contenedorCercadors img{
+	width: 100%;
+}
+.caixa-cercadors{
+	border-right: 0.6rem solid rgb(1, 149, 235);
+	border-left: 0.6rem solid rgb(1, 149, 235);
+	padding: 1.25%;
+	position: relative;
+}
+/* ======= Enllaços ====== */
+.caixa-cercadors a{
+	display: flex;
+	justify-content: end;
+}
+a{
+	color: rgb(108, 180, 0);
+	font-weight: bold;
+}
+a:visited{
+	color: brown;
+}
+#idioma-pagina{
+	color: inherit;
+	text-decoration: none;
+}
+/*  */
