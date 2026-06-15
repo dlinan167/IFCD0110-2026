@@ -53,7 +53,9 @@ header figure{
 }
 
 footer{
-    grid-area: footer;
+  position: fixed;
+  grid-area: footer;
+  width: 100%;
     opacity: 96%;
     z-index: 5;
     bottom: 0%;
@@ -94,7 +96,7 @@ main{
   justify-content: center;
   text-align: center;
   border: 0.150rem solid;
-  padding: 2%;
+  padding: 1%;
 }
 aside{
   grid-area: aside;
@@ -224,28 +226,17 @@ img{
   display: flex;
   align-content: center;
   justify-content: center;
-  position: absolute;
-  width: 50%;
+  width: 90%;
   margin: 3.5%;
   background: rgba(0, 255, 255, 0.541);
   color: #000000f5;
   border-radius: 4rem;
   align-content: center;
-  padding: 3rem;
+  padding: 2rem;
   box-shadow: 0.35rem 0.35rem rgba(8, 8, 8, 0.575); 
 }
 .tarjeta-missatge p{
     font-size: 1.1rem;
-}
-.tarjeta-missatge figure{
-  width: 50%;
-  border: 0;
-  position: relative;
-  right: -2.5rem;
-}
-.tarjeta-missatge img{
-  position: relative;
-  float: right;
 }
 
 /* =========== FORMULARI ============= */
