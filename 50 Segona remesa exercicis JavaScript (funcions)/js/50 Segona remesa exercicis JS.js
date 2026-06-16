@@ -51,7 +51,7 @@ console.log(calcularImpuestos(30, 500)) // 0
 
 // escriu la funció bmi aquí
 function bmi(pes, altura){
-    if(pes/altura**2 >= 65 / 1.8**2 && pes/altura**2 < 72 / 1.6**2){
+    if(pes/altura**2 >= 65/1.8**2 && pes/altura**2 < 72 / 1.6**2){
         bmiResult = "Normal";
     }
     if(pes/altura**2 >= 72 / 1.6**2 && pes/altura**2 < 135 / 1.7**2){
@@ -74,12 +74,21 @@ console.log(bmi(135, 1.7)) // "Obès"
 
 // === ## 4. Imprimir un array ===  Escriure una funció anomenada `imprimirArray` que rebi un array i imprimeixi cada element en una línia a part:
 // escriu la teva resposta aquí
-function imprimirArray(){
 
+// Recòrrer una col·lecció d'elements
+function imprimirArray(llista){
+for (const elementDeLlista of llista) {
+    console.log(elementDeLlista);
+}
+
+// Recòrrer a partir d'un index
+    for (let i = 0; i < llista.length; i++) {
+        console.log(llista[i]);
+    }
 }
 // codi de prova
-console.log("=== ## 4. Imprimir un array === ")
-console.log(imprimirArray(1, "Hola", 2, "Món"))
+console.log("=== ## 4. Imprimir un array (x2) === ");
+imprimirArray([1, "Hola", 2, "Món"]);
 // 1
 // Hola
 // 2
@@ -95,14 +104,17 @@ console.log(imprimirArray(1, "Hola", 2, "Món"))
 // Si el nombre és menor a 1000, s'ha de tornar el mateix nombre com un string.
 // escriu la teva resposta aquí
 function likes(numLikes){
-    if (numLikes.length >= 4){
-        numLikes +="K"
+    if(numLikes < 1000){
+        return numLikes;
     }
-    if (numLikes.length >= 8){
-        numLikes=
-        numLikes+= "M"
+    else if(numLikes < 1000000){
+        // Math.trunc(numLikes); // Elimina decimals
+        // return numLikes/1000.toPrecision(1) + "K"; // toPrecision: Retorna un string amb un decimal o mes segons el valor
+        return Math.trunc(numLikes/1000) + "K";
     }
-    return
+    else if(numLikes >= 1000000){
+        return Math.trunc(numLikes/1000000) + "M";
+    }
 }
 // codi de prova
 console.log(" === ## 5. Número de Likes === ")
@@ -118,7 +130,15 @@ console.log(likes(25222444)) // "25M"
 // * "fizzbuzz" si el nombre és múltiple tant de 3 com de 5.
 // * Si no compleix cap de les condicions anteriors ha de retornar el mateix número.
 // escriu la teva resposta aquí
-
+function fizzBuzz(num){
+    // Multiples de 3 i 5
+    if(num % 3 == 0 && num % 5 == 0){return num+" es fizzBuzz";}
+    // Multiples de 3
+    if(num % 3 == 0){return num+" es fizz";}
+    // Multiples de 5
+    if(num % 5 == 0){return num+" es Buzz";}
+    return num;
+}
 // codi de prova
 console.log(" === ## 6. FizzBuzz === ")
 console.log(fizzBuzz(6)); // "fizz"
@@ -129,7 +149,13 @@ console.log(fizzBuzz(8)); // 8
 // === ## 7. Comptar rang de números === Escriure una funció anomenada `comptarRang` que rebi dos números i retorni quants n'hi ha entre ells (excloent-los):
 // **Nota:** Utilitza un cicle a la teva solució. Pots assumir que el primer número serà menor que el segon.
 // escriu la teva resposta aquí
-
+function comptarRang(numeroInferior, numeroSuperior){
+    let contadorRang = 0;
+    for(let i = numeroInferior + 1; i < numeroSuperior; i++){
+        contadorRang++;
+    }
+    return contadorRang;
+}
 // codi de prova
 console.log(" === ## 7. Comptar rang de números === ")
 console.log(comptarRang(1, 9)) // 7
@@ -139,9 +165,15 @@ console.log(comptarRang(5, 6)) // 0
 
 // === ## 8. Sumar rang de números === Escriure una funció anomenada `sumarRang` que rebi dos arguments: nombre inicial i nombre final. La funció ha de retornar la suma dels nombres en aquest rang (incloent-los).
 // **Nota:** pots assumir que el nombre inicial serà menor o igual que el nombre final.
-
 // escriu la teva resposta aquí
-
+function sumarRang(numInicial, numFinal){
+    let sumaRang = 0;
+       for(let i = numInicial + 1; i <= numFinal; i++){
+        sumaRang += numInicial++; //nem suman desde el numero inicial fins al número final
+    }
+    sumaRang += numFinal; //sumem el número final
+    return sumaRang;
+}
 // codi de prova
 console.log(" === ## 8. Sumar rang de números === ")
 console.log(sumarRang(0, 10)) // 55
@@ -150,7 +182,15 @@ console.log(sumarRang(5, 5)) // 5
 
 // === ## 9. Número de as (lletra "a") === Escriure una funció anomenada `numeroDeAes` que rebi un string i retorni el nombre de vegades que apareix la lletra "a":
 // escriu la teva resposta aquí
-
+function numeroDeAes(frase){
+    let contadorAes = 0;
+    for (let i = 0; i < frase.length; i++){
+        if(frase[i].toLocaleLowerCase() == 'a'){
+            contadorAes++;
+        }
+    }
+    return "El número de aes és: "+contadorAes;
+}
 // codi de prova
 console.log(" === ## 9. Número de as (lletra 'a') === ")
 console.log(numeroDeAes("abracadabra")) // 5
@@ -161,132 +201,127 @@ console.log(numeroDeAes("")) // 0
 // === ## 10. Nombre de caràcters === Escriure una funció anomenada `numeroDeCaracters` que rebi un string i un caràcter (un string d'un caràcter). La funció ha de retornar el nombre de vegades que apareix el caràcter a l'string.
 //  Escriu 'vocals' de la frase, solament una vegada
 // escriu la teva resposta aquí
-
+function numeroDeCaracters(frase, caracter){
+    let contadorCaracter = 0;
+    for (let i = 0; i < frase.length;i++){
+        if(frase[i] == caracter){
+            contadorCaracter++;
+        }
+    }
+    return "El text \""+frase+"\" conté "+contadorCaracter+" la lletra \""+caracter+"\"";
+}
 // codi de prova
 console.log(" === ## 10. Nombre de caràcters === ")
 console.log(numeroDeCaracters("Hola Món", "o")) // 2
 console.log(numeroDeCaracters("MMMMM", "m")) // 0
-console.log(numeroDeCaracters("eeee", e)) // 4
+console.log(numeroDeCaracters("eeee", "e")) // 4
 
-// === ex11.- === Escriviu un programa que demani una frase i escrigui quantes lletres són vocals.
-//  Contador de caracters 'vocals'
-let fraseVocals=prompt("(ex11) Escriu un frase aqui (vocals):");
-
-var contadorCaracterVocal = 0;
-for (var i = 0; i < fraseVocals.length; i++){
-
-    if (fraseVocals[i].toLocaleLowerCase() == 'a' || fraseVocals[i].toLocaleLowerCase() == 'e' || fraseVocals[i].toLocaleLowerCase() == 'i' || fraseVocals[i].toLocaleLowerCase() == 'o' || fraseVocals[i].toLocaleLowerCase() == 'u'){
-        contadorCaracterVocal++;
+// === ## 11. Sumar array === Escriure una funció anomenada `sumarArray` que rebi un array de números i retorni la suma de tots els elements.
+// escriu la teva resposta aquí
+function sumarArray(arrayNumeros){
+    let sumaResult = 0;
+    for (let i = 0; i < arrayNumeros.length; i++){
+        sumaResult = sumaResult + arrayNumeros[i];
     }
+    return sumaResult;
 }
-document.getElementById("ex11").innerHTML= "<p>/- (ex11) Numero de caràcters 'vocals': <b>"+contadorCaracterVocal+"</b> En la frase (\""+fraseVocals+"\")</p>";
+
+// codi de prova
+console.log(" === ## 11. Sumar array === ")
+console.log(sumarArray([3, 1, 2])) // 6
+console.log(sumarArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])) // 55
+console.log(sumarArray([])) // 0
+
+// === ## 12. Multiplicar array === Escriure una funció anomenada `multiplicarArray` que rebi un arranjament de números i retorni la multiplicació de tots els elements.
+// escriu la teva resposta aquí
+function multiplicarArray(arrayNumeros){
+    let multiplicacioResult = 1; //mult. x1
+    for (let i = 0; i < arrayNumeros.length; i++){
+        multiplicacioResult = multiplicacioResult * arrayNumeros[i];
+    }
+    return multiplicacioResult;
+}
+// codi de prova
+console.log(" === ## 12. Multiplicar array === ")
+console.log(multiplicarArray([4, 1, 2, 3])) // 24
+console.log(multiplicarArray([1, 2, 3, 4, 5, 6, 7, 8])) // 40320
+console.log(multiplicarArray([])) // 1
 
 
-// === ex12.- === Escriviu un programa que demani una frase i escrigui quantes vegades apareixen cada una de les vocals.
-//  Contador DE CADA caracter 'vocal'
-let fraseNumVocals=prompt("(ex12) Escriu un frase aqui (numero de cada vocal):");
-let contadorVocalA=0;
-let contadorVocalE=0;
-let contadorVocalI=0;
-let contadorVocalO=0;
-let contadorVocalU=0;
+// === ## 13. Treure zeros === Escriure una funció anomenada `treureZeros` que rebi un arrany de números i retorni un nou array excloent els zeros (0).
+// escriu la teva resposta aquí
 
-for (var i = 0; i < fraseNumVocals.length; i++){
+// Cas A: Forma sense metodes
+function treureZeros(arrayNumeros){
+    let arraytreureZeros = [];
+    let contadorNoZeros = 0;
+    for (let i = 0; i < arrayNumeros.length; i++){
+        if(arrayNumeros[i] != 0){
+            contadorNoZeros++; //contem els números que no són zeros
+            arraytreureZeros[contadorNoZeros - 1] = arrayNumeros[i]; //utilizem el contadorNoZeros per afegir els números que no són zeros al nou array
+        }
+    }
+    return arraytreureZeros;
+}
+// function treureZeros(arrayNumeros){
+//     let arraytreureZeros = [];
+//     let contadorNoZeros = 0;
+//     for (let i = 0; i < arrayNumeros.length; i++){
+//         if(arrayNumeros[i] == 0){
     
-    if (fraseNumVocals[i].toLocaleLowerCase() == 'a'){
-        contadorVocalA++;
-    }
-    if (fraseNumVocals[i].toLocaleLowerCase() == 'e'){
-        contadorVocalE++;
-    }
-    if (fraseNumVocals[i].toLocaleLowerCase() == 'i'){
-        contadorVocalI++;
-    }
-    if (fraseNumVocals[i].toLocaleLowerCase() == 'o'){
-        contadorVocalO++;
-    }
-    if (fraseNumVocals[i].toLocaleLowerCase() == 'u'){
-        contadorVocalU++;
-    }
-}
-document.getElementById("ex12").innerHTML= 
-"<p>/- (ex12) </p>"+
-"<p>Numero de caràcters: 'a': "+contadorVocalA+ "</p>"+
+            
+//           arrayNumeros.shift([i]); //eliminam el zero del array
+//         }
+//     }
+//     return arrayNumeros;
+// }
 
-"<p>Numero de caràcters: 'e': "+contadorVocalE+ "</p>"+
-"<p>Numero de caràcters: 'i': "+contadorVocalI+ "</p>"+
-"<p>Numero de caràcters: 'o': "+contadorVocalO+ "</p>"+
-"<p>Numero de caràcters: 'u': "+contadorVocalU+ "</p>"+
-"<p> En la frase (\""+fraseNumVocals+"\")</p>";
+// codi de prova
+console.log(" === ## 13. Treure zeros === ")
+console.log(treureZeros([0, 1, 0, 2, 0, 3])) // [1, 2, 3]
+console.log(treureZeros([9, 3, 6, 4])) // [9, 3, 6, 4]
+console.log(treureZeros([0, 0, 0])) // []
 
 
-// === ex13.- === Escriviu un programa que demani un número i ens digui si és divisible per 2, 3, 5 o 7 (sólo cal comprobar si ho és per un dels quatre).
- let ex13Num=parseInt(prompt("(ex13) Es divisible per per un dels quatre?: 2, 3, 5, 7"));
+// === ## 14. Sumar array entre el rang === Escriure una funció anomenada `sumarArray` que rebi tres arguments: un array de números, la posició inicial i la posició final. La funció ha de retornar la suma de tots els números dins del rang (la posició inicial i la posició final, incloent-les).
+// escriu la teva resposta aquí
 
- if(ex13Num % 2 == 0 || ex13Num % 3 == 0 || ex13Num % 2 == 5 || ex13Num % 7 == 0){
-     
-     document.getElementById("ex13").innerHTML= "<p>/- (ex13) "+ex13Num+" Si és divisible per un dels quatre: 2, 3, 5, 7</p>";
- }
- else{
- document.getElementById("ex13").innerHTML= "<p>/- (ex13) "+ex13Num+" No és divisible per un dels quatre: 2, 3, 5, 7</p>";
-}
+// codi de prova
+console.log(" === ## 14. Sumar array entre el rang === ")
+console.log(sumarArray([1, 2, 3], 1, 2)) // 5
+console.log(sumarArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3, 6)) // 22
+console.log(sumarArray([7, 8, 9], 0, 0)) // 0
 
+ // === ## 15. Transcriure ADN a ARN  === Escriure una funció anomenada `transcriure` que rebi un string (una cadena d'ADN) i retorni un altre string (el vostre complement ARN).
 
-// === ex14.- === Afegir a l'exercici anterior que ens digui quin dels quatre és divisible (s'han de dir tots pels que és divisible).
- let ex14Num=parseInt(prompt("(ex14) Es divisible per per un dels quatre?: 2, 3, 5, 7"));
+// Els complements són els següents:
 
- let ex14Resposta="El número és: "+ex14Num;
+// * G -> C
+// * C -> G
+// * T -> A
+// * A -> U
 
- if(ex14Num % 2 == 0){ ex14Resposta+="<br> És divisible per 2.";}
- if(ex14Num % 3 == 0){ex14Resposta+="<br> És divisible per 3.";}
- if(ex14Num % 5 == 0){ex14Resposta+="<br> És divisible per 5.";}
- if(ex14Num % 7 == 0){ex14Resposta+="<br> És divisible per 7.";}
+// escriu la teva funció aquí
 
- document.getElementById("ex14").innerHTML= ex14Resposta;
+// codi de prova
+console.log(" === ## 15. Transcriure ADN a ARN === ")
+console.log(transcriure("ACGT")) // "UGCA"
+console.log(transcriure("ACGTGGTCTTAA")) // "UGCACCAGAAUU"
 
- // === ex15.- === Escriviu un programa que mostri per pantalla els divisors d'un número donat.
-  let ex15Num=parseInt(prompt("(ex15) Escriu un número i et diré els seus divisors"));
-  let ex15Divisors="";
+// === ## 16. Capitalitzar paraula === Escriure una funció anomenada `capitalitzar` que rebi un string i capitalitzi la primera lletra:
+// escriu la teva funció aquí
 
-  for(i=1; i<=ex15Num; i++){
-    if(ex15Num % i == 0){
-        ex15Divisors += i+"<br>"
-    }
-  }
- document.getElementById("ex15").innerHTML= "Els divisors del número"+ex15Num+ "són: <br>" +ex15Divisors;
+// codi de prova
+console.log(" === ## 16. Capitalitzar paraula === ")
+console.log(capitalitzar("pedro")) // "Pedro"
+console.log(capitalitzar("hola món")) // "Hola món"
+console.log(capitalitzar("")) // ""
 
-  // === ex16.- === Escriviu un programa que mostri per pantalla els divisors comuns de dos números donats.
-  let ex16Num1=parseInt(prompt("(ex16) Escriu un número (1) i et diré els divisors comuns"));
-  let ex16Num2=parseInt(prompt("(ex16) Escriu un número (2) i et diré els divisors comuns"));
+// === ## 17. Capitalitzar cada paraula ===  Escriure una funció anomenada `capitalitzar` que rebi un string i capitalitzi la primera lletra **de cada paraula**:
+// escriu la teva funció aquí
 
-  let ex16DivisorsComuns="";
-  let numeroMenor=0;
-    // Busquem el número menor perquè aquest serà el potencial major comú
-  if (ex16Num1 > ex16Num2){
-    numeroMenor=ex16Num2;
-  }else{
-    numeroMenor=ex16Num1
-  }
-  
-  for(i=1; i<=numeroMenor; i++){
-    if(ex16Num1 % i == 0 && ex16Num2 % i == 0){
-        ex16DivisorsComuns += i+"<br>";
-    }
-  }
-  document.getElementById("ex16").innerHTML="Els divisors comuns entre el "+ex16Num1+" i el " + ex16Num2 +" són: <br>"+ ex16DivisorsComuns;
-
-// === ex17.- ===  Escriure un programa que ens digui si un número donat és primer (no és divisible per ningun altre número que no sigui ell mateix o la unitat).
-  
-let ex17Num=parseInt(prompt("(ex17) Escriu un número i et diré si és primer (nomes divisible per ell mateix i per 1)"));
-let esPrimer=true;
-for (let i = 2; i < ex17Num; i++) {
-    if (ex17Num % i == 0) {
-        esPrimer=false; // No es primer si es divisible entre altres numeros que no sigui el mateix o 1
-    }
-}
-
-if(esPrimer){ //if(esPrimer == true){
-document.getElementById("ex17").innerHTML="El número "+ex17Num+" Si es primer";
-}else {
-    document.getElementById("ex17").innerHTML="El número "+ex17Num+" NO es primer";
-}
+// codi de prova
+console.log(" === ## 17. Capitalitzar cada paraula === ")
+console.log(capitalitzar("hola món")) // "Hola Món"
+console.log(capitalitzar("make it real")) // "Make It Real"
+console.log(capitalitzar("")) // ""
