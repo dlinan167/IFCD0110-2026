@@ -252,29 +252,29 @@ console.log(multiplicarArray([])) // 1
 // escriu la teva resposta aquí
 
 // Cas A: Forma sense metodes
+
 function treureZeros(arrayNumeros){
-    let arraytreureZeros = [];
+    const arrayTreureZeros = [];
     let contadorNoZeros = 0;
     for (let i = 0; i < arrayNumeros.length; i++){
         if(arrayNumeros[i] != 0){
             contadorNoZeros++; //contem els números que no són zeros
-            arraytreureZeros[contadorNoZeros - 1] = arrayNumeros[i]; //utilizem el contadorNoZeros per afegir els números que no són zeros al nou array
+            arrayTreureZeros[contadorNoZeros - 1] = arrayNumeros[i]; //utilizem el contadorNoZeros per afegir els números que no són zeros al nou array
         }
     }
-    return arraytreureZeros;
+    return arrayTreureZeros;
 }
-// function treureZeros(arrayNumeros){
-//     let arraytreureZeros = [];
-//     let contadorNoZeros = 0;
-//     for (let i = 0; i < arrayNumeros.length; i++){
-//         if(arrayNumeros[i] == 0){
-    
-            
-//           arrayNumeros.shift([i]); //eliminam el zero del array
-//         }
-//     }
-//     return arrayNumeros;
-// }
+
+// Cas B: Forma amb metodes (.push)
+function treureZeros(arrayNumeros){
+    const arrayTreureZeros = [];
+    for (let i = 0; i < arrayNumeros.length; i++){
+        if(arrayNumeros[i] != 0){
+          arrayTreureZeros.push(arrayNumeros[i]); //regenera el array, sense zeros
+        }
+    }
+    return arrayTreureZeros;
+}
 
 // codi de prova
 console.log(" === ## 13. Treure zeros === ")
@@ -285,7 +285,13 @@ console.log(treureZeros([0, 0, 0])) // []
 
 // === ## 14. Sumar array entre el rang === Escriure una funció anomenada `sumarArray` que rebi tres arguments: un array de números, la posició inicial i la posició final. La funció ha de retornar la suma de tots els números dins del rang (la posició inicial i la posició final, incloent-les).
 // escriu la teva resposta aquí
-
+function sumarArray(arrayNumeros, numInicial, numFinal){
+    let sumaResult = 0;
+    for (let i = numInicial; i <= numFinal; i++){
+        sumaResult = sumaResult + arrayNumeros[i];
+    }
+    return sumaResult;
+}
 // codi de prova
 console.log(" === ## 14. Sumar array entre el rang === ")
 console.log(sumarArray([1, 2, 3], 1, 2)) // 5
@@ -302,6 +308,26 @@ console.log(sumarArray([7, 8, 9], 0, 0)) // 0
 // * A -> U
 
 // escriu la teva funció aquí
+function transcriure(cadenaADN){
+    let cadenaARN = "";
+    for (let i = 0; i < cadenaADN.length; i++){
+        switch (cadenaADN[i]) {
+            case "G":
+                cadenaARN += "C";
+                break;
+            case "C":
+                cadenaARN += "G";
+                break;
+            case "T":
+                cadenaARN += "A";
+                break;
+            case "A":
+                cadenaARN += "U";
+                break;
+        }
+    }
+    return cadenaARN;
+}
 
 // codi de prova
 console.log(" === ## 15. Transcriure ADN a ARN === ")
@@ -310,18 +336,270 @@ console.log(transcriure("ACGTGGTCTTAA")) // "UGCACCAGAAUU"
 
 // === ## 16. Capitalitzar paraula === Escriure una funció anomenada `capitalitzar` que rebi un string i capitalitzi la primera lletra:
 // escriu la teva funció aquí
-
+function capitalitzarPrimeraLletra(cadena){
+    if(cadena.length !=0){ //Si la cadena no esta res escrit
+        return cadena[0].toUpperCase() + cadena.slice(1);
+    }
+    return "\"\"";
+}
 // codi de prova
 console.log(" === ## 16. Capitalitzar paraula === ")
-console.log(capitalitzar("pedro")) // "Pedro"
-console.log(capitalitzar("hola món")) // "Hola món"
-console.log(capitalitzar("")) // ""
+console.log(capitalitzarPrimeraLletra("pedro")) // "Pedro"
+console.log(capitalitzarPrimeraLletra("hola món")) // "Hola món"
+console.log(capitalitzarPrimeraLletra("")) // ""
 
 // === ## 17. Capitalitzar cada paraula ===  Escriure una funció anomenada `capitalitzar` que rebi un string i capitalitzi la primera lletra **de cada paraula**:
 // escriu la teva funció aquí
+function capitalitzar(cadena){
+    let cadenaSolucio="";
+    for(i = 0; i<cadena.length; i++){
+        if(i==0 || cadena[i - 1] == " "){ //IF Si el es la primera posició (0) o si el caracter anteior es un espai, 
+            cadenaSolucio+=cadena[i].toUpperCase(); //es fa mayuscula i es suma al nou array, 
+        }else{
+            cadenaSolucio+=cadena[i]; //ELSE la resta de les lletres de la paraula es sumen
+        }
+    }
+    return cadenaSolucio;
 
+    // = METODE (split) =
+
+    // let llista = cadena.split(" ") //Fem split per els espais
+    // for(element of llista){ //PER CADA ELEMENT LA PRIMERA LLETRA ES MAYUCULA + LA RESTA DE LA PARAULA + ESPAI
+    //     cadenaSolucio += element[0].toUpperCase()+element.slice(1)+ " ";
+    // }
+    // return cadenaSolucio;
+}
 // codi de prova
 console.log(" === ## 17. Capitalitzar cada paraula === ")
 console.log(capitalitzar("hola món")) // "Hola Món"
 console.log(capitalitzar("make it real")) // "Make It Real"
 console.log(capitalitzar("")) // ""
+
+// === ## 18. Trobar el número màxim === Escriure una funció anomenada `max` que rebi un array de números i retorni el nombre màxim:
+// **Nota:** Intentar-ho fer sense el mètode `Math.max` de JavaScript.
+// escriu la teva funció aquí
+function max(arrayNumeros){
+    let numMax=0;
+    for (let i = 0; i < arrayNumeros.length; i++) {        
+        if (numMax < arrayNumeros[i]){
+            numMax = arrayNumeros[i];
+        }
+    }
+    return numMax;
+}
+// codi de prova
+console.log(" === ## 18. Trobar el número màxim === ")
+console.log(max([3, 9, 6])) // 9
+console.log(max([67, 35, 54, 26])) // 67
+console.log(max([5, 9, 2, 4, 5, 7])) // 9
+
+// === ## 19. Trobar el número mínim === Escriure una funció anomenada `min` que rebi un array de números i retorni el nombre mínim:
+// **Nota:** Intentar-ho fer sense el mètode `Math.min` de JavaScript.
+// escriu la teva funció aquí
+function min(arrayNumeros){
+
+    let numMin = arrayNumeros[0]; //El minim comença amb el primer numero del array/llista
+    for (let i = 0; i < arrayNumeros.length; i++) {        
+        if (numMin > arrayNumeros[i]){
+            numMin = arrayNumeros[i];
+        }
+    }
+    return numMin;
+}
+// codi de prova
+console.log(" === ## 19. Trobar el número mínim === ")
+console.log(min([3, 9, 6])) // 3
+console.log(min([67, 35, 54, 26])) // 26
+console.log(min([5, 9, 2, 4, 5, 7])) // 2
+
+
+// === ## 20. Generar contrasenya === Escriure una funció anomenada `password` que rebi un string i retorni un nou string realitzant els canvis següents:
+
+// * Les majúscules es reemplacen per minúscules.
+// * S'eliminen els espais en blanc.
+// * Reemplaça el caràcter “a” per “4”.
+// * Reemplaça el caràcter “e” per “3”.
+// * Reemplaça el caràcter “i” per “1”.
+// * Reemplaça el carater “o” per “0”.
+// escriu la teva funció aquí
+function password(contrasenyaAntiga) {
+    let contrasenyaNova = "";
+    for (let i = 0; i < contrasenyaAntiga.length; i++){
+        switch (contrasenyaAntiga[i]) { //Switch de cambiar les lletres per numeros
+            case "a":
+                contrasenyaNova+="4";
+                break;
+            case "e":
+                contrasenyaNova += "3";
+                break;
+            case "i":
+                contrasenyaNova += "1";
+                break;
+            case "o":
+                contrasenyaNova += "0";
+                break;
+            case " ": //Si es espai el salta
+            break;
+            default:// si no es cap dels casos, posa la [i] lletra del string original al nou
+                contrasenyaNova += contrasenyaAntiga[i]; 
+            break;
+        }
+    }
+    return contrasenyaNova;
+}
+// codi de prova
+console.log(" === ## 20. Generar contrasenya === ")
+console.log(password("hola")) // "h0l4"
+console.log(password("esta es una prueba")) // "3st43sun4pru3b4"
+console.log(password("")) // ""
+
+// === ## 21. Trobar números parells en un array === Escriure una funció anomenada `parells` que rebi un array de números i retorni un nou array amb els números parells únicament.
+// escriu la teva funció aquí
+function parells(arrayNumeros) {
+    let arrayParells =[];
+    for (let i = 0; i < arrayNumeros.length; i++) {
+        if(arrayNumeros[i] % 2 == 0){//IF són numeros pars, insertem els numeros del array antic(array Numeros) al nou(array Parells)
+            arrayParells.push(arrayNumeros[i]);
+        }
+    }
+    return arrayParells;
+}
+// codi de prova
+console.log(" === ## 21. Trobar números parells en un array === ")
+console.log(parells([1, 2, 3, 4, 5, 6])) // [2, 4, 6]
+console.log(parells([])) // []
+
+// === ## 22. Trobeu posicions de números parells === Escriviu una funció anomenada `posicions` que rebi un array de números i retorneu un nou array **a les posicions** on es troben números parells.
+// escriu la teva funció aquí
+function posicions(arrayNumeros) {
+    let posicionsParells =[];
+    for (let i = 0; i < arrayNumeros.length; i++) {
+        if(arrayNumeros[i] % 2 == 0){//IF són numeros pars
+            posicionsParells.push(i); //agafem la posició
+        }
+    }
+    return posicionsParells;
+}
+
+
+// codi de prova
+console.log(" === ## 22. Trobeu posicions de números parells === ")
+console.log(posicions([1, 2, 3, 4, 5, 6])) // [1, 3, 5]
+console.log(posicions([])) // []
+
+
+// === ## 23. Duplicar elements d'un array === Escriu una funció anomenada `duplicar` que rep un array de números i retorna un nou array on cada número estigui multiplicat per dos (2).
+// escriu la teva funció aquí
+function duplicar(arrayNumeros) {
+    let arrayX2 =[];
+    for (let i = 0; i < arrayNumeros.length; i++) {
+            arrayX2[i] = arrayNumeros[i] * 2
+        }
+        return arrayX2;
+    }
+// codi de prova
+console.log(" === ## 23. Duplicar elements d'un array === ")
+console.log(duplicar([1, 2, 3])) // [2, 4, 6]
+console.log(duplicar([])) // []
+
+
+// === ## 24. Trobeu paraules que comencin per "a" === Escriu una funció anomenada `comencenPerA` que rebi un array d'strings i retorna un nou array amb totes les paraules que comencin per "a" (majúscula o minúscula).
+// escriu la teva funció aquí
+function comencenPerA(arrayParaules) {
+    let arrayAmbA = []
+    for (paraula of arrayParaules) {
+        if(paraula[0].toLocaleLowerCase() == "a"){
+            arrayAmbA.push(paraula);
+        }
+    }
+    return arrayAmbA;
+}
+
+//Metode de for amb index
+
+// function comencenPerA(arrayParaules) {
+//     let arrayAmbA = []
+//     for (i=0; i< arrayParaules.length; i++) {
+//         if(arrayParaules[i][0].toLocaleLowerCase() == "a"){
+//             arrayAmbA.push(arrayParaules[i]);
+//         }
+//     }
+//     return arrayAmbA;
+// }
+// codi de prova
+
+console.log("=== ## 24. Trobeu paraules que comencin per 'a' === ")
+console.log(comencenPerA(["beta", "alfa", "Arbol", "gama"])) // ["alfa", "Arbol"]
+console.log(comencenPerA(["beta", "delta", "gama"])) // []
+console.log(comencenPerA([])) // []
+
+
+// === ## 25. Trobeu paraules que acabin en "s" === Escriu una funció anomenada `acabenAmbS` que rep un array d'strings i retorna un nou array amb totes les paraules que acaben amb "s" (majúscula o minúscula).
+// escriu la teva funció aquí
+function acabenAmbS(arrayParaules) {
+    let arrayAmbS = []
+    for (paraula of arrayParaules) {
+        if(paraula[paraula.length -1].toLocaleLowerCase() == "s"){
+            arrayAmbS.push(paraula);
+        }
+    }
+    return arrayAmbS;
+}
+// codi de prova
+console.log("=== ## 25. Trobeu paraules que acabin en 's' === ")
+console.log(acabenAmbS(["pruebas", "arroz", "árbol", "tokens"])) // ["pruebas", "tokens"]
+console.log(acabenAmbS(["beta", "delta", "gama"])) // []
+console.log(acabenAmbS([])) // []
+
+
+// === ## 26. Imprimir una matriu === Escriu una funció anomenada `imprimirMatriu` que rep una matriu (un array d'arrays) i imprimeixi tots els elements de l'array.
+// escriu la teva funció aquí
+function imprimirMatriu(matriu) {
+    for (let i = 0; i < matriu.length; i++) {
+        
+    }
+}
+// codi de prova
+console.log(" === ## 26. Imprimir una matriu === ")
+console.log(imprimirMatriu([
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]))
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+
+// === ## 31. Distància entre dos strings === Escriviu una funció de anomenada `distància` que rebi dos strings i retorni el nombre de caràcters diferents (comparant la posició per posició).
+// **Nota:** Podeu assumir que els strings sempre tenen la mateixa longitud. En canvi, si voleu afegir més dificultat podeu pensar cómo solucionar-ho si una cadena és més llarga que l'atra (la diferència entre les longituds s'afegiria al resultat).
+// escriu la teva funció aquí
+function distancia(string1, string2) {
+    let diferent=0;
+    let diferenciaLLarg=0;
+    
+    // Quants dels caracters son diferents entre els strings
+    for (let i = 0; i < string2.length; i++) {
+        if (string1[i] != string2[i]) {
+            diferent++   
+        }
+    }
+
+    // Diferencia del llarg sumat al final
+    if(string1.length < string2.length){
+       diferenciaLLarg = string2.length - string1.length
+    }else{
+        diferenciaLLarg = string1.length - string2.length
+    }
+    return diferent + diferenciaLLarg;
+}
+// codi de prova
+console.log(" === ## 31. Distància entre dos strings === ")
+console.log(distancia("hola", "hola")) // 0
+console.log(distancia("sol", "tol")) // 1
+console.log(distancia("carro", "correr")) // 3
