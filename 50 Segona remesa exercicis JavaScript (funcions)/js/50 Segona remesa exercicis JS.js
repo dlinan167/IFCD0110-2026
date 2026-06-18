@@ -130,15 +130,28 @@ console.log(likes(25222444)) // "25M"
 // * "fizzbuzz" si el nombre és múltiple tant de 3 com de 5.
 // * Si no compleix cap de les condicions anteriors ha de retornar el mateix número.
 // escriu la teva resposta aquí
-function fizzBuzz(num){
-    // Multiples de 3 i 5
-    if(num % 3 == 0 && num % 5 == 0){return num+" es fizzBuzz";}
-    // Multiples de 3
-    if(num % 3 == 0){return num+" es fizz";}
-    // Multiples de 5
-    if(num % 5 == 0){return num+" es Buzz";}
-    return num;
+function fizzBuzz(num) {
+    cadena = "";
+    if (num % 3 == 0) {
+        cadena += "fizz"
+    }
+    if (num % 5 == 0) {
+        cadena += "buzz"
+    }
+    if (cadena == "") {
+        return num;
+    }  
+    return cadena;
 }
+// function fizzBuzz(num){
+//     // Multiples de 3 i 5
+//     if(num % 3 == 0 && num % 5 == 0){return num+" es fizzBuzz";}
+//     // Multiples de 3
+//     if(num % 3 == 0){return num+" es fizz";}
+//     // Multiples de 5
+//     if(num % 5 == 0){return num+" es Buzz";}
+//     return num;
+// }
 // codi de prova
 console.log(" === ## 6. FizzBuzz === ")
 console.log(fizzBuzz(6)); // "fizz"
@@ -554,18 +567,31 @@ console.log(acabenAmbS([])) // []
 
 // === ## 26. Imprimir una matriu === Escriu una funció anomenada `imprimirMatriu` que rep una matriu (un array d'arrays) i imprimeixi tots els elements de l'array.
 // escriu la teva funció aquí
+console.log(" === ## 26. Imprimir una matriu === ")
+console.log(" Recorrent per col·leccions ")
+
 function imprimirMatriu(matriu) {
+    for (fila of matriu) {
+        for (columna of fila) {
+            console.log(columna);
+        }
+    }
+    // console.log(matriu) //
+    // codi de prova
+    console.log(" Recorrent utilitzant índex ")
+    
     for (let i = 0; i < matriu.length; i++) {
-        
+        console.log(matriu[i]); //Imprimeix cada fila
+        for (let j = 0; j < matriu[i].length; j++) {
+            console.log(matriu[i][j]); //Imprimeix cada element
+        }
     }
 }
-// codi de prova
-console.log(" === ## 26. Imprimir una matriu === ")
-console.log(imprimirMatriu([
+imprimirMatriu([
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
-]))
+])
 // 1
 // 2
 // 3
@@ -576,27 +602,163 @@ console.log(imprimirMatriu([
 // 8
 // 9
 
+// === ## 27. Traduir números a paraules === Escriu una funció llamada `numerosAParaules` que rep un array de números (cada número en el rang de 0 a 9) i retorna un nou array convertint cada número a la seva versió en paraules.
+// escriu la teva funció aquí
+function numerosAParaules(llista) {
+    let llistaParaules=[];
+    for (numero of llista) {
+        switch (numero) {
+            case 0:
+                llistaParaules.push("cero");
+                break;
+            case 1:
+                llistaParaules.push("uno");
+                break;
+            case 2:
+                llistaParaules.push("dos");
+                break;
+            case 3:
+                llistaParaules.push("tres");
+                break;
+            case 4:
+                llistaParaules.push("cuatro");
+                break;
+            case 5:
+                llistaParaules.push("cinco");
+                break;
+            case 6:
+                llistaParaules.push("seis");
+                break;
+            case 7:
+                llistaParaules.push("siete");
+                break;
+            case 8:
+                llistaParaules.push("ocho");
+                break;
+            case 9:
+                llistaParaules.push("nueve");
+                break;
+        
+            default:
+                break;
+        }
+    }
+    return llistaParaules;
+}
+// codi de prova
+console.log(" === ## 27. Traduir números a paraules === ")
+console.log(numerosAParaules([0, 1, 2, 3, 4])) // ["cero", "uno", "dos", "tres", "cuatro"]
+console.log(numerosAParaules([5, 6, 7, 8, 9])) // ["cinco", "seis", "siete", "ocho", "nueve"]
+
+
+// === ## 28. Traduir paraules a números === Escriu una funció llamada `paraulesANumeros` que rep un array de strings i retorna un nou array traduïnt cada paraula a la seva versió numèrica (del 0 al 9). Si la paraula no és un nombre traduir a -1.
+// escriu la teva funció aquí
+function paraulesANumeros(llista) {
+    let llistaNumeros=[];
+    for (paraula of llista) {
+        switch (paraula) {
+            case "cero":
+                llistaNumeros.push(0);
+                break;
+            case "uno":
+                llistaNumeros.push(1);
+                break;
+            case "dos":
+                llistaNumeros.push(2);
+                break;
+            case "tres":
+                llistaNumeros.push(3);
+                break;
+            case "cuatro":
+                llistaNumeros.push(4);
+                break;
+            case "cinco":
+                llistaNumeros.push(5);
+                break;
+            case "seis":
+                llistaNumeros.push(6);
+                break;
+            case "siete":
+                llistaNumeros.push(7);
+                break;
+            case "ocho":
+                llistaNumeros.push(8);
+                break;
+            case "nueve":
+                llistaNumeros.push(9);
+                break;
+        
+            default:
+                llistaNumeros.push(-1);
+                break;
+        }
+    }
+    return llistaNumeros;
+}
+// codi de prova
+console.log(" === ## 28. Traduir paraules a números === ")
+console.log(paraulesANumeros(["cero", "uno", "dos", "tres", "what?", "cuatro"])) // [0, 1, 2, 3, -1, 4]
+console.log(paraulesANumeros(["cinco", "seis", "siete", "ocho", "nueve"])) // [5, 6, 7, 8, 9]
+
+
+// === ## 29. Número d'asteriscs en un array === Escriu una funció llamada `paraulesANumeros` que rep un array de strings i retorna un nou array traduïnt cada paraula a la seva versió numèrica (del 0 al 9). Si la paraula no és un nombre traduir a -1.
+// escriu la teva funció aquí
+function numAsteriscs(arrayLlista) {
+    let contadorAsteriscs=0;
+    for (element of arrayLlista) {     
+        if(element == "*"){
+            contadorAsteriscs++;
+        }
+    }
+    return contadorAsteriscs;
+}
+// codi de prova
+console.log(" === ## 29. Número d'asteriscs en un array === ")
+console.log(numAsteriscs(['', '*', '', '*'])) // 2
+console.log(numAsteriscs(['*', '*', '*'])) // 3
+console.log(numAsteriscs([])) // 0
+
+
+// === ## 30. Número d'asteriscs en una matriu === Escriviu una funció anomenada `numAsteriscs` que rep una matriz (un array de arrays) i retorneu el nombre d'asteriscs:
+// escriu la teva funció aquí
+function matriuNumAsteriscs(matriu) {
+    let contadorAsteriscs=0;
+    for (fila of matriu) {
+        for (columna of fila) {
+            if (columna == "*") {
+                contadorAsteriscs++;
+            } 
+        }
+    }
+    return contadorAsteriscs;
+}
+// codi de prova
+console.log(" === ## 30. Número d'asteriscs en una matriu === ")
+console.log(matriuNumAsteriscs([
+  ['*', '', '*'],
+  ['', '*', ''],
+  ['*', '', '*']
+]))
+// 5
+
 // === ## 31. Distància entre dos strings === Escriviu una funció de anomenada `distància` que rebi dos strings i retorni el nombre de caràcters diferents (comparant la posició per posició).
 // **Nota:** Podeu assumir que els strings sempre tenen la mateixa longitud. En canvi, si voleu afegir més dificultat podeu pensar cómo solucionar-ho si una cadena és més llarga que l'atra (la diferència entre les longituds s'afegiria al resultat).
 // escriu la teva funció aquí
 function distancia(string1, string2) {
-    let diferent=0;
-    let diferenciaLLarg=0;
+    let diferent=Math.abs(string1.length - string2.length); //inicialitzem amb la diferencia del llarg (Aixi es suma al resultat del contador)
+    let limitLlarg=0;
     
-    // Quants dels caracters son diferents entre els strings
-    for (let i = 0; i < string2.length; i++) {
+    if (string1.length < string2.length){// Agafem el streing més llarg com el limit del FOR
+        limitLlarg = string1.length
+    }else{
+        limitLlarg= string2.length
+    }
+    for (let i = 0; i < limitLlarg; i++) { // Quants dels caracters son diferents entre els strings 
         if (string1[i] != string2[i]) {
-            diferent++   
+            diferent++;
         }
     }
-
-    // Diferencia del llarg sumat al final
-    if(string1.length < string2.length){
-       diferenciaLLarg = string2.length - string1.length
-    }else{
-        diferenciaLLarg = string1.length - string2.length
-    }
-    return diferent + diferenciaLLarg;
+    return diferent;
 }
 // codi de prova
 console.log(" === ## 31. Distància entre dos strings === ")
