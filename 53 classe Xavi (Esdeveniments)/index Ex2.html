@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script>
+       console.log(document.title);
+       document.title= "prova1"; //Canviem el títol del document
+
+      // pTITOL.addEventListener("click", canviarPagTitol);
+
+      // function canviarPagTitol() {
+      //    document.title= document.getElementById("pagTITOL");
+      //   }     
+    </script>
+</head>
+<body>
+   <!-- FORMULARI -->
+   <form action="index Ex2.html" style="text-align: center;">
+      <!-- NIF -->
+      <label for="NIF">NIF</label>
+      <p id="avisCampRequerit"></p>
+      <input type="text" id="fNIF" required>
+      <br>
+      <!-- Nom -->
+      <label for="NOM">Nom</label>
+      <br>
+      <input type="text">
+      <br>
+      <!-- Cognom -->
+      <label for="COGNOM">cognom</label>
+      <br>
+      <input type="text">
+      <br>
+      <!-- Botó d'enviar -->
+      <p id="avisBotoActivat"></p>
+      <button type="submit" id="fBotoEnviar" disabled>Enviar</button>
+      <br>
+      <!-- Canviar títol de pagina -->
+      <br>
+      <!-- <p id="pTITOL">Canviar títol de pagina per:</p> -->
+   </form>
+   
+   <script>
+      console.log(fBotoEnviar); // Mostrar atributs del boto enviar
+      fBotoEnviar.disabled=true; // Per defecte el boto está desactivat
+      // Events
+       fNIF.addEventListener("click", controlClick);
+       fBotoEnviar.addEventListener("click", controlEnviarNIF);
+       fNIF.addEventListener("change", controlNIFActivaBoto);
+
+      // Canviar onclick en NIF
+       function controlClick() {
+           fNIF.style.background="orange";
+        }
+      //  Activar boto al canviar el camp NIF 
+        function controlNIFActivaBoto() {
+        document.getElementById("avisBotoActivat").innerHTML= "<b> El boto de enviar esta activat! </b>";
+        fNIF.style.background="green";
+        fBotoEnviar.style.background="green";
+        fBotoEnviar.disabled=false;
+        }       
+
+      // Avis de requeriment del NIF al enviar
+      function controlEnviarNIF() {
+         document.getElementById("avisCampRequerit").innerHTML= "<b> Per continuar ompleix aquest camp!: </b>";
+         fNIF.style.background="red";
+        }     
+
+      // === Fer el camp fNIF arrastrable (ens diu les coordenades per consola) ===
+      fNIF.draggable=true;
+      fNIF.addEventListener("drag", coordenadesArrastrar);
+      function coordenadesArrastrar() {
+         console.log(event.clientY+"|"+event.clientX);
+      }
+      
+
+   </script>
+        
+</body>
+</html>

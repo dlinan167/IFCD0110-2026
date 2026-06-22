@@ -57,10 +57,10 @@ console.log("Format JSON")
 console.log(cotxe)
 
 // Convertim el objecte en un string
+console.log(" === OBJECTE COTXE === ")
 let cadena = JSON.stringify(cotxe)
 console.log("Format String")
 console.log(cadena)
-
 
 // (this.)
 function person(first, second, age, eye) {
@@ -69,4 +69,53 @@ function person(first, second, age, eye) {
     this.age = age;
     this.firstName = eye;
 }
+
+// Inici sessió 19/6 ===============================================================================================
+
+// Objecte cotxe 2
+const cotxe2 = {marca:"Audi", model:"A5"};
+console.log(" = Cotxe 2 = ");
+console.log(cotxe2);
+
+
+console.log("Cotxe original");
+console.log(cotxe);
+
+// // === Copies properties from a source object to a target object ===
+// Object.assign(target, source)
+Object.assign(cotxe, cotxe2);
+
+console.log(" = Cotxe original sobreecrit amb els atributs del cotxe2 = ");
+console.log(cotxe);
+
+
+
+// === Returns an array of the key/value pairs of an object === ( Comparteix el objecte en llista / array )
+// Object.entries(object)
+
+console.log(Object.entries(cotxe));
+
+
+// Objecte fruits
+const fruits = {Bananas:300, Oranges:200, Apples:500};
+
+// 'Object.entries(fruits)' actua com un llista / array
+
+console.log(" === Estan junts en llista (.entries) === ");
+// 
+for (let element of Object.entries(fruits)) {
+    console.log(element);
+}
+
+
+console.log(" === Estan separats  (bucle for) [elementKey, valor] === ");
+// 
+for (let [elementKey, valor] of Object.entries(fruits)) {
+    console.log(elementKey +": --> "+ valor);
+}
+
+// Mapejar les entrades (una altre format per visualitzar el objecte)
+
+const elMeuMapa = new Map(Object.entries(cotxe));
+console.log(elMeuMapa);
 
