@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>54 CALCULADORA</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" /> <!-- < < < CSS 1 -->
+    <!-- Enllaç del javascript -->
+    <script defer src="js/54 Calculadora.js"></script>
+</head>
+<body>
+    <header>
+        <h1>54 CALCULADORA</h1>
+    </header>
+
+    <!-- CALCULADORA -->
+     <main>
+         <div class="marcCalculadora">
+            <div class="pantallaCalc" id="pantallaCalc"></div>
+            <div class="fila">
+                <div class="botonCalc botoClear" onclick="limpiar()"> C </div>
+                <div class="botonCalc botoClear" onclick="limpiar()"> CA </div>
+                <div class="botonCalc botoOperador" onclick="afegir('%')"> % </div>
+                <div class="botonCalc botoOperador" onclick="afegir('/')"> / </div>
+            </div>
+            <div class="fila">
+                <div class="botonCalc" id="set" onclick="afegir('7')"> 7 </div>
+                <div class="botonCalc" id="vuit" onclick="afegir('8')"> 8 </div>
+                <div class="botonCalc" id="nou" onclick="afegir('9')"> 9 </div>
+                <div class="botonCalc botoOperador" onclick="afegir('*')"> X </div>
+            </div>
+            <div class="fila">
+                <div class="botonCalc" id="quatre" onclick="afegir('4')"> 4 </div>
+                <div class="botonCalc" id="cinc" onclick="afegir('5')"> 5 </div>
+                <div class="botonCalc" id="sis" onclick="afegir('6')"> 6 </div>
+                <div class="botonCalc botoOperador" onclick="afegir('-')"> - </div>
+            </div>
+            <div class="fila">
+                <div class="botonCalc" id="u" onclick="afegir('1')"> 1 </div>
+                <div class="botonCalc" id="dos" onclick="afegir('2')"> 2  </div>
+                <div class="botonCalc" id="tres" onclick="afegir('3')"> 3 </div>
+                <div class="botonCalc botoOperador" id="suma" onclick="afegir('+')"> + </div>
+            </div>
+            <div class="fila ultimaFilaCalc">
+                <div class="botonCalc" id="cero" onclick="afegir('0')"> 0 </div>
+                <div class="botonCalc" id="decimal" onclick="afegir('.')"> . </div>
+                <div class="botonCalc botoIgual" id="igual" onclick="calcular()"> = </div>
+            </div>
+         </div>
+
+
+     </main>
+
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>
