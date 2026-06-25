@@ -78,7 +78,9 @@ aside{
   justify-content: center;
   flex-wrap: wrap;
   }
-
+.shadow{
+  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #0000009f;
+}
   /* =============== CALCULADORA ================ */
   .marcCalculadora{
   border: 0.3rem #000 solid;
@@ -153,4 +155,33 @@ aside{
 .ultimaFilaCalc{
   position: relative;
   top: -0.35rem;
+}
+
+/* ================ RESPONSIVE ================== */
+@media (max-width:800px) {
+    body > nav{
+        position: static;
+    }
+    body{
+      display: block;
+    }
+}
+@media (max-width:600px) {
+  .marcCalculadora{
+    width: 99%;
+
+  }
+  .botonCalc{
+    width: 4rem;
+  }
+}
+@media (max-width:481px) {
+  .botonCalc{
+    width: 3.75rem;
+    height: 4.5rem;
+  }
+  .botonCalc{
+    width: 23%;
+    margin: 0.2%;
+  }
 }
