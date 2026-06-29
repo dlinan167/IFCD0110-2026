@@ -133,6 +133,30 @@ aside{
     background: #00000000;
     transition: all 0.1s;
   }
+  .botoReset{
+    border: #000 solid;
+    border-radius: 20%;
+    background: rgb(2, 150, 39);
+    width: 10rem;
+    height: 5rem;
+    position: absolute;
+    right: 18rem;
+  }
+  .infoPartida{
+    border: #000 solid;
+    border-radius: 20%;
+    background: rgb(194, 239, 245);
+    width: 15rem;
+    height: 5rem;
+    position: absolute;
+    right: 13rem;
+    top: 15rem
+  }
+  .botoReset:hover{
+    scale: calc(1.1);
+    background: rgb(0, 202, 50);
+    transition: all 0.1s;
+  }
 
 /* ================ RESPONSIVE ================== */
 @media (max-width:800px) {
