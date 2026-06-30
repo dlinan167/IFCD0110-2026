@@ -11,6 +11,16 @@
 //         }
 //     }
 // }
+
+// FORMAT "FOR OF"
+// function inicialitza(posicion) {
+//     for (let fila of tauler) {
+//         for (let i = 0; i < fila.length; i++) {
+//             fila[i] = "b";
+//         }
+//     }
+// }
+
 // inicialitza();
 
 let jugadorColor="";
@@ -35,20 +45,21 @@ torn = (posicion) =>{
     
     tornContador++; //Torn
 
+
     // Torn del cercle vermell
     if (tornContador % 2 == 0) {
         jugadorColor="O Vermell";
         console.log("El jugador és: "+jugadorColor)
         posicionSeleccionada.classList.add("cercle"); //Pinta la classe CSS a la casilla clickada
-
-    // Torn de la X blava
+        
+        // Torn de la X blava
     } else {
         jugadorColor="X Blau";
         console.log("El jugador és: "+jugadorColor)
         // posicionSeleccionada.classList.add("xBlau"); 
         posicionSeleccionada.className+=" xBlau" // Alternativa de afegir la classe CSS (El mateix que adalt)
     }
-        
+
     // La victoria es del jugador que hi retorni 'true' en la funció de 'comprovarVictoria()'
     if (comprovarVictoria(jugadorColor)) { // Si la funció retorna true s'acaba la partida
         partidaAcabada = true;
@@ -110,7 +121,6 @@ reset = () =>{
     
     let casellas = document.getElementsByClassName("casella");
     console.log(casellas);
-mostrarInfo(jugadorColor);
     for (let i = 0; i < casellas.length; i++) {
         casellas[i].className = "casella";
     }
