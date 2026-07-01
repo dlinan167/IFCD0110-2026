@@ -19,12 +19,12 @@ body{
     "footer  footer footer";
     min-height: 100vh;
     grid-template-columns: 1% auto 1%;
-    grid-template-rows: 6.5% auto 3.5%;
+    grid-template-rows: auto auto 3.5%;
 }
 /* ================== ESTRUCTURA GENERAL ======================= */
 
 header,footer{
-    color: f5deb3;
+    color: #f5deb3;
     background: #000;
     border: 0.2rem palevioletred solid;
 }
@@ -47,9 +47,9 @@ footer{
   position: fixed;
   grid-area: footer;
   width: 100%;
-    opacity: 96%;
-    z-index: 5;
-    bottom: 0%;
+  bottom: 0%;
+  opacity: 96%;
+  z-index: 5;
 }
 h1{
     color: #f5deb3;
@@ -78,14 +78,41 @@ aside{
   padding: 1%;
   justify-content: center;
   flex-wrap: wrap;
-  }
+}
 .shadow{
   box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #0000009f;
 }
-  /* ===============  ================ */
+  /* =============== TAULA DE DADES, JSON ================ */
  
+table{
+  border: 0.2rem #000 solid;
+  gap: inherit;
+  border-collapse: collapse;
+  padding: 0.5%;
+}
+th{
+  border: #000 solid;
+  padding: 0.5%;
+  background-color: blanchedalmond;
+}
+td{
+  border: #000 solid;
+  padding: 0.25%;
+}
 
-
+td:nth-child(even){
+  background-color: #afe4e4;
+}
+td:nth-child(odd){
+  background-color: #90d9d9;
+}
+tr:hover td{
+    background-color: #d0fafa;
+    scale: calc(1.05);
+}
+td:first-child, td:last-child{
+  width: 4rem;
+}
 
 /* ================ RESPONSIVE ================== */
 @media (max-width:800px) {
