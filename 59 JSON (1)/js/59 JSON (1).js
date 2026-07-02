@@ -53,20 +53,26 @@ for (let i = 0; i < objecteJSON.empleats.length; i++) {
 // }
 // carregarDades();
 
+// dispara la funció al fer carregar el <body> (event)
+const cuerpo=document.getElementById("cuerpo");
+cuerpo.addEventListener("load", carregarDades);
+
 const taula = document.getElementById("taula");
 async function carregarDades() {
-    try {
-        // AGAFEM L'ARXIU
+
+    try{
+        // AGAFEM L'ARXIU (y las sebes dades)
         const resposta = await fetch("./JSON_(dades)/2025_pad_imm_mdbas.json");
         const usuaris = await resposta.json();
 
         // RECORREM ELS ELEMENTS DEL JSON i els mostrem
         usuaris.forEach(usuari => {
-            taula.innerHTML += "<tr><td><b>"+usuari.Valor+"</b> - </td><td>"+usuari.Nom_Districte +"</td><td>"+usuari.Nom_Barri+"</td><td>"+usuari.Seccio_Censal+"</td><td>"+usuari.Any+"</td></tr>";
-            // Funció
+            afegeixRegistre(usuari.Valor, usuari.Nom_Districte); // funció
             sumaValorDistricte(usuari.Valor, usuari.Nom_Districte);
-            console.log(usuari.Nom_Districte+ " "+ usuari.Nom_Barri);
-        });
+            // MÉTODE BRUT
+            //taula.innerHTML += "<tr><td><b>"+usuari.Valor+"</b> - </td><td>"+usuari.Nom_Districte +"</td><td>"+usuari.Nom_Barri+"</td><td>"+usuari.Seccio_Censal+"</td><td>"+usuari.Any+"</td></tr>";
+
+         });
 
         // En cas de error:...
     } catch (error) {
@@ -74,7 +80,17 @@ async function carregarDades() {
         // alert
     }
 }
-carregarDades();
+function afegeixRegistre(valor, districte) {
+    
+    //Afegim registres en files de taula
+    const registre = document.createElement("tr");
+    const camp = document.createElement("td");
+    camp.innerText = valor;
+    registre.appendChild(camp);
+    taula.appendChild(registre);
+}
+
+
 
 // Suma el 'Valor' si el districte es el mateix
 let resultat = 0;
@@ -93,3 +109,5 @@ function sumaValorDistricte(valor, districte) {
     }
     resultat += valor;
 }
+
+

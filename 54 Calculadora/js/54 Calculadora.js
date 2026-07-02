@@ -20,9 +20,16 @@ function afegir(numero) {
 // Al clickar el boto igual ("=")
 function calcular() {
 
+    try {
         document.getElementById("pantallaCalc").innerText = eval(numerosMostrats); // Mostra el resultat en la pantalla (resultat que es calcula en 'eval()')
         numerosMostrats = eval(numerosMostrats); //Manté i mostra el resultat final, no la operació
-        return numerosMostrats;
+        
+        // Codi d'error
+    } catch (error) {
+        document.getElementById("pantallaCalc").innerText = "Operació no valida!";
+        console.log("Operació no valida: " + error);
+        numerosMostrats ="";
+    }
 }
 
 // Limpiar pantalla 
