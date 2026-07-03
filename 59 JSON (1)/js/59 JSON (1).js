@@ -32,62 +32,43 @@ for (let i = 0; i < objecteJSON.empleats.length; i++) {
 // Sessió 1/07/2026
 // ======================= MOSTRAR ARXIU JSON (local) ===========================
 
-// const taulaWIP = document.getElementById("taulaWIP");
-// async function carregarDades() {
-//     try {
-//         // AGAFEM L'ARXIU
-//         const resposta = await fetch("./JSON_(dades)/2025_pad_imm_mdbas.json");
-//         const usuaris = await resposta.json();
 
-//         // RECORREM ELS ELEMENTS DEL JSON i els mostrem
-//         usuaris.forEach(usuari => {
-//             console.log(usuari.Nom_Districte+ " "+ usuari.Nom_Barri);
-//             taulaWIP.innerHTML += "<p> <b>"+ usuari.Valor+"</b> - "+ usuari.Nom_Districte+ usuari.Nom_Barri  + "</p>"
-//         });
-
-//         // En cas de error:...
-//     } catch (error) {
-//         console.error("Error al carregar dades!",error);
-//         // alert
-//     }
-// }
-// carregarDades();
-
-// dispara la funció al fer carregar el <body> (event)
-const cuerpo=document.getElementById("cuerpo");
-cuerpo.addEventListener("load", carregarDades);
+window.addEventListener("load", carregaDades);
 
 const taula = document.getElementById("taula");
-async function carregarDades() {
+let capcalera = [];
 
-    try{
-        // AGAFEM L'ARXIU (y las sebes dades)
-        const resposta = await fetch("./JSON_(dades)/2025_pad_imm_mdbas.json");
-        const usuaris = await resposta.json();
+async function carregaDades() {
+  try {
+    const resposta = await fetch("./JSON_(dades)/2025_pad_imm_mdbas.json");
+    const persones = await resposta.json();
+    //recorrer el camps per a la capçalera
+    Object.keys(persones[0]).forEach((clau) => {
+      const camp = document.createElement("th");
+      camp.innerText = clau;
+      taula.appendChild(camp);
+    });
 
-        // RECORREM ELS ELEMENTS DEL JSON i els mostrem
-        usuaris.forEach(usuari => {
-            afegeixRegistre(usuari.Valor, usuari.Nom_Districte); // funció
-            sumaValorDistricte(usuari.Valor, usuari.Nom_Districte);
-            // MÉTODE BRUT
-            //taula.innerHTML += "<tr><td><b>"+usuari.Valor+"</b> - </td><td>"+usuari.Nom_Districte +"</td><td>"+usuari.Nom_Barri+"</td><td>"+usuari.Seccio_Censal+"</td><td>"+usuari.Any+"</td></tr>";
-
-         });
-
-        // En cas de error:...
-    } catch (error) {
-        console.error("Error al carregar dades!",error);
-        // alert
-    }
+    //recorrem els elements del json
+    persones.forEach((element) => {
+      taula.appendChild(afegeixRegistre(element));
+    //   sumaValorDistricte(element);
+    });
+    // En cas d'error...
+  } catch (e) {
+    console.error("Error de càrrega ", e);
+  }
 }
-function afegeixRegistre(valor, districte) {
-    
-    //Afegim registres en files de taula
-    const registre = document.createElement("tr");
-    const camp = document.createElement("td");
-    camp.innerText = valor;
+
+function afegeixRegistre(element,etiqueta="td") {
+  const registre = document.createElement("tr");
+  
+  Object.keys(element).forEach((clau) => {
+    const camp = document.createElement(etiqueta);
+    camp.innerText = element[clau];
     registre.appendChild(camp);
-    taula.appendChild(registre);
+  });
+  return registre;
 }
 
 

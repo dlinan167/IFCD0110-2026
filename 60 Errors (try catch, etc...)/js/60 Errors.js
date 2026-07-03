@@ -129,7 +129,7 @@ function suma(num1, num2) {
 let = resultat = num1 + num2;
 return resultat;    
 }
-
+// = Pausa amb el depurador del navegador per veura cada resultat =
 document.getElementById("resultat").innerHTML = suma(10, 5);
 document.getElementById("resultat").innerHTML = suma(10, 50);
 document.getElementById("resultat").innerHTML = suma(10, 500);
