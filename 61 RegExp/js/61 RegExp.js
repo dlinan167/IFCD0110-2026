@@ -284,7 +284,7 @@ paraulaEntera(); // [ "is", "is" ] sense els /b son 4 is
 // ^^/b^^ // // // // // // // //
 
 
-// Cerca Condicional (?=)
+// Cerca Condicional (?= paraula)
 
 function cercaCondicional() {
     let text = "CET Penedès no és dels mateixos que els del CET Garraf, ni CET Barcelonés. CET Penedès és l'original";
@@ -294,7 +294,7 @@ function cercaCondicional() {
 }
 cercaCondicional(); 
 
-// Cerca Condicional NEGATIVA (?!=)
+// Cerca Condicional NEGATIVA (?! paraula)
 
 function cercaCondicionalNEG() {
     let text = "CET Penedès no és dels mateixos que els del CET Garraf, ni CET Barcelonés. CET Penedès és l'original... CET";
