@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>// 62 RegExp (Exercicis)</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" /> <!-- < < < CSS 1 -->
+    <!-- Enllaç del javascript -->
+    <script defer src="js/62 RegExp (Exercicis).js"></script>
+    <style>h2{ background: rgb(248, 111, 111); border-bottom: solid #000;} p{text-align: left;} h2{margin-top: 1rem;}</style>
+</head>
+<body>
+    <header>
+        <h1>// 62 RegExp (Exercicis)</h1>
+    </header>
+
+     <main>
+        <!-- EX 1 -->
+        <h2>## EX 1. Validació de correus electrònics</h2>
+        <div class="enunciat">// Escriu una funció esEmailValid(email) que retorni true si l'email és vàlid i false altrament.</div>
+        <input type="text" id="txt1">
+        <button id="btn1">esEmailValid()</button>
+        <p class="missatge" id="sol1"></p>
+
+
+        <!-- EX 2 -->
+        <h2>## EX 2. Extracció de números de telèfon</h2>
+        <div class="enunciat">// Escriu una funció extreureNombresTelefon(text) que retorni una llista de números de telèfon trobats en el text.</div>
+        <input type="text" id="txt2" placeholder="(123) 456-7890">
+        <button id="btn2">extreureNombresTelefon(text)</button>
+        <p class="missatge" id="sol2"></p>
+
+
+        <!-- EX 3 -->
+        <h2>## EX 3. Validació de codis postals</h2>
+        <div class="enunciat">// Escriu una funció esCpValid(zip) que retorni true si el codi postal és vàlid i false altrament.</div>
+        <input type="text" id="txt3">
+        <button id="btn3">esCpValid(zip)</button>
+        <p class="missatge" id="sol3"></p>
+
+        <!-- EX 4 -->
+        <h2>## EX 4. Extracció de dominis de correu electrònic</h2>
+        <div class="enunciat">// Escriu una funció extraureDominiEmail(email) que retorni el domini de l'email.</div>
+        <input type="text" id="txt4">
+        <button id="btn4">extraureDominiEmail(email)</button>
+        <p class="missatge" id="sol4"></p>
+
+        <!-- EX 5 -->
+        <h2>## EX 5. Validació de números de targeta de crèdit</h2>
+        <div class="enunciat">// Escriu una funció esTargetaCreditValida(number) que retorni true si el número de targeta és vàlid i false altrament.</div>
+        <input type="text" id="txt5">
+        <button id="btn5">esTargetaCreditValida(number)</button>
+        <p class="missatge" id="sol5"></p>
+        <!-- EX 6 -->
+        <h2>## EX 6. Extracció de hashtags</h2>
+        <div class="enunciat">// Escriu una funció extraureHashtags(text) que retorni una llista de hashtags trobats en el text.</div>
+        <input type="text" id="txt6">
+        <button id="btn6">extraureHashtags(text)</button>
+        <p class="missatge" id="sol6"></p>
+
+        <!-- EX 7 -->
+        <h2>## EX 7. Validació de contrasenyes</h2>
+        <div class="enunciat">// Escriu una funció esPasswordValida(password) que retorni true si la contrasenya és vàlida i false altrament.</div>
+        <input type="text" id="txt7">
+        <button id="btn7">esPasswordValida(password)</button>
+        <p class="missatge" id="sol7"></p>
+
+        <!-- EX 8 -->
+        <h2>## EX 8. Extracció de dates</h2>
+        <div class="enunciat">// Escriu una funció extraureDates(text) que retorni una llista de dates trobades en el text.</div>
+
+        <!-- EX 9 -->
+        <h2>## EX 9. Eliminació de duplicats en una cadena</h2>
+        <div class="enunciat">// Escriu una funció treureParaulesDuplicades(text) que retorni la cadena sense paraules duplicades consecutives.</div>
+
+        <!-- EX 10 -->
+        <h2>## EX 10. Validació de URL</h2>
+        <div class="enunciat">// Escriu una funció esURLValida(url) que retorni true si la URL és vàlida i false altrament.</div>
+
+        <!-- EX 11 -->
+        <h2>## EX 11. Validació de números de seguretat social</h2>
+        <div class="enunciat">// Escriu una funció esSegSocValida(ssn) que retorni true si el número de seguretat social és vàlid i false altrament.</div>
+
+        <!-- EX 12 -->
+        <h2>## EX 12. Extracció de noms d'usuari de Twitter</h2>
+        <div class="enunciat">// Escriu una funció extraureUsuarisTwitter(text) que retorni una llista de noms d'usuari de Twitter trobats en el text.</div>
+       
+        <!-- EX 13 -->
+        <h2>## EX 13. Validació de codis de barres EAN-13</h2>
+        <div class="enunciat">// Escriu una funció esEAN13Valid(code) que retorni true si el codi de barres EAN-13 és vàlid i false altrament.</div>
+
+        <!-- EX 14 -->
+        <h2>## EX 14. Extracció de URLs</h2>
+        <div class="enunciat">// Escriu una funció extractURLs(text) que retorni una llista de URLs trobades en el text.</div>
+
+        <!-- EX 15 -->
+        <h2>## EX 15. Validació de noms de fitxers</h2>
+        <div class="enunciat">// Escriu una funció esFitxerValid(fileName) que retorni true si el nom de fitxer és vàlid i false altrament.</div>
+
+        <!-- EX 16 -->
+        <h2>## EX 16. Extracció de codis HEX de colors</h2>
+        <div class="enunciat">// Escriu una funció extraureColorsHex(text) que retorni una llista de codis HEX de colors trobats en el text.</div>
+
+        <!-- EX 17 -->
+        <h2>## EX 17. Validació de números ISBN-10</h2>
+        <div class="enunciat">// Escriu una funció esISBN10Valid(isbn) que retorni true si el número ISBN-10 és vàlid i false altrament.</div>
+        
+     </main>
+
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>

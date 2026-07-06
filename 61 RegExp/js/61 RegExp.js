@@ -303,3 +303,75 @@ function cercaCondicionalNEG() {
     console.log(resultat); // [ "CET", "CET", "CET" ]
 }
 cercaCondicionalNEG(); 
+
+// ======================================         RegExp Capturing Groups          =========================================================
+
+// L'agrupació es posari els '( )'
+function grups() {
+    let text = "L'Anna estima en Jofre";
+    const patro = /(\w+) estima (\w+)/;    
+    let resultat = text.match(patro);
+    console.log(resultat); // [ "Anna estima en", "Anna", "en" ]
+}
+grups();
+
+function data() {
+    let text = "2026-05-21";
+    const patro = /(\d{4})-(\d{2})-(\d{2})/;  // Sense els '()' per agrupar solament dona [ "2026-05-21"]
+    let resultat = text.match(patro);
+    console.log(resultat); // [ "2026-05-21", "2026", "05", "21" ]
+}
+data();
+
+// ======================================         Quantificadors         =========================================================
+// Quantificador   x+ - (un o més) - x* (ningun o més) x? - (ningun o un)
+
+// mes (+)
+function mes() {
+    let text = "Hola bod dia! Hola CET Penedès. hello hello looooooolo";
+    const patro = /lo+/g;    // una o mes O's
+    let resultat = text.match(patro);
+    console.log(resultat); // [ "lo", "lo", "looooooo", "lo" ]
+}
+mes();
+
+
+// Asterisc (*)
+function asterisc() {
+    let text = "Hola bod dia! Hola CET Penedès. hello hello looooooolo le li";
+    const patro = /lo*/g;    // cero o mes O's
+    let resultat = text.match(patro);
+    console.log(resultat); // [ "l", "l", "l", "lo", "l", "lo", "looooooo", "lo", "l", "l" ]
+}
+asterisc();
+
+// Interrogant (?) (ningun o un)
+
+// function quantificadorInterrogant() {
+//         let text = "98, 15, 1, 100 o 1000";
+//     const patro = /10?/g;
+//     let resultat = text.match(patro);
+
+//     console.log(resultat); // Array ["1", "1", "10", "10" ] | (un '1' i que hi hagi un '0' o no  ('0?' el caracter que li afecta el interrogant))
+// }
+// quantificadorInterrogant(); 
+
+
+//  {n}
+//  {n,m}  Miním i màxim
+function nOcurrencies() {
+        let text = "98, 15, 1, 100 o 1000";
+    const patro = /\d{4}/g; //  {n,m}  Miním i màxim <= Solament agafem un numero de 4 digits seguits (solament el '1000' aquí)
+
+    // const patro = /\d{3,4}/g;  //  {n,m}  Miním i màxim
+
+    // const patro = /\d{3,}/g;  //  {n,}  Miním i sense màxim
+
+    let resultat = text.match(patro);
+
+    console.log(resultat); //
+}
+nOcurrencies(); 
+
+
+
