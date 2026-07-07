@@ -15,8 +15,8 @@ function esEmailValid() {
     // Referències als objectes
     const text = document.getElementById("txt1").value;
     const solucio = document.getElementById("sol1");
-    // 
-    let patro = /\w+@\w+\.\w{2,5}/g;
+    // de validació Email
+    let patro = /(\w+[^\.]|\w+\.\w+)@\w+\.\w{2,5}/;
     let resultat = text.match(patro);
 
     if (resultat){
@@ -101,18 +101,12 @@ function extraureDominiEmail(text) {
     
     text = document.getElementById("txt4").value;
     const solucio = document.getElementById("sol4");
-    
-    // Mirar Email
-    let patro = /\w+@\w+\.\w{2,5}/g;
-    const resultat = text.match(patro);
 
     // Mirar Domini
-    let patroDomini = /@\w+\.\w{2,5}/g;
+    let patroDomini = /(?<=\w+@)\w+\.\w{2,5}/;
     let domini = text.match(patroDomini);
-    
-    // domini.substring(1,0);
 
-    if (resultat){
+    if (domini){
         solucio.innerText= "El domini és OK: => "+domini; //Retrnar domini en lloc d'Email
     }else{
         solucio.innerText= "Error: Email NO valid!";
@@ -193,7 +187,7 @@ function esPasswordValida(text) {
     text = document.getElementById("txt7").value;
     const solucio = document.getElementById("sol7");
 
-    // Mirar Patro de tarjeta
+    // Mirar Patro de Password
     let patro = /(\w+)(\d+)([^A-Za-z0-9]+)/ig;
     const resultat = text.match(patro);
 
@@ -207,3 +201,81 @@ function esPasswordValida(text) {
 // ### Proves
 // console.log(esPasswordValida("Password1!")); // true
 // console.log(esPasswordValida("password1")); // false
+
+
+// ## 8. Extracció de dates
+// ### Enunciat: 
+// Escriu una funció extraureDates(text) que retorni una llista de dates trobades en el text.
+document.getElementById("btn8").addEventListener("click", extraureDates);
+function extraureDates(text) {
+    
+    text = document.getElementById("txt8").value;
+    const solucio = document.getElementById("sol8");
+
+    // Mirar Patro de les dates
+    let patro = /\d{2}\/\d{2}\/\d{4}/g;
+    const resultat = text.match(patro);
+
+    if (resultat){
+        solucio.innerText= "Les dates OK: => "+resultat;
+    }else{
+        solucio.innerText= "Error: NO valid!";
+    }
+    return resultat;
+}
+
+// ### Proves
+// console.log(extraureDates("My birthday is on 12/05/1992 and my brother's is on 03/10/1995.")); // ["12/05/1992", "03/10/1995"]
+
+// ## 9. Eliminació de duplicats en una cadena
+// ### Enunciat: 
+// Escriu una funció treureParaulesDuplicades(text) que retorni la cadena sense paraules duplicades consecutives.
+// > Pista:
+// Retorn text.replaceregex('$1');
+document.getElementById("btn9").addEventListener("click", treureParaulesDuplicades);
+function treureParaulesDuplicades(text) {
+    
+    text = document.getElementById("txt9").value;
+    const solucio = document.getElementById("sol9");
+
+    // Mirar Patro que no repeteix paraules
+    let patro = /(\w+)(?!.*\1)/g;
+    const resultat = text.match(patro);
+
+    if (resultat){
+        solucio.innerText= "Sense duplicades OK: => "+resultat;
+    }else{
+        solucio.innerText= "Error: NO valid!";
+    }
+    return resultat;
+}
+// ### Proves
+console.log(treureParaulesDuplicades("This is is a test test.")); // "This is a test."
+
+
+// ## 10. Validació de URL
+// ### Enunciat: 
+// Escriu una funció esURLValida(url) que retorni true si la URL és vàlida i false altrament.
+// > Pista:
+// return regex.test(url);
+document.getElementById("btn10").addEventListener("click", treureParaulesDuplicades);
+function treureParaulesDuplicades(text) {
+    
+    text = document.getElementById("txt10").value;
+    const solucio = document.getElementById("sol10");
+
+    // Mirar Patro que no repeteix paraules
+    let patro = /(\w+)(?!.*\1)/g;
+    const resultat = text.match(patro);
+
+    if (resultat){
+        solucio.innerText= "Sense duplicades OK: => "+resultat;
+    }else{
+        solucio.innerText= "Error: NO valid!";
+    }
+    return resultat;
+}
+// ### Proves
+// console.log(esURLValida("https://www.example.com")); // true
+// console.log(esURLValida("ftp://files.example.com")); // true
+// console.log(esURLValida("htp://invalid-url.com")); // false
