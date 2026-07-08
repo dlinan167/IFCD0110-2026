@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
     <title>// UF1305-PAC1-1C-49900095P-David Liñan</title> <!-- < Titol de la pestanya -->
-    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- Icona de la pestanya-->
     <link rel="stylesheet" href="./css/styles.css" /> <!-- < < < CSS 1 -->
     <!-- Enllaç del javascript -->
-    <script defer src="js/JavaScript.js"></script>
+    <script defer src="js/JavaScript.js"></script> <!-- <=- Bloc 2: Inserit desde un arxiu extern -->
+    <script>
+        console.log("Bloc 2: Codi javascript dins del <head>");
+    </script>
 </head>
 <body>
     <header>
@@ -15,7 +18,32 @@
     </header>
 
      <main>
-        
+        <!-- Bloc 1: funció d'ordinograma -->
+        <button type="button" id="RestaB1">Resta: positiu i negatiu (bloc 1)</button>
+        <p id="resultatRestaB1"></p>
+
+        <div>.--+--.</div>
+        <!-- Bloc 2: Inserit dins d'un element HTML -->
+        <div id="demoBloc2"></div>
+
+        <div>.--+--.</div>
+        <!-- Bloc 6: -->
+         <h2>(Bloc 6: Control Esdeveniments)</h2>
+        <form id="formulariB6" method="get" action="">
+            <input type="text" id="elementFormulari"></input>
+            <p id="controlEvents"></p>
+            <p id="controlFinestra"></p>
+            <!--  -->
+                    <label for="llistaElements">Tipus de tarjeta:</label>
+                    <select name="llistaElements" id="llistaElements">
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="american-express">American-Express</option>
+                        <option value="diners-club-international">Diners-Club-International</option>
+                    </select>
+            <button type="submit" id="botoSubmit">Enviar (submit)</button>
+        </form>
+
 
      </main>
 
@@ -24,5 +52,8 @@
         <li>&copy; Fet per David</li>
     </ul>
 </footer>
+    <script>
+        console.log("Bloc 2: Codi javascript dins del <body>");
+    </script>
 </body>
 </html>

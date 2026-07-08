@@ -12,7 +12,7 @@ function cuentaAtras(numTimer)  {
     }
 
     console.log(numTimer)
-    cuentaAtras(numTimer - 1); // Es crida
+    cuentaAtras(numTimer - 1); // <= Es repeteix la funció
 }
 console.log(cuentaAtras(10));
 
@@ -30,7 +30,7 @@ function factorial(numero) {
 }
 console.log(factorial(4)); //Resultat: 24
 
-// Funció on els parametres tenen un valor per defect si s'indica explicitament (En aquest cas 'num2=10')
+// Funció on els parametres tenen un valor per defecte si NO s'indica explicitament (En aquest cas 'num2=10')
 function suma(num1, num2=10) {
     return num1 + num2;
 }

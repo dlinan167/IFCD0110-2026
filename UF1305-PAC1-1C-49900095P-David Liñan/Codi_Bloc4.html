@@ -1,0 +1,48 @@
+<!-- Troba i explica quins són i com has depurat els errors del següent codi: -->
+<!-- <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Detecció i correcció d’errors</title>
+  </head>
+  <body>
+    <script>
+      function escriu() {
+
+        //Escriu el valor introduit al camp al paràgraf del final del codi
+        document.getElementById("escriu").value = document.getElementById("usuari").value;  //<= ERROR!: El id 'Escriu' no existeix i usuari.value es redundant.
+      }
+      // Pinta de vermell el color de fons del cap "Nom usuari"
+      document.getElementById("usuari").style.backgroundColor = "Red";    // <= ERROR!: EL canvi de color es troba fora de la funció
+    </script>
+    <form method="post" action="https://xavier.aymerich.cat/ifcd0110">
+      <label for="usuari">Escriu el nom d’usuari: </label>
+      <input type="text" id="usuari" name="usuari" onChange="escriu()" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html> -->
+
+
+
+<!-- CODI DEPURAT -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Detecció i correcció d’errors</title>
+  </head>
+  <body>
+    <script>
+        function escriu() {
+            // Pinta de vermell el color de fons del cap "Nom usuari"
+            usuari.style.backgroundColor = "red"; //Es pot modificar directament el '.style' referenciant el 'usuari'
+        }
+    </script>
+    <form method="post" action="https://xavier.aymerich.cat/ifcd0110">
+      <label for="usuari">Escriu el nom d’usuari: </label>
+      <input type="text" id="usuari" name="usuari" onchange="escriu()" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
