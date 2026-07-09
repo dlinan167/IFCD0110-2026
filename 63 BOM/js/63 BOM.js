@@ -79,3 +79,67 @@ if(confirm("Press a button!")){
 }else{   
     alert("You pressed CANCEL!");
 }
+
+// let resposta = confirm("Estàs seguir que vols desar les dades?");  //Retorna un boolean true o false
+// console.log(resposta);
+
+// if (resposta) {
+//     console.log("Ha triat Acceptar");
+// }else{
+//     console.log("Ha triat Cancelar");
+// }
+
+//prompt:           Missatge,                       valor per defecte
+// let resposta = prompt("Quin és el teu color favorit", "Green");
+
+// // console.log(resposta);
+
+// if (resposta) {
+//     console.log("Has entrat "+resposta);
+// }else{
+//     console.log("No has entrat res");
+// }
+
+
+// Si no hi ha respota (null) insisteix l'usuari fins que introdeix una resposta
+
+let resposta = prompt("Quin és el teu color favorit", "Green");
+
+while (!resposta) {
+    console.log("Escriu algo!!!")
+    resposta = prompt("Quin és el teu color favorit", "Green")
+}
+console.log(resposta);
+
+// alert("Hola \n Bon dia a tothom"); // '\n' <= Salt de línea
+
+
+
+// +-+-+-++-+-+-+-+-++-+-+-===== ! TIMING EVENTS ! ======-+-+-+-++-+-+-+-+-+-+-+-+-++-+-+-++-++-+-+
+
+// Delay de 3 segons per mostrar el missatge! o executar el codi de la funció assignada
+function missatgeAmbRetard() {
+    alert("Bon dia amb alegría (Timeout)");
+}
+
+
+// Rellotge del PC
+setInterval(hora, 1000); // <= S'actualitza per cada 1s que pasa
+
+function hora() {
+  const horaPC = new Date(); // <= Crea un objecte i referencia 'horaPC'
+  document.getElementById("demoRellotge").innerHTML = "<br><b>"+horaPC.toLocaleTimeString()+"</b>";
+} 
+
+
+let comptaEnrera = setInterval(cronometre, 1000); // <= S'actualitza per cada 1s que pasa
+
+let comptador = 60; // s
+
+function cronometre() {
+  document.getElementById("demoCronometre").innerHTML = "<br><b>"+comptador+"</b>";
+  comptador--;
+  if (comptador < 0) { // Es para quan arriva a '0' (I evitar numeros negatius)
+    clearInterval(comptaEnrera);
+  }
+} 
