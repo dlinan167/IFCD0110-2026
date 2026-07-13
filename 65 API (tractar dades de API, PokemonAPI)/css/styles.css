@@ -127,6 +127,13 @@ ul{
 a{font-weight: bold;}
 
   /* =============== TAULA DE DADES, JSON / API ================ */
+    #taulaPokemonAPI{
+    display: flex;
+    flex-wrap: wrap;
+    border: #000 solid;
+    padding: 0.5%;
+    border-radius: 2%;
+  }
  
 table{
   border: 0.2rem #000 solid;
