@@ -69,7 +69,7 @@ async function mostrarDades(dades) {
 function creaCarta(name, phone, email, picture, username, location) {
   const carta = document.createElement("div");
   carta.classList.add("card", "border-primary", "mb-3", "shadow");
-  carta.style.margin = "0.2rem";
+  carta.style.margin = "0.35rem";
   carta.style.maxWidth = "10rem"; // mida de carta
   
   //Nom en la carta
@@ -83,18 +83,19 @@ function creaCarta(name, phone, email, picture, username, location) {
   // username
   const body = document.createElement("div");
   body.classList.add("card-body", "text-primary");
-  body.innerHTML ="- <b>Username:</b> "+ username;
+  body.innerHTML ="<b>- Username:</b> "+ username;
 
   // Email
   const titolBody = document.createElement("p");
   titolBody.classList.add("card-title");
-  titolBody.innerHTML ="- <b>Email:</b> "+ email;
+  titolBody.innerHTML ="<b>- Email:</b> "+ email;
 
   // Location
   const textBody = document.createElement("p");
   textBody.classList.add("card-text");
-  textBody.innerHTML ="- <b>Location:</b> "+ location.city +", "+ location.country;
+  textBody.innerHTML ="<b>- Location:</b> "+ location.city +", "+ location.country;
 
+  // Afegim els elements a la carta
   body.append(titolBody, textBody);
   carta.append(header, foto);
   carta.append(header, body);
