@@ -158,6 +158,23 @@ td:first-child, td:last-child{
   width: 4rem;
 }
 
+/* -+-+-+-+-+-+-+-+ TEMA CLAR / TEMA FOSC -+-+-+-+-+-+-+-+-+-*/
+
+.dark{
+  color: whitesmoke;
+  background: #141a13;
+  *{
+    color: whitesmoke;
+    button{
+      color: #000;
+    }
+  }
+}
+.light{
+  color: rgb(5, 0, 0);
+  background: #d8f7cc;
+}
+
 /* ================ RESPONSIVE ================== */
 @media (max-width:800px) {
     body > nav{

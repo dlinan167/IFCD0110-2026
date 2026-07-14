@@ -128,3 +128,32 @@ function contarClicksSESSION() {
 }
 
 // +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ TEMA CLAR / TEMA FOSC -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+window.addEventListener("load", function(){ // Quan carrega la pàgina/finestra mostra el tema guardat
+    cambiaTema(localStorage.tema);
+    console.log(localStorage.tema);
+}) 
+
+
+
+document.getElementById("tema").addEventListener("change", function(){
+    const tema = document.getElementById("tema").value;
+    cambiaTema(tema);
+});
+
+// 
+const mainColor = document.getElementById("principal");
+function cambiaTema(tema) {
+    if (tema == "dark") {
+        mainColor.classList.remove("light")  // <= Quita tema 'light'
+        mainColor.classList.add("dark")      // <= Posa tema 'dark'
+        localStorage.setItem("tema", "dark") // <= Guarda l'estat tema 'dark'
+    } else {
+        mainColor.classList.remove("dark")
+        mainColor.classList.add("light")
+         localStorage.setItem("tema", "light")
+    } 
+    console.log(localStorage.tema); // Prova // <= retorna 'light' o 'dark'
+}
