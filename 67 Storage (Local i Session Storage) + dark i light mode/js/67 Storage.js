@@ -20,7 +20,6 @@ divNom.innerHTML += "<br><h4>"+ localStorage.getItem("NOM")+"</h4>"; //Mostra el
 // ===========================================
 
 
-
 //  =============  GUARDAR NOM ============= (setItem)
 boto.addEventListener("click", function(){ // dispara el event de guardar el nom
     guardar();
@@ -43,8 +42,6 @@ function guardar() {
     }
 }
 //  ===========================================
-
-
 //  =============  COMPTADOR DE CLICKS ! ============= 
 
 const botoClicks = document.getElementById("btnClicks");
@@ -62,7 +59,6 @@ function contarClicks() {
     txtClicks.innerHTML = "<b> "+localStorage.comptadorClicks+"</b>";
 }
 //  ==================================================
-
 // ==================== CLEAR ======================  (Nateja tots els localStorage, totes les dades guardades)
 
 const botoNateja = document.getElementById("btnNateja");
@@ -108,8 +104,6 @@ function guardarSESSION() {
     }
 }
 //  ===========================================
-
-
 //  =============  COMPTADOR DE CLICKS ! ============= 
 
 const botoClicks2 = document.getElementById("btnClicks-2");
@@ -134,26 +128,47 @@ function contarClicksSESSION() {
 window.addEventListener("load", function(){ // Quan carrega la pàgina/finestra mostra el tema guardat
     cambiaTema(localStorage.tema);
     console.log(localStorage.tema);
-}) 
+});
 
-
-
+// Seleccionar el tema
 document.getElementById("tema").addEventListener("change", function(){
     const tema = document.getElementById("tema").value;
     cambiaTema(tema);
 });
 
 // 
-const mainColor = document.getElementById("principal");
+const bodyColor = document.getElementById("body");
 function cambiaTema(tema) {
     if (tema == "dark") {
-        mainColor.classList.remove("light")  // <= Quita tema 'light'
-        mainColor.classList.add("dark")      // <= Posa tema 'dark'
-        localStorage.setItem("tema", "dark") // <= Guarda l'estat tema 'dark'
+        bodyColor.classList.remove("light");  // <= Quita tema 'light'
+        bodyColor.classList.add("dark");      // <= Posa tema 'dark'
+        localStorage.setItem("tema", "dark"); // <= Guarda l'estat tema 'dark'
+        document.getElementById("demoTema").innerHTML= "=>=>=>| Estem en el tema: "+tema+ " <i class='fa-solid fa-moon' style='font-size: 2rem;'></i> |<=<=<=";
     } else {
-        mainColor.classList.remove("dark")
-        mainColor.classList.add("light")
-         localStorage.setItem("tema", "light")
+        bodyColor.classList.remove("dark");
+        bodyColor.classList.add("light");
+         localStorage.setItem("tema", "light");
+         document.getElementById("demoTema").innerHTML= "=>=>=>| Estem en el tema: "+tema+ " <i class='fa-solid fa-sun' style='font-size: 2rem;'></i> |<=<=<=";
     } 
     console.log(localStorage.tema); // Prova // <= retorna 'light' o 'dark'
 }
+
+
+// // JSON tema clar/fosc
+// async function cambiaTemaJSON() {
+//     try {
+//         if (dades) {
+
+//     } else {
+//         const API = "../json/colors.json";
+//         const resposta = await fetch(API);
+//         const dades = await resposta.json();
+//     }
+//     console.log(dades);   
+    
+//     // Aquí va el codi
+//   } catch (e) {
+//     console.error("Error de càrrega",e);
+//   }
+// }
+// cambiaTemaJSON();

@@ -20,8 +20,8 @@ async function carregaAPI() {
     
     // Aquí va el codi
     mostrarDades(dades);
-  } catch (error) {
-    console.error("Error de càrrega",e)
+  } catch (e) {
+    console.error("Error de càrrega",e);
   }
 }
 

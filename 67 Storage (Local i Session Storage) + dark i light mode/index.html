@@ -14,7 +14,7 @@
     <!-- ---------- CSS de Font awesome (per icones)---------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 </head>
-<body>
+<body id="body">
     <header id="capçalera">
         <h1 id="titol">// 67 Storage (Local i Session Storage)</h1>
         <select name="darktheme" id="tema">
@@ -28,7 +28,9 @@
         <button id="btnNateja">Esborra Local Storage</button>
     </nav>
 
-     <main id="principal">
+     <main>
+        <!-- Demo Tema CLAR/OSCUR -->
+         <h3 id="demoTema"></h3>
          <!-- LOCAL Storage -->
          <div style="border: solid;">
          <h2>LOCAL Storage</h2>
@@ -56,9 +58,8 @@
         <button id="btnClicks-2">Fes clicks!</button>     
         <div id="txtClicks-2">Comptador de clicks</div>
     </div>
-
 </main>
-
+<aside></aside>
     <footer>
     <ul>
         <li>&copy; Fet per David</li>

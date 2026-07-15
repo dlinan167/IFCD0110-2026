@@ -3,7 +3,14 @@
   margin:0%;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  color: #000;
+}
+:root{
+    --fons-main:rgba(153, 205, 50, 0.377);
+    --fons-titol: #000000f5;
+    --color-titol-lletra: #f5deb3;
+    --color-titol-border: #d87093;
+    --fons-aside: #5f3300;
+    --fons-navegacio:#5f5e00;
 }
 html{
     font-size: 62.5%;
@@ -11,22 +18,23 @@ html{
     font-size: 1.3rem;
 }
 body{
+    color: #000;
     display: grid;
-    background: var(--fons-principal);
+    background: var(--fons-main);
     grid-template-areas: 
     "header header header"
     "nav main aside"
     "footer  footer footer";
     min-height: 100vh;
-    grid-template-columns: 1% auto 1%;
-    grid-template-rows: 6.5% auto 3.5%;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 3rem auto 2.35rem;
 }
 /* ================== ESTRUCTURA GENERAL ======================= */
 
 header,footer{
-    color: #f5deb3;
-    background: #000;
-    border: 0.2rem palevioletred solid;
+  color: var(--color-titol-lletra);
+  background: var(--fons-titol);
+  border: 0.2rem var(--color-titol-border) solid;
 }
 header{
   grid-area: header;
@@ -50,14 +58,15 @@ footer{
   bottom: 0%;
   opacity: 96%;
   z-index: 5;
+  max-height: 5%;
 }
 h1{
-    color: #f5deb3;
+    color: var(--color-titol-lletra);
     font-size: 2rem;
     font-weight: bold;
 }
 main{
-  background: rgba(153, 205, 50, 0.377);
+  background: var(--fons-main);
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -69,7 +78,7 @@ main{
 aside{
   grid-area: aside;
   border: 0.150rem solid;
-  background: var(--fons-anuncis);
+  background: var(--fons-aside);
   align-content: center;
 }
 .fila{
@@ -87,17 +96,17 @@ nav{
   grid-area: nav;
   align-content: center;
   border: 0.150rem solid;
-  background: #f5deb3;
+  background: var(--fons-navegacio);
 }
 nav ul::before{
     content: "MENU:";
     font-weight: bold;
 }
     
-body > nav{
+/* body > nav{
     position: fixed;
     top: 20%;
-}
+} */
 body > nav li:hover{
   width: 110%;
   border: 0.250rem solid;
@@ -129,18 +138,19 @@ a{font-weight: bold;}
   /* =============== TAULA DE DADES, JSON / API ================ */
  
 table{
-  border: 0.2rem #000 solid;
+  --table-borders: #000;
+  border: 0.2rem var(--table-borders) solid;
   gap: inherit;
   border-collapse: collapse;
   padding: 0.5%;
 }
 th{
-  border: #000 solid;
+  border: var(--table-borders) solid;
   padding: 0.5%;
   background-color: blanchedalmond;
 }
 td{
-  border: #000 solid;
+  border: var(--table-borders) solid;
   padding: 0.25%;
 }
 
@@ -161,19 +171,29 @@ td:first-child, td:last-child{
 /* -+-+-+-+-+-+-+-+ TEMA CLAR / TEMA FOSC -+-+-+-+-+-+-+-+-+-*/
 
 .dark{
-  color: whitesmoke;
+  
   background: #141a13;
-  *{
-    color: whitesmoke;
-    button{
-      color: #000;
+  --fons-main:rgba(112, 151, 33, 0.377);
+  --fons-titol: #000000f5;
+  --fons-aside: #301a00;
+  --fons-navegacio:#1d2000;
+  --color-titol-lletra: #d1bc93;
+  --color-titol-border: #944e65;
+  color: #dfdfdf;
+  button, select, input{
+    color: #ebebeb;
+      background: #141a13;
     }
-  }
 }
 .light{
   color: rgb(5, 0, 0);
   background: #d8f7cc;
 }
+/* -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+button:hover, select:hover, input:hover, input:focus{
+  scale: calc(1.1);
+  transition: all 0.1s;
+  }
 
 /* ================ RESPONSIVE ================== */
 @media (max-width:800px) {
