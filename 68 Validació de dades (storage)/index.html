@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>// 67 Storage (Local i Session Storage)</title>                        <!-- <= Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- <= Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" />                             <!-- <= CSS 1 -->
+    <script defer src="js/68 Validació.js"></script>                                <!-- <= Enllaç del javascript -->
+
+    <!-- BOOTstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body id="body">
+    <header>
+        <h1>// 68 Validació de dades (storage)</h1>
+        <select name="darktheme" id="tema">
+            <option value="light">Light<i class="fa-regular fa-sun"></i></option>
+            <option value="dark">Dark<i class="fa-solid fa-moon"></i></option>
+        </select>
+        <i class="fa-regular fa-sun" style="color: wheat; font-size: 2rem;"></i>|||||<i class="fa-solid fa-moon" style="color: wheat; font-size: 2rem;"></i>
+    </header>
+
+    <nav>
+        <button id="btnNateja">Esborra Local Storage</button>
+    </nav>
+
+     <main>
+
+    <!-- Validació de dades (Utilitzant storage) -->
+     <!-- USUARI I PASSWORD (INICI DE SESSIÓ) -->
+    <h3>Validació d'Inici de Sessió:</h3>
+            <div class="caixaValidar">
+            <!-- <form action="" method="post"> -->
+
+                <table>
+                    <!-- Usuari i contrasenya: -->
+                    <tr>
+                        <td>
+                            <label for="username">Usuari:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="nom" id="username">
+                        </td>
+                        <td>
+                            <div id="mUsername" class="alert"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Contrasenya:</label>
+                        </td>
+                        <td>               
+                            <input type="password" name="nom" id="password" minlength="8" maxlength="24">
+                        </td>
+                        <td>
+                            <div id="mPassword" class="alert"></div>
+                        </td>
+                    </tr>
+                    <!-- Botóns del formulari: -->
+                    <tr>
+                        <td>
+                            <button id="btnIniciSessio" type="submit">Inici sessió</button>     
+                        </td>
+                        <td>
+                            <button id="btnNatejaDades">Nateja dades</button>     
+                        </td>
+                        <td>
+                            <button id="btnNouUsuari">Registrar nou usuari</button>     
+                        </td>
+                    </tr>
+                    <!-- Mostrar errors o missatges aqui: -->
+                    <tr>
+                        <td colspan="3" class="alert"><p><b id="missatgeValUsuari"></b></p></td>
+                    </tr>
+                </table>
+            </div>
+        <!-- </form> -->
+        <!--  -->
+    </div>
+
+    
+</main>
+<aside></aside>
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>
