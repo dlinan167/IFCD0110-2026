@@ -7,10 +7,16 @@
 
 
 
-const btnIniciSessio = document.getElementById("btnIniciSessio");
-const btnNouUsuari = document.getElementById("btnNouUsuari");
+// *************** NATEJAR TOTES LES DADES DE LA MEMORIA !!!! (BOTÓ) **************
+const botoNatejaTot = document.getElementById("btnNatejaTot");
+botoNatejaTot.addEventListener("click", function(){  // Al fer click fa 'clear()' de les dades
+    localStorage.clear();                         // <= Nateja les dades
+    location.reload();                            // <= Recarga la pàgina (com F5)
+});
 
-
+// ***************************************************************************************************
+// *                                      EVENTS LISTENERS                                        *
+// ***************************************************************************************************
 
 // Al fer unfocus al camp 'username'
 const evtUsername = document.getElementById("username");
@@ -26,11 +32,25 @@ evtPassword.addEventListener("keyup", ()=>{
     validarClauDePas();                                                                   // <= Missatges de validació per l'usuari
 });
 
-//  // Dispara l'inici de sessió
+// Dispara l'inici de sessió
+const btnIniciSessio = document.getElementById("btnIniciSessio");
 btnIniciSessio.addEventListener("click", function(){ 
     const missatge = document.getElementById("missatgeValUsuari");
     missatge.innerText = validaIniciSessio();                               // <= El missatge es el que retorna(return) de la funció
 });
+
+// = REGISTRAR/AFEGIR NOU USUARI =
+
+const btnNouUsuari = document.getElementById("btnNouUsuari");
+btnNouUsuari.addEventListener("click", function(){ 
+    const missatge = document.getElementById("missatgeValUsuari");
+    missatge.innerText = registraNouUsuari();                         // <= El missatge es el que retorna(return) de la funció
+});
+
+// ***************************************************************************************************
+// ***************************************************************************************************
+
+// -----
 
 // ***************************************************************************************************
 // *                                       DEFINICIÓ FUNCIÓNS                                        *
@@ -38,7 +58,7 @@ btnIniciSessio.addEventListener("click", function(){
 
 // FUNCIÓ: VALIDAR el INICI SESSIÓ
 function validaCamp(id, idMissatge, patro) {
-    const camp = document.getElementById(id).value;                       // <= valor del username o password
+    const camp = document.getElementById(id).value;                       // <= valor del username o password (id)
     const mAlert = document.getElementById(idMissatge);                   // <= Missatge validació (Depend del camp)    
     
     // PATRO per validar:
@@ -60,6 +80,7 @@ function validaCamp(id, idMissatge, patro) {
     }
 }
 
+// VALIDA PATRO PASSWORD/CONTRASENYA
 // Validació d'un patro mes complexe en petites parts (amb missatges personalitzats)
 function validarClauDePas() {
     const camp = document.getElementById("password").value; 
@@ -78,7 +99,7 @@ function validarClauDePas() {
         mAlert.innerHTML += "<br>Falta una símbol";
     }
 }
-
+// VALIDA SESSIÓ
 function validaIniciSessio() {
     const username = document.getElementById("username").value;             // <= valor del username
     const password = document.getElementById("password").value;             // <= valor del password
@@ -95,20 +116,9 @@ function validaIniciSessio() {
     return "";
 }
 
-// *************** NATEJAR TOTES LES DADES DE LA MEMORIA !!!! **************
-const botoNatejaTot = document.getElementById("btnNatejaTot");
-botoNatejaTot.addEventListener("click", function(){  // Al fer click fa 'clear()' de les dades
-    localStorage.clear();                         // <= Nateja les dades
-    location.reload();                            // <= Recarga la pàgina (com F5)
-});
-// ******************************************************************************
+
 
 // ============================ AFEGIR NOU USUARI ============================================
-
-btnNouUsuari.addEventListener("click", function(){ 
-    const missatge = document.getElementById("missatgeValUsuari");
-    missatge.innerText = registraNouUsuari();                         // <= El missatge es el que retorna(return) de la funció
-});
 
 function registraNouUsuari() {
     const username = document.getElementById("username").value;
@@ -136,7 +146,8 @@ function registraNouUsuari() {
 
 
 
-
+// ***************************************************************************************************
+// ***************************************************************************************************
 
 
 
