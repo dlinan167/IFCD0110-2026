@@ -86,6 +86,7 @@ aside{
   justify-content: center;
   border: solid;
   margin-bottom: 3rem;
+  transition: all 0.2s;
 }
 .fila{
   display: flex;
@@ -96,6 +97,10 @@ aside{
 }
 .shadow{
   box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #0000009f;
+}
+.alert{
+  scale: calc(0.9);
+  transition: all 0.5s;
 }
 /* ==================== MENU de NAV ======================= */
 nav{
@@ -200,6 +205,12 @@ button:hover, select:hover, input:hover, input:focus{
   scale: calc(1.05);
   transition: all 0.1s;
   }
+  /* input:invalid{
+    border: red dashed;
+  }
+  input:valid{
+    border: green solid;
+  } */
 
 /* ================ RESPONSIVE ================== */
 @media (max-width:800px) {

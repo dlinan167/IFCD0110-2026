@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
-    <title>// 67 Storage (Local i Session Storage)</title>                        <!-- <= Titol de la pestanya -->
+    <title>// 68 Validació de dades (storage)</title>                        <!-- <= Titol de la pestanya -->
     <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- <= Icona de la pestanya -->
     <link rel="stylesheet" href="./css/styles.css" />                             <!-- <= CSS 1 -->
     <script defer src="js/68 Validació.js"></script>                                <!-- <= Enllaç del javascript -->
@@ -16,7 +16,7 @@
 </head>
 <body id="body">
     <header>
-        <h1>// 68 Validació de dades (storage)</h1>
+        <h1>// 68 Validació de dades (Amb storage)</h1>
         <select name="darktheme" id="tema">
             <option value="light">Light<i class="fa-regular fa-sun"></i></option>
             <option value="dark">Dark<i class="fa-solid fa-moon"></i></option>
@@ -25,7 +25,7 @@
     </header>
 
     <nav>
-        <button id="btnNateja">Esborra Local Storage</button>
+        <button id="btnNatejaTot">Esborra Local Storage</button>
     </nav>
 
      <main>
@@ -80,7 +80,50 @@
             </div>
         <!-- </form> -->
         <!--  -->
-    </div>
+
+        <!-- -+-+-+-+-+-+-+ PROVA TEST DE MÈTODE checkValidity() -+-+-+-+-+-+-+-+-+-+- -->
+         <!-- valida 1 -->
+         <b>EXEMPLE: checkValidity()</b>
+        <input id="id1" type="number" min="100" max="300" required>
+        <button onclick="valida()">Executar Validació</button>
+        <p id="demo"></p>
+        <!-- valida 2 -->
+        <b>EXEMPLE: .validity.rangeOverflow</b>
+        <input id="id2" type="number" max="100" required>
+        <button onclick="valida2()">Executar Validació</button>
+        <p id="demo2"></p>
+        <!-- valida 3 -->
+        <b>EXEMPLE: pattern</b>
+        <input id="id3" type="text" pattern="[a-z]+">
+        <button onclick="valida3()">Executar Validació</button>
+        <p id="demo3"></p>
+
+        <script>
+            // 
+        function valida() {
+            const inpObj1 = document.getElementById("id1");   // <= id Input
+            console.log(inpObj1.checkValidity());            // <= Retorna un boolean true o false basant-se en si compleix o no la validació
+            if (!inpObj1.checkValidity()) {                  // <= checkValidity [fa una validació bàsica com el els limits min.100-300.max que ja té el input]
+                document.getElementById("demo").innerHTML = inpObj1.validationMessage; // <= El missatge automàtic [Depend del navegador i del idioma del PC] (Es pot customitzar)
+            } else 
+                document.getElementById("demo").innerHTML = "Input OK";
+            }
+            // range overflow
+            function valida2() {
+                const num2 = document.getElementById("id2");
+                let text2 = "Value OK";
+                if (num2.validity.rangeOverflow) {
+                    text2 = "T'has pasat del límit (Value too large)";
+                }
+                document.getElementById("demo2").innerHTML = text2;
+            }
+            // pattern
+            function valida3() {
+                const pattern = document.getElementById("id3");
+                console.log(pattern.checkValidity());
+            }
+            </script>
+
 
     
 </main>
