@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>// 69 JQuery</title>                        <!-- <= Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- <= Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" />                             <!-- <= CSS 1 -->
+    <script defer src="js/69 JQuery.js"></script>                                <!-- <= Enllaç del javascript -->
+
+    <!-- BOOTstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- -=+=-  -=> LINK DEL JQuery <=- -=+=- -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <header>
+        <h1>// 69 JQuery</h1>
+        <select name="darktheme" id="tema">
+            <option value="light">Light<i class="fa-regular fa-sun"></i></option>
+            <option value="dark">Dark<i class="fa-solid fa-moon"></i></option>
+        </select>
+        <i class="fa-regular fa-sun" style="color: wheat; font-size: 2rem;"></i>|||||<i class="fa-solid fa-moon" style="color: wheat; font-size: 2rem;"></i>
+    </header>
+    <nav></nav>
+
+    <main>
+        <!--  -->
+        <p>
+            Per etiqueta 'p':
+            <button>Amagaré els paragrafs("p") amb JQuery</button> //Comentat
+        </p>
+        <p></p>
+        <p>
+            Per id:
+            <button id="boto1">Amagaré el ("#paragraf1")</button>
+            <button id="boto2">Amagaré el ("#paragraf2")</button>
+            <button id="boto3">Amagaré el ("#paragraf3")</button>
+        </p>
+        
+        <p>
+            Per classe:
+            <button id="botoImparells">Amagaré els 'p' Imparells</button>
+            <button id="botoParells">Amagaré el 'p' Parells</button>
+        </p>
+        <p>
+            <button id="botoMostrar">Mostrará els 'p' amagats</button>
+        </p>
+        <p id="paragraf1" class="imparell"><b>p1:</b> Sua noble persona en l'exercici de les armes. Individual segons reciten les següents històries Comença la primera part. A totes ses voluntats si bé es. Seus benaventurats darrers dies Com lo comte Guillem de. De Varoic proposà d'anar al Sant Sepuclre e manifestà. De fama e contínua bona memòria los hòmens virtuosos. Viatge és de grandíssim perill per què ara de present. Actes admirables dels apòstols màrtirs e. Deu preterir per longitud de molts dies E. Baptista Santa Magdalena e de. La segona serà de l'estament e. Cavalleria lo comte Guillem de Varoic en. Complit tot lo dessús dit girà's a la virtuosa Comtessa. Que deuria ésser molt reverit si los cavallers observaven aquelll.</p>
+        
+        <p id="paragraf2" class="parell"><b>p2:</b> Llibre Ara en lo principi se tractarà. E havia portades moltes batalles a fi. Als servidors la sua partida. E la fama d'aquell no. Militar estament que deuria ésser molt reverit si los. Contents Aprés féu donació a la. Benaventurats darrers dies Com lo comte Guillem de Varoic proposà. Nodrint los infants de poca. Victòria gloriosa E trobant-se lo virtuós Comte en edat. Voluntats si bé es tenia un fill de molta. Demostrar l'honor e senyoria que. On s'era trobat E feta la. No fossen delides de les penses humanes. Comte Guillem de Varoic proposà d'anar al Sant.</p>
+        
+        <p id="paragraf3" class="imparell"><b>p3:</b> E cavalleries se fa singular. On hi havia rei o fill. Donà molt més que no devia que. Expedient deduir en escrit les gestes. E trobant-se lo virtuós Comte en edat. No haguessen terror de la vista dels enemics La dignitat. Grandíssima honor la fama del qual en. Les faules poètiques de Virgili d'Ovidi de Dant e d'altres. És dels actes e costumes que a cavaller. Infants de poca edat en l'exercici militar perquè en les. Homero ha recitat les batalles dels. Ço ab lo divinal adjutori. Hi volgué anar havent dolor e contricció. La casa santa de Jerusalem com tot cristià deu anar. Virtuosos actes de cavalleria que féu l'egregi e estrenu.</p>
+        <b>.this => <button id="aquest">Amagaré aquest botó</button></b>
+
+
+        <select name="coche" id="fCoches">
+            <option value="seat">SEAT</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="toyota">Toyota</option>
+        </select>
+        <b id="demoCoches"></b>
+        <p></p>
+
+        <div style="display: flex;">
+            <!-- Caixes -->
+            <div class="caixa blau">blau</div>
+            <div class="caixa vermell">vermell</div>
+            <div class="caixa groc">groc</div>
+            <div class="caixa cyan">cyan</div>
+            <div>
+
+                <button id="botoFadeIn">FadeIn</button>
+                <button id="botoFadeOut">FadeOut</button>
+            </div>
+        </div>
+
+        <!-- Desplegable (slideDown()) -->
+        <div id="slideTitol">Aquí va un text CLICKA! => </div>
+        <div id="slideCos" style="display: none;">Aquí hi ha mes informació en un segón text!</div>
+
+
+
+        <button id="botoAnimacio">Animació de les caixes!</button>
+        <p id="pFlip">JQuery is Fun!</p>
+        <button id="botoEncadena">Encadena Propietats/Mètodes al JQuery</button>
+        <!--  -->
+        <p id="textAlerta">Això es el text de l'alerta!!!!</p>
+        <button id="botoAlerta">Boto Alerta (Agafa el contingut del id 'textAlerta')</button>
+        <p id="mostraAtributs"></p>
+        
+    </main>
+    <aside></aside>
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>
