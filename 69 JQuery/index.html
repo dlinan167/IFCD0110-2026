@@ -15,9 +15,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <!-- -=+=-  -=> LINK DEL JQuery <=- -=+=- -->
     <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <style>
+        .arbre{
+            font-size: 1.2rem;
+            border: 0.15rem solid burlywood;
+            box-shadow: 2.1px 3px rgba(0, 0, 0, 0.486);
+        }
+    </style>
 </head>
 <body id="body">
     <header>
+        <!--  -->
+        <button id="btnMain">Vuida MAIN (Arbre de pares/fills)</button>
+
         <h1>// 69 JQuery</h1>
         <select name="darktheme" id="tema">
             <option value="light">Light<i class="fa-regular fa-sun"></i></option>
@@ -57,6 +67,7 @@
         <b>.this => <button id="aquest">Amagaré aquest botó</button></b>
 
 
+        <!-- Agafar valor del <select> -->
         <select name="coche" id="fCoches">
             <option value="seat">SEAT</option>
             <option value="mercedes">Mercedes</option>
@@ -83,15 +94,85 @@
         <div id="slideCos" style="display: none;">Aquí hi ha mes informació en un segón text!</div>
 
 
-
+        <!-- Executar animació -->
         <button id="botoAnimacio">Animació de les caixes!</button>
         <p id="pFlip">JQuery is Fun!</p>
         <button id="botoEncadena">Encadena Propietats/Mètodes al JQuery</button>
-        <!--  -->
+
+        <!-- Llegir text per alerta -->
         <p id="textAlerta">Això es el text de l'alerta!!!!</p>
         <button id="botoAlerta">Boto Alerta (Agafa el contingut del id 'textAlerta')</button>
         <p id="mostraAtributs"></p>
+
+        <h3>text()/html()/val()</h3>
+        <button id="botoAfegeix">Afegeix</button>
+        <p id="idText"></p>
+        <p id="idHTML"></p>
+        <input id="idVal" type="text" value="Valor antic" size="33"></input>
+        <b>---</b>
+
+        <div class="fila"></div>
+        <!-- Canviar/Afegir atributs -->
+        <a href="">Enllaç d'internet</a>
+        <button id="botoAtribut">Afegeix atributs amb '.attr()'</button>
+        <b>---</b>
+
+        <!-- Afegeix elements o contingut '.append' -->
+        <h3>Afegim contingut o elements</h3>
+        <button id="botoContingut"> Afegeix contingut '.append'</button>
+        <div id="refContingut">Text de referència per afegir contingut</div>
+        <b>---</b>
+
+        <!-- Afegeix Etiquetes '.append' -->
+        <h3>Afegim Etiquetes HTML (elements HTML)</h3>
+        <button id="botoEtiquetes"> Afegeix Etiquetes '.append'</button>
+        <div id="refEtiquetes">Text de referència per afegir Etiquetes</div>
+        <b>---</b>
+
+        <!-- Afegeix 3 elements '.append(text1, text2, text3)' -->
+        <h3>Afegim 3 elements ''.append(text1, text2, text3)' + llista</h3>
+
+        <button id="boto3Elements"> Afegeix 3 elements</button>
+        <div id="ref3Elements">Text de referència per afegir 3 elements</div>               <!-- <= 3 elements -->
+        <b>---</b>
+        <div id="refLlistaElements">Text de referència per afegir Llista de elements</div>  <!-- <= En llista -->
+
+
+
+        <!-- Afegeix elements a menu '.before(text1, text2) .after(text1, text2)' -->
+        <h3>Afegeix elements a menu '.before(text1, text2) .after(text1, text2)'</h3>
+
+        <button id="botoAfegirAMenu"> Afegeix elements al menú</button>
+        <ul id="refMenu" style="background: green;">MENU de refèrencia (ul)</ul>
+        <b>---</b>
+        <!-- Afegeix elements a menu '.before(text1, text2) .after(text1, text2)' -->
         
+        
+        <!-- Eliminar elements amb '.remove()' o '.empty()' -->
+        <h3>Eliminar elements amb '.remove()' o '.empty()'</h3>
+        <button id="botoRemove"> Eliminar elements  amb '.remove()' </button>             
+        <b>(Esborra el ul i els seus fills)</b>
+        <button id="botoEmpty"> Eliminar elements amb '.empty()'</button>             
+        <b>(Elimina els fills, es manté el ul)</b>
+        <b>---</b>
+       
+        <!-- Afegir classes CSS a elements -->
+        <h3>Afegir classes CSS a elements '.addClass()'</h3>
+        <button id="botoAfegirClasse"> Afegir Classe als 'h3' </button>   
+        
+        <!-- jQuery Dimension Methods     (DETECTAR DIMENSIONS D'ELEMENTS AMB EL JQUERY) -->
+        <h3>MOSTRAR DIMENSIONS</h3>
+        <button id="botoDimensions"> Mostrar dimensions d'elements '.caixa'</button>   
+        <!-- jQuery Dimension Methods   Canviar dimensions -->
+        <div class="caixa cyan">cyan</div>
+        <div class="caixa blau">blau</div>
+        <div class="caixa vermell">vermell</div>
+        <div class="caixa groc">groc</div>
+        <div class="caixa cyan">cyan</div>
+
+        <h3>Canviar DIMENSIONS</h3>
+        <button id="botoCanviaDimensions"> Canviar dimensions d'elements '.cyan'</button>   
+
     </main>
     <aside></aside>
     <footer>

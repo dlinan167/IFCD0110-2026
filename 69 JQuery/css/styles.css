@@ -212,7 +212,6 @@ button:hover, select:hover, input:hover, input:focus{
     border: #000 solid;
     text-align: center;
     align-items: center;
-    display: none;
     font-weight: bold;
     margin-right: 0.9rem;
   }
