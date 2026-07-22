@@ -289,8 +289,9 @@ $("#btnMain").click(function(){
         "<b class='arbre' id='net21'>net 21</b>",
     )
 
-    $("main").append("<button id='botoPare'>Busca pare</button>");  //Botó: Busca pare
-    $("main").append("<button id='botoFills'>Busca fills</button>");  //Botó: Busca fills
+    $("main").append("<button id='botoPare'>Busca pare</button>");  //==> Botó: Busca pare
+    $("main").append("<button id='botoFills'>Busca fills</button>");  //==> Botó: Busca fills
+    $("main").append("<button id='botoGermans'>Busca germans</button>");  //==> Botó: Busca germans
 });
 
 // ===> BUSCAR Pare:
@@ -298,12 +299,32 @@ $(document).on("click", "#botoPare", function(){
     let pare = prompt("Posa el element del que vols saber el seu pare");
     $(pare).parent().css({"border": "0.45rem solid #ff0000"});
 });
+// .parents()
+// .parentsUntil()
 
 // ===> BUSCAR Fills:
 $(document).on("click", "#botoFills", function(){
     let fill = prompt("Posa el element del que vols saber el seus fills");
     $(fill).children().css({"border": "0.45rem solid #00ff55"});
 });
+
+// .childrens()
+// .children(p.first) busca solament el primer fill
+
+// ===> BUSCAR germans (siblings):
+$(document).on("click", "#botoGermans", function(){
+    let germa = prompt("Posa el element del que vols saber el seus germans");
+    $(germa).siblings().css({"border": "0.45rem solid #00d9ff"});
+});
+// .next()
+// .nextAll()
+// .nextUntil()
+
+// Filtrar per elements span, div, li, etc...
+// .first()  <= Primer <div>
+// .last()   <= Últim <div>
+// .eq() <= busca per numero de index (ex: ("p").eq(2))
+// .filter() <= Filtra per uns criteris (ex: ("p").filter(".intro") busca els '<p>' amb la classe '.intro')
 
 // Destacar el pare que mirem del arbre amb el mouse     // WIP
 // $(".arbre").mouseenter(function(){
