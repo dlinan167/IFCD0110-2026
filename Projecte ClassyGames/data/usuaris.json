@@ -1,0 +1,645 @@
+(Utilitzar local o session storage per navegar en diferents pàgines amb l'usuari... esCorrecte = true) 
+(Verificar coses com el dni o el telefon etc... /patrons/)
+(Posar imatges d'usuari (falten))
+(Els usuari han de poder guardar preferències)
+(Redirigir al inici de sessió si es copia un url directament sense un usuari vàlid)
+[
+  {
+    "id": 1,
+    "username": "admin1",
+    "password": "Admin1234",
+    "rol": "admin",
+    "actiu": true,
+    "nom": "Joan",
+    "cognoms": "Serra Puig",
+    "dni": "10000001A",
+    "genere": "Home",
+    "dataNaixement": "1991-02-15",
+    "telefon": "698520376",
+    "telefonVerificat": true,
+    "email": "admin1@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user01.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 11",
+      "ciutat": "Barcelona",
+      "provincia": "Barcelona",
+      "codiPostal": "08001",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/admin1",
+      "github": "https://github.com/admin1",
+      "instagram": "@admin1"
+    },
+    "preferencies": {
+      "idioma": "es",
+      "tema": "dark",
+      "notificacions": true
+    },
+    "preferits": [
+      2,
+      4
+    ],
+    "historial": [
+      {
+        "idActivitat": 2,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 5,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 57
+    },
+    "registre": {
+      "dataRegistre": "2025-01-30T09:00:00",
+      "dataActualitzacio": "2025-08-19T09:00:00"
+    }
+  },
+  {
+    "id": 2,
+    "username": "admin2",
+    "password": "Admin1234",
+    "rol": "admin",
+    "actiu": true,
+    "nom": "Marta",
+    "cognoms": "Casals Riera",
+    "dni": "10000002A",
+    "genere": "Dona",
+    "dataNaixement": "1992-03-15",
+    "telefon": "696441457",
+    "telefonVerificat": true,
+    "email": "admin2@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user02.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 12",
+      "ciutat": "Girona",
+      "provincia": "Girona",
+      "codiPostal": "08002",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/admin2",
+      "github": "https://github.com/admin2",
+      "instagram": "@admin2"
+    },
+    "preferencies": {
+      "idioma": "en",
+      "tema": "light",
+      "notificacions": false
+    },
+    "preferits": [
+      3,
+      5
+    ],
+    "historial": [
+      {
+        "idActivitat": 3,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 6,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 64
+    },
+    "registre": {
+      "dataRegistre": "2025-02-19T09:00:00",
+      "dataActualitzacio": "2025-09-09T09:00:00"
+    }
+  },
+  {
+    "id": 3,
+    "username": "pol",
+    "password": "Pol123",
+    "rol": "user",
+    "actiu": true,
+    "nom": "Pol",
+    "cognoms": "Ferrer Vidal",
+    "dni": "10000003A",
+    "genere": "Home",
+    "dataNaixement": "1993-04-15",
+    "telefon": "686449157",
+    "telefonVerificat": false,
+    "email": "pol@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user03.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 13",
+      "ciutat": "Lleida",
+      "provincia": "Lleida",
+      "codiPostal": "08003",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/pol",
+      "github": "https://github.com/pol",
+      "instagram": "@pol"
+    },
+    "preferencies": {
+      "idioma": "ca",
+      "tema": "dark",
+      "notificacions": true
+    },
+    "preferits": [
+      4,
+      6
+    ],
+    "historial": [
+      {
+        "idActivitat": 4,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 7,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 71
+    },
+    "registre": {
+      "dataRegistre": "2025-03-11T09:00:00",
+      "dataActualitzacio": "2025-09-30T09:00:00"
+    }
+  },
+  {
+    "id": 4,
+    "username": "laia",
+    "password": "Laia123",
+    "rol": "user",
+    "actiu": true,
+    "nom": "Laia",
+    "cognoms": "Pujol Soler",
+    "dni": "10000004A",
+    "genere": "Dona",
+    "dataNaixement": "1994-05-15",
+    "telefon": "633187554",
+    "telefonVerificat": true,
+    "email": "laia@example.com",
+    "emailVerificat": false,
+    "avatar": "img/users/user04.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 14",
+      "ciutat": "Tarragona",
+      "provincia": "Tarragona",
+      "codiPostal": "08004",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/laia",
+      "github": "https://github.com/laia",
+      "instagram": "@laia"
+    },
+    "preferencies": {
+      "idioma": "es",
+      "tema": "light",
+      "notificacions": false
+    },
+    "preferits": [
+      5,
+      7
+    ],
+    "historial": [
+      {
+        "idActivitat": 5,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 8,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 78
+    },
+    "registre": {
+      "dataRegistre": "2025-03-31T09:00:00",
+      "dataActualitzacio": "2025-10-21T09:00:00"
+    }
+  },
+  {
+    "id": 5,
+    "username": "oriol",
+    "password": "Oriol123",
+    "rol": "user",
+    "actiu": false,
+    "nom": "Oriol",
+    "cognoms": "Navarro Costa",
+    "dni": "10000005A",
+    "genere": "Home",
+    "dataNaixement": "1995-06-15",
+    "telefon": "645797018",
+    "telefonVerificat": true,
+    "email": "oriol@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user05.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 15",
+      "ciutat": "Sabadell",
+      "provincia": "Barcelona",
+      "codiPostal": "08005",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/oriol",
+      "github": "https://github.com/oriol",
+      "instagram": "@oriol"
+    },
+    "preferencies": {
+      "idioma": "en",
+      "tema": "dark",
+      "notificacions": true
+    },
+    "preferits": [
+      6,
+      8
+    ],
+    "historial": [
+      {
+        "idActivitat": 6,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 9,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 85
+    },
+    "registre": {
+      "dataRegistre": "2025-04-20T09:00:00",
+      "dataActualitzacio": "2025-11-11T09:00:00"
+    }
+  },
+  {
+    "id": 6,
+    "username": "nuria",
+    "password": "Núria123",
+    "rol": "user",
+    "actiu": true,
+    "nom": "Núria",
+    "cognoms": "Vila Bosch",
+    "dni": "10000006A",
+    "genere": "Dona",
+    "dataNaixement": "1996-07-15",
+    "telefon": "677400393",
+    "telefonVerificat": false,
+    "email": "nuria@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user06.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 16",
+      "ciutat": "Terrassa",
+      "provincia": "Barcelona",
+      "codiPostal": "08006",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/nuria",
+      "github": "https://github.com/nuria",
+      "instagram": "@nuria"
+    },
+    "preferencies": {
+      "idioma": "ca",
+      "tema": "light",
+      "notificacions": false
+    },
+    "preferits": [
+      7,
+      9
+    ],
+    "historial": [
+      {
+        "idActivitat": 7,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 10,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 92
+    },
+    "registre": {
+      "dataRegistre": "2025-05-10T09:00:00",
+      "dataActualitzacio": "2025-12-02T09:00:00"
+    }
+  },
+  {
+    "id": 7,
+    "username": "alex",
+    "password": "Àlex123",
+    "rol": "user",
+    "actiu": true,
+    "nom": "Àlex",
+    "cognoms": "Martí Lluch",
+    "dni": "10000007A",
+    "genere": "Home",
+    "dataNaixement": "1997-08-15",
+    "telefon": "678669732",
+    "telefonVerificat": true,
+    "email": "alex@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user07.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 17",
+      "ciutat": "Reus",
+      "provincia": "Barcelona",
+      "codiPostal": "08007",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/alex",
+      "github": "https://github.com/alex",
+      "instagram": "@alex"
+    },
+    "preferencies": {
+      "idioma": "es",
+      "tema": "dark",
+      "notificacions": true
+    },
+    "preferits": [
+      8,
+      10
+    ],
+    "historial": [
+      {
+        "idActivitat": 8,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 1,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 99
+    },
+    "registre": {
+      "dataRegistre": "2025-05-30T09:00:00",
+      "dataActualitzacio": "2025-12-23T09:00:00"
+    }
+  },
+  {
+    "id": 8,
+    "username": "judit",
+    "password": "Judit123",
+    "rol": "user",
+    "actiu": true,
+    "nom": "Judit",
+    "cognoms": "Roca Prat",
+    "dni": "10000008A",
+    "genere": "Dona",
+    "dataNaixement": "1998-09-15",
+    "telefon": "678747253",
+    "telefonVerificat": true,
+    "email": "judit@example.com",
+    "emailVerificat": false,
+    "avatar": "img/users/user08.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 18",
+      "ciutat": "Manresa",
+      "provincia": "Barcelona",
+      "codiPostal": "08008",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/judit",
+      "github": "https://github.com/judit",
+      "instagram": "@judit"
+    },
+    "preferencies": {
+      "idioma": "en",
+      "tema": "light",
+      "notificacions": false
+    },
+    "preferits": [
+      9,
+      1
+    ],
+    "historial": [
+      {
+        "idActivitat": 9,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 2,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 106
+    },
+    "registre": {
+      "dataRegistre": "2025-06-19T09:00:00",
+      "dataActualitzacio": "2026-01-13T09:00:00"
+    }
+  },
+  {
+    "id": 9,
+    "username": "gerard",
+    "password": "Gerard123",
+    "rol": "user",
+    "actiu": false,
+    "nom": "Gerard",
+    "cognoms": "Ribas Puig",
+    "dni": "10000009A",
+    "genere": "Home",
+    "dataNaixement": "1999-01-15",
+    "telefon": "612262821",
+    "telefonVerificat": false,
+    "email": "gerard@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user09.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 19",
+      "ciutat": "Mataró",
+      "provincia": "Barcelona",
+      "codiPostal": "08009",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/gerard",
+      "github": "https://github.com/gerard",
+      "instagram": "@gerard"
+    },
+    "preferencies": {
+      "idioma": "ca",
+      "tema": "dark",
+      "notificacions": true
+    },
+    "preferits": [
+      10,
+      2
+    ],
+    "historial": [
+      {
+        "idActivitat": 10,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 3,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 113
+    },
+    "registre": {
+      "dataRegistre": "2025-07-09T09:00:00",
+      "dataActualitzacio": "2026-02-03T09:00:00"
+    }
+  },
+  {
+    "id": 10,
+    "username": "carla",
+    "password": "Carla123",
+    "rol": "user",
+    "actiu": true,
+    "nom": "Carla",
+    "cognoms": "Mora Salas",
+    "dni": "10000010A",
+    "genere": "Dona",
+    "dataNaixement": "1990-02-15",
+    "telefon": "664153473",
+    "telefonVerificat": true,
+    "email": "carla@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user10.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 20",
+      "ciutat": "Vic",
+      "provincia": "Barcelona",
+      "codiPostal": "08010",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/carla",
+      "github": "https://github.com/carla",
+      "instagram": "@carla"
+    },
+    "preferencies": {
+      "idioma": "es",
+      "tema": "light",
+      "notificacions": false
+    },
+    "preferits": [
+      1,
+      3
+    ],
+    "historial": [
+      {
+        "idActivitat": 1,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 4,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 120
+    },
+    "registre": {
+      "dataRegistre": "2025-07-29T09:00:00",
+      "dataActualitzacio": "2026-02-24T09:00:00"
+    }
+  },
+  {
+    "id": 11,
+    "username": "roger",
+    "password": "Roger123",
+    "rol": "user",
+    "actiu": true,
+    "nom": "Roger",
+    "cognoms": "Soler Camps",
+    "dni": "10000011A",
+    "genere": "Home",
+    "dataNaixement": "1991-03-15",
+    "telefon": "687318508",
+    "telefonVerificat": true,
+    "email": "roger@example.com",
+    "emailVerificat": true,
+    "avatar": "img/users/user11.webp",
+    "bio": "Usuari de demostració del projecte.",
+    "adreca": {
+      "carrer": "Carrer Major, 21",
+      "ciutat": "Sitges",
+      "provincia": "Barcelona",
+      "codiPostal": "08011",
+      "pais": "Espanya"
+    },
+    "xarxes": {
+      "linkedin": "https://linkedin.com/in/roger",
+      "github": "https://github.com/roger",
+      "instagram": "@roger"
+    },
+    "preferencies": {
+      "idioma": "en",
+      "tema": "dark",
+      "notificacions": true
+    },
+    "preferits": [
+      2,
+      4
+    ],
+    "historial": [
+      {
+        "idActivitat": 2,
+        "data": "2026-06-01T10:00:00"
+      },
+      {
+        "idActivitat": 5,
+        "data": "2026-07-01T12:30:00"
+      }
+    ],
+    "estadistiques": {
+      "intentsLogin": 0,
+      "ultimaConnexio": "2026-07-20T18:00:00",
+      "nombreConnexions": 127
+    },
+    "registre": {
+      "dataRegistre": "2025-08-18T09:00:00",
+      "dataActualitzacio": "2026-03-17T09:00:00"
+    }
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "ca": {
+    "menu": {
+      "home": "Inici",
+      "activities": "Activitats",
+      "favorites": "Preferits",
+      "profile": "Perfil",
+      "login": "Iniciar sessió",
+      "logout": "Tancar sessió"
+    },
+    "buttons": {
+      "search": "Cercar",
+      "save": "Desar",
+      "cancel": "Cancel·lar",
+      "register": "Registrar-se",
+      "login": "Entrar"
+    },
+    "forms": {
+      "username": "Nom d'usuari",
+      "password": "Contrasenya",
+      "email": "Correu electrònic",
+      "repeatPassword": "Repetiu la contrasenya"
+    },
+    "messages": {
+      "welcome": "Benvingut",
+      "loginError": "Usuari o contrasenya incorrectes",
+      "saved": "Canvis desats",
+      "favoriteAdded": "Afegit als preferits",
+      "favoriteRemoved": "Eliminat dels preferits"
+    }
+  },
+  "es": {
+    "menu": {
+      "home": "Inicio",
+      "activities": "Actividades",
+      "favorites": "Favoritos",
+      "profile": "Perfil",
+      "login": "Iniciar sesión",
+      "logout": "Cerrar sesión"
+    },
+    "buttons": {
+      "search": "Buscar",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "register": "Registrarse",
+      "login": "Entrar"
+    },
+    "forms": {
+      "username": "Usuario",
+      "password": "Contraseña",
+      "email": "Correo electrónico",
+      "repeatPassword": "Repetir contraseña"
+    },
+    "messages": {
+      "welcome": "Bienvenido",
+      "loginError": "Usuario o contraseña incorrectos",
+      "saved": "Cambios guardados",
+      "favoriteAdded": "Añadido a favoritos",
+      "favoriteRemoved": "Eliminado de favoritos"
+    }
+  },
+  "en": {
+    "menu": {
+      "home": "Home",
+      "activities": "Activities",
+      "favorites": "Favorites",
+      "profile": "Profile",
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "buttons": {
+      "search": "Search",
+      "save": "Save",
+      "cancel": "Cancel",
+      "register": "Register",
+      "login": "Login"
+    },
+    "forms": {
+      "username": "Username",
+      "password": "Password",
+      "email": "Email",
+      "repeatPassword": "Repeat password"
+    },
+    "messages": {
+      "welcome": "Welcome",
+      "loginError": "Wrong username or password",
+      "saved": "Changes saved",
+      "favoriteAdded": "Added to favorites",
+      "favoriteRemoved": "Removed from favorites"
+    }
+  }
+}
