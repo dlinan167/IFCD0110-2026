@@ -5,43 +5,55 @@
     <script src="js/load_components.js"></script> <!-- <= inserció dels components/Snippets "id" -->
 
     <title>ClassyGames</title>                        <!-- <= Titol de la pestanya -->
-    <script defer src="js/"></script>                                <!-- <= Enllaç del javascript -->
+    <!-- <script defer src="js/"></script>                                <= Enllaç del javascript -->
+
+    <script defer src="js/themes.js"></script> 
 </head>
 
 
 
-<body>
+<body id="body">
     <header>
-        <!--  -->
 
-        <h1>ClassyGames</h1>
-        <select name="darktheme" id="tema">
-            <option value="light">Light<i class="fa-regular fa-sun"></i></option>
-            <option value="dark">Dark<i class="fa-solid fa-moon"></i></option>
-        </select>
-        <i class="fa-regular fa-sun" style="color: wheat; font-size: 2rem;"></i>|||||<i class="fa-solid fa-moon" style="color: wheat; font-size: 2rem;"></i>
+        <h1>~ ClassyGames ~</h1>
+        <i class="fa-solid fa-hand-holding"></i>
+        <i class="fa-solid fa-gamepad"></i>
+
+        <!--Header tool bar-->
+        <div class="headerBar"> 
+        <i id="themeIcon" class="fa-regular"></i> <!--Icona de tema-->
+        <div>
+            <label for="genre">Filtrar per Genre:</label>
+            <select class="shadow" name="jocCategoria" id="jocCategoria">
+                <option value="">Categoria</option>
+                <option value="RPG">RPG</option>
+                <option value="shooter">Shooter</option>
+                <option value="estrategia">Estrategia</option>
+                <option value="horror">Horror</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Busca:</label>
+            <input class="shadow" type="text" size="20" placeholder="..." style="border-radius: 8%;"> <!--Search bar-->
+        </div>
+        <!-- Imatge de la sessió activa del usuari -->
+        <img src="../img/imatge_pera.png" style="width: 5%; border-radius: 50%;" class="shadow" alt="">
+    </div>
     </header>
-    
-        <nav>
+
+        <nav class="shadow">
             <div id="navMenu">
-                <ul>
-                    MENU:
-                    <li>Catáleg</li>
-                    <li>Els teus favorits</li>
-                    <li>opció 3</li>
-                </ul>
             </div>
         </nav>
 
     <main>
-        <!--  -->
 
+
+<p>Servidors donà molt més que. A Jesucrist serà plasent e lo viatge. La primera part serà del. Victòria dels molts la saviesa e. Que fet m'haveu E féu-se traure una gran caixa. Dies és estat doncs molt condecent útil e expedient deduir. Foren per los antics ordenades justes e torneigs. Batalles campals on hi havia rei o fill. Pecar e viciosament viure emperó no els ha tolt l'universal. Casa santa de Jerusalem com tot cristià.</p>
     </main>
     <aside></aside>
-    <footer>
-    <ul>
-        <li>&copy; Fet per David</li>
-    </ul>
-</footer>
+    <footer id="footer">
+        
+    </footer>
 </body>
 </html>

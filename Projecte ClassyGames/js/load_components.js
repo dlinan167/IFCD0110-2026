@@ -9,5 +9,5 @@ document.getElementById(id).innerHTML = contingut;
 carregarComponent("previa", "./components/previa.html");
 
 carregarComponent("header", "./components/header.html");
-carregarComponent("nav", "./components/nav.html");
+carregarComponent("navMenu", "./components/navMenu.html");
 carregarComponent("footer", "./components/footer.html");
