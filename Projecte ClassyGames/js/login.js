@@ -87,26 +87,45 @@ function validaIniciSessio() {
 
     // VALIDACIÓ: No està buit
     if (!username.trim() || !password.trim()) {   
-        missatge.innerText = "Un dels camps esta buit!";
-        return false;  // <= Missatge d'error (Esta buit!)
+        missatge.innerText = "Un dels camps esta buit!"; // <= Missatge d'error
+        return false;  
     }
-    // VALIDACIÓ: Local Storage (usuari registrat anteriorment)
-    if (username == localStorage.getItem("usernameSave") && password == localStorage.getItem("passwordSave")) {
+    // VALIDACIÓ: Local Storage (usuari registrat anteriorment) && VALIDACIÓ: Usuari i password trobats JSON()
+    // if ((username == localStorage.getItem("usernameSave") && password == localStorage.getItem("passwordSave")) || validaFetchUsuariLogin() == true) {
+    if (validaFetchUsuariLogin() === true) {
         missatge.innerText = "Inici de sessió realitzat correctament!";
-        return false;
+        return true;
     }else{
         missatge.innerText = "Sessió Incorrecte!";
         return false;
     }
-    // VALIDACIÓ: Usuari i password trobats en la "base de dades" (usuaris.json)
+}
 
-    if (condition) {
-        
-    } else {
-        missatge.innerText = "Sessió Incorrecte!";
+async function validaFetchUsuariLogin() {
+    // VALIDACIÓ: Usuari i password trobats en la "base de dades" (usuaris.json)
+    // Fetch del JSON local (usuari) (dona una llista d'Objectes amb 'username' and 'password')
+    const missatge = document.getElementById("missatgeValUsuari");
+    const username = document.getElementById("username").value;             // <= valor del username
+    const password = document.getElementById("password").value;             // <= valor del password
+    
+    try {
+        const resposta = await fetch('./data/usuaris.json'); // adjust path if needed
+        if (!resposta.ok) throw new Error('No s\'ha pogut carregar usuaris.json');
+        const usuaris = await resposta.json();
+        const trobat = usuaris.find(usuari => usuari.username === username && usuari.password === password); //<= (True o False) Vàlida si tant el 'username' i 'password' trobats son iguals que els del <input>
+    
+        if (trobat) {
+            missatge.innerText = "Inici de sessió realitzat correctament!";
+            return true;
+        } else {
+            missatge.innerText = "Sessió Incorrecte!";
+            return false;
+        }
+    } catch (e) {
+        console.error(e);
+        missatge.innerText = "Error al validar usuaris localment!";
         return false;
     }
-    return true;
 }
 
 
