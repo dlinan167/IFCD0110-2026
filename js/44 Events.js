@@ -27,7 +27,7 @@ function fesScroll(){
         document.getElementById('caixa').style.backgroundColor = "cyan";
 }
 function ToggleCanviaOnOff(){
-        alert('He apretat el botó de detalis/summary')
+        alert('He apretat el botó de details/summary')
 }
 
 function msgVenvinguda(){

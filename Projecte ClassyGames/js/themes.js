@@ -2,19 +2,19 @@
 
 window.addEventListener("load", function(){ // Quan carrega la pàgina/finestra canvia al tema guardat anteriorment
     const temaGuardat = localStorage.temaFosc;
-    cambiaTema(temaGuardat);
+    canviarTema(temaGuardat);
 });
 
 // Seleccionar el temaFosc (toggle)
 const icona = document.getElementById("themeIcon");
 icona.addEventListener("click", function(){
     const temaFosc = icona.classList.contains("fa-moon"); //Si la icona es del tema dark = true
-    cambiaTema(temaFosc);
+    canviarTema(temaFosc);
 }); 
 
 // Canvi de temaFosc
 const bodyColor = document.getElementById("body");
-function cambiaTema(temaFosc) {
+function canviarTema(temaFosc) {
 
     if (temaFosc === false) {
         bodyColor.classList.remove("light");    // <= Quita tema 'light' a la pàgina
