@@ -2,7 +2,7 @@
   {
     "id": 1,
     "username": "admin1",
-    "password": "Admin1234",
+    "password": "Admin#123",
     "rol": "admin",
     "actiu": true,
     "nom": "Joan",
@@ -60,7 +60,7 @@
   {
     "id": 2,
     "username": "admin2",
-    "password": "Admin1234",
+    "password": "Admin#123",
     "rol": "admin",
     "actiu": true,
     "nom": "Marta",
@@ -118,7 +118,7 @@
   {
     "id": 3,
     "username": "pol",
-    "password": "Pol123",
+    "password": "Pol#123",
     "rol": "user",
     "actiu": true,
     "nom": "Pol",
@@ -176,7 +176,7 @@
   {
     "id": 4,
     "username": "laia",
-    "password": "Laia123",
+    "password": "Laia#123",
     "rol": "user",
     "actiu": true,
     "nom": "Laia",
@@ -234,7 +234,7 @@
   {
     "id": 5,
     "username": "oriol",
-    "password": "Oriol123",
+    "password": "Oriol#123",
     "rol": "user",
     "actiu": false,
     "nom": "Oriol",
@@ -292,7 +292,7 @@
   {
     "id": 6,
     "username": "nuria",
-    "password": "Núria123",
+    "password": "Núria#123",
     "rol": "user",
     "actiu": true,
     "nom": "Núria",
@@ -350,7 +350,7 @@
   {
     "id": 7,
     "username": "alex",
-    "password": "Àlex123",
+    "password": "Àlex#123",
     "rol": "user",
     "actiu": true,
     "nom": "Àlex",
@@ -408,7 +408,7 @@
   {
     "id": 8,
     "username": "judit",
-    "password": "Judit123",
+    "password": "Judit#123",
     "rol": "user",
     "actiu": true,
     "nom": "Judit",
@@ -466,7 +466,7 @@
   {
     "id": 9,
     "username": "gerard",
-    "password": "Gerard123",
+    "password": "Gerard#123",
     "rol": "user",
     "actiu": false,
     "nom": "Gerard",
@@ -524,7 +524,7 @@
   {
     "id": 10,
     "username": "carla",
-    "password": "Carla123",
+    "password": "Carla#123",
     "rol": "user",
     "actiu": true,
     "nom": "Carla",

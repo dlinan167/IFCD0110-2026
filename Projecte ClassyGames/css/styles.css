@@ -246,8 +246,8 @@ button, select, input{
   display: block;
   position: relative;
   left: -5%;
-  height: 80%;
-  width: 35%;
+  height: 27rem;
+  width: 26rem;
   background-color: var(--fons-navegacio);
   border: solid var(--color-opcio-navegacio);
   color: var(--color-opcio-navegacio);
@@ -262,7 +262,7 @@ button, select, input{
   margin-bottom: 1%;
 }
 .caixaLogin > div > i{
-  font-size: 8rem;
+  font-size: 800%;
   margin-left: -5rem;
   position: relative;
   left: 10%;
@@ -315,4 +315,11 @@ button:hover, select:hover, input:hover, input:focus{
     body{
       display: block;
     }
+}
+@media (max-width:925px) {
+    .caixaLogin input, .caixaLogin label{
+      display: block;
+      font-size: 100%;
+    }
+    .caixaLogin{width: 20rem;}
 }

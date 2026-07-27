@@ -3,7 +3,7 @@
   <head id="previa">  <!-- <== "previa" = style.css, jquary, favicon, charset i responsive -->
 
     <script defer src="js/load_components.js"></script> <!-- <= inserció dels components/Snippets "id" -->
-    <script defer src="js/login.js"></script> <!-- Validació del login (usuari i contrasenya) -->
+    <script defer src="js/signIn.js"></script> <!-- Validació del login (usuari i contrasenya) -->
     
 </head>
 
@@ -24,15 +24,15 @@
          <!-- Inici de sessió -->
 
          <div class="caixaLogin">
-            <h2>Qui ets?</h2>
+            <h2>Qui vols ser?</h2>
             <div>
                 <i class="fa-regular fa-circle-user"></i>
                 <i class="fa-regular fa-question"></i>
             </div>
 
-            <h2>Inici de sessió</h2>
+            <h2>Registrar-se</h2>
 
-            <form action="./index.html" method="post" onsubmit="return validaIniciSessio()">
+            <form action="./login.html" method="post" onsubmit="return validaUsuariNou()">
             <table>
                 <!-- Usuari i contrasenya: -->
                 <tr>
@@ -40,7 +40,7 @@
                         <label for="username">Usuari:</label>
                     </td>
                     <td>
-                        <input type="text" name="nom" id="username">
+                        <input type="text" name="nom" id="username" required>
                     </td>
                     <td>
                         <div id="mUsername" class="alert"></div>
@@ -51,16 +51,28 @@
                         <label for="password">Contrasenya:</label>
                     </td>
                     <td>               
-                        <input type="password" name="nom" id="password" minlength="8" maxlength="24">
+                        <input type="password" name="nom" id="password" minlength="8" maxlength="24" required>
                     </td>
                     <td>
                         <div id="mPassword" class="alert"></div>
                     </td>
+                    <!-- Email -->
+                    <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>               
+                        <input type="email" name="nom" id="email">
+                    </td>
+                    <td>
+                        <div id="mEmail" class="alert"></div>
+                    </td>
+                </tr>
                 </tr>
                 <!-- Botóns del formulari: -->
                 <tr>
                     <td>
-                        <button id="btnIniciSessio" type="submit">Iniciar sessió</button>     
+                        <button id="btnRegistrarUsuari" type="submit">Registrar Usuari</button>     
                     </td>
                 </tr>
                 <!-- Mostrar errors o missatges aqui: -->
@@ -69,10 +81,6 @@
                 </tr>
             </table>
         </form>
-
-            <form action="./signIn.html">
-                <button type="submit"><b>No estas registrat? Fes-ho aquí!</b></button>
-            </form>
 
          </div>
 
