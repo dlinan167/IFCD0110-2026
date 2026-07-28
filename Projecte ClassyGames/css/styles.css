@@ -24,6 +24,8 @@
     /* Colors: Icones */
     --color-ombres-icones:#000000bd;
     --color-principal-icones: #0a3ead;
+    /* --color-lluna: #0a3ead;
+    --color-sol: #b4a800; */
 
     /* Colors: Alertes (missatges)*/
     --fons-alerta-incorrecte: #330808d7;
@@ -32,6 +34,7 @@
     --fons-alerta-correcte: #0a2c0ad5;
     --color-alerta-correcte: #0b9c0b;
     --border-alerta-correcte: #0c630cf6;
+    
 }
 html{
     font-size: 62.5%;
@@ -70,6 +73,7 @@ h1{
   font-size: 2.3rem;
   font-weight: bold;
   color: var(--color-titol-lletra);
+  text-shadow: 2px 2px 4px #000000b4;
 }
 header figure{
   background: whitesmoke;
@@ -96,6 +100,7 @@ header i{
 #themeIcon{
   cursor: pointer;
   transition: all 0.2s;
+  border: dashed 0.05rem;
 }
 #themeIcon:hover{
 scale: calc(1.08);
@@ -220,23 +225,37 @@ a{
 button, select, input{
    color: #ebebeb;
     background: #1d1d2c;
+    border-radius: 0.15rem;
   }
 
+/* (Dark mode per defecte /En root:/) */
 /* Colors: Paleta light mode */
-.dark{
-  
-  background: #141a13;
-  --fons-main:rgba(203, 243, 59, 0.493);
-  --fons-titol: #000000f5;
-  --fons-aside: #301a00;
-  --fons-navegacio:#1d2000;
-  --color-titol-lletra: #d1bc93;
-  --color-titol-border: #944e65;
+.light{
+  /* Colors: Fons */
+  --fons-main: #f5efe6;
+  --fons-titol: #f0d9c6; 
+  --fons-aside: #d9b89a; 
+  --fons-navegacio: #efe4d8;
+  --fons-menu-nav: #f7e8dd;
+  --fons-opcio-navegacio: #d6b294;
+  --fons-hover-opcio-navegacio: #dcc2a8;
 
-  --color-main-lletra: #050505;
+  /* Colors: Lletra (text) */
+  --color-main-lletra: #3b2a1a; 
+  --color-opcio-navegacio: #6b4f3a;
+  --color-titol-lletra: #5a3e2b;
+  --color-lletra: #2b1f17;
+  --color-titol-border: #b89a7a;
+
+  /* Colors: Icones */
+  --color-ombres-icones: #00000026;
+  --color-principal-icones: #8b5e3c;
+
   button, select, input{
-    color: #141a13;
-      background: #ebebeb;
+    color: #22221a;
+    background: #ffffff;
+    border: 1px solid #d2c9b5;
+    border-radius: 0.15rem;
     }
 }
 
@@ -246,7 +265,7 @@ button, select, input{
   display: block;
   position: relative;
   left: -5%;
-  height: 27rem;
+  height: 29rem;
   width: 26rem;
   background-color: var(--fons-navegacio);
   border: solid var(--color-opcio-navegacio);
@@ -275,9 +294,51 @@ button, select, input{
 
 .caixaLogin label, .caixaLogin input{
   font-size: 1.5rem;
+  margin-top: 8.5%;
+  margin-bottom: 8.5%;
 }
 
+/* -+-+-+-+-+-+-+-+ SignIn -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
 
+.caixaSignIn{
+  display: block;
+  position: relative;
+  left: -5%;
+  height: 32.5rem;
+  width: 40rem;
+  background-color: var(--fons-navegacio);
+  border: solid var(--color-opcio-navegacio);
+  color: var(--color-opcio-navegacio);
+}
+.caixaSignIn h2{
+  background: #000;
+  font-size: 1.5rem;
+}
+/* Logo de SignIn => */
+.caixaSignIn > div{
+  background: #000;
+  margin-bottom: 1%;
+}
+.caixaSignIn > div > i{
+  font-size: 800%;
+  margin-left: -3rem;
+  position: relative;
+  left: 10%;
+}
+/* <= */
+
+.caixaSignIn table td{
+  margin: 0.8%;
+}
+
+.caixaSignIn label, .caixaSignIn input{
+  font-size: 1.25rem;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+#passwordConfirm{
+  margin: 0%;
+}
 /* -+-+-+-+-+-+-+-+ ALERTES DE VALIDACIÓ (LOGIN / SIGN IN) -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
 .alert{
 width: 12rem;
@@ -286,6 +347,7 @@ width: 12rem;
   background: var(--fons-alerta-incorrecte);
   color: var(--color-alerta-incorrecte);
   border: solid var(--border-alerta-incorrecte);
+
 }
 .alert-success{
   background: var(--fons-alerta-correcte);
@@ -300,12 +362,7 @@ button:hover, select:hover, input:hover, input:focus{
   scale: calc(1.05);
   transition: all 0.1s;
   }
-  /* input:invalid{
-    border: red dashed;
-  }
-  input:valid{
-    border: green solid;
-  } */
+
 
 /* ================ RESPONSIVE ================== */
 @media (max-width:800px) {
@@ -317,9 +374,9 @@ button:hover, select:hover, input:hover, input:focus{
     }
 }
 @media (max-width:925px) {
-    .caixaLogin input, .caixaLogin label{
-      display: block;
-      font-size: 100%;
+    .caixaLogin input, .caixaLogin label, i, .alert, .caixaSignIn input, .caixaSignIn label{
+
+      font-size: 95%;
     }
-    .caixaLogin{width: 20rem;}
+    .caixaLogin, .caixaSignIn{width: 21rem;}
 }

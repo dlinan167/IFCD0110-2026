@@ -17,6 +17,11 @@ evtPassword.addEventListener("keyup", () => {
   validaCamp("password","mPassword", /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/); // <= PATRO: min.1 majúscula, min.1 número, min.1 caràcter especial, mínim 8 caràcters
   validarClauDePas(); // <= Missatges de validació per l'usuari
 });
+// Valida la confirmació de password
+const evtPasswordConfirm = document.getElementById("passwordConfirm");
+evtPasswordConfirm.addEventListener("keyup", () =>{
+  validaClauConfirmacio();
+});
 
 // Validar Email
 const evtEmail = document.getElementById("email");
@@ -59,12 +64,14 @@ function validaCamp(id, idMissatge, patro) {
     mAlert.innerText = "Vàlid";
     mAlert.classList.remove("alert-danger");
     mAlert.classList.add("alert-success");
+    document.getElementById(id).style.borderColor = "green";
     return true; // true VALIDACIÓ CORRECTA!
   } else {
     // console.log("no OK !!!");
     mAlert.innerText = "NO Vàlid";
     mAlert.classList.remove("alert-success");
     mAlert.classList.add("alert-danger");
+    document.getElementById(id).style.borderColor = "red";
     return false; // false VALIDACIÓ INCORRECTA!
   }
 }
@@ -88,9 +95,28 @@ function validarClauDePas() {
     mAlert.innerHTML += "<br>Falta una símbol";
   }
 }
+// VALIDA LA REPETICIÓ DE LA CONTRASENYA
+function validaClauConfirmacio() {
+  const password = document.getElementById("password").value; // <= input password
+  const passwordConfirm = document.getElementById("passwordConfirm").value; // <= input confirmació de password
+  const mAlert = document.getElementById("mPasswordConfirm");
+  if (password === passwordConfirm) {
+
+    mAlert.innerText = "La contrasenya es igual";
+    mAlert.classList.remove("alert-danger");
+    mAlert.classList.add("alert-success");
+    return true;
+  } else {
+    
+    mAlert.innerText = "La contrasenya no es igual";
+    mAlert.classList.remove("alert-success");
+    mAlert.classList.add("alert-danger");
+    return false;
+  }
+}
+
 
 // VALIDA si el usuari ja existeix
-
 function validaUsuariNou() {
   const missatge = document.getElementById("missatgeValUsuari");
   const username = document.getElementById("username").value; // <= valor del username
@@ -125,12 +151,13 @@ function validaUsuariNou() {
     return false;
     
 
-  } else if( // Valida els camps abans de registrar el usuari amb els patrons que corresponen: Usuari, Password, Email...
+  } else if( // VALIDACIÓ FINAL: Valida els camps abans de registrar el usuari amb els patrons que corresponen: Usuari, Password, Email...
     validaCamp("username", "mUsername", /^[a-zñ0-9àèìòùáéíóú]+$/i) == true && 
     validaCamp("password","mPassword", /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/) == true &&
-    validaCamp("email", "mEmail", /(\w+[^\.]|\w+\.\w+)@\w+\.\w{2,}/i) == true
+    validaCamp("email", "mEmail", /(\w+[^\.]|\w+\.\w+)@\w+\.\w{2,}/i) == true &&
+    validaClauConfirmacio() == true
 ){
-    missatge.innerText = "Usuari registrat correctament!";
+    missatge.innerText = "Usuari nou registrat correctament!";
     // REGISTRA EL USUARI NOU (al local storage):
 
 

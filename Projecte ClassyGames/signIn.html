@@ -7,8 +7,6 @@
     
 </head>
 
-
-
 <body id="body">
 <header>
         <h1>~ ClassyGames ~</h1>
@@ -23,10 +21,10 @@
         <!-- Contingut Principal -->
          <!-- Inici de sessió -->
 
-         <div class="caixaLogin">
+         <div class="caixaSignIn">
             <h2>Qui vols ser?</h2>
             <div>
-                <i class="fa-regular fa-circle-user"></i>
+                <i class="fa-regular fa-address-card"></i>
                 <i class="fa-regular fa-question"></i>
             </div>
 
@@ -34,40 +32,52 @@
 
             <form action="./login.html" method="post" onsubmit="return validaUsuariNou()">
             <table>
-                <!-- Usuari i contrasenya: -->
+                <!-- Usuari: -->
                 <tr>
                     <td>
                         <label for="username">Usuari:</label>
                     </td>
                     <td>
-                        <input type="text" name="nom" id="username" required>
+                        <input type="text" name="Usuari" id="username" required>
                     </td>
                     <td>
                         <div id="mUsername" class="alert"></div>
                     </td>
                 </tr>
+                <!-- Contrasenya: -->
                 <tr>
                     <td>
                         <label for="password">Contrasenya:</label>
                     </td>
                     <td>               
-                        <input type="password" name="nom" id="password" minlength="8" maxlength="24" required>
+                        <input type="password" name="contrasenya" id="password" minlength="8" maxlength="24" required>
                     </td>
                     <td>
                         <div id="mPassword" class="alert"></div>
                     </td>
-                    <!-- Email -->
+                    </tr>
+                <tr>
+                    <td>
+                        <label for="passwordConfirm">Confirma:</label>
+                    </td>
+                    <td>               
+                        <input type="password" name="ConfirmaContrasenya" id="passwordConfirm" minlength="8" maxlength="24" required>
+                    </td>
+                    <td>
+                        <div id="mPasswordConfirm" class="alert"></div>
+                    </td>
+                    </tr>
+                    <!-- Email: -->
                     <tr>
                     <td>
                         <label for="email">Email:</label>
                     </td>
                     <td>               
-                        <input type="email" name="nom" id="email">
+                        <input type="email" name="Correu" id="email" required>
                     </td>
                     <td>
                         <div id="mEmail" class="alert"></div>
                     </td>
-                </tr>
                 </tr>
                 <!-- Botóns del formulari: -->
                 <tr>
@@ -81,10 +91,8 @@
                 </tr>
             </table>
         </form>
-
-         </div>
-
-    </main>
+    </div>
+</main>
 
     <aside></aside>
 

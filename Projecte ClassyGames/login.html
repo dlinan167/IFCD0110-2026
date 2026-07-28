@@ -7,8 +7,6 @@
     
 </head>
 
-
-
 <body id="body">
 <header>
         <h1>~ ClassyGames ~</h1>
@@ -32,9 +30,9 @@
 
             <h2>Inici de sessió</h2>
 
-            <form action="./index.html" method="post" onsubmit="return validaIniciSessio()">
+            <form action="./index.html" method="get" onsubmit="return validaIniciSessio()">
             <table>
-                <!-- Usuari i contrasenya: -->
+                <!-- Usuari: -->
                 <tr>
                     <td>
                         <label for="username">Usuari:</label>
@@ -46,6 +44,7 @@
                         <div id="mUsername" class="alert"></div> <!-- <= Alerta del Username-->
                     </td>
                 </tr>
+                <!-- Contrasenya: -->
                 <tr>
                     <td>
                         <label for="password">Contrasenya:</label>
@@ -73,13 +72,10 @@
             <form action="./signIn.html">
                 <button type="submit"><b>No estas registrat? Fes-ho aquí!</b></button>
             </form>
-
          </div>
 
     </main>
-
     <aside></aside>
-
     <footer id="footer">
     </footer>
 </body>

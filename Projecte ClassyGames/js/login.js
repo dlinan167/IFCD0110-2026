@@ -121,15 +121,16 @@ function validaIniciSessio() {
 }
 
 // window onload
+// VALIDACIÓ: Usuari i password trobats en la "base de dades" (usuaris.json)
 async function fetchUsuarisJSON() {
-  // VALIDACIÓ: Usuari i password trobats en la "base de dades" (usuaris.json)
+
   // Fetch del JSON local (usuari) (dona una llista d'Objectes amb 'username' and 'password')
   const missatge = document.getElementById("missatgeValUsuari");
   const username = document.getElementById("username").value; // <= valor del username
   const password = document.getElementById("password").value; // <= valor del password
 
   try {
-    const resposta = await fetch("./data/usuaris.json"); // adjust path if needed
+    const resposta = await fetch("./data/usuaris.json"); // <= Busca els usuaris d'aquest fitxer
     if (!resposta.ok) throw new Error("No s'ha pogut carregar usuaris.json");
     const usuaris = await resposta.json();
     const stringUsuaris = JSON.stringify(usuaris);
