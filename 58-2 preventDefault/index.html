@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>// 58-2 preventDefault</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" /> <!-- < < < CSS 1 -->
+    <!-- Enllaç del javascript -->
+    <script defer src="js/58-2 preventDefault.js"></script>
+</head>
+<body>
+    <header>
+        <h1>58-2 preventDefault</h1>
+    </header>
+    <nav>
+    </nav>
+     <main id="main">
+         <h2> Pràctica per veure el comportament del preventDefault()</h2>
+         <hr>
+         <br>
+        <h2> Exemple 1: Evitar que un enllaç obri una pàgina</h2>
+        <a href="https://www.google.com/" target="_blank" id="aGoogle">Anar a Google</a>
+        
+        <h2> Exemple 2: Evitar l'enviament d'un formulari</h2>
+        <form id="formulari">
+            <label for="nom"> Nom:</label>
+                <input type="text" id="nom" />            
+            <button type="submit">Enviar</button>  <!-- <= bloquejem el submit-->
+        </form>
+
+        <h2>Exemple 3: Validar un formulari abans d'enviar-lo</h2>
+        <form id="registre">
+            <input type="text" id="usuari" />
+            
+            <button>Registrar-se</button>
+        </form>
+
+        <h2>Exemple 4: Evitar el menú contextual del botó dret</h2>
+        <br>
+        <br>
+
+        <h2>Exemple 5: Evitar que una tecla faci una acció (tecla: a) [console.log(e)]</h2>
+        <input type="text" id="camp" />
+        
+        <h2>Exemple 6: Evitar que un botó enviï un formulari</h2>
+        <form>
+            <input type="text" />
+            <button id="boto">Botó de prova</button>
+        </form>
+        
+        <h2>Exemple 7: Evitar que es tanqui finestra per accident (beforeunload) [Tanca la finestra o pestanya]</h2>
+        
+     </main>
+
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>

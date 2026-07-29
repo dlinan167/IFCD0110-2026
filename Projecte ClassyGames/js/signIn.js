@@ -41,6 +41,13 @@ window.addEventListener("load", function () {
   fetchUsuarisJSON();
 });
 
+// Evitar tancar la pestanya per accident i esborrar les dades del formulari
+window.addEventListener("beforeunload", (e) => {
+  if (!validaUsuariNou()) {
+    e.preventDefault();
+  }
+});
+
 // ***************************************************************************************************
 // ***************************************************************************************************
 
