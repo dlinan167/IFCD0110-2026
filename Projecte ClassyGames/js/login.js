@@ -17,6 +17,9 @@ evtPassword.addEventListener("keyup", () => {
     validarClauDePas(); // <= Missatges de validació per l'usuari, (return true/false si la contrasenya es valida)
 });
 
+// Toggle de password visible
+
+
 // 1: Dispara l'inici de sessió (botó)
 // 2: També valida quan el <form> fa submit (Evita fer un submit i pasar de pàgina, si el usuari o password no son vàlids)
 const btnIniciSessio = document.getElementById("btnIniciSessio");
@@ -28,6 +31,8 @@ btnIniciSessio.addEventListener("click", function () {
 window.addEventListener("load", function () {
   fetchUsuarisJSON();
 });
+
+
 
 // ***************************************************************************************************
 // ***************************************************************************************************
