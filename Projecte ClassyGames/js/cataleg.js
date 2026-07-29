@@ -48,7 +48,8 @@ async function mostrarDades(dades) {
 // funció crea carta de joc
 function creaCarta(titol, imatge, plataforma, genere, any) {
   const carta = document.createElement("div");
-  carta.classList.add("card", "border-primary", "mb-3", "shadow");
+  // carta.classList.add("card", "border-primary", "mb-3", "shadow");
+  carta.classList.add("shadow");
   carta.style.margin = "0.35rem";
   carta.style.maxWidth = "12rem"; // mida de carta
   carta.style.border = "solid"; // <= Prova WIP (per mirar si carrega)
@@ -65,17 +66,17 @@ function creaCarta(titol, imatge, plataforma, genere, any) {
 
   // plataforma
   const body = document.createElement("div");
-  body.classList.add("card-body", "text-primary");
+  // body.classList.add("card-body", "text-primary");
   body.innerHTML ="<b>- Plataforma:</b><br> "+ plataforma;
 
   // genere
   const titolBody = document.createElement("p");
-  titolBody.classList.add("card-title");
+  // titolBody.classList.add("card-title");
   titolBody.innerHTML ="<b>- Gènere:</b> "+ genere;
 
   // any
   const textBody = document.createElement("p");
-  textBody.classList.add("card-text");
+  // textBody.classList.add("card-text");
   textBody.innerHTML ="<b>- Any:</b> "+ any;
 
   // Afegim els elements a la carta

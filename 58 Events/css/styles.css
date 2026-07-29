@@ -105,9 +105,20 @@ aside{
   content: "FIGURA";
   border: #f5deb3 dashed;
 }
-  /* ===============  ================ */
+  /* ===============  CAPTURA D'EVENTS ================ */
  
+#menuCapturaEvents{
 
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  border: solid;
+  background: #f0ba45;
+}
+#menuCapturaEvents li:hover{
+  cursor: pointer;
+  background: #a58726;
+}
 
 
 /* ================ RESPONSIVE ================== */

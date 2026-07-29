@@ -38,3 +38,46 @@ const boto4 = document.getElementById("boto4");
 
 //Objecte           // Nom d'event , script/funció //
 boto4.addEventListener("click", creaFigura)
+
+
+
+
+// ***********************************************************************************************************************
+// *                      IMPORTANT!:                  CAPTURA D'EVENTS                                                  *
+// ***********************************************************************************************************************
+
+const menus = document.getElementById("menuCapturaEvents");
+
+// Li afegim un parametre a la funció anonima del event (captura dades, podem veure a quin dels fills hem fet click)
+// menus.addEventListener("click", 
+//     function (event){
+//         console.log(event); // <= click { target: li, buttons: 0, clientX: 682, clientY: 366, layerX: 206, layerY: 41 }
+        
+
+//         document.getElementById("resultat").innerHTML = "<b>"+ event.target.innerHTML +"</b>"; // <= En target.innerHTML es pot veure el contingut de cada fill del menu (opcio 1, opcio2, etc...)
+//     });
+
+
+    
+// const opcionsMenu = document.querySelector("li"); // <= selecciona el primer <li> que troba   (querySelectorAll dona una llista)
+// console.warn(opcionsMenu); // <=  =><li>
+
+
+const opcionsMenu = document.querySelectorAll("li"); // <= (querySelectorAll dona una llista, de tots els <li>)
+
+// Recorrem la llista al fer click
+for (element of opcionsMenu) {
+    element.addEventListener("click", function(event){  // <= captura la informació de cada element de la llista
+
+        console.log(event); // <= click { target: li, buttons: 0, clientX: 682, clientY: 366, layerX: 206, layerY: 41 }
+        document.getElementById("resultat").innerHTML = "<b>"+ event.target.nodeName +"</b>"; // LI
+    });
+}
+
+
+// Captura el nom de tots els elements dins del <body>:
+const cos = document.getElementsByTagName("body");
+console.log(cos[0])
+cos[0].addEventListener("click", function(){
+document.getElementById("resultat").innerHTML = "<b>"+ event.target.nodeName +"</b>";
+});
