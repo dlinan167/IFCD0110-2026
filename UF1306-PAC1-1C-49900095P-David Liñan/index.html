@@ -18,20 +18,134 @@
 
     </header>
     <nav></nav>
-
+    
     <main>
-        <!--  -->
+        <!-- == BLOC: 1 == -->
+        <div class="caixaBloc">
+            <h2>BLOC: 1</h2>
+            <!-- 1. -->
+            <!-- 1.1 -->
+            <h3>1.1</h3>
+            <p>Verificar que no estiguin buits o formats incorrectes, indicant explicitament que són obligatoris</p>
+            <!-- 1.2 -->
+            <h3>1.2</h3>
+            <p>Seguir el format '@email.com' verificant que es pot posar entre '@' i els '.'</p>
+            <!-- 1.3 -->
+            <h3>1.3</h3>
+            <p>Verificar un rang de colors, els noms dels colors, com per exemple un rang de colors més càlids com tons de color taronges</p>
+            <p>També si els colors son format rgb o hexadecimal</p>
+            <!-- 1.4 -->
+            <h3>1.4</h3>
+            <p></p>
+            <!-- 1.5 -->
+            <h3>1.5</h3>
+            <p>Verificar el indicat com 'DD/MM/YYYY' o 'DD-MM-YYYY' etc..., entre un límit mínim i máxim del any</p>
+            
+            <!-- 2. -->
+            <!-- 2.1 -->
+             <h3>2.1</h3>
+             <ul>
+                <li><b>* : S'utilitza per indicar 0 o més d'un caràcters</b></li>
+                <li><b>\ : Serveix per posar un caràcters com un literal i no utilitzar el seu significat d'expresió regular, com \*</b></li>
+                <li><b>| : Serveix com un OR entre expressions, com [a-z] | [A-Z], solament es te que complir una</b></li>
+                <li><b>[a-z] : Indica nómes lletre minúscules</b></li>
+                <li><b>{N, M} : Indica un mínim y un máxim de caràcters, '{numero mínim, numero máxim}' '{6, 10}'</b></li>
+                <li><b>[^XYZ] : Indica una negació de 'XYZ'</b></li>
+                <li><b>\w : Indica caràcters seguits que no estan separats per espais, com paraules</b></li>
+                <li><b>/i : Fa que al patró no distingeixi minúscules de majúscules</b></li>
+             </ul>
+            <!-- 2.2 Expressió regular /patro/ -->
+             <h3>2.2</h3>
+             <b>Podem validar una tarjeta que ha de contenir '16 números' ya sigui tots junts, o separats per espais en grups de 4</b>
+             <p>El patro d'expresió regular ha de ser: </p> <b>/^\d{4} \d{4} \d{4} \d{4}$|^\d{16}$/</b>
+             ------
+             <input type="text" id="inpTarjeta"/>
+             <div id="mTarjeta" class="alert"></div>
+            
+            <!-- 3. ets un robot? -->
+            
+            <h3>3.</h3>
+            <div id="captcha">
+                <img src="https://png.pngtree.com/png-vector/20250205/ourmid/pngtree-gold-number-3-design-png-image_15390782.png" alt="numero 3">
+                <img src="https://pngimg.com/uploads/plus/plus_PNG119.png" alt="signe de mes">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/011/297/073/small_2x/3d-red-number-2-png.png" alt="numero 2">
+                <label>Quin es el resultat d'questa operació?</label>
+                <p>= </p>
+                <input type="number" maxlength="2" size="2" id="respostaCaptcha" required/>
+                <button id="btnCaptcha">Comprovar</button>
+                <p id="mCaptcha"></p>
+            </div>
+            
+            <form action="" method="post">
+                <!-- 4. -->
+                <h3>4.</h3>
+                <table>
+                    <!-- Usuari: -->
+                    <tr>
+                        <td>
+                            <label for="username">Usuari:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="Usuari" id="username" required />
+                        </td>
+                        <td>
+                            <div id="mUsername" class="alert"></div>
+                        </td>
+                    </tr>
+                    <!-- Contrasenya: -->
+                    <tr>
+                        <td>
+                            <label for="password">Contrasenya:</label> <!-- 4.2 => --> <i id="ullContrasenya" class="fa-solid fa-eye"></i>
+                        </td>
+                        <td>               
+                            <input type="password" name="contrasenya" id="password" minlength="8" maxlength="24" required />
+                        </td>
+                        <td>
+                            <div id="mPassword" class="alert"></div>
+                        </td>
+                        <td>
+                            <div id="mFortalesa" class="alert"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="passwordConfirm">Confirma:</label>
+                        </td>
+                        <td>               
+                         <input type="password" name="ConfirmaContrasenya" id="passwordConfirm" minlength="8" maxlength="24" required/>
+                        </td>
+                        <td>
+                            <div id="mPasswordConfirm" class="alert"></div>
+                        </td>
+                    </tr>
+                    <!-- Botóns del formulari: -->
+                    <tr>
+                        <td>
+                            <button id="btnRegistrarUsuari" type="submit">Registrar Usuari</button> 
+                        </td>
+                    </tr>
+                </table>
+                </form>
+                <!-- 4.2 -->
+            </div>
+                
 
-        <!-- 3. ets un robot -->
-        <div id="capcha">
-            <img src="https://png.pngtree.com/png-vector/20250205/ourmid/pngtree-gold-number-3-design-png-image_15390782.png" alt="numero 3">
-            <img src="https://pngimg.com/uploads/plus/plus_PNG119.png" alt="signe de mes">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/011/297/073/small_2x/3d-red-number-2-png.png" alt="numero 2">
-            <label>Quin es el resultat d'questa operació?</label>
-            <p>= </p>
-            <input type="number" maxlength="2"/>
-        </div>
+            <!-- == BLOC: 2 == -->
+            <div class="caixaBloc">
+                <h2>BLOC: 2</h2>
+                <!-- 5. carrusel -->
+                <div id="carrusel">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
 
+            <!-- == BLOC: 3 == -->
+            <div class="caixaBloc">
+                <h2>BLOC: 3</h2>
+            </div>
     </main>
     <aside></aside>
     <footer>

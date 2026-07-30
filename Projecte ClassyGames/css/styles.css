@@ -31,6 +31,9 @@
     --fons-alerta-incorrecte: #330808d7;
     --color-alerta-incorrecte: #c70909;
     --border-alerta-incorrecte: #8f0505fa;
+    --fons-alerta-advertencia: #232408f6;
+    --color-alerta-advertencia: #ccbf0e;
+    --border-alerta-advertencia: #bbaa0ef6;
     --fons-alerta-correcte: #0a2c0ad5;
     --color-alerta-correcte: #0b9c0b;
     --border-alerta-correcte: #0c630cf6;
@@ -347,7 +350,11 @@ width: 12rem;
   background: var(--fons-alerta-incorrecte);
   color: var(--color-alerta-incorrecte);
   border: solid var(--border-alerta-incorrecte);
-
+}
+.alert-warning{
+  background: var(--fons-alerta-advertencia);
+  color: var(--color-alerta-advertencia);
+  border: solid var(--border-alerta-advertencia);
 }
 .alert-success{
   background: var(--fons-alerta-correcte);

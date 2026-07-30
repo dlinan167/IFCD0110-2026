@@ -5,12 +5,23 @@
   font-family: 'Times New Roman', Times, serif;
 }
 :root{
-    --fons-main:rgba(153, 205, 50, 0.377);
+    --fons-main:#99cd3260;
     --fons-titol: #000000f5;
     --color-titol-lletra: #f5deb3;
     --color-titol-border: #d87093;
     --fons-aside: #5f3300;
     --fons-navegacio:#5f5e00;
+    
+    /* Colors: Alertes (missatges)*/
+    --fons-alerta-incorrecte: #110202;
+    --color-alerta-incorrecte: #ff0000;
+    --border-alerta-incorrecte: #ff0000fd;
+    --fons-alerta-advertencia: #232408f6;
+    --color-alerta-advertencia: #ccbf0e;
+    --border-alerta-advertencia: #bbaa0ef6;
+    --fons-alerta-correcte: #082408f6;
+    --color-alerta-correcte: #0ecc0e;
+    --border-alerta-correcte: #0ebb0ef6;
 }
 html{
     font-size: 62.5%;
@@ -26,8 +37,8 @@ body{
     "nav main aside"
     "footer  footer footer";
     min-height: 100vh;
-    grid-template-columns: 5% auto 5%;
-    grid-template-rows: 3rem auto 2.35rem;
+    grid-template-columns: 4% auto 0.3%;
+    grid-template-rows: 3rem auto 2rem;
 }
 /* ================== ESTRUCTURA GENERAL ======================= */
 
@@ -53,12 +64,15 @@ header figure{
 
 footer{
   position: fixed;
+  display: flex;
+  justify-content: space-evenly;
   grid-area: footer;
   width: 100%;
   bottom: 0%;
-  opacity: 96%;
+  opacity: 95%;
   z-index: 5;
-  max-height: 5%;
+  min-height: 2rem;
+  max-height: 2rem;
 }
 h1{
     color: var(--color-titol-lletra);
@@ -103,42 +117,6 @@ nav{
   border: 0.150rem solid;
   background: var(--fons-navegacio);
 }
-nav ul::before{
-    content: "MENU:";
-    font-weight: bold;
-}
-    
-/* body > nav{
-    position: fixed;
-    top: 20%;
-} */
-body > nav li:hover{
-  width: 110%;
-  border: 0.250rem solid;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  padding: 1.5%;
-  transition: all 0.3s;
-}
-
-nav li{width: 10.5em; text-align: center; transition: all 0.3s ease;}
-nav li:hover{
-    border-radius: 0.5rem;
-    background: burlywood;
-    cursor: pointer;
-    /*Aumenta el tamany al fer hover en transició*/
-    transform: scale(1.25); 
-    transition: all 0.3s ease;
-}
-nav figure:hover{
-    transform: scale(1.8);
-    transition: all 0.3s ease;
-}
-ul{
-  list-style-type: none;
-  cursor: pointer;
-}
-a{font-weight: bold;}
 
   /* =============== TAULA DE DADES, JSON / API ================ */
  
@@ -151,21 +129,99 @@ a{font-weight: bold;}
 } */
 
 /* -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+h2{
+  color: var(--color-titol-lletra);
+  background: var(--fons-titol);
+  width: 100%;
+  height: 3rem;
+  border: purple solid;
+  align-content: center;
+  text-align: center;
+  font-size: 2.25rem;
+}
+h3{
+  color: var(--color-titol-lletra);
+  background: var(--fons-titol);
+  width: 2rem;
+  height: 2rem;
+  border: purple solid;
+  align-content: center;
+  font-size: 1.25rem;
+  margin-top: 1.5%;
+}
+
+.caixaBloc{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1%;
+  align-items: center;
+  background: #32c8cda2;
+  border: #000 solid;
+  margin-bottom: 3.5rem;
+}
+.caixaBloc > ul{
+  text-align: left;
+}
+.caixaBloc > h3{
+  position: relative;
+  left: -33%;
+}
+
 button:hover, select:hover, input:hover, input:focus{
   scale: calc(1.05);
   transition: all 0.1s;
   }
 
-  #capcha{
+  #captcha{
+    width: 80%;
     display: flex;
     border: solid;
     align-items: center;
+    background: #f75b00e0;
+    padding: 1%;
   }
-  #capcha img{
+  #captcha img{
     max-width: 3.5rem;
   }
-  #capcha input{
+  #captcha input{
     height: 50%;
+  }
+  #mCaptcha{
+    margin: 1%;
+  }
+  #ullContrasenya{
+    cursor: pointer;
+  }
+
+  /* -+-+-+-+-+-+-+-+ ALERTES DE VALIDACIÓ (Contrasenya) -+-+-+-+-+-+-+-+ */
+.alert{
+width: 12rem;
+}
+.alert-danger{
+  background: var(--fons-alerta-incorrecte);
+  color: var(--color-alerta-incorrecte);
+  border: solid var(--border-alerta-incorrecte);
+
+}
+.alert-warning{
+  background: var(--fons-alerta-advertencia);
+  color: var(--color-alerta-advertencia);
+  border: solid var(--border-alerta-advertencia);
+}
+.alert-success{
+  background: var(--fons-alerta-correcte);
+  color: var(--color-alerta-correcte);
+  border: solid var(--border-alerta-correcte);
+}
+
+  /* -+-+-+-+-+-+-+-+ Carrusel (bloc 2) -+-+-+-+-+-+-+-+ */
+  #carrusel{
+    display: flex;
+    /* translate: ; */
+    transition: all 0.3s;
   }
 
 /* ================ RESPONSIVE ================== */

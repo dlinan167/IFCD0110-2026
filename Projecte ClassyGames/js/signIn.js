@@ -12,7 +12,6 @@ evtUsername.addEventListener("blur", () => {
 });
 // Validació de password
 const evtPassword = document.getElementById("password");
-// Valida el llarg de 'password'
 evtPassword.addEventListener("keyup", () => {
   validaCamp("password","mPassword", /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/); // <= PATRO: min.1 majúscula, min.1 número, min.1 caràcter especial, mínim 8 caràcters
   validarClauDePas(); // <= Missatges de validació per l'usuari
