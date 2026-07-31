@@ -36,7 +36,7 @@
             <p>També si els colors son format rgb o hexadecimal</p>
             <!-- 1.4 -->
             <h3>1.4</h3>
-            <p></p>
+            <p>Verificar si el prefixe és correcte pel número del telèfon que s'ha escrit, el format s'ha escrit correctament amb el que volem validar (Amb separacións concretes o no "-" " " etc..)</p>
             <!-- 1.5 -->
             <h3>1.5</h3>
             <p>Verificar el indicat com 'DD/MM/YYYY' o 'DD-MM-YYYY' etc..., entre un límit mínim i máxim del any</p>
@@ -134,17 +134,52 @@
             <div class="caixaBloc">
                 <h2>BLOC: 2</h2>
                 <!-- 5. carrusel -->
-                <div id="carrusel">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                 <i class="fa-solid fa-circle-arrow-left" id="cFletxaEsquerra"></i>
+                 <div class="caixaCarrusel">
+                     <div class="carrusel carruselgiraAutomatic" id="carruselPrincipal">
+                        <figure class="itemCarrusel">
+                            <img src="./img/Portal2_cover.jpg" name="Portal 2" alt="Portada de videojoc: portal 2">
+                        </figure>
+                        <figure class="itemCarrusel">
+                            <img src="./img/Elden_Ring_Box_cover.jpg" name="Elden Ring" alt="Portada de videojoc: Elden Ring">
+                        </figure>
+                        <figure class="itemCarrusel">
+                            <img src="img/supreme_commander_cover.jpg" name="Supreme Commander" alt="Portada de videojoc: supreme commander">
+                        </figure>
+                        <figure class="itemCarrusel">
+                            <img src="img/GTAV_cover.webp" name="Grand Thief Auto 5" alt="Portada de videojoc: GTA 5">
+                        </figure>
+                     </div>
+                 </div>
+                 <i class="fa-solid fa-circle-arrow-right" id="cFletxaDreta"></i>
+                 <!-- Frame que mostra la imatge I el nom de la imatge click -->
+                 <div style="display: flex; flex-direction: column;">
+                     <b id="finestraDeContingut"></b>
+                     <iframe name="marcDeContingut" src="" frameborder="0" id="marcDeContingut" height="750px" width="650px"></iframe>
                 </div>
+                    
             </div>
 
             <!-- == BLOC: 3 == -->
             <div class="caixaBloc">
                 <h2>BLOC: 3</h2>
+                <!-- 6.1 -->
+                <h3>6.1</h3>
+                <p>Primer comprovaria si hi ha variables indefinides o sintaxi que s'així escrit malament. Miraria cada possible resultat de cada d'un switch if/else de forma fàcil, també per poder mirar les dades de variables durant bucles i funcions per detectar possibles errors. Validaria els resultats de proves de funcionament.</p>
+                <!-- 6.2 -->
+                <h3>6.2</h3>
+                <div>
+                    <b>Console.log(): </b> <button onclick="provaConsoleLog()">Provar Exemple</button> <p>Ens serveix com una forma fàcil de mirar el resultat d'una funció o el valor d'una variable abans del resultat final en pantalla.</p>
+                    <br>
+                    <b>Console.warn(): </b><button onclick="provaConsoleWarn()">Provar Exemple</button> <p>Similar al console.log, però amb un format que serveix per escriure missatge d'advertència.</p>
+                    <br>
+                    <b>Console.error(): </b><button onclick="provaConsoleError()">Provar Exemple</button> <p>Podem escriure un missatge en forma d'error per resultats inesperats</p>
+                    <br>
+                    <b>Console.count(): </b> <button onclick="provaConsoleCount()">Provar Exemple</button> <p>Conta el número  de vegades que el console.count es mostra</p>
+                    <br>
+                    <b>Console.clear(): </b> <button onclick="provaConsoleClear()">Provar Exemple</button> <p>Esborra els missatges de consola, serveix per evitar confusió</p>
+                    <br>
+                </div>
             </div>
     </main>
     <aside></aside>

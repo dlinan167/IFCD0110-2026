@@ -50,6 +50,17 @@ evtUllContrasenya.addEventListener("click", () =>{
 
 
 
+// Carrusel (girar a la esquerra)
+const evtcFletxaEsquerra = document.getElementById("cFletxaEsquerra");
+evtcFletxaEsquerra.addEventListener("click", () =>{
+  giraCarrusel(120);
+});
+
+// Carrusel (girar a la dreta)
+const evtcFletxaDreta = document.getElementById("cFletxaDreta");
+evtcFletxaDreta.addEventListener("click", () =>{
+  giraCarrusel(-120);
+});
 
 // ***************************************************************************************************
 // ***************************************************************************************************
@@ -187,4 +198,66 @@ function validaClauConfirmacio() {
     mAlert.classList.add("alert-danger");
     return false;
   }
+}
+
+// (5.1) (5.2)
+// Gira carrusel, Quan es fa click (a la dreta o esquerra)
+let posicioCarrusel = 0;
+const carrusel = document.getElementById("carruselPrincipal");
+let resetTimeout = 0;
+
+function giraCarrusel(deg) {
+  
+  posicioCarrusel += deg; //<= Acumula els degrees de la posició actual amb els que sumem clickant més
+  // Animacións de moviment (els fem .remove cada vegada per no resetegar la posició inicial de la animació CSS, fent-lo dinàmic) =>
+  carrusel.classList.remove("carruselgiraAutomatic", "carruselgiraEsquerra", "carruselgiraDreta"); 
+  carrusel.style.transform = "rotateY(" + posicioCarrusel + "deg)"; // <= modifica la posició en el css
+  clearTimeout(resetTimeout);
+  resetTimeout = setTimeout(retornaGiraAutomatic, 4000); // retorna a girar automaticament després de 4s
+}
+
+// El carrusel retorna a girar de forma automàtica (com estaba originalment, abans de fer click a una fletxa)
+function retornaGiraAutomatic() {
+  carrusel.style.transform = "";
+  carrusel.classList.remove("carruselgiraEsquerra", "carruselgiraDreta");
+  carrusel.classList.add("carruselgiraAutomatic");
+}
+
+// (5.3)
+
+// Li afegim un parametre a la funció anonima del event (captura dades, podem veure a quin dels fills hem fet click)
+carrusel.addEventListener("click", function (event){
+
+        console.log(event); // <= click { target: img, buttons: 0, clientX: 1244, clientY: 284, layerX: -29, layerY: 180 }
+        console.log(event.target.name); // <= nom=""(intern html) de cada imatge
+
+        document.getElementById("marcDeContingut").src = event.target.src; // <= En target posa el scr de cada imatge al marcDeContingut
+        document.getElementById("finestraDeContingut").innerHTML = event.target.name; // <= Posa el nom
+    });
+
+
+
+// Proves d'exemple de Console (6.2)
+function provaConsoleLog() {
+  let resposta = 3 + 2;
+  console.log("Console log: La resposta es: "+ resposta);
+}
+function provaConsoleWarn() {
+  let resposta = 3 + 2;
+  console.warn("Console warn: ADVERTENCIA La resposta es: "+ resposta);
+}
+function provaConsoleError() {
+  let resposta = 3 + 2;
+  if (resposta = 5) { 
+    console.error("Console log: --ERROR-- La resposta NO es: "+ resposta);
+  }
+}
+
+function provaConsoleCount() {
+  for (let i = 0; i < 5; i++) {
+    console.count("console.count: La resposta actual es: ");
+  }
+}
+function provaConsoleClear() {
+  console.clear();
 }
