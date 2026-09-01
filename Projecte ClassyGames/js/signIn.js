@@ -28,12 +28,7 @@ evtEmail.addEventListener("blur", () => {
   validaCamp("email", "mEmail", /(\w+[^\.]|\w+\.\w+)@\w+\.\w{2,}/i); // <= PATRO: Email estandar
 });
 
-// 1: Dispara el registrat d'un usuari nou (botó)
-// 2: També valida quan el <form> fa submit (Evita fer un submit i pasar de pàgina, si el usuari o password no son vàlids)
-const btnRegistrarUsuari = document.getElementById("btnRegistrarUsuari");
-btnRegistrarUsuari.addEventListener("click", function () {
-    validaUsuariNou(); // <= retorna (true o false)(Vàlid o NO Vàlid)
-});
+
 
 // Guarda en variable la llista d'usuaris al carregar la pàgina
 window.addEventListener("load", function () {
@@ -41,11 +36,11 @@ window.addEventListener("load", function () {
 });
 
 // Evitar tancar la pestanya per accident i esborrar les dades del formulari
-window.addEventListener("beforeunload", (e) => {
-  if (!validaUsuariNou()) {
-    e.preventDefault();
-  }
-});
+// window.addEventListener("beforeunload", (e) => {
+//   if (!validaUsuariNou()) {
+//     e.preventDefault();
+//   }
+// });
 
 // ***************************************************************************************************
 // ***************************************************************************************************
@@ -122,61 +117,67 @@ function validaClauConfirmacio() {
 }
 
 
-// VALIDA si el usuari ja existeix
+// VALIDA. Usuari nou
 function validaUsuariNou() {
   const missatge = document.getElementById("missatgeValUsuari");
-  const username = document.getElementById("username").value; // <= valor del username
-  const password = document.getElementById("password").value; // <= valor del password
+  const username = document.getElementById("username").value.trim(); // <=
+  const password = document.getElementById("password").value;
+  const email = document.getElementById("email").value.trim();
+  const usuaris = obtenirUsuarisLocalStorage(); // <= llista d'usuaris LocalStorage
 
   // VALIDACIÓ: No està buit
   if (!username.trim() || !password.trim()) {
     missatge.innerText = "Un dels camps esta buit!"; // <= Missatge d'error
     return false;
   }
-  // && VALIDACIÓ: Usuari i password trobats al JSON()
-  const usuarisJSON = localStorage.getItem("usuarisJSON");
-  let usuaris = [];
-  
-  if (usuarisJSON) {
-    usuaris = JSON.parse(usuarisJSON);
-  } else {
-    missatge.innerText = "Error al carregar el usuari!";
-  }
-// let trobat = usuaris.find(usuari => usuari.username === username && usuari.password === password); WIP 
-  let trobat = false;
-  for (usuari of usuaris) {
-    if (usuari.username === username && usuari.password === password) {  //<= (True o False) Vàlida si tant el 'username' i 'password' trobats al JSON son iguals que els del <input>
-      trobat = true;   
+  // VALIDACIÓ: Local Storage (Usuari existeix en local storage?)
+  function obtenirUsuarisLocalStorage() {
+    try {
+      return JSON.parse(localStorage.getItem("usuarisJSON")) || [];
+    } catch (e) {
+      return [];
     }
+}
+
+  if (usuaris.some(usuari => usuari.username == username || usuari.email == email)) {
+    missatge.innerText = "L'usuari o el correu ja existeix!";
+    return false;
   }
 
-  // VALIDACIÓ: Local Storage (usuari registrat anteriorment)
-  if (
-    (username == localStorage.getItem("usernameSave") && password == localStorage.getItem("passwordSave")) || trobat == true) {
-    missatge.innerText = "Aquest usuari ja existeix!";
-    return false;
-    
+  if (  // VALIDACIÓ FINAL: Valida el camps amb els patrons que correponen:
+    validaCamp("username", "mUsername", /^[a-zñ0-9àèìòùáéíóú]+$/i) &&
+    validaCamp("password", "mPassword", /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/) &&
+    validaCamp("email", "mEmail", /(\w+[^\.]|\w+\.\w+)@\w+\.\w{2,}/i) &&
+    validaClauConfirmacio()
+  ) {
+    // --> USUARI NOU <--
+    const ara = new Date().toISOString();
+    const nouUsuari = {
+      id: usuaris.length + 1,
+      username,
+      password,
+      rol: "user",
+      actiu: true,
+      nom: username,
+      email,
+      emailVerificat: false,
+      preferencies: {
+        idioma: "ca",
+        tema: "light",
+        notificacions: true
+      },
+      preferits: [],
+      registre: {
+        dataRegistre: ara,
+        dataActualitzacio: ara
+      }
+    };
 
-  } else if( // VALIDACIÓ FINAL: Valida els camps abans de registrar el usuari amb els patrons que corresponen: Usuari, Password, Email...
-    validaCamp("username", "mUsername", /^[a-zñ0-9àèìòùáéíóú]+$/i) == true && 
-    validaCamp("password","mPassword", /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/) == true &&
-    validaCamp("email", "mEmail", /(\w+[^\.]|\w+\.\w+)@\w+\.\w{2,}/i) == true &&
-    validaClauConfirmacio() == true
-){
+    usuaris.push(nouUsuari); // Guarda nou usuari al local storage (l'usuari amb un format json)
+    localStorage.setItem("usuarisJSON", JSON.stringify(usuaris));
     missatge.innerText = "Usuari nou registrat correctament!";
-    // REGISTRA EL USUARI NOU (al local storage):
-
-
-
-    // let usernameSave+=usernameSave+","+nousUsuari;
-    // let temporal=localStorage.getItem(usernameSave);
-    // temporal.split(",");
-
-
-    // localStorage.setItem("usernameSave", Todo:WIP );  // Llista [,] dels usuaris guardats (local storage)
-    
     return true;
-  }else{
+  } else {
     missatge.innerText = "L'usuari no es vàlid per registrar!";
     return false;
   }
@@ -184,11 +185,11 @@ function validaUsuariNou() {
 
 // window onload
 async function fetchUsuarisJSON() {
-  // VALIDACIÓ: Usuari i password trobats en la "base de dades" (usuaris.json)
+  // VALIDACIÓ: Usuaris trobats en la "base de dades" (usuaris.json)
   // Fetch del JSON local (usuari) (dona una llista d'Objectes amb 'username' and 'password')
-  const missatge = document.getElementById("missatgeValUsuari");
-  const username = document.getElementById("username").value; // <= valor del username
-  const password = document.getElementById("password").value; // <= valor del password
+  if (localStorage.getItem("usuarisJSON")) { // if: evita sobreescriure la variable 'usuarisJSON' si ja tenim una llista d'ells en local storage
+    return true;
+  }
 
   try {
     const resposta = await fetch("./data/usuaris.json"); // adjust path if needed

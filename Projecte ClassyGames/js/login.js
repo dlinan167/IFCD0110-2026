@@ -138,8 +138,9 @@ async function fetchUsuarisJSON() {
     const resposta = await fetch("./data/usuaris.json"); // <= Busca els usuaris d'aquest fitxer
     if (!resposta.ok) throw new Error("No s'ha pogut carregar usuaris.json");
     const usuaris = await resposta.json();
-    const stringUsuaris = JSON.stringify(usuaris);
-    localStorage.setItem("usuarisJSON", stringUsuaris); // Guardar al storage la llista d'usaris del JSON
+    if (!localStorage.getItem("usuarisJSON")) {
+      localStorage.setItem("usuarisJSON", JSON.stringify(usuaris)); // Guardar al storage la llista d'usaris del JSON
+    }
   } catch (e) {
     console.error(e);
     missatge.innerText = "Error al carregar els usuaris localment!";
