@@ -100,12 +100,17 @@ header i{
   /* border: solid var(--color-titol-border); */
 }
 
-#themeIcon{
+#themeIcon, #userSettingsIcon{
   cursor: pointer;
   transition: all 0.2s;
-  border: dashed 0.05rem;
+  border: solid 0.05rem;
+  border-radius: 20%;
+  background: var(--fons-navegacio);
+  padding: 0.5%;
+  display: flex;
+  justify-content: center;
 }
-#themeIcon:hover{
+#themeIcon:hover, #userSettingsIcon:hover{
 scale: calc(1.08);
 }
 /* +-+-+-+ +-+-+-+ */
@@ -369,6 +374,80 @@ button:hover, select:hover, input:hover, input:focus{
   scale: calc(1.05);
   transition: all 0.1s;
   }
+
+  
+.caixaControlCarrusel{
+  display: flex;
+  padding: 1%;
+  align-items: end;
+  justify-content: space-around;
+  width: 55%;
+}
+/* Per botóns de carrusel */
+.caixaControlCarrusel > i{
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+  /* -+-+-+-+-+-+-+-+ CARRUSEL (index.html cataleg) -+-+-+-+-+-+-+-+ */
+  .caixaCarrusel {
+    width: 22rem;
+    height: 18rem;
+    position: relative;
+    border: solid;
+    border-radius: 1%;
+    perspective: 1200px;
+  }
+  .carrusel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    /* Animació automàtica lenta (rotant les imatges) => */
+    transform-style: preserve-3d;
+    transition: all 2s;
+  }
+  .carruselgiraAutomatic{
+    animation: giroCarrusel 30s infinite ease;
+  }
+  /* Girar al clickar botó */
+  .carruselgiraEsquerra{
+    animation: giroCarruselEsquerra 3s;
+  }
+  .carruselgiraDreta{
+    animation: giroCarruselDreta 3s;
+  }
+
+  .itemCarrusel {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border: solid;
+  border-radius: 2%;
+}
+.itemCarrusel > img{
+  width: 100%;
+  height: 100%;
+}
+/* Un per cada fill (imatge/figure) del carrusel*/
+.itemCarrusel:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
+.itemCarrusel:nth-child(2) { transform: rotateY(120deg) translateZ(250px); }
+.itemCarrusel:nth-child(3) { transform: rotateY(240deg) translateZ(250px); }
+
+@keyframes giroCarrusel {
+  0% { transform: rotateY(0deg); }
+  33% { transform: rotateY(120deg); }
+  66% { transform: rotateY(240deg); }
+  100% { transform: rotateY(360deg); }
+}
+@keyframes giroCarruselEsquerra {
+  to { transform: rotateY(120deg); }
+}
+@keyframes giroCarruselDreta {
+  to { transform: rotateY(-120deg); }
+}
 
 
 /* ================ RESPONSIVE ================== */

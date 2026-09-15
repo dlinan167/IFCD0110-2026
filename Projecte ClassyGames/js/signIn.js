@@ -173,7 +173,7 @@ function validaUsuariNou() {
       }
     };
 
-    usuaris.push(nouUsuari); // Guarda nou usuari al local storage (l'usuari amb un format json)
+    usuaris.push(nouUsuari); // Guarda nou usuari al local storage (l'usuari amb un format emulant el .json)
     localStorage.setItem("usuarisJSON", JSON.stringify(usuaris));
     missatge.innerText = "Usuari nou registrat correctament!";
     return true;

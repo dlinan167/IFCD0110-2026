@@ -20,7 +20,6 @@
     {"id": 18, "titol": "Outer Wilds", "plataforma": "Multiplataforma", "genere": "Exploració", "any": 2019, "imatge": "https://upload.wikimedia.org/wikipedia/en/f/f6/Outer_Wilds_Steam_artwork.jpg"},
     {"id": 19, "titol": "Final Fantasy VII Remake", "plataforma": "PC / PS4 / PS5", "genere": "JRPG", "any": 2020, "imatge": "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/FFVIIRemake.png/250px-FFVIIRemake.png"},
     {"id": 20, "titol": "Half-life 2", "plataforma": "Multiplataforma", "genere": "Acció", "any": 2004, "imatge": "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg"},
-    {"id": 20, "titol": "Fallout New Vegas", "plataforma": "PC / Xbox", "genere": "Acció RPG", "any": 2005, "imatge": "https://m.media-amazon.com/images/I/710vNXTNahS._AC_UF894,1000_QL80_.jpg"},
-    {"id": 21, "titol": "Fallout New Vegas", "plataforma": "PC / Xbox", "genere": "Acció RPG", "any": 2005, "imatge": "https://m.media-amazon.com/images/I/710vNXTNahS._AC_UF894,1000_QL80_.jpg"}
+    {"id": 20, "titol": "Fallout New Vegas", "plataforma": "PC / Xbox", "genere": "Acció RPG", "any": 2005, "imatge": "https://m.media-amazon.com/images/I/710vNXTNahS._AC_UF894,1000_QL80_.jpg"}
   ]
 }

@@ -24,13 +24,23 @@
         <div class="headerBar"> 
         <i id="themeIcon" class="fa-regular"></i> <!--Icona de tema-->
         <div>
-            <label for="genre">Filtrar per Genre:</label>
+            <label for="genre">Filtrar Genre:</label>
+            <i class="fa-solid fa-filter"></i>
             <select class="shadow" name="jocCategoria" id="jocCategoria">
                 <option value="">Categoria</option>
+                <option value="aventura">Aventura</option>
                 <option value="RPG">RPG</option>
-                <option value="shooter">Shooter</option>
+                <option value="JRPG">JRPG</option>
+                <option value="AccioRPG">Acció RPG</option>
+                <option value="Accio">Acció</option>
+                <option value="metroidvania">Metroidvania</option>
+                <option value="sandbox">Sandbox</option>
+                <option value="monObert">Món Obert</option>
+                <option value="simulacio">Simulació</option>
+                <option value="Puzles">Puzles</option>
+                <option value="plataformes">Plataformes</option>
+                <option value="roguelike">Roguelike</option>
                 <option value="estrategia">Estrategia</option>
-                <option value="horror">Horror</option>
             </select>
         </div>
         <div>
@@ -39,6 +49,8 @@
         </div>
         <!-- Imatge de la sessió activa del usuari -->
         <img src="../img/imatge_pera.png" style="width: 5%; border-radius: 50%;" class="shadow" alt="">
+        <a href="index.html"><i id="userSettingsIcon" class="fa-solid fa-user-gear"></i></a>
+        <label for="">Opcions d'usuari</label>
     </div>
 
     </header>
@@ -50,9 +62,36 @@
 
     <main>
         <!-- Contingut Principal (Cataleg)-->
-         <div id="taulaCataleg" style="display: flex; flex-wrap: wrap;"></div>
-<p>Servidors donà molt més que. A Jesucrist serà plasent e lo viatge. La primera part serà del. Victòria dels molts la saviesa e. Que fet m'haveu E féu-se traure una gran caixa. Dies és estat doncs molt condecent útil e expedient deduir. Foren per los antics ordenades justes e torneigs. Batalles campals on hi havia rei o fill. Pecar e viciosament viure emperó no els ha tolt l'universal. Casa santa de Jerusalem com tot cristià.</p>
-    </main>
+         <!-- *** CARRUSEL *** -->
+         <h3>Paquet de saga especial:</h3>
+         <h3>Advance Wars</h3>
+            <div class="caixaControlCarrusel">
+                 <i class="fa-solid fa-circle-arrow-left" id="cFletxaEsquerra"></i>
+                 <div class="caixaCarrusel">
+                     <div class="carrusel carruselgiraAutomatic" id="carruselPrincipal">
+                        <figure class="itemCarrusel">
+                            <img src="https://m.media-amazon.com/images/M/MV5BYjU3MjE3NDUtOGIzOC00NzhkLWJlZjAtYzY5MDA3OGU2YTkzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" name="Advance wars" alt="Portada de Advance wars">
+                        </figure>
+                        <figure class="itemCarrusel">
+                            <img src="https://m.media-amazon.com/images/M/MV5BYTcwM2JiYmItNTE1NC00ZjZlLWI2N2ItZDdjZTEzNGI2OGI4XkEyXkFqcGc@._V1_.jpg" name="Advance wars 2" alt="Portada de Advance wars 2">
+                        </figure>
+                        <figure class="itemCarrusel">
+                            <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_ds_22/SI_NDS_AdvanceWarsDualStrike_image1600w.jpg" name="Advance wars: Dual Strike" alt="Portada de Advance wars: Dual Strike">
+                        </figure>
+                        <figure class="itemCarrusel">
+                            <img src="" name="" alt="">
+                        </figure>
+                     </div>
+                 </div>
+                 <i class="fa-solid fa-circle-arrow-right" id="cFletxaDreta"></i>
+                </div>
+                <!-- *** CARRUSEL *** -->
+
+                <b>Videojocs classics i moderns</b>
+
+                <!-- *** Llista del CATALEG (.json) **** -->
+                <div id="taulaCataleg" style="display: flex; flex-wrap: wrap;"></div>
+            </main>
 
     <aside></aside>
 

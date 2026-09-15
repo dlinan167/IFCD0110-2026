@@ -1,6 +1,50 @@
 // catalegs
 
 
+// ************************************************************************************************
+// *                                      EVENTS LISTENERS                                        *
+// ************************************************************************************************
+
+// Carrusel (girar a la esquerra)
+const evtcFletxaEsquerra = document.getElementById("cFletxaEsquerra");
+evtcFletxaEsquerra.addEventListener("click", () =>{
+  giraCarrusel(120);
+});
+
+// Carrusel (girar a la dreta)
+const evtcFletxaDreta = document.getElementById("cFletxaDreta");
+evtcFletxaDreta.addEventListener("click", () =>{
+  giraCarrusel(-120);
+});
+
+
+// ****************************************************************************
+// +                                CARRUSEL                                  +
+// ----------------------------------------------------------------------------
+
+// Gira carrusel, Quan es fa click (a la dreta o esquerra)
+let posicioCarrusel = 0;
+const carrusel = document.getElementById("carruselPrincipal");
+let resetTimeout = 0;
+
+function giraCarrusel(deg) {
+  
+  posicioCarrusel += deg; //<= Acumula els degrees de la posició actual amb els que sumem clickant més
+  // Animacións de moviment (els fem .remove cada vegada per no resetegar la posició inicial de la animació CSS, fent-lo dinàmic) =>
+  carrusel.classList.remove("carruselgiraAutomatic", "carruselgiraEsquerra", "carruselgiraDreta"); 
+  carrusel.style.transform = "rotateY(" + posicioCarrusel + "deg)"; // <= modifica la posició en el css
+  clearTimeout(resetTimeout);
+  resetTimeout = setTimeout(retornaGiraAutomatic, 4000); // retorna a girar automaticament després de 4s
+}
+
+// El carrusel retorna a girar de forma automàtica (com estaba originalment, abans de fer click a una fletxa)
+function retornaGiraAutomatic() {
+  carrusel.style.transform = "";
+  carrusel.classList.remove("carruselgiraEsquerra", "carruselgiraDreta");
+  carrusel.classList.add("carruselgiraAutomatic");
+}
+
+
 // ++++++++++++++++++++++++ consumir Cataleg ++++++++++++++++++++++
 
 // +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ 
@@ -62,7 +106,13 @@ function creaCarta(titol, imatge, plataforma, genere, any) {
   // Foto
   const foto = document.createElement("img");
   foto.style.maxWidth = "100%";
+  foto.setAttribute("loading", "lazy");  // Carga de imatges menys prioritaria (Última cosa que es carrega a la página) 
   foto.src = imatge;
+
+  // Enllaç cap a la seva propia pagina d'informació extendida '<a> <img> </a>'  *WIP
+  // 
+  // ---
+  // 
 
   // plataforma
   const body = document.createElement("div");
