@@ -347,6 +347,7 @@ button, select, input{
 #passwordConfirm{
   margin: 0%;
 }
+
 /* -+-+-+-+-+-+-+-+ ALERTES DE VALIDACIÓ (LOGIN / SIGN IN) -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
 .alert{
 width: 12rem;
@@ -383,11 +384,48 @@ button:hover, select:hover, input:hover, input:focus{
   justify-content: space-around;
   width: 55%;
 }
+/* Com es mostra les cartes del CATALEG (API) */
+#taulaCataleg{
+  display: flex; 
+  flex-wrap: wrap;
+}
 /* Per botóns de carrusel */
 .caixaControlCarrusel > i{
   font-size: 2.5rem;
   cursor: pointer;
 }
+.imatgePerfil{
+  width: 5%; 
+  border-radius: 50%;
+}
+
+  /* -+-+-+-+-+-+-+-+ DETALL (detall.html) -+-+-+-+-+-+-+-+ */
+  .contenidorDetalls{
+     display: flex; 
+     width: 100%; 
+     height: 100%;
+  }
+  
+  .imatgeDetall{
+    width: 24%;
+    margin: 1.5%;
+  }
+  
+  .imatgeDetall img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+    border-radius: 1.40%;
+    border: solid var(--color-opcio-navegacio);
+  }
+
+  .dadesDetall{
+    width: 35%;
+    height: 35%;
+    padding: 1%;
+    border: solid var(--color-opcio-navegacio);
+    text-align: left;
+  }
 
   /* -+-+-+-+-+-+-+-+ CARRUSEL (index.html cataleg) -+-+-+-+-+-+-+-+ */
   .caixaCarrusel {

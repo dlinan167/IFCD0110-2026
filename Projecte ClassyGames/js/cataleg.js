@@ -52,14 +52,14 @@ function retornaGiraAutomatic() {
 
 // Cataleg: Videojocs
 
-// const cataleg = "https://randomuser.me/api/?results=30";
-const cataleg = "./data/catalegs.json";
+// const cataleg = "https://randomuser.me/api/?results=30"; (Exemple de direcció amb filtres)
+const API = "./data/catalegs.json";
 const taula = document.getElementById("taulaCataleg");
 
 // Carrega Cataleg
 async function carregaCataleg() {
   try {
-    const resposta = await fetch(cataleg);
+    const resposta = await fetch(API);
     const dades = await resposta.json();
     console.log(dades);   // <= Object { videojocs: (20) […] } videojocs: Array(20) [ {…}, {…}, {…}, … ]
     console.log(dades.videojocs);  // videojocs: Array(20) [ {…}, {…}, {…}, … 
@@ -83,14 +83,14 @@ async function mostrarDades(dades) {
       //recorrem els elements del json cataleg
       dades.videojocs.forEach((element) => {
         console.log(element.titol);
-        // PER CADA UN: Mostra el titol, imatge etc... 
-        taula.appendChild(creaCarta(element.titol, element.imatge, element.plataforma, element.genere, element.any)); // Carta de cada element (funció)
+        // PER CADA UN: Mostra el titol, imatge etc...
+        taula.appendChild(creaCarta(element.titol, element.imatge, element.plataforma, element.genere, element.any, element)); // Carta de cada element (funció)
       });
 }
 
 
 // funció crea carta de joc
-function creaCarta(titol, imatge, plataforma, genere, any) {
+function creaCarta(titol, imatge, plataforma, genere, any, joc) {
   const carta = document.createElement("div");
   // carta.classList.add("card", "border-primary", "mb-3", "shadow");
   carta.classList.add("shadow");
@@ -109,29 +109,33 @@ function creaCarta(titol, imatge, plataforma, genere, any) {
   foto.setAttribute("loading", "lazy");  // Carga de imatges menys prioritaria (Última cosa que es carrega a la página) 
   foto.src = imatge;
 
-  // Enllaç cap a la seva propia pagina d'informació extendida '<a> <img> </a>'  *WIP
-  // 
-  // ---
-  // 
+
+  // ****
+  // Enllaç cap a la seva propia pagina d'informació extendida '<a> <img> </a>'
+  // ****
+  const redireccio = document.createElement("a");
+  redireccio.href = "./detall.html";
+  redireccio.addEventListener("click", () => {
+    sessionStorage.setItem("jocSeleccionat", JSON.stringify(joc));
+  });
+  // ****
 
   // plataforma
   const body = document.createElement("div");
-  // body.classList.add("card-body", "text-primary");
   body.innerHTML ="<b>- Plataforma:</b><br> "+ plataforma;
 
   // genere
   const titolBody = document.createElement("p");
-  // titolBody.classList.add("card-title");
   titolBody.innerHTML ="<b>- Gènere:</b> "+ genere;
 
   // any
   const textBody = document.createElement("p");
-  // textBody.classList.add("card-text");
   textBody.innerHTML ="<b>- Any:</b> "+ any;
 
   // Afegim els elements a la carta
   body.append(titolBody, textBody);
-  carta.append(header, foto);
+  redireccio.append(foto);
+  carta.append(header, redireccio);
   carta.append(header, body);
 
   return carta; //Afegeix carta a la taula
