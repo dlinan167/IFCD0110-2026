@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>// 70 Finestra Modal</title>                        <!-- <= Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- <= Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" />                             <!-- <= CSS 1 -->
+    <script defer src="js/Finestra Modal.js"></script>                                <!-- <= Enllaç del javascript -->
+
+    <!-- BOOTstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- -=+=-  -=> LINK DEL JQuery <=- -=+=- -->
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+</head>
+<body id="body" onload="obrirModal()">
+    <header>
+        <!--  -->
+        <h1>// 70 Finestra Modal</h1>
+    </header>
+        
+    <nav></nav>
+
+    <main>
+    <!--  -->
+    <label for="">Clicka el botó</label>
+    <p>(- Al clickar s'obra una finestra emergent amb els elements que nosaltres programem -)</p>
+    <button id="btnObrir" onclick="obrirModal()">Boto de OBRIR Finestra Modal</button>
+    <p>---</p>
+    <button id="btnTancar" onclick="tancarModal()">Boto de TANCAR Finestra Modal</button>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p>AMB onclick="myDialog.showModal()":</p>
+    <button id="btnObrir" onclick="myDialog.showModal()">Boto de OBRIR Finestra Modal</button>
+    <p>---</p>
+    <p>AMB onclick="myDialog.close()":</p>
+    <button id="btnTancar" onclick="myDialog.close()">Boto de TANCAR Finestra Modal</button>
+
+    <!-- En la etiqueta dialogue que té el estat 'open' (false/true), podem afegir qualsevol cosa dintre -->
+    <dialog id="myDialog">
+        <h3>
+            Aixó es una finestra modal oberta!
+        </h3>
+        <button id="btnTancar" onclick="tancarModal()">Boto de TANCAR Finestra Modal</button>
+    </dialog>
+    
+    <div class="cargant">
+       <h3>Cargant...</h3>
+    </div>
+    </main>
+    <aside></aside>
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>
