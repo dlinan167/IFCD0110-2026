@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>// UF1306-PAC1-1C</title>                        <!-- <= Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- <= Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" />                             <!-- <= CSS 1 -->
+    <script defer src="js/Javascript.js"></script>                                <!-- <= Enllaç del javascript -->
+
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+    <header>
+        <h1>UF1306-PAC1-1C</h1>
+
+    </header>
+    <nav></nav>
+    
+    <main>
+        <div class="caixaBloc">
+
+            <!-- PART 1 -->
+            <h3>PART 1:</h3>  
+            <form action="" method="post">
+            <table>
+                <!-- Edat -->
+                <tr>
+                    <td>
+                        <label for="edat">Edat:</label>
+                    </td>
+                    <td>
+                    <input type="number" name="edat" id="edat" size="3" maxlength="3" max="110" required />
+                </td>
+                <td>
+                    <div id="mEdat" class="alert"></div>
+                </td>
+            </tr> 
+        <!-- Usuari: -->
+                    <tr>
+                        <td>
+                            <label for="username">Usuari:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="Usuari" id="username" required />
+                        </td>
+                        <td>
+                            <div id="mUsername" class="alert"></div>
+                        </td>
+                    </tr>
+                    <!-- Telefón -->
+                    <tr>
+                        <td>
+                            <label for="telefon">Telefón:</label>
+                        </td>
+                        <td>               
+                            <input type="tel" name="telefon" id="telefon" maxlength="12" placeholder="123-123-1234" required />
+                        </td>
+                        <td>
+                            <div id="mTelefon" class="alert"></div>
+                        </td>
+                    </tr>
+                    <!-- Email: -->
+                    <tr>
+                        <td>
+                            <label for="email">Email:</label>
+                        </td>
+                        <td>               
+                            <input type="email" name="Correu" id="email" required>
+                    </td>
+                    <td>
+                        <div id="mEmail" class="alert"></div>
+                    </td>
+                </tr>
+                    <!-- Contrasenya: -->
+                    <tr>
+                        <td>
+                            <label for="password">Contrasenya:</label> <!-- 4.2 => --> <i id="ullContrasenya" class="fa-solid fa-eye"></i>
+                        </td>
+                        <td>               
+                            <input type="password" name="contrasenya" id="password" minlength="8" maxlength="24" required />
+                        </td>
+                        <td>
+                            <div id="mPassword" class="alert"></div>
+                        </td>
+                        <td>
+                            <div id="mFortalesa" class="alert"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="passwordConfirm">Confirma:</label>
+                        </td>
+                        <td>               
+                         <input type="password" name="ConfirmaContrasenya" id="passwordConfirm" minlength="8" maxlength="24" required/>
+                        </td>
+                        <td>
+                            <div id="mPasswordConfirm" class="alert"></div>
+                        </td>
+                    </tr>
+                    <!-- Botóns del formulari: -->
+                    <tr>
+                        <td>
+                            <button id="btnRegistrarUsuari" type="submit">Registrar Usuari</button> 
+                        </td>
+                    </tr>
+                </table>
+                </form>
+
+            <!-- PART 2 -->
+            <h3>PART 2:</h3>  
+            <label for=""><b>Provar finestra modal de Cookies</b></label>
+            <button id="btnObrir" onclick="obrirModal()">OBRIR Finestra de Cookies</button>
+            <p>---</p>
+
+            <!-- Finestra modal (Cookies) -->
+            <dialog id="dialogCookies">
+            <h3>
+                Acepta les Cookies!
+            </h3>
+            <form>
+            <div>
+                    <table>
+                        <tr>
+                            <th>La Cookie</th>
+                            <th>Refusar</th>
+                            <th>Acceptar</th>
+                        </tr>
+                        <tr>
+                            <td>Galeta 1</td>
+                        <td><input type="radio" id="galeta1Refusada" name="galeta1" value="Refusada"></td>
+                        <td><input type="radio" id="galeta1Acceptada" name="galeta1" value="Acceptada"></td>
+                    </tr>
+                    <tr>
+                        <td>Galeta 2</td>
+                        <td><input type="radio" id="galeta2Refusada" name="galeta2" value="Refusada"></td>
+                        <td><input type="radio" id="galeta2Acceptada" name="galeta2" value="Acceptada"></td>
+                    </tr>
+                    <tr>
+                        <td>Galeta 3</td>
+                        <td><input type="radio" id="galeta3Refusada" name="galeta3" value="Refusada"></td>
+                        <td><input type="radio" id="galeta3Acceptada" name="galeta3" value="Acceptada"></td>
+                    </tr>
+                </table>
+            </div>
+            <button type="submit" id="btnSeleccio" onclick="seleccioCookies()">Guardar selecció</button>
+            <button type="submit" id="btnRefusar" onclick="refusarCookies()">Refusar totes</button>
+            <button type="submit" id="btnAceptar" onclick="aceptarCookies()">Aceptar totes</button>
+        </form>
+        </dialog>
+
+            <!-- * RESPOSTA DE PART 3 * PART 3 -->
+            <h3>PART 3:</h3>    
+            <p>Console.log(): Serveix com una forma fàcil de mirar el resultat d'una funció o el valor d'una variable abans del resultat final en pantalla.</p>
+            <p>Utilitzar el depurador del navegador per seguir cada pas de la execució de codi on es troben els errors</p>
+            <p>Verificar la consola a l'hora de modificar codi per tractar els erros que apareixen</p>
+
+        </div>
+
+
+            
+           
+                
+    </main>
+    <aside></aside>
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>

@@ -26,7 +26,6 @@ function obrirModal() {
 function tancarModal() {
     const finestra = document.getElementById("myDialog");
     finestra.close();
-
 }
 
 

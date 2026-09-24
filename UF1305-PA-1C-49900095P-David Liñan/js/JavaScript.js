@@ -1,20 +1,19 @@
 
 
 // +-+-+-+ PART 2:
-// Exemple de carrega
-window.addEventListener("load", function () {
+// Exemple de carrega (Amb setInterval per poder visualitzar l'exemple a la web)
+// 'DOMContentLoaded' Es l'event que salta quan es finalitza de carregar el contingut de tota la página
+window.addEventListener("DOMContentLoaded", function () {
 
   // Finalitza de carregar (Mostra missatge)
   setInterval(() => {
     document.getElementById("demoLoad").innerHTML = "Página cargada";
-  }, 2000);
+  }, 1500);
   
   // Finalitza de carregar (Desapareix)
   setInterval(() => {
     document.getElementById("demoLoad").style.display = "none";
-  }, 3000);
-
-
+  }, 2500);
 
 });
 
