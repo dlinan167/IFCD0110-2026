@@ -471,22 +471,52 @@ button:hover, select:hover, input:hover, input:focus{
 }
 /* Un per cada fill (imatge/figure) del carrusel*/
 .itemCarrusel:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
-.itemCarrusel:nth-child(2) { transform: rotateY(120deg) translateZ(250px); }
-.itemCarrusel:nth-child(3) { transform: rotateY(240deg) translateZ(250px); }
+.itemCarrusel:nth-child(2) { transform: rotateY(90deg) translateZ(250px); }
+.itemCarrusel:nth-child(3) { transform: rotateY(180deg) translateZ(250px); }
+.itemCarrusel:nth-child(4) { transform: rotateY(270deg) translateZ(250px); }
 
 @keyframes giroCarrusel {
   0% { transform: rotateY(0deg); }
-  33% { transform: rotateY(120deg); }
-  66% { transform: rotateY(240deg); }
+  25% { transform: rotateY(90deg); }
+  50% { transform: rotateY(180deg); }
+  75% { transform: rotateY(270deg); }
   100% { transform: rotateY(360deg); }
 }
 @keyframes giroCarruselEsquerra {
-  to { transform: rotateY(120deg); }
+  to { transform: rotateY(90deg); }
 }
 @keyframes giroCarruselDreta {
-  to { transform: rotateY(-120deg); }
+  to { transform: rotateY(-90deg); }
 }
 
+
+
+/* Animació de carrega */
+@keyframes animacioCarrega {
+  0%   {background:#ff0000; left:0px; top:0px;}
+  25%  {background:#ffff00; left:100px; top:0px;}
+  50%  {background:#1b50ff; left:100px; top:100px;}
+  75%  {background:#008000; left:0px; top:100px;}
+  100% {background:#ff0000; left:0px; top:0px;}
+}
+
+.cargant {
+  position: absolute;
+  margin: auto;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 15%;
+  position: relative;
+  background: red;
+  color: #000;
+  animation-name: animacioCarrega;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+#aCargant{
+  margin-bottom: 5rem;
+}
 
 /* ================ RESPONSIVE ================== */
 @media (max-width:800px) {

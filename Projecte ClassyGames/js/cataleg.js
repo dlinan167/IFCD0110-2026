@@ -5,16 +5,28 @@
 // *                                      EVENTS LISTENERS                                        *
 // ************************************************************************************************
 
+// Animació de Carrega
+window.addEventListener("DOMContentLoaded", function () {
+  
+  document.getElementById("aCargant").innerHTML = "Loading...";
+  setInterval(() => {
+    // Finalitza de carregar (Desapareix)
+    document.getElementById("aCargant").style.display = "none";
+  }, 2500);
+
+});
+
+
 // Carrusel (girar a la esquerra)
 const evtcFletxaEsquerra = document.getElementById("cFletxaEsquerra");
 evtcFletxaEsquerra.addEventListener("click", () =>{
-  giraCarrusel(120);
+  giraCarrusel(90);
 });
 
 // Carrusel (girar a la dreta)
 const evtcFletxaDreta = document.getElementById("cFletxaDreta");
 evtcFletxaDreta.addEventListener("click", () =>{
-  giraCarrusel(-120);
+  giraCarrusel(-90);
 });
 
 
