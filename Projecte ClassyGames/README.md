@@ -1,17 +1,57 @@
+# Nom de web: ClassyGames
 
-<!--  -->
+
+## Aquesta és una pàgina de demostració. <br> Mostra el funcionament bàsic d'una pàgina on un usuari es pot registrar/inicia sessió i elegir preferències.
+### ---
+
+#### + Utilitza una API amb .json locals.
+
+#### + Llista les entrades de la API en tarjetes.
+
+#### + Registre / inici de sessió amb usuaris guardats localment i al .json. (Verificació bàsica de camps).
+
+#### + La pàgina principal es mostra com un catàleg de videojocs, quan es fa clic a una miniatura accedim a una pàgina d'informació ampliada del videojoc seleccionat.
+
+#### + L'usuari pot guardar els seus favorits.
+
+#### + L'usuari te opcions de preferència. (Tema, Favorits, idioma, etc...)
+
+#### Tema clar i tema fosc (També guardat com preferència d'usuari).
+
+#### Cerca per categoria.
+
+#### Cerca escrita.
 
 
-<!-- JSON -->
+
+
+
+## Llista de pendents:
 (Utilitzar local o session storage per navegar en diferents pàgines amb l'usuari... esCorrecte = true) 
-(Verificar coses com el dni o el telefon etc... /patrons/)
 (Posar imatges d'usuari (falten))
 (Els usuari han de poder guardar preferències)
-(Redirigir al inici de sessió si es copia un url d'un .html directament sense un usuari vàlid)
 
+- Animación de carga ("DOMContentLoaded" event)
+- Imagenes de resolucion pequeña en el catalogo index.html
+- Pagina 404 (Con imagen y Con boton de volver al index.html)
+- Transition on css del light/dark theme colors
 
-<!-- Cataleg -->
--- Nom de web: ClassyGames
-Agafa solament 1 càtaleg
-(inclou una mini llista de 3 imatges large, medium, small per pantalles de diferents resolucions com tablest o phones)
-(fer una plantilla html (dinàmic) per quan es selecciona un videojoc)
+- boton iniciar sessión/registrarse si no hem iniciat sessió (en index.html i detalls.html)
+- favoritos (sessionStorage i usuari storage)
+- millorar carrusel (enllaços, API) (hover: de cos tarjeta amb valoració)
+- descriptions en detalls.html
+- paginació
+- Entrar a l'usuari i tenir les seves opcións
+- Opcions d'usuari
+- Busqueda por categoria i/o busqueda escrita
+
+<br>
+
+- Complements:
+- htacces/htpasswd para (js/ i css/)
+- Rating stars 1/5 (promedio de todos los usuarios registrados)
+- Diagrama al README.md
+- Multïdioma (cat/esp/eng)
+- contacte.html (Amb iframe de google maps)
+- Responsive (PC 1920x1080)
+##
