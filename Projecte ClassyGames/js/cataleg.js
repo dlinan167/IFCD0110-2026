@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", function () {
 // Carrusel (girar a la esquerra)
 const evtcFletxaEsquerra = document.getElementById("cFletxaEsquerra");
 evtcFletxaEsquerra.addEventListener("click", () =>{
-  giraCarrusel(90);
+  giraCarrusel(90); // <-- Graus que gira el carrusel al fer clic a la fletxa
 });
 
 // Carrusel (girar a la dreta)
