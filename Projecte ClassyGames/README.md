@@ -34,7 +34,7 @@
 - Animación de carga ("DOMContentLoaded" event)
 - Imagenes de resolucion pequeña en el catalogo index.html
 - Pagina 404 (Con imagen y Con boton de volver al index.html)
-- Transition on css del light/dark theme colors
+- Missatge (alerta-correcte) quan es fa login correctament
 
 - boton iniciar sessión/registrarse si no hem iniciat sessió (en index.html i detalls.html)
 - favoritos (sessionStorage i usuari storage)
@@ -53,5 +53,13 @@
 - Diagrama al README.md
 - Multïdioma (cat/esp/eng)
 - contacte.html (Amb iframe de google maps)
-- Responsive (PC 1920x1080)
+- Responsive (PC 1920x1080, 720, 480)
 ##
+
+
+<br>
+
+## Pendents reslitzats:
+
+- Transition on css del light/dark theme colors
+

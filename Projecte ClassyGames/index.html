@@ -12,8 +12,7 @@
 
 
 <body id="body">
-    <!-- Animació de carrega -->
-        <div id="aCargant" class="cargant"></div>
+
     <!-- Header -->
     <header>
 
@@ -53,23 +52,26 @@
         <a href="index.html"><i id="userSettingsIcon" class="fa-solid fa-user-gear"></i></a>
         <label for="">Opcions d'usuari</label>
     </div>
+    
+</header>
+<!-- navMenu -->
+<nav class="shadow">
+    <div id="navMenu">
+    </div>
+</nav>
 
-    </header>
-        <!-- navMenu -->
-        <nav class="shadow">
-            <div id="navMenu">
-            </div>
-        </nav>
-
-    <main>
-        <!-- Contingut Principal (Cataleg)-->
-         <!-- *** CARRUSEL *** -->
-         <h3>Paquet de saga especial:</h3>
-         <h3>Advance Wars</h3>
+<!-- Animació de carrega -->
+<div id="aCargant" class="cargant">Carregant...</div>
+<main id="main">
+    
+    <!-- Contingut Principal (Cataleg)-->
+    <!-- *** CARRUSEL *** -->
+    <h3>Paquet de saga especial:</h3>
+    <h3>Advance Wars</h3>
             <div class="caixaControlCarrusel">
-                 <i class="fa-solid fa-circle-arrow-left" id="cFletxaEsquerra"></i>
-                 <div class="caixaCarrusel">
-                     <div class="carrusel carruselgiraAutomatic" id="carruselPrincipal">
+                <i class="fa-solid fa-circle-arrow-left" id="cFletxaEsquerra"></i>
+                <div class="caixaCarrusel">
+                    <div class="carrusel carruselgiraAutomatic" id="carruselPrincipal">
                         <figure class="itemCarrusel">
                             <img src="https://m.media-amazon.com/images/M/MV5BYjU3MjE3NDUtOGIzOC00NzhkLWJlZjAtYzY5MDA3OGU2YTkzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" name="Advance wars" alt="Portada de Advance wars">
                         </figure>
@@ -82,18 +84,18 @@
                         <figure class="itemCarrusel">
                             <img src="" name="" alt="">
                         </figure>
-                     </div>
-                 </div>
-                 <i class="fa-solid fa-circle-arrow-right" id="cFletxaDreta"></i>
+                    </div>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right" id="cFletxaDreta"></i>
                 </div>
                 <!-- *** CARRUSEL *** -->
-
+                
                 <b>Videojocs classics i moderns</b>
-
+                
                 <!-- *** Llista del CATALEG (.json) **** -->
                 <div id="taulaCataleg"></div>
-            </main>
-
+        </main>
+            
     <aside></aside>
 
     <footer id="footer">

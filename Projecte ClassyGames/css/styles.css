@@ -11,7 +11,7 @@
     --fons-aside: #5f3300;
     --fons-navegacio:#070027ef;
     --fons-menu-nav:#00184bef;
-    --fons-opcio-navegacio:#270024;
+    --fons-opcio-navegacio:#09000f;
     --fons-hover-opcio-navegacio:#1c0e4dd2;
 
     /* Colors: Lletra */
@@ -19,7 +19,7 @@
     --color-opcio-navegacio:#92abf1;
     --color-titol-lletra: #b3d0f5;
     --color-lletra: #000;
-    --color-titol-border: #10031a;
+    --color-normal-border: #10031a;
 
     /* Colors: Icones */
     --color-ombres-icones:#000000bd;
@@ -61,8 +61,9 @@ body{
 header,footer{
   color: var(--color-titol-lletra);
   background: var(--fons-titol);
-  border: 0.15rem var(--color-titol-border) solid;
+  border: 0.15rem var(--color-normal-border) solid;
   font-style: italic;
+  transition: all 0.1s;
 }
 /* +-+-+-+ HEADER +-+-+-+ */
 header{
@@ -96,8 +97,8 @@ header i{
   right: 0%;
   width: 50rem;
   margin-left: 1.5rem;
-  border-left: solid var(--color-titol-border);
-  /* border: solid var(--color-titol-border); */
+  border-left: solid var(--color-normal-border);
+  /* border: solid var(--color-normal-border); */
 }
 
 #themeIcon, #userSettingsIcon{
@@ -137,6 +138,7 @@ main{
   align-items: center;
   background: var(--fons-main);
   color: var(--color-main-lletra);
+  transition: all 0.2s;
 }
 aside{
   grid-area: aside;
@@ -165,12 +167,15 @@ nav{
   align-content: center;
   border: 0.150rem solid;
   padding-top: 1%;
+  border: var( --color-normal-border) solid;
   background: var(--fons-navegacio);
+  transition: all 0.1s;
 }
 #navMenu{ 
   border: #000 solid 0.1rem;
   border-radius: 0.5rem;
   background: var(--fons-menu-nav);
+  transition: all 0.1s;
 }
     
 nav > #navMenu{
@@ -188,7 +193,7 @@ nav > #navMenu{
   margin-top: 0.25rem; 
   margin-bottom: 0.25rem; 
 
-  background: var(--fons-navegacio); 
+  background: var(--fons-opcio-navegacio); 
   color: var(--color-opcio-navegacio); 
 }
 #navMenu li:hover{
@@ -243,17 +248,17 @@ button, select, input{
   --fons-main: #f5efe6;
   --fons-titol: #f0d9c6; 
   --fons-aside: #d9b89a; 
-  --fons-navegacio: #efe4d8;
-  --fons-menu-nav: #f7e8dd;
-  --fons-opcio-navegacio: #d6b294;
+  --fons-navegacio: #eedecc;
+  --fons-menu-nav: #66432c;
+  --fons-opcio-navegacio: #f0c9aa;
   --fons-hover-opcio-navegacio: #dcc2a8;
 
   /* Colors: Lletra (text) */
   --color-main-lletra: #3b2a1a; 
-  --color-opcio-navegacio: #6b4f3a;
+  --color-opcio-navegacio: #3b2a1a;
   --color-titol-lletra: #5a3e2b;
   --color-lletra: #2b1f17;
-  --color-titol-border: #b89a7a;
+  --color-normal-border: #b89a7a;
 
   /* Colors: Icones */
   --color-ombres-icones: #00000026;
@@ -389,10 +394,15 @@ button:hover, select:hover, input:hover, input:focus{
   display: flex; 
   flex-wrap: wrap;
 }
+#taulaCataleg img:hover{
+  transition: all 0.2s;
+  scale: calc(1.035);
+}
 /* Per botóns de carrusel */
 .caixaControlCarrusel > i{
   font-size: 2.5rem;
   cursor: pointer;
+  /* margin: auto; */
 }
 .imatgePerfil{
   width: 5%; 
@@ -509,13 +519,14 @@ button:hover, select:hover, input:hover, input:focus{
   position: relative;
   background: red;
   color: #000;
+  font-size: 1.8rem;
   animation-name: animacioCarrega;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 #aCargant{
-  margin-bottom: 5rem;
+  margin: auto;
 }
 
 /* ================ RESPONSIVE ================== */

@@ -1,19 +1,31 @@
-// catalegs
+// cataleg
 
 
 // ************************************************************************************************
 // *                                      EVENTS LISTENERS                                        *
 // ************************************************************************************************
 
-// Animació de Carrega
-window.addEventListener("DOMContentLoaded", function () {
+
+
+// Animació de Carrega: No es mostra el contingut main fins que acaba de carregar
+
   
-  document.getElementById("aCargant").innerHTML = "Loading...";
+
+document.addEventListener("DOMContentLoaded", function () {
+const main = document.getElementById("main");
+main.hidden = true;
+
+  const aCargant = document.getElementById("aCargant");
+  aCargant.innerHTML = "Carregat!";
+  
+  // Interval per demostració
   setInterval(() => {
     // Finalitza de carregar (Desapareix)
-    document.getElementById("aCargant").style.display = "none";
-  }, 2500);
-
+    aCargant.hidden = true;
+    // Mostra el contingut de main
+    // main.hidden = false;
+  }, 1000);
+  console.log("holllaaaaaaa8");
 });
 
 
@@ -49,7 +61,7 @@ function giraCarrusel(deg) {
   resetTimeout = setTimeout(retornaGiraAutomatic, 4000); // retorna a girar automaticament després de 4s
 }
 
-// El carrusel retorna a girar de forma automàtica (com estaba originalment, abans de fer click a una fletxa)
+// El carrusel retorna a girar de forma automàtica (com estava originalment, abans de fer click a una fletxa)
 function retornaGiraAutomatic() {
   carrusel.style.transform = "";
   carrusel.classList.remove("carruselgiraEsquerra", "carruselgiraDreta");
@@ -79,7 +91,7 @@ async function carregaCataleg() {
     // Aquí va el codi
     mostrarDades(dades);
   } catch (e) {
-    console.error("Error de càrrega",e);
+    console.error("Error de càrrega", e);
   }
 }
 
@@ -118,7 +130,7 @@ function creaCarta(titol, imatge, plataforma, genere, any, joc) {
   // Foto
   const foto = document.createElement("img");
   foto.style.maxWidth = "100%";
-  foto.setAttribute("loading", "lazy");  // Carga de imatges menys prioritaria (Última cosa que es carrega a la página) 
+  foto.loading = "lazy";      // <-- Carga de imatges menys prioritaria (Última cosa que es carrega a la página)
   foto.src = imatge;
 
 
