@@ -7,9 +7,9 @@
 
 
 
-// Animació de Carrega: No es mostra el contingut main fins que acaba de carregar
 
-  
+// WIP *********************************************
+// Animació de Carrega: No es mostra el contingut main fins que acaba de carregar
 
 document.addEventListener("DOMContentLoaded", function () {
 const main = document.getElementById("main");
@@ -25,9 +25,8 @@ main.hidden = true;
     // Mostra el contingut de main
     // main.hidden = false;
   }, 1000);
-  console.log("holllaaaaaaa8");
 });
-
+// ************************************************
 
 // Carrusel (girar a la esquerra)
 const evtcFletxaEsquerra = document.getElementById("cFletxaEsquerra");
@@ -40,6 +39,13 @@ const evtcFletxaDreta = document.getElementById("cFletxaDreta");
 evtcFletxaDreta.addEventListener("click", () =>{
   giraCarrusel(-90);
 });
+
+// Buscar dintre de Cataleg de jocs
+const buscaBarra = document.getElementById("jocBusca");
+buscaBarra.addEventListener("keyup", () =>{
+  buscaCataleg();
+});
+
 
 
 // ****************************************************************************
@@ -99,7 +105,24 @@ carregaCataleg();
 // +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ 
 // +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ 
 
-// ====== AFEGIR I MOSTRAR DADES EN TAULA ======= (// Comentat)
+
+// Buscar dintre de Cataleg de jocs
+function buscaCataleg() {
+    let buscaInput = document.getElementById('jocBusca').value;
+    buscaInput = buscaInput.toLowerCase();
+
+    // Busca i compara el contingut de cada carta i mostra el que inclou el es busca
+    const jocs = taula.querySelectorAll(".jocCarta");
+    for (let i = 0; i < jocs.length; i++) {
+      if (jocs[i].textContent.toLowerCase().includes(buscaInput)) {
+        jocs[i].style.display = "";     // <-- Mostra
+      } else {
+        jocs[i].style.display = "none"; // <-- NO Mostra
+      }
+    }
+}
+
+// ====== AFEGIR I MOSTRAR DADES EN TAULA (En Cartes) ======= (// Comentat)
 
 
 async function mostrarDades(dades) {
@@ -116,6 +139,7 @@ async function mostrarDades(dades) {
 // funció crea carta de joc
 function creaCarta(titol, imatge, plataforma, genere, any, joc) {
   const carta = document.createElement("div");
+  carta.classList.add("jocCarta");
   // carta.classList.add("card", "border-primary", "mb-3", "shadow");
   carta.classList.add("shadow");
   carta.style.margin = "0.35rem";
