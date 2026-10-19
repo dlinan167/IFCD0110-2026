@@ -106,7 +106,7 @@ carregaCataleg();
 // +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ +-+-+-+-+-+-+-+ 
 
 
-// Buscar dintre de Cataleg de jocs
+// Buscar dintre de Cataleg de jocs (Barra de Cerca)
 function buscaCataleg() {
     let buscaInput = document.getElementById('jocBusca').value;
     buscaInput = buscaInput.toLowerCase();
@@ -129,9 +129,9 @@ async function mostrarDades(dades) {
     
       //recorrem els elements del json cataleg
       dades.videojocs.forEach((element) => {
-        console.log(element.titol);
+        // console.log(element.titol);
         // PER CADA UN: Mostra el titol, imatge etc...
-        taula.appendChild(creaCarta(element.titol, element.imatge, element.plataforma, element.genere, element.any, element)); // Carta de cada element (funció)
+        taula.appendChild(creaCarta(element.titol, element.imatge, element.plataforma, element.genere, element.any, element)); // Crea Carta estructurada de cada element (funció)
       });
 }
 
@@ -140,11 +140,11 @@ async function mostrarDades(dades) {
 function creaCarta(titol, imatge, plataforma, genere, any, joc) {
   const carta = document.createElement("div");
   carta.classList.add("jocCarta");
-  // carta.classList.add("card", "border-primary", "mb-3", "shadow");
+  
   carta.classList.add("shadow");
   carta.style.margin = "0.35rem";
   carta.style.maxWidth = "12rem"; // mida de carta
-  carta.style.border = "solid"; // <= Prova WIP (per mirar si carrega)
+  carta.style.border = "solid";
   
   //Nom en la carta
   const header = document.createElement("h4", "card-header");

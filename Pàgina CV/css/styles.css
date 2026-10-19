@@ -1,0 +1,547 @@
+*{
+  font-size: 1rem;
+  margin:0%;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+:root{
+  /* Colors: Fons */
+    --fons-main:#0c0624d2;
+    --fons-titol: #122046;
+    --fons-aside: #5f3300;
+    --fons-navegacio:#070027ef;
+    --fons-menu-nav:#00184bef;
+    --fons-opcio-navegacio:#09000f;
+    --fons-hover-opcio-navegacio:#1c0e4dd2;
+
+    /* Colors: Lletra */
+    --color-main-lletra: #b5c9ff;
+    --color-opcio-navegacio:#92abf1;
+    --color-titol-lletra: #b3d0f5;
+    --color-lletra: #000;
+    --color-normal-border: #10031a;
+
+    /* Colors: Icones */
+    --color-ombres-icones:#000000bd;
+    --color-principal-icones: #0a3ead;
+    /* --color-lluna: #0a3ead;
+    --color-sol: #b4a800; */
+
+    /* Colors: Alertes (missatges)*/
+    --fons-alerta-incorrecte: #330808d7;
+    --color-alerta-incorrecte: #c70909;
+    --border-alerta-incorrecte: #8f0505fa;
+    --fons-alerta-advertencia: #232408f6;
+    --color-alerta-advertencia: #ccbf0e;
+    --border-alerta-advertencia: #bbaa0ef6;
+    --fons-alerta-correcte: #0a2c0ad5;
+    --color-alerta-correcte: #0b9c0b;
+    --border-alerta-correcte: #0c630cf6;
+    
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-size: 1.3rem;
+}
+body{
+    color: #000;
+    display: grid;
+    background: var(--fons-main);
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer  footer footer";
+    min-height: 100vh;
+    grid-template-columns: 10% auto 0.3%;
+    grid-template-rows: 3rem auto 3rem;
+}
+/* ================== ESTRUCTURA GENERAL ======================= */
+
+header,footer{
+  color: var(--color-titol-lletra);
+  background: var(--fons-titol);
+  border: 0.15rem var(--color-normal-border) solid;
+  font-style: italic;
+  transition: all 0.1s;
+}
+/* +-+-+-+ HEADER +-+-+-+ */
+header{
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  top: 0%;
+}
+h1{
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: var(--color-titol-lletra);
+  text-shadow: 2px 2px 4px #000000b4;
+}
+header figure{
+  background: whitesmoke;
+  border-radius: 1.5rem;
+  width: 2.7%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+header i{
+  font-size: 2.1rem;
+}
+.headerBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  right: 0%;
+  width: 50rem;
+  margin-left: 1.5rem;
+  border-left: solid var(--color-normal-border);
+  /* border: solid var(--color-normal-border); */
+}
+
+#themeIcon, #userSettingsIcon{
+  cursor: pointer;
+  transition: all 0.2s;
+  border: solid 0.05rem;
+  border-radius: 20%;
+  background: var(--fons-navegacio);
+  padding: 0.5%;
+  display: flex;
+  justify-content: center;
+}
+#themeIcon:hover, #userSettingsIcon:hover{
+scale: calc(1.08);
+}
+/* +-+-+-+ +-+-+-+ */
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  grid-area: footer;
+  width: 100%;
+  bottom: 0%;
+  opacity: 95%;
+  z-index: 5;
+  min-height: 3rem;
+  max-height: 3rem;
+}
+
+main{
+
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1%;
+  align-items: center;
+  background: var(--fons-main);
+  color: var(--color-main-lletra);
+  transition: all 0.2s;
+}
+aside{
+  grid-area: aside;
+  border: 0.150rem solid;
+  align-content: center;
+  background: var(--fons-aside);
+}
+/* .fila{
+  display: flex;
+  width: 80%;
+  padding: 1%;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+.shadow{
+  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #0000009f;
+}
+
+.alert{
+  scale: calc(0.9);
+  transition: all 0.5s;
+}
+/* ==================== MENU de NAV ======================= */
+nav{
+  grid-area: nav;
+  align-content: center;
+  border: 0.150rem solid;
+  padding-top: 1%;
+  border: var( --color-normal-border) solid;
+  background: var(--fons-navegacio);
+  transition: all 0.1s;
+}
+#navMenu{ 
+  border: #000 solid 0.1rem;
+  border-radius: 0.5rem;
+  background: var(--fons-menu-nav);
+  transition: all 0.1s;
+}
+    
+nav > #navMenu{
+    position: fixed;
+    top: 8%;
+}
+
+#navMenu li{
+  min-width: 8.8rem; 
+  max-width: 8.8rem; 
+  height: 3rem; 
+  text-align: center; 
+  align-content: center; 
+  font-size: 1.2rem;
+  margin-top: 0.25rem; 
+  margin-bottom: 0.25rem; 
+
+  background: var(--fons-opcio-navegacio); 
+  color: var(--color-opcio-navegacio); 
+}
+#navMenu li:hover{
+  border: 0.1rem solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: var(--fons-hover-opcio-navegacio);
+  /*Aumenta el tamany al fer hover en transició*/
+  transform: scale(1.05); 
+  transition: all 0.15s ease;
+}
+
+#navMenu > ul{
+  list-style-type: none;
+  padding-left: 0%;
+}
+/* Enllaços */
+a{
+  font-weight: bold;   
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* ==================== ICONS de NAV ======================= */
+
+#navMenu li:hover > i{
+  transform: rotateY(-360deg); /*Rota la icona*/
+  transition: all 0.3s ease;
+}
+#navMenu i{
+  padding: 1rem;
+  color: var(--color-principal-icones);
+  text-shadow: 1.5px 2px var(--color-ombres-icones);
+}
+
+/* ==================== LINKS OPCIÓ  NAV ======================= */
+#navMenu li:active {
+  background: rgb(255, 166, 0);
+}
+
+/* -+-+-+-+-+-+-+-+ TEMA CLAR / TEMA FOSC -+-+-+-+-+-+-+-+-+-*/
+button, select, input{
+   color: #ebebeb;
+    background: #1d1d2c;
+    border-radius: 0.15rem;
+  }
+
+/* (Dark mode per defecte /En root:/) */
+/* Colors: Paleta light mode */
+.light{
+  /* Colors: Fons */
+  --fons-main: #f5efe6;
+  --fons-titol: #f0d9c6; 
+  --fons-aside: #d9b89a; 
+  --fons-navegacio: #eedecc;
+  --fons-menu-nav: #66432c;
+  --fons-opcio-navegacio: #f0c9aa;
+  --fons-hover-opcio-navegacio: #dcc2a8;
+
+  /* Colors: Lletra (text) */
+  --color-main-lletra: #3b2a1a; 
+  --color-opcio-navegacio: #3b2a1a;
+  --color-titol-lletra: #5a3e2b;
+  --color-lletra: #2b1f17;
+  --color-normal-border: #b89a7a;
+
+  /* Colors: Icones */
+  --color-ombres-icones: #00000026;
+  --color-principal-icones: #8b5e3c;
+
+  button, select, input{
+    color: #22221a;
+    background: #ffffff;
+    border: 1px solid #d2c9b5;
+    border-radius: 0.15rem;
+    }
+}
+
+
+/* -+-+-+-+-+-+-+-+ LOGIN -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+.caixaLogin{
+  display: block;
+  position: relative;
+  left: -5%;
+  height: 29rem;
+  width: 26rem;
+  background-color: var(--fons-navegacio);
+  border: solid var(--color-opcio-navegacio);
+  color: var(--color-opcio-navegacio);
+}
+.caixaLogin h2{
+  background: #000;
+  font-size: 1.5rem;
+}
+/* Logo de login => */
+.caixaLogin > div{
+  background: #000;
+  margin-bottom: 1%;
+}
+.caixaLogin > div > i{
+  font-size: 800%;
+  margin-left: -5rem;
+  position: relative;
+  left: 10%;
+}
+/* <= */
+
+.caixaLogin table{
+  margin: 0.8%;
+}
+
+.caixaLogin label, .caixaLogin input{
+  font-size: 1.5rem;
+  margin-top: 8.5%;
+  margin-bottom: 8.5%;
+}
+
+/* -+-+-+-+-+-+-+-+ SignIn -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+
+.caixaSignIn{
+  display: block;
+  position: relative;
+  left: -5%;
+  height: 32.5rem;
+  width: 40rem;
+  background-color: var(--fons-navegacio);
+  border: solid var(--color-opcio-navegacio);
+  color: var(--color-opcio-navegacio);
+}
+.caixaSignIn h2{
+  background: #000;
+  font-size: 1.5rem;
+}
+/* Logo de SignIn => */
+.caixaSignIn > div{
+  background: #000;
+  margin-bottom: 1%;
+}
+.caixaSignIn > div > i{
+  font-size: 800%;
+  margin-left: -3rem;
+  position: relative;
+  left: 10%;
+}
+/* <= */
+
+.caixaSignIn table td{
+  margin: 0.8%;
+}
+
+.caixaSignIn label, .caixaSignIn input{
+  font-size: 1.25rem;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+#passwordConfirm{
+  margin: 0%;
+}
+
+/* -+-+-+-+-+-+-+-+ ALERTES DE VALIDACIÓ (LOGIN / SIGN IN) -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+.alert{
+width: 12rem;
+}
+.alert-danger{
+  background: var(--fons-alerta-incorrecte);
+  color: var(--color-alerta-incorrecte);
+  border: solid var(--border-alerta-incorrecte);
+}
+.alert-warning{
+  background: var(--fons-alerta-advertencia);
+  color: var(--color-alerta-advertencia);
+  border: solid var(--border-alerta-advertencia);
+}
+.alert-success{
+  background: var(--fons-alerta-correcte);
+  color: var(--color-alerta-correcte);
+  border: solid var(--border-alerta-correcte);
+}
+
+
+/* -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+/* EXTRA DETAILS -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+button:hover, select:hover, input:hover, input:focus{
+  scale: calc(1.05);
+  transition: all 0.1s;
+  }
+
+  
+.caixaControlCarrusel{
+  display: flex;
+  padding: 1%;
+  align-items: end;
+  justify-content: space-around;
+  width: 55%;
+}
+/* Com es mostra les cartes del CATALEG (API) */
+#taulaCataleg{
+  display: flex; 
+  flex-wrap: wrap;
+}
+#taulaCataleg img:hover{
+  transition: all 0.2s;
+  scale: calc(1.035);
+}
+/* Per botóns de carrusel */
+.caixaControlCarrusel > i{
+  font-size: 2.5rem;
+  cursor: pointer;
+  /* margin: auto; */
+}
+.imatgePerfil{
+  width: 5%; 
+  border-radius: 50%;
+}
+
+  /* -+-+-+-+-+-+-+-+ DETALL (detall.html) -+-+-+-+-+-+-+-+ */
+  .contenidorDetalls{
+     display: flex; 
+     width: 100%; 
+     height: 100%;
+  }
+  
+  .imatgeDetall{
+    width: 24%;
+    margin: 1.5%;
+  }
+  
+  .imatgeDetall img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+    border-radius: 1.40%;
+    border: solid var(--color-opcio-navegacio);
+  }
+
+  .dadesDetall{
+    width: 35%;
+    height: 35%;
+    padding: 1%;
+    border: solid var(--color-opcio-navegacio);
+    text-align: left;
+  }
+
+  /* -+-+-+-+-+-+-+-+ CARRUSEL (index.html cataleg) -+-+-+-+-+-+-+-+ */
+  .caixaCarrusel {
+    width: 22rem;
+    height: 18rem;
+    position: relative;
+    border: solid;
+    border-radius: 1%;
+    perspective: 1200px;
+  }
+  .carrusel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    /* Animació automàtica lenta (rotant les imatges) => */
+    transform-style: preserve-3d;
+    transition: all 2s;
+  }
+  .carruselgiraAutomatic{
+    animation: giroCarrusel 30s infinite ease;
+  }
+  /* Girar al clickar botó */
+  .carruselgiraEsquerra{
+    animation: giroCarruselEsquerra 3s;
+  }
+  .carruselgiraDreta{
+    animation: giroCarruselDreta 3s;
+  }
+
+  .itemCarrusel {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border: solid;
+  border-radius: 2%;
+}
+.itemCarrusel > img{
+  width: 100%;
+  height: 100%;
+}
+/* Un per cada fill (imatge/figure) del carrusel*/
+.itemCarrusel:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
+.itemCarrusel:nth-child(2) { transform: rotateY(90deg) translateZ(250px); }
+.itemCarrusel:nth-child(3) { transform: rotateY(180deg) translateZ(250px); }
+.itemCarrusel:nth-child(4) { transform: rotateY(270deg) translateZ(250px); }
+
+@keyframes giroCarrusel {
+  0% { transform: rotateY(0deg); }
+  25% { transform: rotateY(90deg); }
+  50% { transform: rotateY(180deg); }
+  75% { transform: rotateY(270deg); }
+  100% { transform: rotateY(360deg); }
+}
+@keyframes giroCarruselEsquerra {
+  to { transform: rotateY(90deg); }
+}
+@keyframes giroCarruselDreta {
+  to { transform: rotateY(-90deg); }
+}
+
+
+
+/* Animació de carrega */
+@keyframes animacioCarrega {
+  0%   {background:#ff0000; left:0px; top:0px;}
+  25%  {background:#ffff00; left:100px; top:0px;}
+  50%  {background:#1b50ff; left:100px; top:100px;}
+  75%  {background:#008000; left:0px; top:100px;}
+  100% {background:#ff0000; left:0px; top:0px;}
+}
+
+.cargant {
+  position: absolute;
+  margin: auto;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 15%;
+  position: relative;
+  background: red;
+  color: #000;
+  font-size: 1.8rem;
+  animation-name: animacioCarrega;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+#aCargant{
+  margin: auto;
+}
+
+/* ================ RESPONSIVE ================== */
+@media (max-width:800px) {
+    body > nav{
+        position: static;
+    }
+    body{
+      display: block;
+    }
+}
+@media (max-width:925px) {
+    .caixaLogin input, .caixaLogin label, i, .alert, .caixaSignIn input, .caixaSignIn label{
+
+      font-size: 95%;
+    }
+    .caixaLogin, .caixaSignIn{width: 21rem;}
+}
