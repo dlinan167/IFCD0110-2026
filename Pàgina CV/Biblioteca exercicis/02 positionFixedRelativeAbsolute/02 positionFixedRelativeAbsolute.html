@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 positionFixedRelativeAbsolute</title>
+
+    <style>
+        .caixa{
+            height: 150px;
+            width: 200px;
+            background-color: green;
+            
+        }
+        .caixaFixa{
+            top: 220px;
+            height: 50px;
+            width: 100px;
+            position: fixed;
+        }
+         .caixaRelativa{
+            left: 200px;
+            top: -763px;
+            position: relative;
+        }
+         .caixaAbsoluta{
+            left: 450px;
+            top: 220px;
+            width: 200px;
+            height: 350px;
+            position: absolute;
+        }
+        .rodona{
+            position: absolute;
+            background-color: purple;
+            height: 40px;
+            width: 40px;
+            top: 60px;
+            left: 60px;
+            border-radius: 50%;
+        }
+        .caixaLlarga{
+            background-color: red;
+            height: 900px;
+            width: 100px;
+            border-radius: 2%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1>Exercici sobre la propietat <span style="color: red;">position</span></h1>
+    </header>
+
+    <main>
+        <p><b>Fixed:</b> posició fixa en un punt de la pantalla (fixa en scroll, sempre queda a la mateixa posició)</p>
+        <p><b>Relative:</b> la posició d'element és relativa a l'anterior item (és a dir, dins d'un altre)</p>
+        <p><b>Absolute:</b> la posició d'element és absoluta respecte el seu pare</p>
+        <p><b>Static:</b> la posició per defecte</p>
+
+        <div class="caixaLlarga"></div>
+        <div class="caixa caixaFixa">Fixed</div>
+        <div class="caixa caixaRelativa">Relative</div>
+        <div class="caixa caixaAbsoluta">Absolute
+
+            <div class="rodona"></div>
+            
+        </div>
+
+    </main>
+
+    <footer></footer>
+</body>
+</html>
