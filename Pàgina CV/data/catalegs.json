@@ -1,7 +1,7 @@
 {
   "bibliotecaPagines": [
     {"id": 1, "titol": "01 positionBlock", "descripcio": "Prova del position:block", "linkPagina": "Biblioteca exercicis/01 positionBlock/01 positionBlock.html", "any": 2026, "imatge": "./img/01 positionBlock.png"},
-    {"id": 2, "titol": "02 positionFixedRelativeAbsolutet", "descripcio": "PC / PS4 / Xbox", "linkPagina": "Pàgina CV/Biblioteca exercicis/02 positionFixedRelativeAbsolute/02 positionFixedRelativeAbsolute.html", "any": 2026, "imatge": "./img/02 positionFixedRelativeAbsolute.png"},
+    {"id": 2, "titol": "02 positionFixedRelativeAbsolutet", "descripcio": "PC / PS4 / Xbox", "linkPagina": "Biblioteca exercicis/02 positionFixedRelativeAbsolute/02 positionFixedRelativeAbsolute.html", "any": 2026, "imatge": "./img/02 positionFixedRelativeAbsolute.png"},
     {"id": 3, "titol": "Elden Ring", "descripcio": "PC / PS5 / Xbox", "linkPagina": "Acció RPG", "any": 2022, "imatge": "https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg"},
     {"id": 4, "titol": "Hollow Knight", "descripcio": "Multidescripcio", "linkPagina": "Metroidvania", "any": 2017, "imatge": "https://upload.wikimedia.org/wikipedia/en/d/de/Hollow_Knight_2026_cover_art.jpg"},
     {"id": 5, "titol": "God of War Ragnarök", "descripcio": "PS4 / PS5 / PC", "linkPagina": "Acció", "any": 2022, "imatge": "https://static.wikia.nocookie.net/godofwar/images/2/29/GODRagnarokCover1.jpg/revision/latest?cb=20210909222903"},
