@@ -154,13 +154,9 @@ aside{
   flex-wrap: wrap;
 } */
 .shadow{
-  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #0000009f;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #0000009f;
 }
 
-.alert{
-  scale: calc(0.9);
-  transition: all 0.5s;
-}
 /* ==================== MENU de NAV ======================= */
 nav{
   grid-area: nav;
@@ -355,7 +351,9 @@ button, select, input{
 
 /* -+-+-+-+-+-+-+-+ ALERTES DE VALIDACIÓ (LOGIN / SIGN IN) -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
 .alert{
-width: 12rem;
+  width: 12rem;
+  scale: calc(0.9);
+  transition: all 0.5s;
 }
 .alert-danger{
   background: var(--fons-alerta-incorrecte);
@@ -395,8 +393,10 @@ button:hover, select:hover, input:hover, input:focus{
   flex-wrap: wrap;
 }
 #taulaCataleg img:hover{
-  transition: all 0.2s;
-  scale: calc(1.035);
+  transition: all 0.3s;
+  scale: calc(1.75);
+  transform: translateY(-1.825rem);
+  border: var(--color-normal-border) solid;
 }
 /* Per botóns de carrusel */
 .caixaControlCarrusel > i{

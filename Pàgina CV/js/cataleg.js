@@ -144,7 +144,9 @@ function creaCarta(titol, imatge, descripcio, linkPagina, any, pagina) {
   carta.classList.add("shadow");
   carta.style.margin = "0.35rem";
   carta.style.maxWidth = "19rem"; // mida de carta (width)
-  carta.style.maxHeight = "15rem"; // mida de carta (height)
+  carta.style.minWidth = "19rem"; // mida de carta (width)
+  carta.style.maxHeight = "20rem"; // mida de carta (height)
+  carta.style.minHeight = "15rem"; // mida de carta (height)
   carta.style.border = "solid";
   
   //Nom en la carta
@@ -155,7 +157,9 @@ function creaCarta(titol, imatge, descripcio, linkPagina, any, pagina) {
 
   // Foto
   const foto = document.createElement("img");
+  foto.classList.add("shadow");  // <-- Agrega sombra a la imatge (Notable al fer :hover)
   foto.style.maxWidth = "100%";
+  foto.style.height = "60%";
   foto.loading = "lazy";      // <-- Carga de imatges menys prioritaria (Última cosa que es carrega a la página)
   foto.src = imatge;
 
@@ -165,13 +169,15 @@ function creaCarta(titol, imatge, descripcio, linkPagina, any, pagina) {
   // ****
   const redireccio = document.createElement("a");
   redireccio.href = linkPagina;
-  redireccio.addEventListener("click", () => {
-    sessionStorage.setItem("paginaSeleccionada", JSON.stringify(pagina));
-  });
+  redireccio.target = "_blank";
+  // redireccio.addEventListener("click", () => {
+  //   sessionStorage.setItem("paginaSeleccionada", JSON.stringify(pagina));
+  // });
   // ****
 
   // descripcio
   const body = document.createElement("div");
+  body.style.margin = "0.5rem";
   body.innerHTML = descripcio;
 
 

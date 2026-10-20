@@ -148,6 +148,7 @@ function creaCarta(titol, imatge, plataforma, genere, any, joc) {
   
   //Nom en la carta
   const header = document.createElement("h4", "card-header");
+  header.style.textDecoration = "underline";
   header.innerText = titol; 
 
 
