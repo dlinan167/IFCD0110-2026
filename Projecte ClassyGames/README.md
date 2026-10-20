@@ -34,16 +34,15 @@
 - Animación de carga ("DOMContentLoaded" event)
 - Imagenes de resolucion pequeña en el catalogo index.html
 - Pagina 404 (Con imagen y Con boton de volver al index.html)
-- Missatge (alerta-correcte) quan es fa login correctament
+- Missatge/notificació (alerta-correcte) quan es fa login correctament
 
 - boton iniciar sessión/registrarse si no hem iniciat sessió (en index.html i detalls.html)
 - favoritos (sessionStorage i usuari storage)
 - millorar carrusel (enllaços, API) (hover: de cos tarjeta amb valoració)
 - descriptions en detalls.html
-- paginació
 - Entrar a l'usuari i tenir les seves opcións
 - Opcions d'usuari
-- Busqueda por categoria i/o busqueda escrita
+- Busqueda por categoria 
 
 <br>
 
@@ -62,4 +61,5 @@
 ## Pendents reslitzats:
 
 - Transition on css del light/dark theme colors
+- Busqueda escrita
 

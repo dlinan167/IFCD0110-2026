@@ -143,11 +143,13 @@ function creaCarta(titol, imatge, descripcio, linkPagina, any, pagina) {
   
   carta.classList.add("shadow");
   carta.style.margin = "0.35rem";
-  carta.style.maxWidth = "12rem"; // mida de carta
+  carta.style.maxWidth = "19rem"; // mida de carta (width)
+  carta.style.maxHeight = "15rem"; // mida de carta (height)
   carta.style.border = "solid";
   
   //Nom en la carta
   const header = document.createElement("h4", "card-header");
+  header.style.textDecoration = "underline";
   header.innerText = titol; 
 
 
@@ -170,7 +172,7 @@ function creaCarta(titol, imatge, descripcio, linkPagina, any, pagina) {
 
   // descripcio
   const body = document.createElement("div");
-  body.innerHTML ="<b>- Descripció:</b><br> "+ descripcio;
+  body.innerHTML = descripcio;
 
 
   // any
