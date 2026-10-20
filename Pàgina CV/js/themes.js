@@ -1,36 +1,36 @@
 // -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ TEMA CLAR / TEMA FOSC (toggle) -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 
 window.addEventListener("load", function(){ // Quan carrega la pàgina/finestra canvia al tema guardat anteriorment
-    const temaGuardat = localStorage.temaFosc;
+    const temaGuardat = localStorage.temaClar;
     canviarTema(temaGuardat);
 });
 
-// Seleccionar el temaFosc (toggle)
+// Seleccionar el temaClar (toggle)
 const icona = document.getElementById("themeIcon");
 icona.addEventListener("click", function(){
-    const temaFosc = icona.classList.contains("fa-moon"); //Si la icona es del tema dark = true
-    canviarTema(temaFosc);
+    const temaClar = icona.classList.contains("fa-sun"); //Si la icona es del tema light = true
+    canviarTema(temaClar);
 }); 
 
-// Canvi de temaFosc  (per defecte el tema es fosc/dark)
+// Canvi de temaClar  (per defecte el tema es clar/light)
 const bodyColor = document.getElementById("body");
-function canviarTema(temaFosc) {
+function canviarTema(temaClar) {
 
-    if (temaFosc === false) {
-        bodyColor.classList.remove("dark");    // <= Quita tema 'light' a la pàgina
-        bodyColor.classList.add("light");        // <= Posa tema 'dark' a la pàgina
-        icona.classList.remove("fa-sun");      // <= Intercanvia la forma del icona d'un sol a una luna
-        icona.classList.add("fa-moon");
-        localStorage.setItem("temaFosc", temaFosc); // <= Guarda l'estat tema 'light' (false)
-        // TEMA ACTUAL: LIGHT
-        // console.log(temaFosc) //check (false)
-    } else {
-        bodyColor.classList.remove("light");
-        bodyColor.classList.add("dark");
-        icona.classList.remove("fa-moon");
+    if (temaClar === false) {
+        bodyColor.classList.remove("light");    // <= Quita tema 'dark' a la pàgina
+        bodyColor.classList.add("dark");        // <= Posa tema 'light' a la pàgina
+        icona.classList.remove("fa-moon");      // <= Intercanvia la forma del icona d'un sol a una luna
         icona.classList.add("fa-sun");
-        localStorage.setItem("temaFosc", temaFosc); // <= Guarda l'estat 'dark' (true)
+        localStorage.setItem("temaClar", temaClar); // <= Guarda l'estat tema 'light' (false)
         // TEMA ACTUAL: DARK
-        // console.log(temaFosc) //check (true)
+        // console.log(temaClar) //check (false)
+    } else {
+        bodyColor.classList.remove("dark");
+        bodyColor.classList.add("light");
+        icona.classList.remove("fa-sun");
+        icona.classList.add("fa-moon");
+        localStorage.setItem("temaClar", temaClar); // <= Guarda l'estat 'light' (true)
+        // TEMA ACTUAL: LIGHT
+        // console.log(temaClar) //check (true)
     } 
 }
