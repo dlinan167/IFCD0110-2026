@@ -80,8 +80,9 @@ function validaCamp(id, idMissatge, patro) {
 // VALIDA PATRO PASSWORD/CONTRASENYA
 // Validació d'un patro mes complexe en petites parts (amb missatges personalitzats)
 function validarClauDePas() {
-  const camp = document.getElementById("password").value;
-  const mAlert = document.getElementById("mPassword");
+  const camp = document.getElementById("password").value;   // <-- Camp de contrasenya
+  const mAlert = document.getElementById("mPassword");      // <-- Missatge de validació del patro contrasenya
+  const mFortalesa = document.getElementById("mFortalesa"); // <-- Missatge alerta fortalesa
 
   if (camp.length < 8) {
     mAlert.innerHTML = "Menys de 8 caracters - Falten:" + (8 - camp.length); // <= MIDEIX EL LLARG DE LA PASSWORD, i el mostra
@@ -95,7 +96,32 @@ function validarClauDePas() {
   if (!camp.match(/[^a-z0-9]+/i)) {
     mAlert.innerHTML += "<br>Falta una símbol";
   }
+  
+  // Indicar fortalesa de contrasenya (WIP, provisional millorable)
+  if (camp.match(/\d/) && camp.match(/[A-Z]/) && camp.match(/[a-z]/) && camp.match(/[^a-z0-9]+/i)) {
+    clauForta = true
+  }
+  
+  if (!camp.match(/\d/) || !camp.match(/[A-Z]/) || !camp.match(/[a-z]/) || !camp.match(/[^a-z0-9]+/i)) {
+    mFortalesa.innerHTML = "Clau fluixa";
+    mFortalesa.classList.add("alert-danger");
+    mFortalesa.classList.remove("alert-success");
+  }else if (clauForta && camp.length >= 6 && camp.length <= 9) {
+    mFortalesa.innerHTML = "Clau vulnerable";
+    mFortalesa.classList.add("alert-warning");
+    mFortalesa.classList.remove("alert-success");
+  }else if (clauForta && camp.length > 9 && camp.length <= 12) {
+    mFortalesa.innerHTML = "Clau forta";
+    mFortalesa.classList.add("alert-success");
+  }else if (clauForta && camp.length > 12 && camp.length <= 15) {
+    mFortalesa.innerHTML = "Clau molt forta";
+    mFortalesa.classList.add("alert-success");
+  }else if (clauForta && camp.length > 15 && camp.length <= 18) {
+    mFortalesa.innerHTML = "Clau super forta!";
+    mFortalesa.classList.add("alert-success");
+  }
 }
+
 // VALIDA LA REPETICIÓ DE LA CONTRASENYA
 function validaClauConfirmacio() {
   const password = document.getElementById("password").value; // <= input password
