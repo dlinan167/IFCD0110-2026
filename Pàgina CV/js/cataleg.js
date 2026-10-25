@@ -115,7 +115,7 @@ async function mostrarDades(dades) {
 
 
 // funció crea carta de element
-function creaCarta(titol, imatge, descripcio, linkPagina, any, pagina) {
+function creaCarta(titol, imatge, descripcio, linkPagina, any) {
   const carta = document.createElement("div");
   carta.classList.add("paginaCarta");
   

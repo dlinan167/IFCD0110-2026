@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="./css/12 Capçalera amb logo.css"/> <!-- <<< Enllaç a arxiu d'estils <<< -->
+
+    <title>Pagina_de_pràctica</title>
+    <style>
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: seagreen;
+            border: 3px solid goldenrod;
+            padding: 1%;
+        }
+        footer{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: center;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .div-MainArticles{
+
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+        }
+        .div-ImageArticle{
+
+            display: flex;
+            flex-direction: column;
+
+
+            text-align: center;
+            margin: 0.8%;
+            background-color: cornflowerblue;
+            border: 2px solid violet;
+
+
+
+        }
+        img{
+            margin: 1%;
+            width: 90%;
+            height: 80%;
+            border: 2px dashed;
+        }
+        .logo{
+            width: 15%;
+            
+        }
+
+        /* Format Taules */
+        td:hover{
+            background-color: #96D4D4;
+
+        }
+  
+        table{
+            background-color: crimson;
+            text-align: center;
+
+        }
+        tr, td{
+        padding: 1%;
+        }
+        /*  */
+
+        
+        /* Caixeta Missatge que apareix en els dies del caledari al fer :hover (EXPERIMENTAL!)*/
+        .tooltip-text {
+            bottom: 100%; /* Cambia el valor según sea necesario */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip-text {
+          visibility: hidden;
+          width: 120px;
+          background-color: #000;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%; /* Posiciona el tooltip encima del elemento */
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: opacity 0.3s;
+         }
+         
+         .tooltip-container:hover .tooltip-text {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        /* <<< EXPERIMENTAL! */
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <img class="logo" src="https://torrellesdefoix.cat/wp-content/uploads/2016/04/foix_09.jpg"/>
+
+        <div> <h2> Santuari de la Mare de Déu de Foix</h2> </div>
+
+        <nav>  <!-- > Menu de navegació < -->
+            <ul>
+                <li> <a href="./12 home.html"> Home </a> </li>
+                <li> <a href="./12 historia.html"> Historia </a> </li>
+                <li> <a href="./12 calendari.html"> Calendari </a> </li>
+            </ul>
+        </nav> <!---->
+    </header>
+    
+    
+    <main>
+
+        <div class="div-MainArticles"> <!-- >>> Secció d'articles en main START >>> -->
+
+            <div class="div-ImageArticle">
+
+                <h3>~= Foto ARTICLE 1 =~</h3>
+                <a href="" target="_blank">
+                    <img src="https://www.poblesdecatalunya.cat/fotos/normal/112602.jpeg"/>
+                </a>
+                <p>Dels cavallers ha bastat aterrar les forces dels. Trobant-se lo virtuós Comte en edat avançada de. Anell sancer e ab la meitat de les armes de. Sua breu partida la qual ho pres ab molta impaciència. Que no era decorat d'honor de milícia sinó lo. La molta amor que li portava; la feminil condició promptament. Tan alt greu excel·leix lo militar estament que deuria. Egregi poeta Homero ha recitat les batalles dels grecs. Fets e compilats de gestes e. Lo dessús dit girà's a.</p>
+
+            </div>
+
+            <div class="div-ImageArticle">
+                <h3>~= Foto ARTICLE 2 =~</h3>
+                <a href="" target="_blank">
+                    <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2020/03/19/5fa8fdc2db5b4.jpeg"/>
+                </a>
+                <p>Dels cavallers ha bastat aterrar les forces dels. Trobant-se lo virtuós Comte en edat avançada de. Anell sancer e ab la meitat de les armes de. Sua breu partida la qual ho pres ab molta impaciència. Que no era decorat d'honor de milícia sinó lo. La molta amor que li portava; la feminil condició promptament. Tan alt greu excel·leix lo militar estament que deuria. Egregi poeta Homero ha recitat les batalles dels grecs. Fets e compilats de gestes e. Lo dessús dit girà's a.</p>
+
+            </div>
+
+            <div class="div-ImageArticle">
+                <h3>~= Foto ARTICLE 3 =~</h3>
+                <a href="" target="_blank">
+                    <img src="https://www.poblesdecatalunya.cat/fotos/normal/037808.jpeg"/>
+                </a>
+                <p>Dels cavallers ha bastat aterrar les forces dels. Trobant-se lo virtuós Comte en edat avançada de. Anell sancer e ab la meitat de les armes de. Sua breu partida la qual ho pres ab molta impaciència. Que no era decorat d'honor de milícia sinó lo. La molta amor que li portava; la feminil condició promptament. Tan alt greu excel·leix lo militar estament que deuria. Egregi poeta Homero ha recitat les batalles dels grecs. Fets e compilats de gestes e. Lo dessús dit girà's a.</p>
+
+            </div>
+
+            <div class="div-ImageArticle">
+                <h3>~= Foto ARTICLE 4 =~</h3>
+                <a href="" target="_blank">
+                    <img src="https://bisbatsantfeliu.cat/wp-content/uploads/2019/08/parroquia-santa-maria-de-foix-el-terme-torrelles-de-foix-2.jpg"/>
+                </a>
+                <p>Dels cavallers ha bastat aterrar les forces dels. Trobant-se lo virtuós Comte en edat avançada de. Anell sancer e ab la meitat de les armes de. Sua breu partida la qual ho pres ab molta impaciència. Que no era decorat d'honor de milícia sinó lo. La molta amor que li portava; la feminil condició promptament. Tan alt greu excel·leix lo militar estament que deuria. Egregi poeta Homero ha recitat les batalles dels grecs. Fets e compilats de gestes e. Lo dessús dit girà's a.</p>
+            </div>
+
+        </div>  <!-- <<< Secció d'articles en main END <<< -->
+            
+        
+        <h2>Clicka al home per saber-ne més!</h2>
+
+        <div class="div-MainArticles">  <!-- >>> Secció de la imatge mapegada en main START >>> -->
+            <img src="https://badocaires.cat/wp-content/uploads/2022/04/i281756464720571051._szw1280h1280_.jpg" alt="" usemap="#mapaHomeClickable"/>
+            <map name="mapaHomeClickable">
+                <area shape="circle" coords="250, 520, 120" alt="Home" title="Fes click aquí!" href="https://badocaires.cat/santuari-de-foix/" target="_blank"/> <!-- <<< Area del home <<< -->
+            </map>
+        </div> <!-- <<< Secció de la imatge mapegada en main END <<< -->       
+
+
+
+
+        <h1>Taula d'horaris</h1>
+        <caption>Dilluns i Dimarts sense servei </caption> <!-- Títol de la taula <<< -->
+         <!-- Taula START >>> -->
+         <!-- table>tr*5>td*7 -->
+         <table style="border-collapse: separate; width: 30%;">
+             
+             <!-- Tootip: missatge hover del... calendari >>> EXPERIMENTAL!-->
+             <div class="tooltip-container" style="background-color: greenyellow;">
+                 <span class="tooltip-text">RESERVAR AQUEST DIA?</span>
+                 <h2> (Hover EXPERIMENTAL!) </h3> 
+            </div>  
+             <!-- <<< EXPERIMENTAL! -->
+
+     
+                <colgroup> <!-- <<< Colors de les columnes >>>-->
+                    <col span="2" style="background-color: red;" title="SENSE SERVEI"/>
+                    <col span="3" style="background-color: wheat;"/>
+                    <col span="2" style="background-color: green;" title="PACK DE CAP DE SETMANA"/>
+                </colgroup>
+
+
+            <tr>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th colspan="2">SAT AND SUN PACK</th>
+                <th></th>
+            </tr>
+            <tr>
+
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+            </tr>
+            
+         </table>
+          <!-- Taula END <<< -->
+
+        
+    </main>
+    
+
+    <footer>
+         
+        <iframe style="margin: 0.8%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6629.525054078414!2d1.5638419491805167!3d41.41447756296246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a472614e2df51f%3A0x58b1c6f751d664fb!2sSantuari%20de%20la%20Mare%20de%20D%C3%A9u%20de%20Foix!5e1!3m2!1ses!2ses!4v1776248184581!5m2!1ses!2ses" width="35%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+            <li>Mes informació</li>
+            <li>Contacte</li>
+            >>> Desenvolupat per David
+
+    </footer>
+
+</body>
+</html>

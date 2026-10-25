@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Inserció de Frames dins d'una pagina</title>
+    <style>
+
+    </style>
+</head>
+
+<!-- <body> -->         <!-- <<< Frameset subtitueix el body -->
+
+
+
+
+    <frameset rows="20%,*,20%">     <!-- >>> Marc set amb capçalera i peu START >>> -->
+        <frame src="10 Marc1(Capçalera).html"></frame>
+
+        <frameset cols="30%,*">
+
+            <frame src="10 Marc3(Menu).html"></frame>
+            <frame src="10 Main_per_defecte(contingut).html" name="contingut_menuMain"></frame> <!-- <<< fram amb el contingut que cambiem amb el menú -->
+
+        </frameset>
+
+        <frame src="10 Marc2(Peu).html"></frame> 
+    </frameset>      <!-- <<< Marc set amb capçalera i peu END <<< -->
+    
+<!-- </body> -->
+</html>
