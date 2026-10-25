@@ -14,8 +14,11 @@ const dadesDetall = document.querySelector(".dadesDetall");
   imatgeDetall.append(foto);
   
   // Info del Joc
-  dadesDetall.innerHTML = "<h2>" + joc.titol + "</h2>" +
+  dadesDetall.innerHTML = "<h2>" + joc.titol + "</h2><br>" +
   "<p><b>- Plataforma:</b> " + joc.plataforma + "</p>" +
   "<p><b>- Gènere:</b> " + joc.genere + "</p>" +
-  "<p><b>- Any:</b> " + joc.any + "</p>";
-  
+  "<p><b>- Any:</b> " + joc.any + "</p>"+
+  "<br>"+
+  "<p>- <a href='"+joc.wikiLink+"'>Visitar wiki del joc</a></p>"+
+  "<br>"+
+  "<div><p>" + joc.wiki + "</p></div>";

@@ -414,7 +414,7 @@ button:hover, select:hover, input:hover, input:focus{
   }
   
   .imatgeDetall{
-    width: 24%;
+    width: 25%;
     margin: 1.5%;
   }
   
@@ -427,11 +427,25 @@ button:hover, select:hover, input:hover, input:focus{
   }
 
   .dadesDetall{
-    width: 35%;
-    height: 35%;
+    min-width: 45%;
+    max-width: 60%;
+    min-height: 65%;
+    max-height: 75%;
     padding: 1%;
+    flex-wrap: wrap;
+    overflow: auto;
     border: solid var(--color-opcio-navegacio);
     text-align: left;
+  }
+  .dadesDetall a{
+    text-decoration: underline;
+  }
+  .dadesDetall > h2{
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--color-opcio-navegacio);
+    background: var(--fons-opcio-navegacio);
+    border: solid var(--color-opcio-navegacio);
   }
 
   /* -+-+-+-+-+-+-+-+ CARRUSEL (index.html cataleg) -+-+-+-+-+-+-+-+ */
@@ -518,12 +532,11 @@ button:hover, select:hover, input:hover, input:focus{
 }
 
 .cargant {
-  position: absolute;
+  position: relative;
   margin: auto;
   width: 7rem;
   height: 3rem;
   border-radius: 15%;
-  position: relative;
   background: red;
   color: #000;
   font-size: 1.8rem;

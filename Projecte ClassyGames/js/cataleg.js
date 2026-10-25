@@ -8,26 +8,6 @@
 
 
 
-// WIP *********************************************
-// Animació de Carrega: No es mostra el contingut main fins que acaba de carregar
-
-document.addEventListener("DOMContentLoaded", function () {
-const main = document.getElementById("main");
-main.hidden = true;
-
-  const aCargant = document.getElementById("aCargant");
-  aCargant.innerHTML = "Carregat!";
-  
-  // Interval per demostració
-  setInterval(() => {
-    // Finalitza de carregar (Desapareix)
-    aCargant.hidden = true;
-    // Mostra el contingut de main
-    // main.hidden = false;
-  }, 1000);
-});
-// ************************************************
-
 // Carrusel (girar a la esquerra)
 const evtcFletxaEsquerra = document.getElementById("cFletxaEsquerra");
 evtcFletxaEsquerra.addEventListener("click", () =>{
@@ -143,7 +123,7 @@ function creaCarta(titol, imatge, plataforma, genere, any, joc) {
   
   carta.classList.add("shadow");
   carta.style.margin = "0.35rem";
-  carta.style.maxWidth = "12rem"; // mida de carta
+  carta.style.width = "12rem"; // mida de carta
   carta.style.border = "solid";
   
   //Nom en la carta
@@ -154,7 +134,7 @@ function creaCarta(titol, imatge, plataforma, genere, any, joc) {
 
   // Foto
   const foto = document.createElement("img");
-  foto.style.maxWidth = "100%";
+  foto.style.width = "100%";
   foto.loading = "lazy";      // <-- Carga de imatges menys prioritaria (Última cosa que es carrega a la página)
   foto.src = imatge;
 

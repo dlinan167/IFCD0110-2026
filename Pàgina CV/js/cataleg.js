@@ -6,28 +6,6 @@
 // ************************************************************************************************
 
 
-
-
-// WIP *********************************************
-// Animació de Carrega: No es mostra el contingut main fins que acaba de carregar
-
-document.addEventListener("DOMContentLoaded", function () {
-const main = document.getElementById("main");
-main.hidden = true;
-
-  const aCargant = document.getElementById("aCargant");
-  aCargant.innerHTML = "Carregat!";
-  
-  // Interval per demostració
-  setInterval(() => {
-    // Finalitza de carregar (Desapareix)
-    aCargant.hidden = true;
-    // Mostra el contingut de main
-    // main.hidden = false;
-  }, 1000);
-});
-// ************************************************
-
 // Carrusel (girar a la esquerra)
 const evtcFletxaEsquerra = document.getElementById("cFletxaEsquerra");
 evtcFletxaEsquerra.addEventListener("click", () =>{

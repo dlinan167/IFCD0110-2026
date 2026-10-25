@@ -174,7 +174,7 @@ nav{
   transition: all 0.1s;
 }
     
-nav > #navMenu{
+#navMenu{
     position: fixed;
     top: 8%;
 }
