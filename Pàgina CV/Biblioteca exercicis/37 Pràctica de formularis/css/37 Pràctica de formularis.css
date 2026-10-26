@@ -1,0 +1,195 @@
+/* --------------- VARIABLES ------------------ */
+:root{
+  --color-principal-icones: brown;
+  --color-ombres-icones: black;
+  --color-titols: rgb(238, 234, 172);
+}
+/* ---------------- !!!!!! ---------------------- */
+
+html{
+  font-size: 62.5%; /*equival a 10 px*/
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0%;
+  font-size: 1.8rem; /*Multipliquem per 2 (20px)*/
+}
+h1{
+  font-size: 2.6rem;
+}
+h2{
+  font-size: 2.3rem;
+}
+/* --------Propietats comuns de header i footer-------- */
+/* ================== ESTRUCTURA GENERAL ======================= */
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: var(--color-titols);
+  width: 100%;
+  position: fixed;
+}
+
+header {
+  border-bottom: 5px solid rgb(128, 0, 128);
+  z-index: 10;
+  top: 0%;
+}
+
+footer {
+  /* menys opacitat */
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  bottom: 0%;
+}
+main{
+  border-radius: 3rem;
+  border: 0.350rem solid;
+  width: 70%;
+  background-color: aquamarine;
+  padding: 1%;
+}
+aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: cadetblue;
+  width: 15%;
+  position: relative;
+  align-items: center;
+}
+nav{
+  
+  background-color: rgba(0, 255, 170, 0.952);
+  border-radius: 1.5rem;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+}
+ul{
+  list-style-type: none;
+  padding: 0.5rem;
+}
+.div-Contenidor{
+  display: flex;
+  margin-top: 3.6rem;
+
+}
+.fila{
+  display: flex;
+  padding: 1%;
+  border-bottom: 0.225rem solid rgb(0, 0, 0);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==================== MENU de NAV ======================= */
+nav ul{
+  top: 5rem;
+  position: sticky;
+  text-align: center;
+  border: 0.2rem dashed;
+}
+nav li{ margin-top: 1.5rem; padding: 1rem; width: 10.5em; background-color: bisque;}
+nav li:hover{
+  background-color: burlywood;
+  cursor: pointer;
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease; /*Fa transició*/
+}
+/* ==================== LINKS OPCIÓ  NAV ======================= */
+a{font-weight: bold;}
+nav a:link {
+  color: rgb(185, 0, 202);
+  text-decoration: none;
+}
+nav a:visited{
+  color: rgba(0, 161, 22, 0.938);
+}
+nav li:hover a{
+  font-size: 2.5rem;
+}
+nav li:active {
+  background-color: rgb(255, 166, 0);
+}
+/* ==================== ICONES ======================= */
+li:hover > i{
+  transform: rotateY(-360deg); /*Rota la icona*/
+  transition: all 0.3s ease;
+}
+
+i{
+  padding: 1rem;
+  color: var(--color-principal-icones); /*Apliquem el color amb la variable*/
+  text-shadow: 1.5px 2px var(--color-ombres-icones);
+}
+
+
+/* =========== IMATGES I BANNERS ============= */
+figure{
+  object-fit: contain;
+  width: 90%;
+  height: fit-content;
+  padding: 0.2%;
+  border: 0.150rem solid black;
+}
+.div-registre figure{
+  width: 100%;
+  border: 0;
+  padding: 0%;
+}
+aside > figure{
+margin-top: 3.5rem;
+margin-left: 1rem;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========== FORMULARI ============= */
+
+form label{
+  margin-right: 1%;
+  margin-left: 1%;
+}
+#registre_usuari input, label, b{
+  font-size: 1.3em;
+}
+.div-registre{
+  min-width: 30%;
+  border: 0.4rem brown solid;
+  width: min-content;
+}
+button{
+  cursor: pointer;
+  margin: 0.3rem;
+  background-color: rgb(39, 167, 14);
+  border-radius: 1rem;
+  border: 0.250rem solid;
+}
+button:hover{
+  background-color: rgb(172, 202, 0);
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease;
+}
+/* ============================= RESPONSIVE !====================================== */
+@media(max-width: 700px) {
+  aside{
+    display: none;
+  }
+  main{
+    width: 100%;
+  }
+}
+
+
+@media(max-width: 1875px){
+  nav li{
+    width: 86%;
+  }
+}

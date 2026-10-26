@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>46 Parametres</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/46 Parametres.css" /> <!-- < < < CSS 1 -->
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <!-- FONT ENLLAÇADA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="img/imatge_pera.png" alt="Icona de Pera">
+        </figure>
+        <h1>Parametres</h1>
+        <figure>
+            <img src="img/imatge_pera.png" alt="Icona de Pera">
+        </figure>
+    </header>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house"></i> Home</li>
+            <li>Opció 1</li>
+            <li>Opció 2</li>
+            <li>Opció 3</li>
+        </ul>
+    </nav>
+    <!-- 36. Tema -->
+    <main>
+        <div class="missatge-confirmacio">    
+                <div>
+                    TRASPASSAREM LES DADES DELS FORMS A ALTRES PAGINES PER MOSTRAR!
+                    <br>
+                    <br>
+                    <form action="./46 Paremetres_2_(mostra_dades).html" method="get" target="_blank">
+                        <!-- NOM. -->
+                        <label for="NOM"><b>Nom:</b></label>
+                        <input type="text" placeholder="Entra el teu nom" name="NOM" id="NOM" pattern="[A-Za-z]{2,20}" minlength="2" required/>
+                        <!-- 38. Rating valoració en una escala de l’1 al 5. -->
+                        <br><br>
+                        <h2>Dona la teva valoració!</h2>
+                        <input tabindex="2" type="range" id="VALORACIO" name="VALORACIO" min="1" max="5" value="5" style="width: 16rem; z-index: 5;"/>
+                        <table class="table-rating">
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                    </table>
+                    <button tabindex="3" type="submit" id="btnSubmit">ENVIAR VALORACIÓ</button>
+                    <br>
+                </div>
+            </form>
+                
+                <figure>
+                    <img src="https://images.icon-icons.com/1280/PNG/512/1497618989-3_85123.png" alt="Icona gran hotel">
+                </figure>
+            </div>
+    </main>
+                    
+    <aside>BANNERS</aside>
+    <footer>
+        <ul>
+            <li>Direcció: Carrer de Ponent, 11, 17310 Lloret de Mar, Girona  </li>
+            <li>tel: 123 36 42 21</li>
+        </ul>
+        
+    </footer>
+</body>
+</html>

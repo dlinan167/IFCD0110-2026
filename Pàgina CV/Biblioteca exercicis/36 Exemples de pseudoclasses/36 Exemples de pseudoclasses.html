@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- <<< Responsive -->
+    <title>36 Exemples de pseudoclasses</title>
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"> <!-- Icon -->
+    <link rel="stylesheet" href="./css/36 Exemples de pseudoclasses.css"> <!-- Primer CSS -->
+</head>
+<body>
+
+    <header>
+        <h1>36 Exemples de pseudoclasses!</h1>
+    </header>
+
+    <div class="div-Contenidor">
+        <main>
+            <!-- --------------- Primera Fila d'apartat (flex) ---------------------- -->
+            <div class="fila">
+                <!-- Example 1 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:link / :visited / :active / :hover</h4> 
+                        (Per Estats dels links)
+                    </div>
+                    <div class="contingut-exemple">Exemple Enllaços:
+                        <p><a href="#a" target="_blank">:link</a> Fons taronja</p>
+                        <p><a href="#b" target="_blank">:visited</a> Fons verd</p>
+                        <p><a href="#c" target="_blank">:active</a> Fons blau</p>
+                        <p><a href="#d" target="_blank">:hover</a> Fons groc</p>
+
+                    </div>
+                </div>
+                 <!-- Example 2 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:first-child / :last-child</h4>
+                         (Per Primer o últim fill)
+                        </div>
+                    <div class="contingut-exemple first-Last-child"> Exemple:
+                        <p>Soc el primer paràgraf (first-child)</p>
+                        <p>Soc el segon paràgraf</p>
+                        <p>Soc el tercer paràgraf</p>
+                        <p>Soc el quart paràgraf (last-child)</p>
+                    </div>
+                </div>
+                 <!-- Example 3 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:nth-child(odd / even /n)</h4>
+                         (Per Fill. Par o impar /cada x numero)
+                        </div>
+                    <div class="contingut-exemple nth-child-exemple">Exemple:
+                        <p>1 child (odd)</p>
+                        <p>2 child (even)</p>
+                        <p>3 child (odd)</p>
+                        <p>4 child (even)</p>
+                        <p>5 child (odd)</p>
+                    </div>
+                </div>
+                 <!-- Example 4 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:nth-child(2) / :nth-last-child(2)</h4> 
+                        (Desde de adalt i abaix)
+                    </div>
+                    <div class="contingut-exemple nth-LastChild-exemple">Exemple:
+                        <p>1 child (odd)</p>
+                        <p>2 child (even)</p>
+                        <p>3 child (odd)</p>
+                        <p>4 child (even)</p>
+                        <p>5 child (odd)</p>
+                    </div>
+                </div>
+                 <!-- Example 5 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:first-of-type / :last-of-type</h4> 
+                        (Per Primer i darrer tipus)
+                    </div>
+                    <div class="contingut-exemple of-type-example">Exemple:
+                        <div>1 child (div)[first-type de 'div']</div>
+                        <div>2 child (div)</div>
+                        <p>3 child (p)[first-type de 'p']</p>
+                        <div>4 child (div)[last-type de 'div']</div>
+                        <p>5 child (p) [last-type de 'p']</p>
+                    </div>
+                </div>
+                 <!-- Example 6 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:only-child</h4>  
+                        (Per Fill únic)
+                    </div>
+                    <div class="contingut-exemple only-child-exemple">Exemple:
+                        <ul> LLista 1
+                            <li>1 Child (L1)</li>
+                            <li>2 Child (L1)</li>
+                        </ul>
+                        <ul> Llista 2
+                            <li>2 Child (L2)</li>
+                        </ul>
+                        <ul> Llista 3
+                            <li>1 Child (L3)</li>
+                        </ul>
+                    </div>
+                </div>
+                 <!-- Example 7 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:only-of-type</h4>
+                        (Per tipus únic)
+                    </div>
+                    <div class="contingut-exemple  only-of-type-exemple">Exemple:
+                        <p>Paragraf</p>
+                        <p>Paragraf</p>
+                        <div>div</div>
+                        <h4>h4</h4>
+                        <b>bold</b>
+                        <h4>h4</h4>
+                    </div>
+                </div>
+                <!-- Example 8 -->
+                <div class="targeta">
+                    <div class="titol-targeta">
+                        <h4>:empty</h4>
+                        (Caixa buida)
+                    </div>
+                    <div class="contingut-exemple  empty-exemple" style="display: flex;">Exemple:
+                        <div class="empty-caixa">1A</div>
+                        <div class="empty-caixa">2B</div>
+                        <div class="empty-caixa"></div>
+                        <div class="empty-caixa">4D</div>
+                    </div>
+                </div>
+                <!-- Example 9 -->
+               <div class="targeta">
+                   <div class="titol-targeta">
+                       <h4>:lang()</h4>
+                       (Per idioma [lang="CA"])
+                   </div>
+                   <div class="contingut-exemple  language-example">Exemple:
+                       <p lang="IT">Italià</p>
+                       <p lang="CA">Català</p>
+                       <p lang="CA">Català</p>
+                       <p lang="ES">Espanyol</p>
+                       <p lang="IT">Italià</p>
+                   </div>
+               </div>
+            </div>
+            <!-- --------------- Segunda Fila d'apartat (flex) ---------------------- -->
+            <div class="fila">
+
+            </div>
+        </main>
+    </div>
+    
+    <footer>Desenvolupat per David</footer>  
+</body>
+</html>

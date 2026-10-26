@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="./css/19 Capçalera amb logo.css"/> <!-- Enllaç a arxiu d'estils-->
+
+    <title>19 Pràctica botons i inputs (+test formulari)</title>
+    <link rel="icon" type="image/x-icon" href="../img/imatge_pera.png"> <!-- <<< Icono per la pestanya <<<-->
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid;
+
+        
+        width: 100%;
+        font-size: large;
+        text-align: center;
+        padding: 0.5%;
+      }
+
+      aside {
+        
+        background-color: burlywood;
+        width: 15%;
+      }
+      .div-Contenidor {
+        display: flex;
+      }
+      body {
+        margin: 0; /* <-- Sense el borde blanc per defecte en la pagina */
+      }
+      li:hover{
+        background-color: aqua;
+        color: blue;
+    }
+    li{
+        background-color: brown;
+        border-radius: 5%;
+         margin: 1%;
+        color: wheat;
+        
+    }
+    ul{
+
+        list-style-type: none;
+        padding: 0%;
+        text-align: center;
+        
+    }
+    button{
+        
+        background-color: darkcyan;
+        border-radius: 5px;
+        padding: 2%;
+    }
+    form{
+        border: 5px solid darkolivegreen;
+        padding: 1%;
+        background-color: antiquewhite;
+    }
+
+    a{text-decoration: none;}
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <img src="https://stickerize.in/wp-content/uploads/2025/04/linuxpenguin.png" width="10%"/>
+
+        <h1> Pràctica botons i inputs </h1>
+
+        <div> </div>
+
+    </header>
+    
+    
+    <div class="div-Contenidor"> 
+
+        <aside>
+            <nav>
+                Menú
+                <ul>
+                    <a href="#" target="_blank"><li>Outlook </li></a>
+                    <a href="#" target="_blank"><li>Google</li></a>
+                    <a href="#" target="_blank"><li>Yahoo</li></a>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main>
+            <button onclick="alert('Bon dia amic meu')"> <!-- <<< Ens obre una finestra d'alerta(missatge) al fer click //-->
+                Fes click!
+            </button>
+
+            <button disabled> boton deshabilitat en un primer moment</button>
+
+
+            <h2>Més button types:</h2>
+            <!-- <<< Formulari START <<< -->
+            <form action="./06 ExerciciDisplayFlex_Plantilla.html">  <!-- <<< Formulari que al enviar(submit) ens portara a la pagina "./prova.html", enviant les dades dels inputs -->
+
+                <button type="button"> Botó normal (button)</button>
+                <button type="submit"> Envia formulari (submit)</button>
+                <button type="reset"> Nateja formulari (reset)</button>
+
+                <br><br>
+                <!-- INPUTS FORMULARI >>> -->
+                <!-- Nom: -->
+                <label for="fnom">Nom:</label>
+                
+                <input type="text" name="nom" id="fnom" placeholder="Tu nombre aquí!"/> <!-- <<< "placeholder" ens posa un text fantasma, com un valor de exemple-->
+                
+                <!-- Cognom: -->
+                <label for="fcognom">Cognom:</label>
+                
+                <input type="text" name="cognom" id="fcognom" placeholder="Tu apellido aquí!"/>
+                <!-- <<< -->
+
+                <!--tipus test (radio)(explusiu) START >>> -->
+                <hr>
+                <h2>Radio button</h2>
+                
+                <h3> (Per tipo test): </h3>
+                <!--Pregunta 1-->
+                <h3>Quina es la teva fruita preferida?</h3>
+
+                <label for="rPomes">Opció 1, Pomes: </label>
+                <input type="radio" id="rPomes" name="fruita"/>
+                <br><br>
+
+                <label for="rPeres">Opció 2, Peres: </label>
+                <input type="radio" id="rPeres" name="fruita"/>
+                <br><br>
+                
+                <label for="rTaronges">Opció 3, Taronges: </label>
+                <input type="radio" id="rTaronges" name="fruita"/>
+                <br><br>
+
+                
+                <!--Pregunta 2--> 
+                <h3>Quin es el teu sexe?</h3>
+                <label for="rMascle">Mascle </label>
+                <input type="radio" id="rMacle" name="sexe" value="Mascle"/>
+
+                <label for="rFemella">Femella </label>
+                <input type="radio" id="rFemella" name="sexe" value="Femella"/>
+
+                <!-- tipus test (radio) END <<< -->
+                
+                <!-- Checkbox (complementari) START >>> -->
+                <hr>
+                <h2>Checkbox</h2>
+                <h3>Estils musicals que m'agrades</h3>
+
+                <label for="cReggaeton">Reggaeton</label>
+                <input type="checkbox" id="cReggaeton" name="musica" value="Reggaeton"/>
+                
+                <label for="cRock">Rock</label>
+                <input type="checkbox" id="cRock" name="musica" value="Rock"/>
+                
+                <label for="cSimfònic">Simfònic</label>
+                <input type="checkbox" id="cSimfònic" name="musica" value="Simfònic"/>
+                
+                <!-- Checkbox (complementari) END >>> -->
+                 
+                <!-- Password -->
+                <hr>
+                <h2>PASSWORD</h2>
+                <label for="UserName">Usuari:</label>
+                <input type="text" name="usuari" id="UserName"/>
+                <br>
+                <label for="UserPassword">Contrasenya:</label>
+                <input type="password" name="contrasenya" id="UserPassword"/>
+
+
+                <!-- Input COLOR-->
+                <hr>
+                <h2>Input COLOR</h2>
+                <label for="fcolor">Tria el color que més t'agradi:</label>
+                <input type="color" name="color" id="fcolor"/>
+
+                <!-- DATA -->
+                <hr>
+                <h2>Input tipus DATE</h2>
+                <label for="fbirthdate">Ingressa la data de naixement:</label>
+                <br>
+                <input type="date" name="birthdate" id="fbirthdate"/>
+
+                <!-- EMAIL -->
+                <hr>
+                <h2>Input tipus EMAIL</h2>
+                <label for="idcorreu">Ingressa el teu correu personal inventat:</label>
+                <br>
+                <input type="email" name="correu" id="idcorreu" placeholder="hola@gmail.com"/>
+                <button type="submit"> Envia correu</button> <!--  (Envia tot el formulari també!) -->
+
+                <!-- IMAGE -->
+                <hr>
+                <h2>Input tipus IMAGE</h2>
+                <p> (Botó submit pero en una imatge) </p>
+                <input type="image" src="./img/imatge_pera.png"/>
+
+                <!-- FILE -->
+                <hr>
+                <h2>Input tipus FILE</h2>
+                <input type="file" name="myfile" id="myfile" accept=".pdf"/> <!-- <<< Amb "accept" definim el tipus d'arxiu que podem aceptar (que prioritza) <<< -->
+           
+                <!-- HIDDEN -->
+                <hr>
+                <h2>Input tipus HIDDEN</h2> <!--Fica un input que el usuari no veu, com un "identificador (id)" per facilitar gestions en el backend-->
+                <h2>(mira en el source code (F12), te que ser "ID: 2984")</h2> 
+                <label for="textAmagat">Tipus amagat</label>
+                <br>
+                <input type="text" id="amagat" name="hiddenAmagat" value="?(valor amagat)" />
+                <input type="hidden" name="amagat" id="textAmagat" value="ID: 2984">
+
+                <!-- MONTH -->
+                <hr>
+                <h2>Input tipus MONTH (mes)</h2>
+                <label for="IDmes">Ingressa el mes del teu aniversari</label>
+                <p>(Firefox pot ser incompatible)</p>
+                <br>
+                <input type="month" name="mes" id="IDmes">
+
+                <!-- WEEK -->
+                <hr>
+                <h2>Input tipus WEEK (setmana)</h2>
+                <label for="IDweek">Ingressa la setmana:</label>
+                <br>
+                <input type="week" name="week" id="IDweek">
+
+                <!-- NUMBER -->
+                <hr>
+                <h2>Input tipus NUMBER</h2>
+                <label for="IDnumber">Quants anys tens?</label>
+
+                <input type="number" name="numero" id="IDnumber" min="1" max="120"/>
+
+                <!-- RANGE -->
+                <hr>
+                <h2>Input tipus RANGE</h2>
+                <label for="IDrange">Gradua el volum</label>
+
+                <input type="range" name="rango" id="IDrange" min="0" max="100" value="10" step="5"/> <!-- "step" el valor que pujara o baixara de una --><!-- 'value' valor per defecte -->
+
+                <!-- SEARCH -->
+                <hr>
+                <h2>Input tipus SEARCH</h2>
+                <label for="IDcerca">Busca alguna cosa</label>
+                <br>
+                <input type="search" name="cerca" id="IDcerca" placeholder="Cerca..." spellcheck="true"/>
+
+                <!-- TEL -->
+                <hr>
+                <h2>Input tipus TEL (telephone)</h2>
+                <label for="IDtelefon">El teu telèfon</label>
+                <br>
+                <input type="tel" name="telefon" id="IDtelefon" placeholder="111-222-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/> <!-- "pattern" obliga en aquest cas un rang del 0 al 9 "[0-9]" en 3 dígits "{3}"-->
+                
+                <!-- TIME -->
+                <hr>
+                <h2>Input tipus TIME</h2>
+                <label for="IDtime"></label>
+                <br>
+                <input type="time" name="hora" id="IDtime"/>
+                
+                <!-- HTML -->
+                <hr>
+                <h2>Input tipus URL</h2>
+                <label for="IDurl"></label>
+                <br>
+                <input type="url" name="hora" id="IDurl" placeholder="https://www.google.com/"/>
+           
+
+                  <!-- Etiqueta SELECT -->
+                <hr>
+                <h2>Etiqueta SELECT</h2>
+                <select name="cars" id="IDcars">
+
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+            </form>
+            <!-- Formulari END <<< -->
+                
+        </main>
+    </div>
+        
+    
+    
+    
+
+
+    <footer>
+        Desenvolupat per David
+    </footer>
+    
+</body>
+
+</html>

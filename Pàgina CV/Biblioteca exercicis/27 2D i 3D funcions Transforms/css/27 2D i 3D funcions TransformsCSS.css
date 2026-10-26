@@ -1,0 +1,194 @@
+/* *{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+* {
+  margin: 0%;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: rgb(238, 234, 172);
+  /* text-align: center; */
+  width: 100%;
+}
+header {
+  /* Borders redondegats */
+  border-bottom: 5px solid rgb(128, 0, 128);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  position: fixed;
+  z-index: 10;
+  top: 0%;
+}
+
+footer {
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: fixed;
+
+  bottom: 0%;
+}
+
+.menu-nav {
+  background-color: rgb(172, 255, 47);
+  border: 2px solid;
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.principal-Main {
+  background-color: rgb(100, 149, 237);
+  left: 12%;
+  position: relative;
+  padding: 1%;
+  width: 83%;
+  
+  display: flex;
+  justify-content: center;
+
+}
+
+.seccio {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 1%;
+  margin-top: 1%;
+  background-color: rgb(255, 188, 106);
+
+  padding: 0.5rem;
+}
+
+section{
+  border: 1px solid;
+  width: 7.5rem;
+  height: 7.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+  /* img{
+    width: 75%;
+    height: 75%;
+  } */
+
+span {
+  /* color: red; */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/*  */
+/* li:hover {
+  background-color: rgb(0, 255, 255);
+  color: rgb(0, 0, 255);
+  border-radius: 1rem;
+} */
+a:link {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+li:active {
+  background-color: rgb(255, 166, 0);
+}
+/*  */
+
+main {
+  top: 3.5rem; /*< < < Podem utilitzar "rem" com a mida relativa*/
+  border-radius: 2%;
+}
+
+nav {
+  top: 3.7rem;
+}
+hr{
+   margin: 3%;
+}
+span {
+  /* < < < "span" per destacar un troç del text*/
+  /* color: red; */
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.div-Contenedor{
+    border: 0.4rem solid;
+    width: 90%;
+    text-align: center;
+}
+
+ul, ol, .llista{
+  
+  padding: 0%;
+
+  border: 2px solid;
+  border-radius: 1rem;
+  margin: 1%;
+}
+ul li, .llista .item{ /* < < < Tots els decendents del ul que son li tenen aquest css (ul [space] li)  */
+  list-style-type: none;
+  padding: 0%;
+}
+
+/* SUBMENUS DE SUBMENUS */
+li:hover{
+  cursor: pointer;
+}
+
+.fila-imatges{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.caixa-foto{
+  border: 0.125rem solid purple;
+  display: flex;
+  flex-direction: column;
+  width: 12%;
+
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+/* TRANSFORMS: > > > */
+.translate:hover {
+  transform: translate(100px, 30px); /* moves the element 50px along the x-axis, and 20px along the y-axis */
+}
+.rotate:hover {
+  transform: rotate(45deg);
+}
+.scaleX:hover {
+  transform: scaleX(1.5);
+}
+.skew:hover{
+  transform: skew(15deg, 15deg);
+}
+.matrix:hover {
+  transform: matrix(1, 0, 0.5, 1, 50, 50);
+}
+
+.rotateX:hover {
+  transform: rotateX(55deg);
+}
+.rotateY:hover {
+  transform: rotateY(55deg);
+}
+.rotateZ:hover {
+  transform: rotateZ(55deg); 
+}

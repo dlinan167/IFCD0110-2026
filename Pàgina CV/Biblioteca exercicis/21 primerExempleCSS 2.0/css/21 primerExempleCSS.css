@@ -1,0 +1,71 @@
+*{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+header, footer {
+  background-color: rgb(252, 229, 194);
+  color: rgb(0, 112, 0);
+  /* text-align: center; */
+  width: 100%;
+
+}
+footer{
+    position: fixed;
+    bottom: 0%;
+}
+
+.menu-cotxes, .menu-fruites {
+  background-color: greenyellow;
+  border: 2px solid;
+  height: 200px;
+  width: 15%;
+  position: fixed;
+  border-radius: 15px;
+}
+
+.principal-Main {
+  background-color: cornflowerblue;
+  left: 15.5%;
+  position: relative;
+  height: 150px;
+}
+
+.fitxa{
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 1%;
+    margin-top: 1%;
+    background-color: rgb(255, 188, 106);
+}
+.menu{
+    list-style-type: none;
+    padding-left: 0%;
+}
+/*  */
+li:hover{
+    background-color: aqua;
+    color: blue;
+}
+a:link{
+    color: red;
+    text-decoration: none;
+}
+
+a:active{
+    background-color: orange;
+}
+/*  */
+
+.bolita {
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  border: 2px solid;
+
+  position: absolute;
+  left: 15px;
+  top: 30px;
+}

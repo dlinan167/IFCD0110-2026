@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>56 TIC-TAC-TOE</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" /> <!-- < < < CSS 1 -->
+    <!-- Enllaç del javascript -->
+    <script defer src="js/56 TicTacToe (Tres en ratlla).js"></script>
+</head>
+<body>
+    <header>
+        <h1>56 TIC-TAC-TOE</h1>
+    </header>
+    <!-- 56 TicTacToe (Tres en ratlla) -->
+     
+    <main>
+           <!--pos TAULA -->
+        <!-- 01 / 02 / 03 -->
+        <!-- 01 / 12 / 13 -->
+        <!-- 01 / 12 / 23 -->
+         
+        <div class="marcTaula shadow">
+            <div class="fila">
+                <div class="casella" id="pos01" onclick="torn('pos01')"></div>
+                <div class="casella" id="pos02" onclick="torn('pos02')"></div>
+                <div class="casella" id="pos03" onclick="torn('pos03')"></div>
+            </div>
+            <div class="fila">
+                <div class="casella" id="pos11" onclick="torn('pos11')"></div>
+                <div class="casella" id="pos12" onclick="torn('pos12')"></div>
+                <div class="casella" id="pos13" onclick="torn('pos13')"></div>
+            </div>
+            <div class="fila">
+                <div class="casella" id="pos21" onclick="torn('pos21')"></div>
+                <div class="casella" id="pos22" onclick="torn('pos22')"></div>
+                <div class="casella" id="pos23" onclick="torn('pos23')"></div>
+            </div>
+        </div>
+        <div class="infoPartida"></div>
+        <button class="botoReset" id="botoReset" onclick="reset()">RESET <br> (Començar de nou)</button>
+
+
+    </main>
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>

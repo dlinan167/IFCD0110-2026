@@ -1,0 +1,90 @@
+/* *{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+* {
+  margin: 0%;
+}
+
+header, footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: rgb(238, 234, 172);
+  /* text-align: center; */
+  width: 100%;
+}
+header {
+  /* Borders redondegats */
+  border-bottom: 5px solid purple;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  position: fixed;
+  z-index: 10;
+  top: 0%;
+}
+
+footer {
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid purple;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: fixed;
+
+  bottom: 0%;
+}
+
+.menu-nav {
+  background-color: rgb(172, 255, 47);
+  border: 2px solid;
+  height: 10rem;
+  width: 15%;
+  position: fixed;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.principal-Main {
+  background-color: cornflowerblue;
+  left: 15.5%;
+  position: relative;
+  padding: 1%;
+}
+
+.seccio {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 1%;
+  margin-top: 1%;
+  background-color: rgb(255, 188, 106);
+
+  padding: 0.5rem;
+}
+
+span{
+    /* color: red; */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.menu {
+  list-style-type: none;
+  padding-left: 0%;
+}
+
+/*  */
+li:hover {
+  background-color: aqua;
+  color: blue;
+}
+a:link {
+  color: red;
+  text-decoration: none;
+}
+
+a:active {
+  background-color: orange;
+}
+/*  */

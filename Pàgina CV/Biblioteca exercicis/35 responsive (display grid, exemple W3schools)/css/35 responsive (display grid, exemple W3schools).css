@@ -1,0 +1,171 @@
+/* --------------- VARIABLES ------------------ */
+:root{
+  --color-principal-icones: brown;
+  --color-ombres-icones: black;
+  --color-titols: rgb(238, 234, 172);
+}
+/* ---------------- !!!!!! ---------------------- */
+
+html{
+  font-size: 62.5%; /*equival a 10 px*/
+}
+* {
+  margin: 0%;
+  font-size: 2rem; /*Multipliquem per 2 (20px)*/
+}
+
+/* --------Propietats comuns de header i footer-------- */
+/* ----- Format compartit ----- */
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: var(--color-titols);
+}
+
+header {
+  border-bottom: 5px solid rgb(128, 0, 128);
+  z-index: 10; /*Es mostra per sobre d'altres elements*/
+}
+
+footer {
+  /* menys opacitat */
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+nav{
+  background-color: blanchedalmond;
+  
+}
+main{
+  background-color: aquamarine;
+  padding: 1%;
+  
+}
+aside{
+  padding: 0.2%;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+ul{
+  list-style-type: none;
+  padding: 0.5rem;
+}
+nav li:hover{
+  background-color: burlywood;
+  cursor: pointer;
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease; /*Fa transició*/
+}
+
+nav li:hover > i{
+  transform: rotateY(-360deg); /*Rota la icona*/
+  transition: all 0.3s ease;
+}
+
+i{
+  padding: 1rem;
+  color: var(--color-principal-icones); /*Apliquem el color amb la variable*/
+  text-shadow: 1.5px 2px var(--color-ombres-icones);
+}
+/* -- Display: grid -- */
+.div-Contenidor-grid{
+  display: grid;
+}
+img{
+  max-width: 100%;
+  height: 100%;
+}
+figure{
+  padding: 0.2%;
+  margin: 0.5%;
+  width: 17rem;
+  height: 18rem;
+  border: 0.225rem solid rgb(0, 0, 0);
+}
+.fila{
+  display: flex;
+}
+p::first-letter{
+  font-size: 3rem;
+  
+}
+p::before{
+  content: "Legeix això: ";
+  color: red;
+  font-weight: bold;
+}
+/* Sangria */
+p {text-indent:5rem;
+} 
+/* ---------------- RESPONSIVE ------------------- */
+/* mida reduida minima per a que canvi la pagina */
+/* ------------------------ */
+@media(max-width: 406px) {
+  header{grid-area: 1/span 6;}
+  nav{grid-area: 2/span 6; 
+    ul{display: none;} 
+    span{display: none;}
+  }
+  
+  main  {grid-area: 4/span 6;}
+  aside {grid-area: 3/span 6; flex-direction: row;
+    p{display: none;} 
+    .fila{display: none;}
+  }
+  footer{grid-area: 5/span 6;}
+
+  /* Mostrar menu amburgesa i ocultar menu normal */
+  ul > i{visibility: visible;}
+  ul > li{visibility: hidden;}
+}
+/* ------------------------ */
+@media(max-width: 572px) { /*Max-with !!! */
+  header{grid-area: 1/span 6;}
+  nav{grid-area: 2/span 6; 
+    ul{display: flex; flex-direction: row; justify-content: space-around;} 
+    span{display: none;}
+  }
+  main  {grid-area: 4/span 6;}
+  aside {grid-area: 3/span 6; flex-direction: row;
+    p{display: none;} 
+    .fila{display: none;}
+  }
+  footer{grid-area: 5/span 6;}
+
+  ul > i {visibility: hidden;}
+}
+/* ------------------------ */
+@media(min-width: 573px) {
+  header{grid-area: 1/span 6;}
+  nav{grid-area: 2/span 6; 
+    ul {display: flex; flex-direction: row; justify-content: space-around;} 
+    span{display: inline;}
+  }
+  main{grid-area: 3/span 4;}
+  aside{grid-area: 3/span 1;}
+  footer{grid-area: 4/span 6;}
+
+    ul > i {visibility: hidden;}
+}
+/* ------------------------ */
+  @media(min-width: 768px) {
+    /* posem la distribució de la mida normal del grid de la pagina (div-contenidor-grid)*/
+    header{grid-area: 1/span 6;}
+    nav{grid-area: 2/span 1; 
+      ul{display: block;} 
+      li{display: flex;}
+        display: flex;
+        }
+    main{grid-area: 2/span 4;}
+    aside{grid-area: 2/span 1;}
+    footer{grid-area: 3/span 6;}
+   
+  }

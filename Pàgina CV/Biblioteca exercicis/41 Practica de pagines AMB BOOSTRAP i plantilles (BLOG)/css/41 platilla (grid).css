@@ -1,0 +1,93 @@
+:root{
+    --fons-principal:#339bf7;
+    --fons-titol: #000000f5;
+    --color-titol-lletra: #f5deb3;
+    --fons-titol-border: #ac0095;
+    --fons-anuncis: #5f3300;
+    --fons-navegacio:#5f5e00;
+
+}
+/* ================== ESTRUCTURA GENERAL ======================= */
+*{
+    font-size: 62.5%;
+    font-size: 1rem;
+    margin:0%;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 1.4rem;
+}
+h1{
+    font-size: 2rem;
+}
+header,footer{
+    font-size: 1.5rem;
+    color: var(--color-titol-lletra);
+    background-color: var(--fons-titol);
+    border: 0.1rem solid;
+    border-color: var(--fons-titol-border);
+    text-align: center;
+    align-content: center;
+}
+header{
+    grid-area: header;
+}
+footer{
+    grid-area: footer;
+    opacity: 96%;
+}
+body{
+    display: grid;
+    background: var(--fons-principal);
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer  footer footer";
+    height: 100vh;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 8% auto 8%;
+
+}
+ul{
+    list-style-type: none;
+}
+main{
+    grid-area: main;
+}
+aside{
+    background-color: var(--fons-anuncis);
+    grid-area: aside;
+}
+/* ==================== MENU de NAV ======================= */
+nav ul::before{
+    content: "MENU:";
+    font-weight: bold;
+}
+nav{
+    grid-area: nav;
+    background: var(--fons-navegacio);
+}
+
+/* =========== IMATGES I BANNERS ============= */
+figure{
+  object-fit: contain;
+  width: 90%;
+  height: fit-content;
+  padding: 0.2%;
+  border: 0.150rem solid black;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ============================= RESPONSIVE !====================================== */
+@media (max-width:650px) {
+    body{
+        display: block;
+    }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <title>45 Patrons(patterns)</title> <!-- <= Títol -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/45 Patrons(patterns).css" /> <!-- <= CSS 1 -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- <= icona -->
+  </head>
+  <body>
+    <header>
+      <h1>Exercici per veure tipus de patrons</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./#">Opció 1</a></li>
+        <li><a href="./#">Opció 2</a></li>
+        <li><a href="./#">Opció 3</a></li>
+        <li><a href="./#">Opció 4</a></li>
+      </ul>
+    </nav>
+    
+    <main>
+    <h2>Pàgina principal MAIN</h2>
+    <form action="./45 Patrons(patterns).html" method="get" target="_blank">
+      
+      <!-- INPUT TEL AMB LLISTA D'OPCIONS (enllçat amb l'id) -->
+      <label for="telefon">Telèfon: INPUT TEL AMB LLISTA D'OPCIONS (sugerencies tel:555-0100)</label>
+      <input type="tel" list="tel-list" name="TELEFON" placeholder="tel: 123-123456" pattern="[0-9]{3}-[0-9]{6}" minlength="9" maxlength="15" title="123-123456"/>
+      <br>
+      <datalist id="tel-list">
+        <option value="555-0100"></option>
+        <option value="555-0101"></option>
+      </datalist>
+      <br><label for="NOM">Nom:</label><br>
+      <input type="text" name="NOM" id="NOM" size="21" pattern="[A-Za-z]{2,20}" minlength="2" maxlength="20">
+      <!-- PATTERN: DE CONTRASENYA -->
+      <br><label for="CONTRASENYA">Contrasenya <br> (prova de pattern: Requereix minuscula, mayus i numero):</label><br>
+      <input type="text" name="CONTRASENYA" id="CONTRASENYA" size="21" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{2,20}" minlength="2" maxlength="20">
+      <!-- PATTERN: DE EMAIL D'EMPRESA -->
+      <br><label for="EMAIL-Empresa">Email de empresa <br>(".@empresa\.com"):</label><br>
+      <input type="email" name="EMAIL-Empresa" id="EMAIL-Empresa" size="35" pattern=".@empresa\.com" minlength="2" maxlength="30">
+      <!-- PATTERN: SOL bocals -->
+      <br><label for="AEIOU">[AEIOU]: <br>(Solament bocals)</label><br>
+      <input type="text" name="AEIOU" id="AEIOU" size="15" pattern="[AEIOU]{2,10}" minlength="2" maxlength="10">
+      <!-- PATTERN: SOL consonants MAYUS -->
+      <br><label for="^AEIOU">[^AEIOUa-z\d]: <br>(Solament consonants mayuscules, format negat)</label><br>
+      <input type="text" name="^AEIOU" id="^AEIOU" size="15" pattern="[^AEIOUa-z\d]{2,10}" minlength="2" maxlength="10">
+
+      <!-- PATTERN: MATRICULA -->
+      <br><label for="MATRICULA">MATRICULA: <br>("[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}")</label><br>
+      <input type="text" name="MATRICULA" id="MATRICULA" size="15" pattern="[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}" minlength="2" maxlength="9">
+      <!-- PATTERN: vil o sad -->
+      <br><label for="vil-o-sad">vil o sad (vil|sad): <br>("[A-Za-z]{4}-(vil|sad)-[0-9]{2}")</label><br>
+      <input type="text" name="vil-o-sad" id="vil-o-sad" size="15" pattern="[A-Za-z]{4}-(vil|sad)-[0-9]{2}" minlength="2" maxlength="15">
+
+      <!-- PATTERN: DE EMAIL patró Millorat -->
+      <br><label for="EMAIL">Email de patró millorat (__.__@__._): <br>("[0-9A-za-z]+(\.[0-9A-za-z]+)*@[0-9A-za-z]+\.[A-za-z]{2,3}"):</label><br>
+      <input type="email" name="EMAIL" id="EMAIL" size="35" pattern="[0-9A-za-z]+(\.[0-9A-za-z]+)*@[0-9A-za-z]+\.[A-za-z]{2,3}" minlength="2" maxlength="99">
+      
+
+      <!-- BUTTONS DEL FORM -->
+      <br><button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
+    </form>
+  </main>
+    
+      <aside>BANNERS</aside>
+    <footer>
+      <p>2026 - &copy; Fet per David</p>
+    </footer>
+    <script src="js/45 Patrons(patterns).js"></script>
+    <!-- <= inserció de les funcions d'events que hem creat" -->
+  </body>
+</html>

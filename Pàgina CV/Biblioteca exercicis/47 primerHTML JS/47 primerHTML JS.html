@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>47 primerHTML JS</title>
+</head>
+<body onload="salutacio()">
+    <button onclick="onClick()">Afegir text</button>
+    <div id="example"></div>   
+
+    <script>
+        // Text en consola (per Desenvolupament)
+        console.log("hola bon dia")
+        // Ventana d'alerta
+        window.alert("Aquest és un missatge d'alerta")
+        // Escriure en pàgina
+        // document.write("Text escrit amb funció write")
+        document.write("La versio d'aquest navegador es: <br> <b>" + navigator.appVersion + "</b> -")
+        document.write(" Nom de motor: <b>" + navigator.appName + "</b>.")
+        // Variables (vars)
+        var A=5;
+        let B=3;
+        const C = A + B; // Variable constant (o contenidor) que no canviará després de definir-la
+        // Es recomana l'ús del camelCase...
+
+    </script>
+    <script async>
+        // Afegeix text al clickar boto
+        function onClick(){
+            document.getElementById("example").innerHTML = "<div> Ja es hora de marxar</div>"
+        }
+        function salutacio(){
+            document.getElementById("example").innerHTML = "<div>Bon dia</div>"
+        }
+    </script>
+</body>
+</html>

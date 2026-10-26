@@ -1,0 +1,81 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+html{
+    font-size: 62.5%;
+}
+/* ================== ESTRUCTURA GENERAL ======================= */
+body{
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-areas: 
+    "cap cap cap"
+    "nav main banner"
+    "peu peu peu";
+    grid-template-rows: 5% auto 5%;
+    grid-template-columns: 15% 70% 15%;
+    height: 100vh;
+}
+header,footer{
+    background-color: black;
+    color: wheat;
+    text-align: center;
+}
+header{
+    grid-area: cap;
+    top: 0;
+}
+footer{
+    opacity: 0.9;
+    grid-area: peu;
+    bottom: 0;
+}
+main{
+    grid-area: main;
+    text-align: center;
+}
+aside{
+    background-color: rgb(95, 70, 0);
+    grid-area: banner;
+}
+.caixa{
+    width: 100%;
+    height: 20rem;
+    border: 1rem solid;
+    background-color: gray;
+    overflow: scroll;
+}
+/* ==================== MENU de NAV ======================= */
+nav{
+    background-color: #deb887;
+    grid-area: nav;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0%;
+    text-align: center;
+}
+
+/* ==================== EVENTS!!! ======================= */
+button{
+  cursor: pointer;
+  margin: 0.3rem;
+  padding: 2rem;
+  background-color: rgb(39, 167, 14);
+  border-radius: 1rem;
+  border: 0.250rem solid;
+  font: bold; font-size: 2.5rem; 
+}
+button:hover{
+  background-color: rgb(172, 202, 0);
+  transform: scale(1.1); /*Aumenta el tamany al fer hover*/
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+

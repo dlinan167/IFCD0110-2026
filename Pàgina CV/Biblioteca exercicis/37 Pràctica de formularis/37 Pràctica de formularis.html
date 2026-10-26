@@ -1,0 +1,364 @@
+   
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- < < < Per adaptar l'amplada a altres dispositious -->
+    <title>37 Pràctica de formularis</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/37 Pràctica de formularis.css" /> <!-- < < < Primer CSS (en local) -->
+
+    <!-- ---------- CSS de Font awesome (per icones)---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+
+  <body>
+    <header>
+      <h1>Pràctica de formularis!</h1>
+    </header>
+    <div class="div-Contenidor"> 
+
+        <aside>
+            <nav>
+                <ul>
+                    <h2>Menú</h2>
+                    <li><a href="#" target="_blank">Inici</a></li>
+                    <li><a href="#registre_usuari">Registre d'usuari</a></li>
+                    <li><a href="#editar_perfil">Editar perfil</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- ============= FORMULARI DE REGISTRE =================== -->
+        
+        <main>
+        <div class="fila">
+            <div class="div-registre" id="registre_usuari">
+                <figure>
+                    <img src="https://cdn.pixabay.com/photo/2014/02/04/13/17/register-257986_1280.jpg" alt="tecla de Registre">
+                </figure>
+                <form action="https://www.google.com" method="get" target="_blank">
+                    
+                    <div class="fila">     
+                        <div class="fila">
+                            <label for="NOM"><b>Nom</b></label>
+                            <input type="text" placeholder="Entra el teu nom" name="NOM" required/>
+                        </div>
+                        <div class="fila">
+                            <label for="USUARI"><b>Usuari</b></label>
+                            <input type="text" placeholder="Entra el teu cognom" name="USUARI" required/>
+                        </div>
+                        <div class="fila"> 
+                            <label for="CONTRASENYA"><b>Contrasenya</b></label>
+                            <input type="password" placeholder="Entra la teva contrasenya" name="CONTRASENYA" required/>
+                        </div>
+                        <button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
+                        
+                        <label>
+                            <input type="checkbox" checked="checked" name="RECORDAR-ME"/> Recordar-me
+                        </label>
+                    </div>
+                    
+                    <div class="fila" style="background-color:#f1f1f1">
+                        <button type="reset" class="btnCancelar">Natejar camps!</button>
+                        <span class="CONTRASENYA">Has perdut la teva <a href="#">contrasenya?</a></span>
+                    </div>
+                </form> 
+            </div>
+        </div>
+                <!-- =============== FORMULARI DE EDITAR PERFIL ================= -->
+        <div class="div-registre" id="editar_perfil">
+            <figure>
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/editing-user-action/edit-user-icon.png" alt="tecla de Registre">
+            </figure>
+            <form action="https://www.google.com" method="post" target="_blank">
+                
+                <div class="fila">     
+                    <div class="fila">
+                        <label for="NOM"><b>Nom</b></label>
+                        <input type="text" placeholder="Entra el teu nom" name="NOM" required/>
+                    </div>
+                    <div class="fila">
+                        <label for="USUARI"><b>Usuari</b></label>
+                        <input type="text" placeholder="Entra el teu cognom" name="USUARI" required/>
+                    </div>
+                    <div class="fila"> 
+                        <label for="CONTRASENYA"><b>Contrasenya</b></label>
+                        <input type="password" placeholder="Entra la teva contrasenya" name="CONTRASENYA" required/>
+                    </div>
+                    <div class="fila">
+                        <h3>Quin es el teu sexe?</h3>
+                        <label for="rMascle">Mascle </label>
+                        <input type="radio" id="rMacle" name="sexe" value="Mascle"/>
+                        
+                        <label for="rFemella">Femella </label>
+                        <input type="radio" id="rFemella" name="sexe" value="Femella"/>
+                    </div>
+                    <button type="submit" value="submit" id="btnSubmit">SUBMIT <br>(Enviar)</button>
+                </div>
+                
+                <div class="fila" style="background-color:#f1f1f1">
+                    <button type="reset" class="btnCancelar">Natejar camps!</button>
+                    <span class="CONTRASENYA">Has perdut la teva <a href="#">contrasenya?</a></span>
+                </div>
+            </form> 
+        </div>
+                      <!-- ============================= FORMULARI ETIQUETA '<select>' I OPCIÓ MULTIPLE DE COTXES ============================== -->
+        <div class="fila">
+            <div class="div-registre">
+            <h2>EL element '>select'</h2>
+            <p>L'element select s'utilitza per crear una llista desplegable.</p>
+            
+            <form action="" method="get" target="_blank">
+                <figure>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3097/3097144.png" alt="Icona de cotxe">
+                </figure>
+                <div class="fila">    
+                    <label for="COTXE">Elegir cotxe:</label>
+                    <select name="COTXE" id="COTXE">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+
+                <div class="fila">
+                    <label for="COTXE_multiple">Elegir cotxe (multiple):</label>
+                    <select name="COTXE_multiple" id="COTXE_multiple" multiple>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <button type="submit" value="Submit">Enviar COTXE</button>
+            </form>
+            <!-- MISSATGE D'ALERTA -->
+            <button onclick="javascript:alert ('ALERTA: Avui es divendres')">MISSATGE DE ALERTA, onclick</button>
+        </div>
+    </div>
+        
+            <!-- ========================= (LEGACY, DEPRECATED) FORMULARI ========================= -->
+            <h2>Més button types:</h2>
+            <!-- <<< Formulari START <<< -->
+            <form action="">  <!-- <<< Formulari que al enviar(submit) ens portara a la pagina "./prova.html", enviant les dades dels inputs -->
+
+                <button type="button"> Botó normal (button)</button>
+                <button type="submit"> Envia formulari (submit)</button>
+                <button type="reset"> Nateja formulari (reset)</button>
+
+                <br><br>
+                <!-- INPUTS FORMULARI >>> -->
+                <!-- Nom: -->
+                <label for="fnom">Nom:</label>
+                
+                <input type="text" name="nom" id="fnom" placeholder="Tu nombre aquí!"/> <!-- <<< "placeholder" ens posa un text fantasma, com un valor de exemple-->
+                
+                <!-- Cognom: -->
+                <label for="fcognom">Cognom:</label>
+                
+                <input type="text" name="cognom" id="fcognom" placeholder="Tu apellido aquí!"/>
+                <!-- <<< -->
+
+                <!--tipus test (radio)(explusiu) START >>> -->
+                <hr>
+                <h2>Radio button</h2>
+                
+                <h3> (Per tipo test): </h3>
+                <!--Pregunta 1-->
+                <h3>Quina es la teva fruita preferida?</h3>
+
+                <label for="rPomes">Opció 1, Pomes: </label>
+                <input type="radio" id="rPomes" name="fruita"/>
+                <br><br>
+
+                <label for="rPeres">Opció 2, Peres: </label>
+                <input type="radio" id="rPeres" name="fruita"/>
+                <br><br>
+                
+                <label for="rTaronges">Opció 3, Taronges: </label>
+                <input type="radio" id="rTaronges" name="fruita"/>
+                <br><br>
+
+                
+                <!--Pregunta 2--> 
+                <h3>Quin es el teu sexe?</h3>
+                <label for="rMascle">Mascle </label>
+                <input type="radio" id="rMacle" name="sexe" value="Mascle"/>
+
+                <label for="rFemella">Femella </label>
+                <input type="radio" id="rFemella" name="sexe" value="Femella"/>
+
+                <!-- tipus test (radio) END <<< -->
+                
+                <!-- Checkbox (complementari) START >>> -->
+                <hr>
+                <h2>Checkbox</h2>
+                <h3>Estils musicals que m'agrades</h3>
+
+                <label for="cReggaeton">Reggaeton</label>
+                <input type="checkbox" id="cReggaeton" name="musica" value="Reggaeton"/>
+                
+                <label for="cRock">Rock</label>
+                <input type="checkbox" id="cRock" name="musica" value="Rock"/>
+                
+                <label for="cSimfònic">Simfònic</label>
+                <input type="checkbox" id="cSimfònic" name="musica" value="Simfònic"/>
+                
+                <!-- Checkbox (complementari) END >>> -->
+                 
+                <!-- Password -->
+                <hr>
+                <h2>PASSWORD</h2>
+                <label for="UserName">Usuari:</label>
+                <input type="text" name="usuari" id="UserName"/>
+                <br>
+                <label for="UserPassword">Contrasenya:</label>
+                <input type="password" name="contrasenya" id="UserPassword"/>
+
+
+                <!-- Input COLOR-->
+                <hr>
+                <h2>Input COLOR</h2>
+                <label for="fcolor">Tria el color que més t'agradi:</label>
+                <input type="color" name="color" id="fcolor"/>
+
+                <!-- DATA -->
+                <hr>
+                <h2>Input tipus DATE</h2>
+                <label for="fbirthdate">Ingressa la data de naixement:</label>
+                <br>
+                <input type="date" name="birthdate" id="fbirthdate"/>
+
+                <!-- EMAIL -->
+                <hr>
+                <h2>Input tipus EMAIL</h2>
+                <label for="idcorreu">Ingressa el teu correu personal inventat:</label>
+                <br>
+                <input type="email" name="correu" id="idcorreu" placeholder="hola@gmail.com"/>
+                <button type="submit"> Envia correu</button> <!--  (Envia tot el formulari també!) -->
+
+                <!-- IMAGE -->
+                <hr>
+                <h2>Input tipus IMAGE</h2>
+                <p> (Botó submit pero en una imatge) </p>
+                <input type="image" src="./img/imatge_pera.png"/>
+
+                <!-- FILE -->
+                <hr>
+                <h2>Input tipus FILE</h2>
+                <input type="file" name="myfile" id="myfile" accept=".pdf"/> <!-- <<< Amb "accept" definim el tipus d'arxiu que podem aceptar (que prioritza) <<< -->
+           
+                <!-- HIDDEN -->
+                <hr>
+                <h2>Input tipus HIDDEN</h2> <!--Fica un input que el usuari no veu, com un "identificador (id)" per facilitar gestions en el backend-->
+                <h2>(mira en el source code (F12), te que ser "ID: 2984")</h2> 
+                <label for="textAmagat">Tipus amagat</label>
+                <br>
+                <input type="text" id="amagat" name="hiddenAmagat" value="?(valor amagat)" />
+                <input type="hidden" name="amagat" id="textAmagat" value="ID: 2984">
+
+                <!-- MONTH -->
+                <hr>
+                <h2>Input tipus MONTH (mes)</h2>
+                <label for="IDmes">Ingressa el mes del teu aniversari</label>
+                <p>(Firefox pot ser incompatible)</p>
+                <br>
+                <input type="month" name="mes" id="IDmes">
+
+                <!-- WEEK -->
+                <hr>
+                <h2>Input tipus WEEK (setmana)</h2>
+                <label for="IDweek">Ingressa la setmana:</label>
+                <br>
+                <input type="week" name="week" id="IDweek">
+
+                <!-- NUMBER -->
+                <hr>
+                <h2>Input tipus NUMBER</h2>
+                <label for="IDnumber">Quants anys tens?</label>
+
+                <input type="number" name="numero" id="IDnumber" min="1" max="120"/>
+
+                <!-- RANGE -->
+                <hr>
+                <h2>Input tipus RANGE</h2>
+                <label for="IDrange">Gradua el volum</label>
+
+                <input type="range" name="rango" id="IDrange" min="0" max="100" value="10" step="5"/> <!-- "step" el valor que pujara o baixara de una --><!-- 'value' valor per defecte -->
+
+                <!-- SEARCH -->
+                <hr>
+                <h2>Input tipus SEARCH</h2>
+                <label for="IDcerca">Busca alguna cosa</label>
+                <br>
+                <input type="search" name="cerca" id="IDcerca" placeholder="Cerca..." spellcheck="true"/>
+
+                <!-- TEL -->
+                <hr>
+                <h2>Input tipus TEL (telephone)</h2>
+                <label for="IDtelefon">El teu telèfon</label>
+                <br>
+                <input type="tel" name="telefon" id="IDtelefon" placeholder="111-222-3333" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/> <!-- "pattern" obliga en aquest cas un rang del 0 al 9 "[0-9]" en 3 dígits "{3}"-->
+                
+                <!-- TIME -->
+                <hr>
+                <h2>Input tipus TIME</h2>
+                <label for="IDtime"></label>
+                <br>
+                <input type="time" name="hora" id="IDtime"/>
+                
+                <!-- HTML -->
+                <hr>
+                <h2>Input tipus URL</h2>
+                <label for="IDurl"></label>
+                <br>
+                <input type="url" name="hora" id="IDurl" placeholder="https://www.google.com/"/>
+           
+
+                  <!-- Etiqueta SELECT -->
+                <hr>
+                <h2>Etiqueta SELECT</h2>
+                <select name="cars" id="IDcars">
+
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+            </form>
+            <!-- Formulari END <<< -->
+                
+        </main>
+        <aside>
+            <h2>Banners</h2>
+                <figure>
+                    <img src="https://i.redd.it/7dei7cu21zya1.jpg" alt="Cat">
+                </figure>
+                <figure>
+                    <img src="https://i.redd.it/7dei7cu21zya1.jpg" alt="Cat">
+                </figure>
+                <figure>
+                    <img src="https://i.redd.it/7dei7cu21zya1.jpg" alt="Cat">
+                </figure>
+                <figure>
+                    <img src="https://i.redd.it/7dei7cu21zya1.jpg" alt="Cat">
+                </figure>
+                <figure>
+                    <img src="https://i.redd.it/7dei7cu21zya1.jpg" alt="Cat">
+                </figure>
+                <figure>
+                    <img src="https://i.redd.it/7dei7cu21zya1.jpg" alt="Cat">
+                </figure>
+        </aside>
+    </div>
+
+    <footer>
+        Desenvolupat per David
+    </footer>
+    
+</body>
+
+</html>

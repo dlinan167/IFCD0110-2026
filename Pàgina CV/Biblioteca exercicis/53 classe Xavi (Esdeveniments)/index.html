@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>53 Esdeveniments</title>
+</head>
+<body>
+    <input type="text" id="elementFormulari"></input>
+    <p id="controlUsuari"></p>
+
+    <script>
+        // 
+        console.log(elementFormulari);
+
+        // Detectar event en elementFormulari
+       elementFormulari.addEventListener("click", controlClick);
+       elementFormulari.addEventListener("focus", controlFocus);
+       elementFormulari.addEventListener("dblclick", controlDblclick);
+       elementFormulari.addEventListener("mouseover", controlMouseover);
+
+        // Escriure en '<p> id=controlUsuari' segons quin event es:
+        function controlClick() {
+           document.getElementById("controlUsuari").innerHTML= "<b> Hola, estas fen: </b> onclick"; 
+           elementFormulari.style.background="white";
+        }
+        function controlFocus() {
+           document.getElementById("controlUsuari").innerHTML= "<b> Hola, estas fen: </b> onfocus"; 
+        }
+        function controlMouseover() {
+           document.getElementById("controlUsuari").innerHTML= "<b> Hola, estas fen: </b> onmouseover"; 
+        }
+        function controlDblclick() {
+           document.getElementById("controlUsuari").innerHTML= "<b> Hola, estas fen: </b> dblclick"; 
+           elementFormulari.style.backgroundColor="blue";
+        }
+        </script>
+        
+</body>
+</html>

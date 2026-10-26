@@ -1,0 +1,223 @@
+*{
+  font-size: 1rem;
+  margin:0%;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --fons-main:rgba(153, 205, 50, 0.377);
+    --fons-titol: #000000f5;
+    --color-titol-lletra: #f5deb3;
+    --color-titol-border: #d87093;
+    --fons-aside: #5f3300;
+    --fons-navegacio:#5f5e00;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-size: 1.3rem;
+}
+body{
+    color: #000;
+    display: grid;
+    background: var(--fons-main);
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer  footer footer";
+    min-height: 100vh;
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 3rem auto 2.35rem;
+}
+/* ================== ESTRUCTURA GENERAL ======================= */
+
+header,footer{
+  color: var(--color-titol-lletra);
+  background: var(--fons-titol);
+  border: 0.2rem var(--color-titol-border) solid;
+}
+header{
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  top: 0%;
+}
+header figure{
+  background: whitesmoke;
+  border-radius: 1.5rem;
+  width: 2.7%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+footer{
+  position: fixed;
+  grid-area: footer;
+  width: 100%;
+  bottom: 0%;
+  opacity: 96%;
+  z-index: 5;
+  max-height: 5%;
+}
+h1{
+    color: var(--color-titol-lletra);
+    font-size: 2rem;
+    font-weight: bold;
+}
+main{
+  background: var(--fons-main);
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1%;
+  align-items: center;
+}
+aside{
+  grid-area: aside;
+  border: 0.150rem solid;
+  background: var(--fons-aside);
+  align-content: center;
+}
+.caixaValidar{
+  display: flex;
+  justify-content: center;
+  border: solid;
+  margin-bottom: 3rem;
+  transition: all 0.2s;
+}
+.fila{
+  display: flex;
+  width: 80%;
+  padding: 1%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.shadow{
+  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #0000009f;
+}
+.alert{
+  scale: calc(0.9);
+  transition: all 0.5s;
+}
+/* ==================== MENU de NAV ======================= */
+nav{
+  grid-area: nav;
+  align-content: center;
+  border: 0.150rem solid;
+  background: var(--fons-navegacio);
+}
+nav ul::before{
+    content: "MENU:";
+    font-weight: bold;
+}
+    
+body > nav{
+    position: fixed;
+    top: 20%;
+}
+body > nav li:hover{
+  width: 110%;
+  border: 0.250rem solid;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  padding: 1.5%;
+  transition: all 0.3s;
+}
+
+nav li{width: 10.5em; text-align: center; transition: all 0.3s ease;}
+nav li:hover{
+    border-radius: 0.5rem;
+    background: burlywood;
+    cursor: pointer;
+    /*Aumenta el tamany al fer hover en transició*/
+    transform: scale(1.25); 
+    transition: all 0.3s ease;
+}
+nav figure:hover{
+    transform: scale(1.8);
+    transition: all 0.3s ease;
+}
+ul{
+  list-style-type: none;
+  cursor: pointer;
+}
+a{font-weight: bold;}
+
+  /* =============== TAULA DE DADES, JSON / API ================ */
+ 
+table{
+  --table-borders: #000;
+  border: 0.2rem var(--table-borders) solid;
+  gap: inherit;
+  border-collapse: collapse;
+  padding: 0.5%;
+}
+/* th{
+  border: var(--table-borders) solid;
+  padding: 0.5%;
+  background-color: blanchedalmond;
+}
+td{
+  border: var(--table-borders) solid;
+  padding: 0.25%;
+}
+
+td:nth-child(even){
+  background-color: #afe4e4;
+}
+td:nth-child(odd){
+  background-color: #90d9d9;
+}
+tr:hover td{
+    background-color: #d0fafa;
+    scale: calc(1.05);
+}
+td:first-child, td:last-child{
+  width: 4rem;
+} */
+
+/* -+-+-+-+-+-+-+-+ TEMA CLAR / TEMA FOSC -+-+-+-+-+-+-+-+-+-*/
+
+.dark{
+  
+  background: #141a13;
+  --fons-main:rgba(112, 151, 33, 0.377);
+  --fons-titol: #000000f5;
+  --fons-aside: #301a00;
+  --fons-navegacio:#1d2000;
+  --color-titol-lletra: #d1bc93;
+  --color-titol-border: #944e65;
+  color: #dfdfdf;
+  button, select, input{
+    color: #ebebeb;
+      background: #141a13;
+    }
+}
+.light{
+  color: rgb(5, 0, 0);
+  background: #d8f7cc;
+}
+/* -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ -+-+-+-+-+-+-+-+ */
+button:hover, select:hover, input:hover, input:focus{
+  scale: calc(1.05);
+  transition: all 0.1s;
+  }
+  /* input:invalid{
+    border: red dashed;
+  }
+  input:valid{
+    border: green solid;
+  } */
+
+/* ================ RESPONSIVE ================== */
+@media (max-width:800px) {
+    body > nav{
+        position: static;
+    }
+    body{
+      display: block;
+    }
+}

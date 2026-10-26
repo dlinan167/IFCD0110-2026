@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>21 primerExempleCSS</title>
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/21 primerExempleCSS.css"/> <!-- < < < Primer CSS -->
+    <link rel="stylesheet" href="./css/21 primerExempleCSS 2on.css"/> <!-- < < < CSS 2 -->
+
+    <style>
+        header{
+            background-color: red;
+            position: fixed;
+            z-index: 1; /*< < < Per donar posició a un element fixe i que es pugui veure per sobre de altres elements que el trepitgen*/
+        }
+        /* Alternativa */
+        /* header{
+            background-color: red;
+            position: fixed;
+            top: 0;
+                        i el header al final
+            } */
+        main{
+            top: 44px;
+            width: 84%;
+
+        }
+        footer{
+            opacity: 85%;
+        }
+        .llista-fruites{
+            list-style-type: circle;
+        }
+        section {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        scroll-margin-top: 90px; /* per evitar solapament */
+        }
+        /* #cotxes{   < < < style amb id, NO ES RECOMENABLE per que utilitza id, solament per coses molt específiques
+            list-style-type: disc;
+        } */
+    </style>
+
+    <!-- <<< ORDRE DE PRIORITAT DELS ESTILS: >>>
+          1er: style Inline
+          2on: Etiqueta style
+          3er: Arxiu enllçat CSS        -->
+  </head>
+
+  <body>
+    <header style="background-color: rgb(252, 229, 194);"> <!-- < < < Toma prioritat el style inline (en la etiqueta)-->
+        <h1>(Pàgina d'exemple del primer arxiu utilitzant CSS)</h1>
+    </header>
+
+    <main class="principal-Main">
+        Contingut principal de la pàgina
+        <section class="fitxa" id="toyota">
+            <h2>Toyota</h2>
+            <p>E històries antigues dels homens forts e virtuosos. Vosaltres e la mia tornada m'és incerta si. Baptista Santa Magdalena e de Sant Pau ermità e de. Sua noble persona en l'exercici de les armes seguint guerres. Virtuós comte hi volgué anar. Lo gloriós Sant Lluc en lo seu Evangeli Mereixedor. Ab les armes sues e de la. Les armes e d'anar de peregrinació. La qual ho pres ab molta impaciència per bé que. Sien espills molt clars exemples e virtuosa doctrina. Com evident experiència mostra la debilitat de la nostra memòria. Com era ajustat se mostraven totes les. L'honor e senyoria que los cavallers. Doncs molt condecent útil e expedient deduir en escrit. Dels molts la saviesa e astúcia dels cavallers. La fama del qual en lo.</p>
+            
+            <p>Grandíssima honor la fama del. Per glòria E llegim que honor. Lo franc arbitre que si aquell és ben regit. Com per la prudència e indústria dels batallants diverses. La primera part serà del. Les faules poètiques de Virgili. En l'exercici militar perquè en les batalles fossen. Aquell és ben regit les poden. De Dant e d'altres poetes; los sants miracles. Mília combatents ensús e era entrat.</p>
+            
+            <p>Milícia sinó lo fort animós prudent. Restant cascuna part anell sancer. E expedient deduir en escrit. Greu excel·leix lo militar estament que deuria ésser molt reverit. Foren per los antics ordenades justes e torneigs nodrint los. Sants actes dels sants pares del noble Josuè. De la Comtessa lo qual anell era fet ab. Inclinacions de pecar e viciosament viure. D'honor glòria e de fama e contínua bona memòria. Que es departia pel mig restant cascuna part. Al cavaller Les quals set parts de cavalleria seran deduïdes.</p>
+        </section>
+        <section class="fitxa" id="renault">
+            <h2>Renault</h2>
+            <p>E històries antigues dels homens forts e virtuosos. Vosaltres e la mia tornada m'és incerta si. Baptista Santa Magdalena e de Sant Pau ermità e de. Sua noble persona en l'exercici de les armes seguint guerres. Virtuós comte hi volgué anar. Lo gloriós Sant Lluc en lo seu Evangeli Mereixedor. Ab les armes sues e de la. Les armes e d'anar de peregrinació. La qual ho pres ab molta impaciència per bé que. Sien espills molt clars exemples e virtuosa doctrina. Com evident experiència mostra la debilitat de la nostra memòria. Com era ajustat se mostraven totes les. L'honor e senyoria que los cavallers. Doncs molt condecent útil e expedient deduir en escrit. Dels molts la saviesa e astúcia dels cavallers. La fama del qual en lo.</p>
+            
+            <p>Grandíssima honor la fama del. Per glòria E llegim que honor. Lo franc arbitre que si aquell és ben regit. Com per la prudència e indústria dels batallants diverses. La primera part serà del. Les faules poètiques de Virgili. En l'exercici militar perquè en les batalles fossen. Aquell és ben regit les poden. De Dant e d'altres poetes; los sants miracles. Mília combatents ensús e era entrat.</p>
+            
+            <p>Milícia sinó lo fort animós prudent. Restant cascuna part anell sancer. E expedient deduir en escrit. Greu excel·leix lo militar estament que deuria ésser molt reverit. Foren per los antics ordenades justes e torneigs nodrint los. Sants actes dels sants pares del noble Josuè. De la Comtessa lo qual anell era fet ab. Inclinacions de pecar e viciosament viure. D'honor glòria e de fama e contínua bona memòria. Que es departia pel mig restant cascuna part. Al cavaller Les quals set parts de cavalleria seran deduïdes.</p>
+        </section>
+        <section class="fitxa" id="ford">
+            <h2>Ford</h2>
+            <p>E històries antigues dels homens forts e virtuosos. Vosaltres e la mia tornada m'és incerta si. Baptista Santa Magdalena e de Sant Pau ermità e de. Sua noble persona en l'exercici de les armes seguint guerres. Virtuós comte hi volgué anar. Lo gloriós Sant Lluc en lo seu Evangeli Mereixedor. Ab les armes sues e de la. Les armes e d'anar de peregrinació. La qual ho pres ab molta impaciència per bé que. Sien espills molt clars exemples e virtuosa doctrina. Com evident experiència mostra la debilitat de la nostra memòria. Com era ajustat se mostraven totes les. L'honor e senyoria que los cavallers. Doncs molt condecent útil e expedient deduir en escrit. Dels molts la saviesa e astúcia dels cavallers. La fama del qual en lo.</p>
+            
+            <p>Grandíssima honor la fama del. Per glòria E llegim que honor. Lo franc arbitre que si aquell és ben regit. Com per la prudència e indústria dels batallants diverses. La primera part serà del. Les faules poètiques de Virgili. En l'exercici militar perquè en les batalles fossen. Aquell és ben regit les poden. De Dant e d'altres poetes; los sants miracles. Mília combatents ensús e era entrat.</p>
+            
+            <p>Milícia sinó lo fort animós prudent. Restant cascuna part anell sancer. E expedient deduir en escrit. Greu excel·leix lo militar estament que deuria ésser molt reverit. Foren per los antics ordenades justes e torneigs nodrint los. Sants actes dels sants pares del noble Josuè. De la Comtessa lo qual anell era fet ab. Inclinacions de pecar e viciosament viure. D'honor glòria e de fama e contínua bona memòria. Que es departia pel mig restant cascuna part. Al cavaller Les quals set parts de cavalleria seran deduïdes.</p>
+        </section>
+        <section class="fitxa" id="porche">
+            <h2>Porche</h2>
+            <p>E històries antigues dels homens forts e virtuosos. Vosaltres e la mia tornada m'és incerta si. Baptista Santa Magdalena e de Sant Pau ermità e de. Sua noble persona en l'exercici de les armes seguint guerres. Virtuós comte hi volgué anar. Lo gloriós Sant Lluc en lo seu Evangeli Mereixedor. Ab les armes sues e de la. Les armes e d'anar de peregrinació. La qual ho pres ab molta impaciència per bé que. Sien espills molt clars exemples e virtuosa doctrina. Com evident experiència mostra la debilitat de la nostra memòria. Com era ajustat se mostraven totes les. L'honor e senyoria que los cavallers. Doncs molt condecent útil e expedient deduir en escrit. Dels molts la saviesa e astúcia dels cavallers. La fama del qual en lo.</p>
+            
+            <p>Grandíssima honor la fama del. Per glòria E llegim que honor. Lo franc arbitre que si aquell és ben regit. Com per la prudència e indústria dels batallants diverses. La primera part serà del. Les faules poètiques de Virgili. En l'exercici militar perquè en les batalles fossen. Aquell és ben regit les poden. De Dant e d'altres poetes; los sants miracles. Mília combatents ensús e era entrat.</p>
+            
+            <p>Milícia sinó lo fort animós prudent. Restant cascuna part anell sancer. E expedient deduir en escrit. Greu excel·leix lo militar estament que deuria ésser molt reverit. Foren per los antics ordenades justes e torneigs nodrint los. Sants actes dels sants pares del noble Josuè. De la Comtessa lo qual anell era fet ab. Inclinacions de pecar e viciosament viure. D'honor glòria e de fama e contínua bona memòria. Que es departia pel mig restant cascuna part. Al cavaller Les quals set parts de cavalleria seran deduïdes.</p>
+        </section>
+
+        <div class="bolita">
+        </div>
+
+    </main>
+            
+      <nav class="menu-cotxes">
+        <h2> Cotxes: </h2>
+        <ul class="menu">
+            <li><a href="#toyota">Toyota</a></li>
+            <li><a href="#renault"> Renault </a></li>
+            <li><a href="#ford"> Ford </a></li>
+            <li><a href="#porche"> Porche </a></li>
+        </ul>
+    </nav>
+
+    <footer>Desenvolupat per David</footer>
+  </body>
+</html>

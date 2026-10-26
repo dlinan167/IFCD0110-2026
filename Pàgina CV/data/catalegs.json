@@ -1,20 +1,564 @@
 {
   "bibliotecaPagines": [
-    {"id": 1, "titol": "01 positionBlock", "descripcio": "Prova del 'position:block'", "linkPagina": "./Biblioteca exercicis/01 positionBlock/01 positionBlock.html", "any": 2026, "imatge": "./img/miniatures exercicis/01 positionBlock.png"},
-    {"id": 2, "titol": "02 positionFixedRelativeAbsolute", "descripcio": "Prova del 'position: Fixed,  Relative i Absolute'", "linkPagina": "./Biblioteca exercicis/02 positionFixedRelativeAbsolute/02 positionFixedRelativeAbsolute.html", "any": 2026, "imatge": "./img/miniatures exercicis/02 positionFixedRelativeAbsolute.png"},
-    {"id": 3, "titol": "04 float", "descripcio": "Prova de la instrucció 'float' amb imatges", "linkPagina": "./Biblioteca exercicis/04 float/04 float.html", "any": 2026, "imatge": "./img/miniatures exercicis/04 float.png"},
-    {"id": 4, "titol": "05 styleGrid(RejillaTaula)", "descripcio": "Prova de la estructura de pàgina en grid", "linkPagina": "./Biblioteca exercicis/05 styleGrid(RejillaTaula)/05 styleGrid(RejillaTaula).html", "any": 2026, "imatge": "./img/miniatures exercicis/05 styleGrid(RejillaTaula).png"},
-    {"id": 5, "titol": "06 DisplayFlex", "descripcio": "Primera mostra de 'display:flex'", "linkPagina": "./Biblioteca exercicis/06 DisplayFlex/06 DisplayFlex.html", "any": 2026, "imatge": "./img/miniatures exercicis/06 DisplayFlex.png"},
-    {"id": 6, "titol": "07 Exercici distribució contingut Grid", "descripcio": "Exercici de distribució del contingut amb CSS Grid", "linkPagina": "./Biblioteca exercicis/07 Exercici_distribució_contingut_Grid/07 Exercici_distribució_contingut_Grid_(Index).html", "any": 2026, "imatge": "./img/miniatures exercicis/07 Exercici_distribució_contingut_Grid.png"},
-    {"id": 7, "titol": "08 Pràctica d'enllaços", "descripcio": "Pràctica d'enllaços interns, externs i de correu", "linkPagina": "./Biblioteca exercicis/08 Pràctica d'enllaços/08 Pràctica d'enllaços.html", "any": 2026, "imatge": ""},
-    {"id": 8, "titol": "09 Imatges i capçalera amb logo", "descripcio": "Exemple de capçalera amb logo i menú de navegació", "linkPagina": "./Biblioteca exercicis/09 Imatges_i_Capçalera_(Amb_logo)/09 Imatges_i_Capçalera_(Amb_logo).html", "any": 2026, "imatge": ""},
-    {"id": 9, "titol": "10 Inserció de Frames", "descripcio": "Exemple d'una pàgina composta amb frames", "linkPagina": "./Biblioteca exercicis/10 Inserció de Frames_(Marcs) dins d'una pagina/10 (index) Inserció de Frames_(Marcs) dins d'una pagina.html", "any": 2026, "imatge": ""},
-    {"id": 10, "titol": "11 Frame Interactiu (iframes)", "descripcio": "Exemple d'integració de contingut amb iframes", "linkPagina": "./Biblioteca exercicis/11 Frame Interactiu (iframes)/11 Frame Interactiu (iframes).html", "any": 2026, "imatge": ""},
-    {"id": 11, "titol": "12 Imatges mapegades i taula", "descripcio": "Pràctica d'imatges mapegades amb una taula", "linkPagina": "./Biblioteca exercicis/12 Pagina_de_pràctica_Imatges_Mapegades (+Taula)/12 Pagina_de_pràctica_Imatges_Mapegades (+Taula).html", "any": 2026, "imatge": ""},
-    {"id": 12, "titol": "13 Taules HTML", "descripcio": "Exemple d'ús de les etiquetes tr, th i td", "linkPagina": "./Biblioteca exercicis/13 table_(tr, th i td)/13 table_(tr, th i td).html", "any": 2026, "imatge": ""},
-    {"id": 13, "titol": "14 Escacs amb taules", "descripcio": "Creació d'un tauler d'escacs amb una taula HTML", "linkPagina": "./Biblioteca exercicis/14 Ajedrez_table/14 Ajedrez_table.html", "any": 2026, "imatge": ""},
-    {"id": 14, "titol": "15 Marquesines (marquee)", "descripcio": "Exemple de l'etiqueta marquee per mostrar text en moviment", "linkPagina": "./Biblioteca exercicis/15 Marquesines (marquee)/15 Marquesines (marquee).html", "any": 2026, "imatge": ""},
-    {"id": 69, "titol": "69 JQuery", "descripcio": "Exercicis d'introducció a JQuery", "linkPagina": "./Biblioteca exercicis/69 JQuery/index.html", "any": 2026, "imatge": "./img/miniatures exercicis/69 JQuery.png"},
-    {"id": 70, "titol": "70 Finestra Modal", "descripcio": "Exemple d'obertura d'una finestra modal", "linkPagina": "./Biblioteca exercicis/70 Finestra Modal/index.html", "any": 2026, "imatge": "./img/miniatures exercicis/70 Finestra Modal.png"}
+    {
+      "id": 1,
+      "titol": "01 positionBlock",
+      "descripcio": "Prova del 'position:block'",
+      "linkPagina": "./Biblioteca exercicis/01 positionBlock/01 positionBlock.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/01 positionBlock.png"
+    },
+    {
+      "id": 2,
+      "titol": "02 positionFixedRelativeAbsolute",
+      "descripcio": "Prova del 'position: Fixed,  Relative i Absolute'",
+      "linkPagina": "./Biblioteca exercicis/02 positionFixedRelativeAbsolute/02 positionFixedRelativeAbsolute.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/02 positionFixedRelativeAbsolute.png"
+    },
+    {
+      "id": 3,
+      "titol": "04 float",
+      "descripcio": "Prova de la instrucció 'float' amb imatges",
+      "linkPagina": "./Biblioteca exercicis/04 float/04 float.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/04 float.png"
+    },
+    {
+      "id": 4,
+      "titol": "05 styleGrid(RejillaTaula)",
+      "descripcio": "Prova de la estructura de pàgina en grid",
+      "linkPagina": "./Biblioteca exercicis/05 styleGrid(RejillaTaula)/05 styleGrid(RejillaTaula).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/05 styleGrid(RejillaTaula).png"
+    },
+    {
+      "id": 5,
+      "titol": "06 DisplayFlex",
+      "descripcio": "Primera mostra de 'display:flex'",
+      "linkPagina": "./Biblioteca exercicis/06 DisplayFlex/06 DisplayFlex.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/06 DisplayFlex.png"
+    },
+    {
+      "id": 6,
+      "titol": "07 Exercici distribució contingut Grid",
+      "descripcio": "Exercici de distribució del contingut amb CSS Grid",
+      "linkPagina": "./Biblioteca exercicis/07 Exercici_distribució_contingut_Grid/07 Exercici_distribució_contingut_Grid_(Index).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/07 Exercici_distribució_contingut_Grid.png"
+    },
+    {
+      "id": 7,
+      "titol": "08 Pràctica d'enllaços",
+      "descripcio": "Pràctica d'enllaços interns, externs i de correu",
+      "linkPagina": "./Biblioteca exercicis/08 Pràctica d'enllaços/08 Pràctica d'enllaços.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/08 Pràctica d'enllaços.png"
+    },
+    {
+      "id": 8,
+      "titol": "09 Imatges i capçalera amb logo",
+      "descripcio": "Exemple de capçalera amb logo i menú de navegació",
+      "linkPagina": "./Biblioteca exercicis/09 Imatges_i_Capçalera_(Amb_logo)/09 Imatges_i_Capçalera_(Amb_logo).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/09 Imatges_i_Capçalera_(Amb_logo).png"
+    },
+    {
+      "id": 9,
+      "titol": "10 Inserció de Frames",
+      "descripcio": "Exemple d'una pàgina composta amb frames",
+      "linkPagina": "./Biblioteca exercicis/10 Inserció de Frames_(Marcs) dins d'una pagina/10 (index) Inserció de Frames_(Marcs) dins d'una pagina.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/10 Inserció de Frames_(Marcs) dins d'una pagina.png"
+    },
+    {
+      "id": 10,
+      "titol": "11 Frame Interactiu (iframes)",
+      "descripcio": "Exemple d'integració de contingut amb iframes",
+      "linkPagina": "./Biblioteca exercicis/11 Frame Interactiu (iframes)/11 Frame Interactiu (iframes).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/11 Frame Interactiu (iframes).png"
+    },
+    {
+      "id": 11,
+      "titol": "12 Imatges mapegades i taula",
+      "descripcio": "Pràctica d'imatges mapegades amb una taula",
+      "linkPagina": "./Biblioteca exercicis/12 Pagina_de_pràctica_Imatges_Mapegades (+Taula)/12 Pagina_de_pràctica_Imatges_Mapegades (+Taula).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/12 Pagina_de_pràctica_Imatges_Mapegades (+Taula).png"
+    },
+    {
+      "id": 12,
+      "titol": "13 Taules HTML",
+      "descripcio": "Exemple d'ús de les etiquetes tr, th i td",
+      "linkPagina": "./Biblioteca exercicis/13 table_(tr, th i td)/13 table_(tr, th i td).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/13 table_(tr, th i td).png"
+    },
+    {
+      "id": 13,
+      "titol": "14 Escacs amb taules",
+      "descripcio": "Creació d'un tauler d'escacs amb una taula HTML",
+      "linkPagina": "./Biblioteca exercicis/14 Ajedrez_table/14 Ajedrez_table.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/14 Ajedrez_table.png"
+    },
+    {
+      "id": 14,
+      "titol": "15 Marquesines (marquee)",
+      "descripcio": "Exemple de l'etiqueta marquee per mostrar text en moviment",
+      "linkPagina": "./Biblioteca exercicis/15 Marquesines (marquee)/15 Marquesines (marquee).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/15 Marquesines (marquee).png"
+    },
+    {
+      "id": 15,
+      "titol": "17 Tipografies",
+      "descripcio": "Exemples de tipografies i fonts de lletra",
+      "linkPagina": "./Biblioteca exercicis/17 Tipografies (fonts de lletra)/17 Tipografies (fonts de lletra).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/17 Tipografies (fonts de lletra).png"
+    },
+    {
+      "id": 16,
+      "titol": "18 Etiquetes semàntiques",
+      "descripcio": "Exemples d'etiquetes semàntiques i l'atribut tabindex",
+      "linkPagina": "./Biblioteca exercicis/18 Altres Etiquetes Semàntiques (+tabindex)/18 Altres Etiquetes Semàntiques (+tabindex).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/18 Altres Etiquetes Semàntiques (+tabindex).png"
+    },
+    {
+      "id": 17,
+      "titol": "19 Pràctica de botons i inputs",
+      "descripcio": "Pràctica de botons, camps d'entrada i formularis",
+      "linkPagina": "./Biblioteca exercicis/19 Pràctica botons i inputs (+test formulari)/19 Pràctica botons i inputs (+test formulari).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/19 Pràctica botons i inputs (+test formulari).png"
+    },
+    {
+      "id": 18,
+      "titol": "20 Position fixed",
+      "descripcio": "Exemple de posicionament fixed sense Flexbox",
+      "linkPagina": "./Biblioteca exercicis/20 position fixed (no -flex)/20 position fixed (no -flex).html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/20 position fixed (no -flex).png"
+    },
+    {
+      "id": 19,
+      "titol": "21 Primer exemple CSS 2.0",
+      "descripcio": "Exemple de pràctica amb CSS",
+      "linkPagina": "./Biblioteca exercicis/21 primerExempleCSS 2.0/21 primerExempleCSS 2.0 .html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 20,
+      "titol": "22 Unitats absolutes i relatives",
+      "descripcio": "Exemples d'unitats de mesura absolutes i relatives en CSS",
+      "linkPagina": "./Biblioteca exercicis/22 Unitats Absolutes i Relatives/22 Unitats Absolutes i Relatives.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 21,
+      "titol": "23 Selectors i combinadors",
+      "descripcio": "Exemples de selectors i combinadors CSS",
+      "linkPagina": "./Biblioteca exercicis/23 selectors (combinadors)/23 selectors (combinadors).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 22,
+      "titol": "24 Escacs amb selectors combinats",
+      "descripcio": "Tauler d'escacs amb selectors CSS combinats",
+      "linkPagina": "./Biblioteca exercicis/24 Ajedrez 2.0 (Amb selectors combinats)/24 Ajedrez 2.0 (Amb selectors combinats).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 23,
+      "titol": "25 Cursor i hover",
+      "descripcio": "Exemples d'estils per al cursor i l'efecte hover",
+      "linkPagina": "./Biblioteca exercicis/25 Cursor hover test/25 Cursor hover test.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 24,
+      "titol": "26 Submenús i transicions",
+      "descripcio": "Exemple de submenús amb display none i transicions",
+      "linkPagina": "./Biblioteca exercicis/26 Submenus de submenus (display none +Transicions)/26 Submenus de submenus (display none +Transicions).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 25,
+      "titol": "27 Transformacions 2D i 3D",
+      "descripcio": "Exemples de funcions de transformació 2D i 3D",
+      "linkPagina": "./Biblioteca exercicis/27 2D i 3D funcions Transforms/27 2D i 3D funcions Transforms.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 26,
+      "titol": "28 Transicions",
+      "descripcio": "Exemples de transicions CSS",
+      "linkPagina": "./Biblioteca exercicis/28 transicions/28 transicions.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 27,
+      "titol": "29 Animacions",
+      "descripcio": "Exemples d'animacions CSS",
+      "linkPagina": "./Biblioteca exercicis/29 animacions/29 animacions.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 28,
+      "titol": "30 Animacions amb nom",
+      "descripcio": "Exemples d'animacions CSS amb noms",
+      "linkPagina": "./Biblioteca exercicis/30 animacions (Nom)/30 animacions (Nom).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 29,
+      "titol": "31 Overflow",
+      "descripcio": "Exemples de control del desbordament de contingut amb CSS",
+      "linkPagina": "./Biblioteca exercicis/31 overflow/31 overflow.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 30,
+      "titol": "32 Pàgina pràctica",
+      "descripcio": "Exercici pràctic de creació d'una pàgina web",
+      "linkPagina": "./Biblioteca exercicis/32 pagina practica/32 pagina practica.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 31,
+      "titol": "33 Pàgina de currículum",
+      "descripcio": "Exercici pràctic de creació d'una pàgina de currículum",
+      "linkPagina": "./Biblioteca exercicis/33 pagina curriculum/33 pagina curriculum.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 32,
+      "titol": "34 Variables CSS",
+      "descripcio": "Exemples d'ús de variables CSS",
+      "linkPagina": "./Biblioteca exercicis/34 variables/34 variables.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 33,
+      "titol": "35 Disseny responsive",
+      "descripcio": "Exemple de disseny responsive amb CSS Grid",
+      "linkPagina": "./Biblioteca exercicis/35 responsive (display grid, exemple W3schools)/35 responsive (display grid, exemple W3schools).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 34,
+      "titol": "36 Pseudoclasses",
+      "descripcio": "Exemples de pseudoclasses CSS",
+      "linkPagina": "./Biblioteca exercicis/36 Exemples de pseudoclasses/36 Exemples de pseudoclasses.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 35,
+      "titol": "37 Pràctica de formularis",
+      "descripcio": "Exercicis pràctics de formularis",
+      "linkPagina": "./Biblioteca exercicis/37 Pràctica de formularis/37 Pràctica de formularis.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 36,
+      "titol": "38 Bootstrap",
+      "descripcio": "Introducció a la llibreria Bootstrap",
+      "linkPagina": "./Biblioteca exercicis/38 Bootstrap (Llibreria)/38 Bootstrap (Llibreria).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 37,
+      "titol": "39-40 Plantilles amb Grid i Bootstrap",
+      "descripcio": "Exemples de plantilles amb CSS Grid i Bootstrap",
+      "linkPagina": "./Biblioteca exercicis/39-40 platilla2 (grid) +BOOSTRAP/39 platilla (grid).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 38,
+      "titol": "41 Pàgines amb Bootstrap",
+      "descripcio": "Pràctica de creació de pàgines amb plantilles Bootstrap",
+      "linkPagina": "./Biblioteca exercicis/41 Practica de pagines AMB BOOSTRAP i plantilles (BLOG)/41 Practica de pagines AMB BOOSTRAP i plantilles (PRINCIPAL).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 39,
+      "titol": "42 Creació de snippets",
+      "descripcio": "Exemple de creació de snippets HTML",
+      "linkPagina": "./Biblioteca exercicis/42 prova creació de Snippets (Ctrl + Shift + P - Snippet Config - html)/42 prova creació de Snippets (Ctrl + Shift + P - Snippet Config - html).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 40,
+      "titol": "42.5 Plantilla dashboard",
+      "descripcio": "Plantilla de dashboard basada en Start Bootstrap SB Admin",
+      "linkPagina": "./Biblioteca exercicis/42.5 Plantilla dashboard (Snippets)/startbootstrap-sb-admin-gh-pages/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 41,
+      "titol": "43 Components amb JavaScript",
+      "descripcio": "Exemple de pàgina amb components carregats amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/43 index (components plantilla js)/43 index (components plantilla js).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 42,
+      "titol": "44 Esdeveniments",
+      "descripcio": "Exemples d'esdeveniments amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/44 Events/44 Events.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 43,
+      "titol": "45 Patrons",
+      "descripcio": "Exemples de patrons de disseny",
+      "linkPagina": "./Biblioteca exercicis/45 Patrons(patterns)/45 Patrons(patterns).html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 44,
+      "titol": "46 Paràmetres",
+      "descripcio": "Exemples de paràmetres amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/46 Parametres/46 Parametres.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 45,
+      "titol": "47 Primer exemple de JavaScript",
+      "descripcio": "Exercici d'introducció a JavaScript",
+      "linkPagina": "./Biblioteca exercicis/47 primerHTML JS/47 primerHTML JS.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 46,
+      "titol": "48 Impressió de variables",
+      "descripcio": "Exercici d'impressió de variables amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/48 PrimerExercici javaScript (Impressió Variables)/48 ImprimirVariables index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 47,
+      "titol": "49 Primera remesa d'exercicis JavaScript",
+      "descripcio": "Primera sèrie d'exercicis de JavaScript",
+      "linkPagina": "./Biblioteca exercicis/49 Primera remesa exercicis JavaScript/49 Primera remesa exercicis.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 48,
+      "titol": "50 Funcions JavaScript",
+      "descripcio": "Segona sèrie d'exercicis de funcions amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/50 Segona remesa exercicis JavaScript (funcions)/50 Segona remesa exercicis JS.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 49,
+      "titol": "51 Objectes en JavaScript",
+      "descripcio": "Exercicis d'objectes amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/51 Objectes en JS/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 50,
+      "titol": "52 Classes en JavaScript",
+      "descripcio": "Exercicis de classes amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/52 Classes en JS/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 51,
+      "titol": "53 Esdeveniments",
+      "descripcio": "Exercicis d'esdeveniments amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/53 classe Xavi (Esdeveniments)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 52,
+      "titol": "54 Calculadora",
+      "descripcio": "Calculadora interactiva amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/54 Calculadora/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 53,
+      "titol": "55 Funcions fletxa",
+      "descripcio": "Exemples de funcions fletxa amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/55 Funcions fletxa/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 54,
+      "titol": "56 Tres en ratlla",
+      "descripcio": "Joc de tres en ratlla amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/56 TicTacToe (Tres en ratlla)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 55,
+      "titol": "57 Funcions recursives",
+      "descripcio": "Exercicis de recursivitat amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/57 funcions recursives (RECURSIVITAT)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 56,
+      "titol": "58 Esdeveniments",
+      "descripcio": "Exemples d'esdeveniments amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/58 Events/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 57,
+      "titol": "58-2 preventDefault",
+      "descripcio": "Exemples de prevenció del comportament per defecte d'esdeveniments",
+      "linkPagina": "./Biblioteca exercicis/58-2 preventDefault/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 58,
+      "titol": "59 JSON",
+      "descripcio": "Exercicis de tractament de dades JSON",
+      "linkPagina": "./Biblioteca exercicis/59 JSON (1)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 59,
+      "titol": "60 Errors i try-catch",
+      "descripcio": "Exemples de gestió d'errors amb try-catch",
+      "linkPagina": "./Biblioteca exercicis/60 Errors (try catch, etc...)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 60,
+      "titol": "61 Expressions regulars",
+      "descripcio": "Introducció a les expressions regulars amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/61 RegExp/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 61,
+      "titol": "62 Exercicis d'expressions regulars",
+      "descripcio": "Exercicis pràctics d'expressions regulars",
+      "linkPagina": "./Biblioteca exercicis/62 Exercicis Expressions Regulars (RegExp)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 62,
+      "titol": "63 BOM",
+      "descripcio": "Exemples de l'objecte Browser Object Model (BOM)",
+      "linkPagina": "./Biblioteca exercicis/63 BOM/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 63,
+      "titol": "64 Cookies i multiidioma",
+      "descripcio": "Exemples de cookies i contingut en diversos idiomes",
+      "linkPagina": "./Biblioteca exercicis/64 Cookies +Multi-Idioma/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 64,
+      "titol": "65 Tractament d'API",
+      "descripcio": "Exemple de tractament de dades d'una API",
+      "linkPagina": "./Biblioteca exercicis/65 API (tractar dades de API, PokemonAPI)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 65,
+      "titol": "65 Pokémon",
+      "descripcio": "Exercici de consulta d'informació de Pokémon",
+      "linkPagina": "./Biblioteca exercicis/65 Pokemon (Solució)/65 Pokemon.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 66,
+      "titol": "66 APIs",
+      "descripcio": "Exemples d'ús d'APIs amb JavaScript",
+      "linkPagina": "./Biblioteca exercicis/66 APIs/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 67,
+      "titol": "67 Emmagatzematge local i de sessió",
+      "descripcio": "Exemples de Local Storage, Session Storage i modes de visualització",
+      "linkPagina": "./Biblioteca exercicis/67 Storage (Local i Session Storage) + dark i light mode/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 68,
+      "titol": "68 Validació de dades",
+      "descripcio": "Exercicis de validació de dades amb emmagatzematge",
+      "linkPagina": "./Biblioteca exercicis/68 Validació de dades (storage)/index.html",
+      "any": 2026,
+      "imatge": ""
+    },
+    {
+      "id": 69,
+      "titol": "69 JQuery",
+      "descripcio": "Exercicis d'introducció a JQuery",
+      "linkPagina": "./Biblioteca exercicis/69 JQuery/index.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/69 JQuery.png"
+    },
+    {
+      "id": 70,
+      "titol": "70 Finestra Modal",
+      "descripcio": "Exemple d'obertura d'una finestra modal",
+      "linkPagina": "./Biblioteca exercicis/70 Finestra Modal/index.html",
+      "any": 2026,
+      "imatge": "./img/miniatures exercicis/70 Finestra Modal.png"
+    }
   ]
 }

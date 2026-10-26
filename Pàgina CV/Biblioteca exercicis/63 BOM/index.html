@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>     <!-- <= Responsive -->
+    <title>// 63 BOM</title> <!-- < Titol de la pestanya -->
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/> <!-- < Icona de la pestanya -->
+    <link rel="stylesheet" href="./css/styles.css" /> <!-- < < < CSS 1 -->
+    <!-- Enllaç del javascript -->
+    <script defer src="js/63 BOM.js"></script>
+</head>
+<body>
+    <header>
+        <h1>// 63 BOM (Browser Object Manager)</h1>
+    </header>
+
+     <main>
+        <!-- -->
+        <h2></h2>
+        <div id="demo"></div>
+        <!-- Botóns '' -->
+        <input type="button" value="Enrere" onclick="tornaEnrera()">
+        <input type="button" value="Endavant" onclick="tornaEndavant()">
+        <div id="demo2"></div>
+
+<!-- mètode Timeout   Executa la funció dintre de...    3000 ml = 3s   -->
+         <button onclick="setTimeout(missatgeAmbRetard, 3000)">Hola en setTimeout! (en 3s) [Delay] </button>
+         <button onclick="setInterval(missatgeAmbRetard, 3000)">Hola en setInterval! (en 3s) [Es repeteix] </button> <!-- <= Repeteix la funció cada 3s -->
+         <hr>
+         <h2>Rellotge del teu PC</h2>
+         <div id="demoRellotge"></div>
+         <h2>Cronometre</h2>
+         <div id="demoCronometre"></div>
+
+         <!-- Cookies -->
+         <h2>Cookies</h2>
+         <div id="demoCookies"></div>
+     </main>
+
+    <footer>
+    <ul>
+        <li>&copy; Fet per David</li>
+    </ul>
+</footer>
+</body>
+</html>

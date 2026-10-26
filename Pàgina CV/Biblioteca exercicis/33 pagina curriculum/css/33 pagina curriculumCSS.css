@@ -1,0 +1,264 @@
+/* *{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+* {
+  margin: 0%;
+}
+
+/* --------Propietats comuns de header i footer-------- */
+header,
+footer {
+  text-align: center;
+  background-color: rgb(22, 14, 2);
+  color: rgb(238, 234, 172);
+  width: 100%;
+}
+
+header {
+  border-bottom: 5px solid rgb(128, 0, 128);
+
+  z-index: 10;
+  top: 0%; /*Fent scroll es manté*/
+}
+
+footer {
+  opacity: 89%;
+  /* Borders redondegats */
+  border-top: 3px solid rgb(128, 0, 128);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: fixed;
+
+  bottom: 0%; /*Fent scroll es manté*/
+}
+
+.menu-nav {
+  background-color: rgb(172, 255, 47);
+  border: 2px solid;
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.principal-Main {
+  background-color: rgb(248, 188, 115);
+
+}
+
+.seccio {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 1%;
+  margin-top: 1%;
+  background-color: rgb(255, 188, 106);
+
+  padding: 0.5rem;
+}
+
+section{
+  width: 7.5rem;
+  height: 7.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+  /* img{
+    width: 75%;
+    height: 75%;
+  } */
+
+span {
+  /* color: red; */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/*  */
+/* li:hover {
+  background-color: rgb(0, 255, 255);
+  color: rgb(0, 0, 255);
+  border-radius: 1rem;
+} */
+a:link {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+li:active {
+  background-color: rgb(255, 166, 0);
+}
+/*  */
+
+main {
+  
+  height: calc(102vh); /*Calculem l'alçada */
+  position: relative;
+  padding: 0.4%;
+    
+}
+
+hr{
+   margin: 3%;
+}
+span {
+  /* < < < "span" per destacar un troç del text*/
+  /* color: red; */
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.div-Contenedor{
+  margin-top: 1rem;
+  border: 0.4rem solid;
+  width: 98%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  border-radius: 1.500rem;
+}
+
+ul, ol, .llista{
+  
+  padding: 0%;
+
+  border: 2px solid;
+  border-radius: 1rem;
+  margin: 1%;
+}
+ul li, .llista .item{ /* < < < Tots els decendents del ul que son li tenen aquest css (ul [space] li)  */
+  list-style-type: none;
+  padding: 0%;
+}
+
+li:hover{
+  cursor: pointer;
+}
+/* -------Format del contingut principal(main)------- */
+.fila{
+  margin-top: 3.5%;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-around;
+  border: 0.225rem solid;
+  position: relative;
+  border-radius: 0rem 0rem 1rem 1rem; 
+}
+.content{
+  font-size: 1.5rem;
+  background-color: rgba(43, 116, 226, 0.575);
+  padding: 1%;
+  flex-direction: column;
+  font-weight: bold;
+  border-radius: 0rem 0rem 1rem 1rem; 
+}
+/* --------- Menu --------*/
+.dades-contacte{
+  position: relative;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(0, 85, 124);
+  border: 3px solid rgb(128, 0, 128);
+  font-size: 1.1rem;
+  color: wheat;
+  /* border-radius: 1rem; */
+  border-radius: 0rem 0rem 1rem 1rem; /*Bordes dabaix redondegats*/
+
+}
+.nav-opcio{
+  border-right: 2px solid wheat;
+  border-left: 2px solid wheat;
+  width: 99%;
+  color: wheat;
+}
+/* ---------Format de caixa dels de les transicions */
+.caixa-targeta{
+  border: 0.225rem solid;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(137, 43, 226, 0.575);
+
+  position: relative;
+  padding: 1%;
+  overflow: hidden;
+
+}
+figure{
+  border: 0.225rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caixa-targeta:hover{ /* ---- Transition en :hover*/
+  height: +30rem;
+  transform: translate(0, -9rem);
+  background-color: rgba(27, 163, 39, 0.932); /*<- background amb menys opacitat a l'hora de fer transition*/
+  transition: height 1s, background-color 1s, transform 1s;
+  overflow: auto;
+}
+.titol-targeta{
+  border: 0.225rem solid;
+  background-color: rgba(255, 255, 1, 0.418);
+  font-size: large;
+}
+.contingut-targeta{
+  font-size: 1.5rem;
+
+}
+/* -------------------CURRICULUM STRUCTURE-------------------- */
+
+.curriculumEsquerra{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3%;
+  background-color: rgba(127, 172, 255, 0.719);
+  border-radius:  1.225rem;
+}
+.curriculumDreta{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.3%;
+}
+.separacio{
+  border: 0.225rem solid black;
+  margin-top: 0.4%;
+  margin-bottom: 0.4%;
+  border-radius:  0.225rem;
+}
+.imatgeCV img{
+  border-radius: 50%;
+}
+.imatgeCV{
+  width: 60%;
+  height: 40%;
+  border-radius: 50%;
+}
+.targeta-horitzontal{
+  display: flex;
+  flex-direction: row;
+}
+.targeta-horitzontal > .contingut-targeta{
+  width: 75%;
+}
+
+/* Les imatges s'adecuen a la caixa pare */
+img{ 
+  /* width: 100%;
+  height: 100%; */
+  width: 95%;
+  height: 95%;
+}
+

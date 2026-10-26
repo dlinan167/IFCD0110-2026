@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="CA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- < < < Per adaptar l'amplada a altres dispositious -->
+    <title>26 Submenus de submenus (display: none)</title>
+    <link rel="shortcut icon" href="../img/imatge_pera.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/26 Submenus de submenus (display none +Transicions)CSS.css" /> <!-- < < < Primer CSS -->
+
+    <style>
+
+    </style>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>26 Submenus de submenus (display: none +Transicions)</h1>
+    </header>
+
+    <nav class="menu-nav" style="width: 10%;">
+      <h2>MENÚ</h2>
+      <hr />
+      <ul>
+        <li>
+          <!--OPCIÓ 1-->
+          <a href="#vh"><div>Opció1</div></a>
+          <ul>
+            <li>Sub-opció 1</li>
+            <li>Sub-opció 2</li>
+            <li>Sub-opció 3</li>
+          </ul>
+        </li>
+        <li>
+           <!--OPCIÓ 2-->
+          <a href="#vh"><div>Opció2</div></a>
+          <ul>
+            <li>Sub-opció 1
+              <!--(2ón) SUB-OPCIÓ 1-->
+              <ul>
+                <li>
+                  (2) sub-opció 1
+                  <!-- (3er) sub-opció 1 -->
+                  <ul>
+                    <li>(3) sub-opció 1</li>
+                    <li>(3) sub-opció 2</li>
+                  </ul>
+                </li>
+                <!-- (2ón) SUB-OPCIÓ 2 -->
+                <li>
+                  (2) sub-opció 2
+                  <!-- (3er) sub-opció 1 -->
+                  <ul>
+                    <li>(3) sub-opció 1</li>
+                    <li>(3) sub-opció 2</li>
+                    <li>(3) sub-opció 3</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Sub-opció 2</li>
+          </ul>
+        </li>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="submenu-alternatiu">
+
+          <!-- OPCIÓ un pis mes amunt (directe) -->
+          <li>OPCIÓ 3
+            <ul>
+              <li>SUB-OPCIÓ 1</li>
+              <li>SUB-OPCIÓ 2
+                <ul>
+                  <li>(2) sub-opció 1</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <!-- OPCIÓ (MENÚ TABULAT) -->
+      </ul>
+    </nav>
+    
+
+    <main class="principal-Main">
+      
+      <!--  START >>> -->
+      
+      <div class="div-Contenedor">
+
+        <div class="menu-prova">
+          <ul class="submenu-tabulat">
+            <li>OPCIÓ 1(MENÚ TABULAT)
+              <ul>
+                <li>SUB-OPCIÓ 1
+
+                  <ul>
+                    <li>(2) sub-opció 1</li>
+                    <li>(2) sub-opció 2</li>
+                    <li>(2) sub-opció 3
+                      <ul>
+                        <li>(3) sub-opció 1</li>
+                        <li>(3) sub-opció 2</li>
+                        <li>(3) sub-opció 3</li>
+                      </ul>
+                    </li>
+                  </li>
+                </ul>
+                <li>SUB-OPCIÓ 2
+                  <ul>
+                    <li>(2) sub-opció 1</li>
+                    <li>(2) sub-opció 2</li>
+                    <li>(2) sub-opció 3</li>
+                  </ul>
+                </li>
+                <li>SUB-OPCIÓ 3
+                  <ul>
+                    <li>(2) sub-opció 1</li>
+                    <li>(2) sub-opció 2</li>
+                    <li>(2) sub-opció 3</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+           ~~~~~~~ Menu amb trancicions: ~~~~~~~
+          <div class="menu-prova">
+            <!-- LLista submenus amb trancicions! (desplegable) -->
+          <div class="submenu-tabulat-transicio">
+            <div class="item"> 
+              <!-- Titol -->
+              <div class="titol-transicio"> (MENÚ AMB DIVS I CLASSES) 
+                <div>
+                  <img src="https://wallpapers.com/images/hd/minimalist-black-arrow-graphic-iro5etfho2cglxwd.jpg" alt="arrow" width="99%" height="99%">
+                </div>
+              </div> 
+              <!-- LLista dins del desplegable -->
+              <div class="llista">
+                <div class="item">SUB-OPCIÓ 1
+
+                  <div class="llista">
+                    <div class="item">(2) sub-opció 1</div>
+                    <div class="item">(2) sub-opció 2</div>
+                    <div class="item">(2) sub-opció 3
+                      <div class="llista">
+                        <div class="item">(3) sub-opció 1</div>
+                        <div class="item">(3) sub-opció 2</div>
+                        <div class="item">(3) sub-opció 3</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">SUB-OPCIÓ 2
+                  <div class="llista">
+                    <div class="item">(2) sub-opció 1</div>
+                    <div class="item">(2) sub-opció 2</div>
+                    <div class="item">(2) sub-opció 3</div>
+                  </div>
+                </div>
+                <div class="item">SUB-OPCIÓ 3
+                  <div class="llista">
+                    <div class="item">(2) sub-opció 1</div>
+                    <div class="item">(2) sub-opció 2</div>
+                    <div class="item">(2) sub-opció 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--  END <<< -->
+
+      
+    </main>
+
+    <footer>Desenvolupat per David</footer>
+  </body>
+</html>
