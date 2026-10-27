@@ -150,7 +150,7 @@
       "descripcio": "Exemple de pràctica amb CSS",
       "linkPagina": "./Biblioteca exercicis/21 primerExempleCSS 2.0/21 primerExempleCSS 2.0 .html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/21 primerExempleCSS 2.0.png"
     },
     {
       "id": 20,
@@ -158,7 +158,7 @@
       "descripcio": "Exemples d'unitats de mesura absolutes i relatives en CSS",
       "linkPagina": "./Biblioteca exercicis/22 Unitats Absolutes i Relatives/22 Unitats Absolutes i Relatives.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/22 Unitats Absolutes i Relatives.png"
     },
     {
       "id": 21,
@@ -166,7 +166,7 @@
       "descripcio": "Exemples de selectors i combinadors CSS",
       "linkPagina": "./Biblioteca exercicis/23 selectors (combinadors)/23 selectors (combinadors).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/23 selectors (combinadors).png"
     },
     {
       "id": 22,
@@ -174,7 +174,7 @@
       "descripcio": "Tauler d'escacs amb selectors CSS combinats",
       "linkPagina": "./Biblioteca exercicis/24 Ajedrez 2.0 (Amb selectors combinats)/24 Ajedrez 2.0 (Amb selectors combinats).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/24 Ajedrez 2.0 (Amb selectors combinats).png"
     },
     {
       "id": 23,
@@ -182,7 +182,7 @@
       "descripcio": "Exemples d'estils per al cursor i l'efecte hover",
       "linkPagina": "./Biblioteca exercicis/25 Cursor hover test/25 Cursor hover test.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/25 Cursor hover test.png"
     },
     {
       "id": 24,
@@ -190,7 +190,7 @@
       "descripcio": "Exemple de submenús amb display none i transicions",
       "linkPagina": "./Biblioteca exercicis/26 Submenus de submenus (display none +Transicions)/26 Submenus de submenus (display none +Transicions).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/26 Submenus de submenus (display none +Transicions).png"
     },
     {
       "id": 25,
@@ -198,7 +198,7 @@
       "descripcio": "Exemples de funcions de transformació 2D i 3D",
       "linkPagina": "./Biblioteca exercicis/27 2D i 3D funcions Transforms/27 2D i 3D funcions Transforms.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/27 2D i 3D funcions Transforms.png"
     },
     {
       "id": 26,
@@ -206,7 +206,7 @@
       "descripcio": "Exemples de transicions CSS",
       "linkPagina": "./Biblioteca exercicis/28 transicions/28 transicions.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/28 transicions.png"
     },
     {
       "id": 27,
@@ -214,7 +214,7 @@
       "descripcio": "Exemples d'animacions CSS",
       "linkPagina": "./Biblioteca exercicis/29 animacions/29 animacions.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/29 animacions.png"
     },
     {
       "id": 28,
@@ -222,7 +222,7 @@
       "descripcio": "Exemples d'animacions CSS amb noms",
       "linkPagina": "./Biblioteca exercicis/30 animacions (Nom)/30 animacions (Nom).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/30 animacions (Nom).png"
     },
     {
       "id": 29,
@@ -230,7 +230,7 @@
       "descripcio": "Exemples de control del desbordament de contingut amb CSS",
       "linkPagina": "./Biblioteca exercicis/31 overflow/31 overflow.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/31 overflow.png"
     },
     {
       "id": 30,
@@ -238,7 +238,7 @@
       "descripcio": "Exercici pràctic de creació d'una pàgina web",
       "linkPagina": "./Biblioteca exercicis/32 pagina practica/32 pagina practica.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/32 pagina practica.png"
     },
     {
       "id": 31,
@@ -246,7 +246,7 @@
       "descripcio": "Exercici pràctic de creació d'una pàgina de currículum",
       "linkPagina": "./Biblioteca exercicis/33 pagina curriculum/33 pagina curriculum.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/33 pagina curriculum.png"
     },
     {
       "id": 32,
@@ -254,7 +254,7 @@
       "descripcio": "Exemples d'ús de variables CSS",
       "linkPagina": "./Biblioteca exercicis/34 variables/34 variables.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/34 variables.png"
     },
     {
       "id": 33,
@@ -262,7 +262,7 @@
       "descripcio": "Exemple de disseny responsive amb CSS Grid",
       "linkPagina": "./Biblioteca exercicis/35 responsive (display grid, exemple W3schools)/35 responsive (display grid, exemple W3schools).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/35 responsive (display grid, exemple W3schools).png"
     },
     {
       "id": 34,
@@ -270,7 +270,7 @@
       "descripcio": "Exemples de pseudoclasses CSS",
       "linkPagina": "./Biblioteca exercicis/36 Exemples de pseudoclasses/36 Exemples de pseudoclasses.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/36 Exemples de pseudoclasses.png"
     },
     {
       "id": 35,
@@ -278,7 +278,7 @@
       "descripcio": "Exercicis pràctics de formularis",
       "linkPagina": "./Biblioteca exercicis/37 Pràctica de formularis/37 Pràctica de formularis.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/37 Pràctica de formularis.png"
     },
     {
       "id": 36,
@@ -286,7 +286,7 @@
       "descripcio": "Introducció a la llibreria Bootstrap",
       "linkPagina": "./Biblioteca exercicis/38 Bootstrap (Llibreria)/38 Bootstrap (Llibreria).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/38 Bootstrap (Llibreria).png"
     },
     {
       "id": 37,
@@ -294,7 +294,7 @@
       "descripcio": "Exemples de plantilles amb CSS Grid i Bootstrap",
       "linkPagina": "./Biblioteca exercicis/39-40 platilla2 (grid) +BOOSTRAP/39 platilla (grid).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/39-40 platilla2 (grid) +BOOSTRAP.png"
     },
     {
       "id": 38,
@@ -302,7 +302,7 @@
       "descripcio": "Pràctica de creació de pàgines amb plantilles Bootstrap",
       "linkPagina": "./Biblioteca exercicis/41 Practica de pagines AMB BOOSTRAP i plantilles (BLOG)/41 Practica de pagines AMB BOOSTRAP i plantilles (PRINCIPAL).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/41 Practica de pagines AMB BOOSTRAP i plantilles (BLOG).png"
     },
     {
       "id": 39,
@@ -310,7 +310,7 @@
       "descripcio": "Exemple de creació de snippets HTML",
       "linkPagina": "./Biblioteca exercicis/42 prova creació de Snippets (Ctrl + Shift + P - Snippet Config - html)/42 prova creació de Snippets (Ctrl + Shift + P - Snippet Config - html).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/42 prova creació de Snippets (Ctrl + Shift + P - Snippet Config - html).png"
     },
     {
       "id": 40,
@@ -318,7 +318,7 @@
       "descripcio": "Plantilla de dashboard basada en Start Bootstrap SB Admin",
       "linkPagina": "./Biblioteca exercicis/42.5 Plantilla dashboard (Snippets)/startbootstrap-sb-admin-gh-pages/index.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/42.5 Plantilla dashboard (Snippets).png"
     },
     {
       "id": 41,
@@ -326,7 +326,7 @@
       "descripcio": "Exemple de pàgina amb components carregats amb JavaScript",
       "linkPagina": "./Biblioteca exercicis/43 index (components plantilla js)/43 index (components plantilla js).html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/43 index (components plantilla js).png"
     },
     {
       "id": 42,
@@ -334,7 +334,7 @@
       "descripcio": "Exemples d'esdeveniments amb JavaScript",
       "linkPagina": "./Biblioteca exercicis/44 Events/44 Events.html",
       "any": 2026,
-      "imatge": ""
+      "imatge": "./img/miniatures exercicis/44 Events.png"
     },
     {
       "id": 43,
